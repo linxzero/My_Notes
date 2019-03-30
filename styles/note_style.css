@@ -1,0 +1,50 @@
+
+      html {
+        font-family: 'Noto Sans TC', sans-serif;
+        background-color: gray;
+        font-size: 17px;
+        color: #424949; /* 內文一般字色，深灰色 */
+      }
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+      }
+      header {
+        height: 150px;
+      }
+      section {
+        padding: 10px 8% 10px 8%;
+      }
+      p {
+        line-height: 1.6; /* 內文一般行高，1.6 */
+      }
+      pre{
+        line-height: 1.6; /* pre 的行高與 p 一樣 */
+        background-color: #D5D8DC;
+        padding: 0 0 0 10px;
+        border-style: dashed;
+        border-width: 1px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%; /* 自動跟隨 windows 大小而改變 */
+      }
+      h1,h2{
+        font-size: 30px;
+        color: #117A65;
+      }
+      h2{ 
+        padding: 25px 0 0 0; /* 與前一行多25px距離 */
+      }
+      h3{
+        font-size: 22px;
+      }
+      .caption_of_image{
+        padding: 0 0 0 10px;
+        margin: 0;
+        font-size: 15px;
+        color: #D7DBDD;
+        background-color: #252424;
+      }
