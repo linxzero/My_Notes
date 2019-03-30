@@ -19,16 +19,19 @@
       p {
         line-height: 1.6; /* 內文一般行高，1.6 */
       }
+      a{
+        color: #2471A3;
+      }
       pre{
         line-height: 1.6; /* pre 的行高與 p 一樣 */
-        background-color: #D5D8DC;
+        background-color: #E5E7E9;
         padding: 0 0 0 10px;
         border-style: dashed;
         border-width: 1px;
       }
       img {
         display: block;
-        margin: 0 auto;
+        margin: 25px auto auto 0;
         max-width: 100%; /* 自動跟隨 windows 大小而改變 */
       }
       h1,h2{
