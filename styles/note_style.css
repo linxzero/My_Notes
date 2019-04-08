@@ -1,9 +1,22 @@
 
+      @font-face{
+        font-family: head; /* Header用的字體 */
+        src: url(../fonts/NotoSerifTC-Regular.otf);
+      }
+      @font-face{
+        font-family: para; /* Paragraph用的字體 */
+        src: url(../fonts/NotoSansTC-Regular.otf);
+      }
+      @font-face{
+        font-family: code; /* Code用的字體 */
+        src: url(../fonts/UbuntuMono-Bold.ttf);
+      }
+
       html {
-        font-family: 'Noto Sans TC', sans-serif;
         background-color: gray;
-        font-size: 17px;
-        color: #424949; /* 內文一般字色，深灰色 */
+        font-family: para;
+        font-size: 100%;
+        color: #424949; /* 內文一般文字，深灰色 */
       }
       body {
         max-width: 1200px;
@@ -16,38 +29,50 @@
       section {
         padding: 10px 8% 10px 8%;
       }
+      h1{
+        font-family: head;
+        font-size: 2.5em;
+        color: #117A65;
+        padding: 25px 0 0 0; /* 與前一行多25px距離 */
+      }
+      h2{ 
+        font-family: head;
+        font-size: 1.8em;
+        color: #2471A3;
+      }
+      h3{
+        font-size: 1.3em;
+      }
       p {
         line-height: 1.6; /* 內文一般行高，1.6 */
       }
       a{
-        color: #2471A3;
+        color: #2471A3; /* 網址顏色，型藍色 */
+        text-decoration: none;
+      }
+      a:hover{
+        text-decoration: underline;
       }
       pre{
         line-height: 1.6; /* pre 的行高與 p 一樣 */
-        background-color: #E5E7E9;
-        padding: 0 0 0 10px;
+        background-color: #E5E7E9; /* 背景為灰色 */
+        padding: 0 0 0 15px;
         border-style: dashed;
         border-width: 1px;
+        font-family: code, para;
+        font-size: 1em;
+        color: #686d6d; /* 因為code用了粗體，所以用比paragraph淺的灰色，來減少突出 */
       }
       img {
         display: block;
         margin: 25px auto auto 0;
         max-width: 100%; /* 自動跟隨 windows 大小而改變 */
       }
-      h1,h2{
-        font-size: 30px;
-        color: #117A65;
-      }
-      h2{ 
-        padding: 25px 0 0 0; /* 與前一行多25px距離 */
-      }
-      h3{
-        font-size: 22px;
-      }
-      .caption_of_image{
+      .cap_of_image{
         padding: 0 0 0 10px;
         margin: 0;
-        font-size: 15px;
+        font-size: 0.85em;
         color: #D7DBDD;
         background-color: #252424;
       }
+      
