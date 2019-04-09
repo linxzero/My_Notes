@@ -12,6 +12,9 @@
         src: url(../fonts/UbuntuMono-Regular.ttf);
       }
 
+      *{ /* width和height的範圍包含padding和border，但不包含margin */
+        box-sizing: border-box;
+      }  
       html {
         background-color: gray;
         font-family: para;
@@ -27,8 +30,10 @@
         height: 9.375em;
       }
       div {
-        margin: 0;
-        padding: 0em 8% 1em 8%;
+        
+        width: 33.33%
+        margin: 1em;
+        padding: 0;
         background-color: #EAEDED; /*light-gray*/
       }
       h1{
