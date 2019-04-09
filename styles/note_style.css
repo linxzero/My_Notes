@@ -1,119 +1,151 @@
 
-      @font-face{
-        font-family: head; /* Header用的字體 */
+      @font-face{ /* Header用的字體 */
+        font-family: head; 
         src: url(../fonts/NotoSerifTC-Regular.otf);
       }
-      @font-face{
-        font-family: para; /* Paragraph用的字體 */
+      @font-face{ /* Paragraph用的字體 */
+        font-family: para; 
         src: url(../fonts/NotoSansTC-Regular.otf);
       }
-      @font-face{
-        font-family: code; /* Code用的字體 */
+      @font-face{ /* Code用的字體 */
+        font-family: code; 
         src: url(../fonts/UbuntuMono-Regular.ttf);
       }
-
+      /*-------------------------------------------------------------*/
       *{ /* width和height的範圍包含padding和border，但不包含margin */
-        box-sizing: border-box;
-      }  
-      html {
+        box-sizing: border-box; }
+      html{ /* html底色灰色，內文一般文字，碳灰色 */
         background-color: gray;
         font-family: para;
         font-size: 100%;
-        color: #424949; /* 內文一般文字，深灰色 */
+        color: #424949; 
       }
-      body {
-        max-width: 75em;
-        margin: 0 auto 0.5em auto;
+      header{ height: 9.375em; }
+      body{
+        max-width: 85%;
+        margin: 0 auto 1em auto;
+      }
+      /*-------------------------------------------------------------*/
+      div{        
+        margin: 0.1em 0 0.1em 0;
+        padding: 0.1em;
         background-color: white;
-      }
-      header {
-        height: 9.375em;
-      }
-      div {
-        
-        width: 33.33%
-        margin: 1em;
-        padding: 0;
-        background-color: #EAEDED; /*light-gray*/
       }
       h1{
         font-family: head;
         font-size: 2.5em;
         color: #117A65;
-        padding: 1em 0 0 0; /* 與前一行多16px距離 */
+        padding: 0 5% 0 5%;
       }
       h2{ 
         font-family: head;
         font-size: 1.8em;
         color: #2471A3;
+        padding: 0 5% 0 5%;
       }
       h3{
         font-size: 1.3em;
+        padding: 0 5% 0 5%;
       }
-      p {
-        line-height: 1.6; /* 內文一般行高，1.6 */
+      p{ /* 內文一般行高，1.6 */
+        line-height: 1.6;
+        padding: 0 5% 0 5%;
       }
-      a{
-        color: #2471A3; /* 網址顏色，型藍色 */
+      a{ /* 網址顏色，型藍色，本身沒有底線 */
+        color: #2471A3; 
         text-decoration: none;
       }
       a:hover{
         text-decoration: underline;
       }
       pre{
-        line-height: 1.6; /* pre 的行高與 p 一樣 */
-        background-color: #E5E7E9; /* 背景為灰色 */
-        padding: 0 0 0 1em;
-        border-style: dashed;
-        border-width: 0.06em;
         font-family: code;
         font-size: 1em;
         color: black;
+        line-height: 1.6; /* pre 的行高與 p 一樣 */
+        background-color: #F8F9F9; /* 背景為灰色 */
+        border-style: outset;
+        border-width: 0.08em;      
+        margin: 0 6% 0 6%;
+        padding: 0 1em 0 1em;
       }
+      ol, ul {
+        line-height: 1.6;
+        margin: 0 auto 0 2em;
+        padding: 0 5% 0 5%;
+      }
+      /*-------------------------------------------------------------*/
       img.big {
         display: block;
-        margin: 2em auto auto auto;
-        width: 90%;
+        margin: 1em auto auto auto;
+        width: 88%;
       }
       p.bigcap{
-        padding: 0;
-        margin: 0.05em auto auto auto;
         font-size: 0.85em;
-        color: #8D8D8D;
-        width: 90%;
-        text-align: right;
-        background-color: #FBFCFC;
+        color: white;
+        background-color: grey;        
+        margin: 0 auto 0 auto;
+        padding: auto;
+        width: 88%;
+        text-align: left;
+        border-left: 1.2em solid #73C6B6;
       }
       img.mid {
         display: block;
-        margin: 2em auto auto auto;
+        margin: 1em auto auto auto;
         width: 75%;
       }
       p.midcap{
-        padding: 0;
-        margin: 0.05em auto auto auto;
         font-size: 0.85em;
-        color: #8D8D8D;
+        color: white;
+        background-color: grey;        
+        margin: 0 auto 0 auto;
+        padding: auto;
         width: 75%;
-        text-align: right;
-        background-color: #FBFCFC;
+        text-align: left;
+        border-left: 1.2em solid #73C6B6;
       }
       img.lit {
         display: block;
-        margin: 2em auto auto auto;
+        margin: 1em auto auto auto;
         width: 60%;
       }
       p.litcap{
-        padding: 0;
-        margin: 0.05em auto auto auto;
         font-size: 0.85em;
-        color: #8D8D8D;
+        color: white;
+        background-color: grey;        
+        margin: 0 auto 0 auto;
+        padding: auto;
         width: 60%;
-        text-align: right;
-        background-color: #FBFCFC;
+        text-align: left;
+        border-left: 1.2em solid #73C6B6;
       }
-      ol, ul {
-        display: block;
-        margin: 0 0 1.6em 0.5em;
-        padding: 0 0 0 1em ;
+      /*-------------------------------------------------------------*/
+      .column3 { /* Create 3 equal columns that floats next to each other */
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        height: auto;
       }
+      .column2 { /* 2 columns version */
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: auto;
+      }
+      .row:after { /* Clear floats after the columns */
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media (max-width: 850px) { /* Responsive layout */
+        .column3 {
+          width: 100%;
+        }
+      }
+      @media (max-width: 850px) { /* Responsive layout */
+        .column2 {
+          width: 100%;
+        }
+      }
+      /*-------------------------------------------------------------*/
