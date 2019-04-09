@@ -22,12 +22,12 @@
       }
       header{ height: 9.375em; }
       body{
-        max-width: 85%;
+        max-width: 95%;
         margin: 0 auto 1em auto;
       }
       /*-------------------------------------------------------------*/
       div{        
-        margin: 0.1em 0 0.1em 0;
+        margin: 0;
         padding: 0.1em;
         background-color: white;
       }
@@ -35,21 +35,23 @@
         font-family: head;
         font-size: 2.5em;
         color: #117A65;
-        padding: 0 5% 0 5%;
+        padding: 0 3% 0 3%;
       }
       h2{ 
         font-family: head;
         font-size: 1.8em;
+        line-height: 1;
         color: #2471A3;
-        padding: 0 5% 0 5%;
+        padding: 0 3% 0 3%;
       }
       h3{
         font-size: 1.3em;
-        padding: 0 5% 0 5%;
+        line-height: 1;
+        padding: 0 3% 0 3%;
       }
       p{ /* 內文一般行高，1.6 */
         line-height: 1.6;
-        padding: 0 5% 0 5%;
+        padding: 0 3% 0 3%;
       }
       a{ /* 網址顏色，型藍色，本身沒有底線 */
         color: #2471A3; 
@@ -67,7 +69,7 @@
         border-style: outset;
         border-width: 0.08em;      
         margin: 0 6% 0 6%;
-        padding: 0 1em 0 1em;
+        padding: 0 2% 0 2%;
       }
       ol, ul, li {
         line-height: 1.6;
