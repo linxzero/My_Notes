@@ -2,113 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>test page</title>
-    <link href="../test/test.css" rel="stylesheet" type="text/css">
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      header{ background-color: tomato }
+      header{ background: url(images/bridge.jpg) no-repeat center; }
+      .column{
+        float: left;
+        width: 33.33%;
+        height: auto;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media(max-width:900px){
+        .column{width:100%;}
+      }
     </style>
   </head>
-
   <body>
     <header>
     </header>
-    <main>
-
-      <div>
-        div 1 navigate
-        <h1>div 1 Header 1 題目</h1>
-        <h2>div 1 Topic 2 標題</h2>
-        <h3>div 1 Header 3</h3>
-        <P>div 1 paragraph , Windows 中文字小測試</P>
+        
+    <div class="row">
+      <div class="column">
+        olll
       </div>
-
-      <div class="header">
-         <h2>div 2 Header</h2>
+      <div class="column">
+        ulll
       </div>
-
-      <div class="row">
-       <div class="column" style="background-color:#aaa;">div 3&4 Colum</div>
-       <div class="column" style="background-color:#bbb;">div 3&4 Colum</div>
-       <div class="column" style="background-color:#ccc;">div 3&4 Colum</div>
-      </div>
-
-      <div class="footer">
-         <p>div 5 Footer</p>
-      </div>
-
-    </main>
+    </div>
+      
+      
   </body>
-</html-->
-
-<!-------------------------------------------------------------------------------------->
-
-<!--DOCTYPE html>
-<html lang="en">
-<head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 30px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content:"";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 900px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
+</html>
 
 
-
-
-
-</head>
-<body>
-
-<h2>CSS Template using Float</h2>
-<p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect.</p>
-
-<div class="header">
-  <h2>Header</h2>
-</div>
-
-<div class="row">
-  <div class="column" style="background-color:#aaa;">Column</div>
-  <div class="column" style="background-color:#bbb;">Column</div>
-  <div class="column" style="background-color:#ccc;">Column</div>
-</div>
-
-<div class="footer">
-  <p>Footer</p>
-</div>
-
-</body>
-</html-->
 
 
 
