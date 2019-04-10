@@ -1,4 +1,5 @@
 
+    /*字體-------------------------------------------------------------*/
       @font-face{ /* Header用的字體 */
         font-family: head; 
         src: url(../fonts/NotoSerifTC-Regular.otf);
@@ -11,7 +12,7 @@
         font-family: code; 
         src: url(../fonts/UbuntuMono-Regular.ttf);
       }
-      /*-------------------------------------------------------------*/
+    /*大圍-------------------------------------------------------------*/
       *{ /* width和height的範圍包含padding和border，但不包含margin */
         box-sizing: border-box; }
       html{ /* html底色灰色，內文一般文字，碳灰色 */
@@ -25,7 +26,7 @@
         max-width: 95%;
         margin: 0 auto 1em auto;
       }
-      /*-------------------------------------------------------------*/
+    /*內文-------------------------------------------------------------*/
       div{        
         margin: 0;
         padding: 0.1em;
@@ -60,7 +61,7 @@
       a:hover{
         text-decoration: underline;
       }
-      pre{
+      .cod{ /* 打cmd專用格式 */
         font-family: code;
         font-size: 1em;
         color: black;
@@ -71,13 +72,13 @@
         margin: 0 6% 0 6%;
         padding: 0 2% 0 2%;
       }
-      ol, ul, li {
+      ol, ul, li{
         line-height: 1.6;
-        margin: 0 auto 0 2em;
+        margin: 0 auto 0 1em;
         padding: 0 5% 0 5%;
       }
-      /*-------------------------------------------------------------*/
-      img.big {
+    /*圖片-------------------------------------------------------------*/
+      img.big{
         display: block;
         margin: 1em auto auto auto;
         width: 88%;
@@ -92,7 +93,7 @@
         text-align: left;
         border-left: 1.2em solid #73C6B6;
       }
-      img.mid {
+      img.mid{
         display: block;
         margin: 1em auto auto auto;
         width: 75%;
@@ -107,7 +108,7 @@
         text-align: left;
         border-left: 1.2em solid #73C6B6;
       }
-      img.lit {
+      img.lit{
         display: block;
         margin: 1em auto auto auto;
         width: 60%;
@@ -122,32 +123,32 @@
         text-align: left;
         border-left: 1.2em solid #73C6B6;
       }
-      /*-------------------------------------------------------------*/
-      .column3 { /* Create 3 equal columns that floats next to each other */
+    /*行列-------------------------------------------------------------*/
+      .column3{ /* Create 3 equal columns that floats next to each other */
         float: left;
         width: 33.33%;
         padding: 10px;
         height: auto;
       }
-      .column2 { /* 2 columns version */
+      .column2{ /* 2 columns version */
         float: left;
         width: 50%;
         padding: 10px;
         height: auto;
       }
-      .row:after { /* Clear floats after the columns */
+      .row:after{ /* Clear floats after the columns */
         content: "";
         display: table;
         clear: both;
       }
-      @media (max-width: 850px) { /* Responsive layout */
+      @media (max-width: 750px){ /* Responsive layout */
         .column3 {
           width: 100%;
         }
       }
-      @media (max-width: 850px) { /* Responsive layout */
+      @media (max-width: 550px){ /* Responsive layout */
         .column2 {
           width: 100%;
         }
       }
-      /*-------------------------------------------------------------*/
+    /*-------------------------------------------------------------*/
