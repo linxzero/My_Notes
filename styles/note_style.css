@@ -21,7 +21,9 @@
         font-size: 100%;
         color: #424949; 
       }
-      header{ height: 9.375em; }
+      header{ 
+        height: 9.375em; 
+      }
       body{
         max-width: 95%;
         margin: 0 auto 1em auto;
@@ -151,4 +153,31 @@
           width: 100%;
         }
       }
-    /*-------------------------------------------------------------*/
+    /*導航-------------------------------------------------------------*/
+      ul.navi{
+        list-style-type: none;
+        overflow: hidden;   
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 0.8;        
+      }
+      li.navi{
+        float: left;
+        margin: 0;
+        padding: 0;
+        line-height: 0.8;
+      }
+      li.navi a{
+        display: block; /* block elements makes the whole link area clickable */
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li.navi a.active{
+        background-color: #4CAF50;
+      }
+      li.navi a:hover:not(.active){
+        background-color: #111;
+      }
