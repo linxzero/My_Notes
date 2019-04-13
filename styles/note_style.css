@@ -160,24 +160,49 @@
         background-color: #333;
         margin: 0;
         padding: 0;
-        line-height: 0.8;        
+        line-height: 0.6;        
       }
       li.navi{
         float: left;
         margin: 0;
         padding: 0;
-        line-height: 0.8;
+        line-height: 0.6;
       }
-      li.navi a{
-        display: block; /* block elements makes the whole link area clickable */
+      a.navi{ /* block elements makes the whole link area clickable */
+        display: inline-block; 
         color: white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
       }
-      li.navi a.active{
-        background-color: #4CAF50;
-      }
-      li.navi a:hover:not(.active){
+      li.navi:hover a.navi{
+      /* 掃到自己，或下拖清單被掃時，自己都變色 */
         background-color: #111;
+      }
+      li.navi:hover .drop-content{
+      /* 掃到有下拖清單的li時，內容才drop */
+        display: block;
+      }
+      .drop-content{
+        margin: 0;
+        padding: 0;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      .drop-content a{
+        margin: 0;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        color: #424949;
+      } .drop-content a:hover{
+        background-color: #CACFD2;
+      }
+      li.navi a#active{
+        background-color: #4CAF50;
       }
