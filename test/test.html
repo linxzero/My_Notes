@@ -1,108 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--link rel="stylesheet" type="text/css" href="../styles/note_style.css"-->
-    <title>test</title>
-    <style>
-
-     
-ul.navi {
-  list-style-type: none;
-  overflow: hidden;   
-  background-color: #333;
-  margin: 0;
-  padding: 0;
-  line-height: 0.8;
-}
-li.navi {
-  float: left;
-  margin: 0;
-  padding: 0;
-  line-height: 0.8;
-}
-a.navi{
-  display: inline-block; /* block elements makes the whole link area clickable */
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-li.navi:hover a.navi{
-/* 掃到自己，或下拖清單被掃時，自己都變色 */
-  background-color: #111;
-}
-li.navi:hover .drop-content {
-/* 掃到有下拖清單的li時，內容才drop */
-  display: block;
-}
-.drop-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.drop-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.drop-content a:hover {background-color: purple;}
-
-
-  
-    </style>
-  </head>
-  <body>
-    <ul class="navi">
-      <li class="navi">
-        <a href="javascript:void(0)" class="navi">Home</a></li>
-      <li class="navi">
-        <a href="javascript:void(0)" class="navi">News</a></li>
-      <li class="navi">
-        <a href="javascript:void(0)" class="navi">Dropdown</a>
-        <div class="drop-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </li>
-      <li class="navi">
-        <a href="javascript:void(0)" class="navi">End</a>
-        
-      </li>
-    </ul>      
-  </body>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<head>
+  <title></title>
+</head>
+<body>
+  <div w3-include-html="linux_cmd.html">
+    
+  </div>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
