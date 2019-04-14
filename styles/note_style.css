@@ -1,9 +1,21 @@
 /*字體-------------------------------------------------------------*/
-  @font-face{ /* Header用的字體 */
+  @font-face{ /* 日系，有角 */
+    font-family: makinas; 
+    src: url(../fonts/cht/Makinas-4-Square.otf);
+  } 
+  @font-face{ /* 源流明體 */
+    font-family: ryu; 
+    src: url(../fonts/cht/GenRyuMinTW-Heavy.ttf);
+  }
+  @font-face{ /* 標題英文 */
+    font-family: ti-eng; 
+    src: url(../fonts/eng/MavenPro-Medium.ttf);
+  }  
+  @font-face{ /* basic Header用的字體，英&中 */
     font-family: head; 
     src: url(../fonts/NotoSerifTC-Regular.otf);
   }
-  @font-face{ /* Paragraph用的字體 */
+  @font-face{ /* Paragraph用的字體，英&中 */
     font-family: para; 
     src: url(../fonts/NotoSansTC-Regular.otf);
   }
@@ -34,8 +46,9 @@
     background-color: white;
   }
   h1{
-    font-family: head;
+    font-family: ryu;
     font-size: 2.5em;
+    font-weight: normal;
     color: #117A65;
     padding: 0 3% 0 3%;
   }
@@ -54,6 +67,14 @@
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
     padding: 0 3% 0 3%;
+  }
+  p.title{
+    font-family: ti-eng, makinas;
+    text-align: right;
+    margin: 0;
+    padding: 1.4em 1.2em 0 0;
+    font-size: 3em;
+    color: white;
   }
   a{ /* 網址顏色，型藍色，本身沒有底線 */
     color: #2471A3; 
