@@ -204,7 +204,7 @@
     display: block;
   }
   li.navi:not(:hover) .drop-content{
-  /* 掃到有下拖清單的li時，內容才drop */
+  /* 沒有掃到有下拖清單的li時，內容none */
     display: none;
   }  
   .drop-content{
