@@ -13,7 +13,7 @@
   }  
   @font-face{ /* basic Header用的字體，英&中 */
     font-family: head; 
-    src: url(../fonts/cht/GenRyuMinTW-Regular.ttf);
+    src: url(../fonts/cht/GenRyuMinTW-Bold.ttf);
   }
   @font-face{ /* Paragraph用的字體，英&中 */
     font-family: para; 
