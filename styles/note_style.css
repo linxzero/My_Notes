@@ -13,7 +13,7 @@
   }  
   @font-face{ /* basic Header用的字體，英&中 */
     font-family: head; 
-    src: url(../fonts/NotoSerifTC-Regular.otf);
+    src: url(../fonts/cht/GenRyuMinTW-Regular.ttf);
   }
   @font-face{ /* Paragraph用的字體，英&中 */
     font-family: para; 
@@ -55,6 +55,7 @@
   h2{ 
     font-family: head;
     font-size: 1.8em;
+    font-weight: normal;
     line-height: 1;
     color: #2471A3;
     padding: 0 3% 0 3%;
