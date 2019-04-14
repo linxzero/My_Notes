@@ -33,7 +33,7 @@
     color: #424949; 
   }
   header{ 
-    height: 9.375em; 
+    min-height: 9.375em; 
   }
   body{
     max-width: 95%;
