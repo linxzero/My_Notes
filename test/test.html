@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html onclick="document.getElementbyClass('drop-content').style.display='none'">
-  <head onclick="document.getElementbyClass('drop-content').style.display='none'">
+<html onclick="cleanbar()">
+  <head onclick="cleanbar()">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
@@ -11,6 +11,10 @@
       $(function(){ /* 在指定位置插入navigation bar */
         $(".navi_bar").load("../1.telecom/navigation/navi_bar.html");
       });
+      function cleanbar(){
+        var x = document.getElementsByClassName("drop-content");
+        x[0].style.display="none";
+      };
     </script>
     <title>Ethernet</title>
     <style>
@@ -19,7 +23,7 @@
     </style>
   </head>
 <!-------------------------------------------------------------------------------->
-  <body onclick="document.getElementbyClass('drop-content').style.display='none'">
+  <body onclick="cleanbar()">
     <header>
       <p class="title">Ethernet 的分類</p>
     </header>
@@ -27,7 +31,7 @@
     </div>
 <!--------------------------------------------------------------------------------> 
     <div>
-      <h1>Head Body 都有onclick</h1>
+      <h1>CleanBar</h1>
       <h2>Header last 源標題</h2>
       <h3>Header 3</h3>
       <P>Linux Cmd  中文字小測試</P>
