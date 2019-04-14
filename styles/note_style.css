@@ -205,7 +205,7 @@
   }
   li.navi:not(:hover) .drop-content{
   /* 沒有掃到有下拖清單的li時，內容none */
-    display: none;
+  /* display: none; */
   }  
   .drop-content{
     margin: 0;
