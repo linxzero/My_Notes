@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html onclick="cleanbar()">
-  <head onclick="cleanbar()">
+<html>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
@@ -11,7 +11,7 @@
       $(function(){ /* 在指定位置插入navigation bar */
         $(".navi_bar").load("../1.telecom/navigation/navi_bar.html");
       });
-      function cleanbar(){
+      function cleanbar(){ /* 手機無法自動縮navi-bar，要手動縮 */
         var x = document.getElementsByClassName("drop-content");
         x[0].style.display="none";
       };

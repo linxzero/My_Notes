@@ -11,6 +11,10 @@
       $(function(){ /* 在指定位置插入navigation bar */
         $(".navi_bar").load("../navigation/navi_bar.html");
       });
+      function cleanbar(){ /* 手機無法自動縮navi-bar，要手動縮 */
+        var x = document.getElementsByClassName("drop-content");
+        x[0].style.display="none";
+      };
     </script>
     <title>Ethernet</title>
     <style>
@@ -21,13 +25,13 @@
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p class="title">Ethernet 的分類</p>
+      <p onclick="cleanbar()" class="title">Ethernet 的分類</p>
     </header>
     <div class="navi_bar" style="margin: 0; padding: 0;">
     </div>
 <!--------------------------------------------------------------------------------> 
-    <div>
-      <h1>Header 源標題</h1>
+    <div onclick="cleanbar()">
+      <h1>Header 縮</h1>
       <h2>Header last 源標題</h2>
       <h3>Header 3</h3>
       <P>Linux Cmd  中文字小測試</P>
