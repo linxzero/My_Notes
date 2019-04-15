@@ -14,8 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){ /* 在指定位置插入navigation bar */
-      	$("ul.navi").load("../../navigations/navi_bar_home.html");
-        $("ul.navi").load("../../navigations/navi_bar_1.html");
+      	$(".navi_span_1").load("../../navigations/navi_bar_home.html");
+        $(".navi_span_2").load("../../navigations/navi_bar_1.html");
         $(".hidebar").click(function(){
           $(".drop-content").css("display","none");
         })
@@ -32,7 +32,7 @@
     <header class="hidebar">
       <p class="hidebar" id="title">分類</p>
     </header>
-    <ul class="navi"></ul>
+    <ul class="navi"><span class="navi_span_1"></span><span class="navi_span_2"></span></ul>
 <!--D1----------------------------------------------------------------------------> 
     <div class="hidebar">
       <h1>7:17</h1>
