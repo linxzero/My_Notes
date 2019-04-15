@@ -4,21 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
-    <!-- ^EugneHome -->
+    <!-- ^EugneHome --------------------------->
     <link href="/Users/home/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
-    <!-- ^Macbook -->
+    <!-- ^Macbook --------------------------->
     <link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
-    <!-- ^GitHub -->
+    <!-- ^GitHub --------------------------->
     <link href="/Users/lamha/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
-    <!-- ^EugneFSm -->
+    <!-- ^EugneFSm --------------------------->
+    <!---------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){ /* 在指定位置插入navigation bar */
-      	$(".navi_span_h").load("../../navigations/navi_bar_home.html");
-        $(".navi_span").load("../../navigations/navi_bar_1.html");
-        /* $(".hidebar").click(function(){ 用返下面個傳統JaveScript取代
-          $(".drop-content").css("display","none");
-        }) */
+      	$(".navi_span_h").load("/Documents/GitHub/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span_h").load("/Users/home/Documents/GitHub/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span_h").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span_h").load("/Users/lamha/Documents/GitHub/my_notes/navigations/navi_bar_home.html");
+        //////////////////////////////////////////////////////////////
+        $(".navi_span").load("/Documents/GitHub/my_notes/navigations/navi_bar_1.html");
+        $(".navi_span").load("/Users/home/Documents/GitHub/my_notes/navigations/navi_bar_1.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
+        $(".navi_span").load("/Users/lamha/Documents/GitHub/my_notes/navigations/navi_bar_1.html");
       });
       function hidebar(){
         var x=document.getElementsByClassName("drop-content");
