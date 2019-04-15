@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+    <!-- ^EugneHome -->
     <link href="/Users/home/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+    <!-- ^Macbook -->
     <link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+    <!-- ^GitHub -->
+    <link href="/Users/lamha/Documents/GitHub/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+    <!-- ^EugneFSm -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){ /* 在指定位置插入navigation bar */
       	$(".navi_bar_home").load("../../navigations/navi_bar_home.html");
         $(".navi_bar").load("../../navigations/navi_bar_1.html");
       });
-
       function cleanbar(){ /* 手機無法自動縮navi-bar，要手動縮 */
         var x = document.getElementsByClassName("drop-content");
         x.style.display="none";
@@ -27,10 +31,10 @@
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p onclick="cleanbar()" class="title">Ethernet 的分類</p>
+      <p onclick="cleanbar()" class="title">分類</p>
     </header>
-    <div class="navi_bar_home" style="margin: 0; padding: 0;"></div>
-    <div class="navi_bar" style="margin: 0; padding: 0;"></div>
+    <div class="navi_bar_home" style="margin: 0; padding: 0; float: left;"> </div>
+    <div class="navi_bar" style="margin: 0; padding: 0;"> </div>
 <!--------------------------------------------------------------------------------> 
     <div onclick="cleanbar()">
       <h1>3</h1>
