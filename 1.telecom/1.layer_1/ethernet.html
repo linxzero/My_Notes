@@ -14,13 +14,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){ /* 在指定位置插入navigation bar */
-      	$(".navi_bar_home").load("../../navigations/navi_bar_home.html");
-        $(".navi_bar").load("../../navigations/navi_bar_1.html");
+      	$("ul.navi").load("../../navigations/navi_bar_home.html");
+        $("ul.navi").load("../../navigations/navi_bar_1.html");
+        $(".hidebar").click(function(){
+          $(".drop-content").css("display","none");
+        })
       });
-      function cleanbar(){ /* 手機無法自動縮navi-bar，要手動縮 */
-        var x = document.getElementsByClassName("drop-content");
-        x.style.display="none";
-      };
     </script>
     <title>Ethernet</title>
     <style>
@@ -31,12 +30,11 @@
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p onclick="cleanbar()" class="title">分類</p>
+      <p class="hidebar" id="title">分類</p>
     </header>
-    <div class="navi_bar_home" style="margin: 0; padding: 0; float: left;"> </div>
-    <div class="navi_bar" style="margin: 0; padding: 0;"> </div>
-<!--------------------------------------------------------------------------------> 
-    <div onclick="cleanbar()">
+    <ul class="navi"></ul>
+<!--D1----------------------------------------------------------------------------> 
+    <div class="hidebar">
       <h1>3</h1>
       <h2>Header last 源標題</h2>
       <h3>Header 3</h3>
@@ -75,7 +73,7 @@
       <h2>the last caption</h2>
       <p>hello world !</p>
     </div>
-<!-------------------------------------------------------------------------------->    
+<!--D2---------------------------------------------------------------------------->    
     <div>
       <h1>Header 2</h1>
       <p>A cruise ship is at sea. It is off Norway. There are 1,300 passengers on the ship. The ship stops working. It cannot move. The weather is bad. The wind blows fast. There are 8-metre waves. The ship moves from side to side.在眾人的幫助下逐漸擁抱自己的與眾不同，成就一段逆風翱翔的暖心傳奇。一位前馬戲團明星，剛從戰爭前線歸來，霍特·法瑞爾(科林·法瑞爾飾)在一家艱難經營的馬戲團謀得一份工作，負責照顧剛出生的小象，帶著兩個善良的孩子，女兒米莉·法瑞爾(尼科·派克飾)和兒子喬·法瑞爾(芬利·霍賓斯飾)，兩個孩子和另外一個女孩瑪茜特(蔡慧泉飾)與小飛象成為朋友，幫助小飛象找到媽媽。當人們發現小象會飛後，馬戲團重複生機，更吸引到一個充滿心機的生意人文德維爾（邁克爾·基頓飾）的注意，他把小飛象雇傭到他的大型遊樂場Dreamland，與雜技演員柯萊特·馬錢特(伊娃·格林飾)做搭檔，人氣達到新高度，然而霍特·法瑞爾發現，遊樂場光鮮亮麗的背後，充滿種種見不得人的秘密。</p>
@@ -83,7 +81,7 @@
       <h2>the last caption</h2>
       <p>hello world !</p>
     </div>
-<!-------------------------------------------------------------------------------->
+<!--D3---------------------------------------------------------------------------->
     <div>
       <h1>Header 2</h1>
       <p>A cruise ship is at sea. It is off Norway. There are 1,300 passengers on the ship. The ship stops working. It cannot move. The weather is bad. The wind blows fast. There are 8-metre waves. The ship moves from side to side. 一位前馬戲團明星，剛從戰爭前線歸來，霍特·法瑞爾(科林·法瑞爾飾)在一家艱難經營的馬戲團謀得一份工作，負責照顧剛出生的小象，帶著兩個善良的孩子，女兒米莉·法瑞爾(尼科·派克飾)和兒子喬·法瑞爾(芬利·霍賓斯飾)，兩個孩子和另外一個女孩瑪茜特(蔡慧泉飾)與小飛象成為朋友，幫助小飛象找到媽媽。當人們發現小象會飛後，馬戲團重複生機，更吸引到一個充滿心機的生意人文德維爾（邁克爾·基頓飾）的注意，他把小飛象雇傭到他的大型遊樂場Dreamland，與雜技演員柯萊特·馬錢特(伊娃·格林飾)做搭檔，人氣達到新高度，然而霍特·法瑞爾發現，遊樂場光鮮亮麗的背後，充滿種種見不得人的秘密。</p>

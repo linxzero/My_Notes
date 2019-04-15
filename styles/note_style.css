@@ -69,7 +69,7 @@
     line-height: 1.6;
     padding: 0 3% 0 3%;
   }
-  p.title{
+  #title{
     font-family: ti-eng, makinas;
     text-align: right;
     margin: 0;
@@ -203,10 +203,6 @@
   /* 掃到有下拖清單的li時，內容才drop */
     display: block;
   }
-  li.navi:not(:hover) .drop-content{
-  /* 沒有掃到有下拖清單的li時，內容none */
-  /* display: none; */
-  }  
   .drop-content{
     margin: 0;
     padding: 0;
