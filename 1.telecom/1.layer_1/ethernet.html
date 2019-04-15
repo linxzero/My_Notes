@@ -14,12 +14,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){ /* 在指定位置插入navigation bar */
-      	$(".navi_span_1").load("../../navigations/navi_bar_home.html");
-        $(".navi_span_2").load("../../navigations/navi_bar_1.html");
-        $(".hidebar").click(function(){
+      	$(".navi_span_h").load("../../navigations/navi_bar_home.html");
+        $(".navi_span").load("../../navigations/navi_bar_1.html");
+        /* $(".hidebar").click(function(){ 用返傳統JS取代
           $(".drop-content").css("display","none");
-        })
+        }) */
       });
+      function hidebar(){
+        var x=document.getElementsByClassName("drop-content");
+        x.style.display="none";
+      };
     </script>
     <title>Ethernet</title>
     <style>
@@ -29,12 +33,12 @@
   </head>
 <!-------------------------------------------------------------------------------->
   <body>
-    <header class="hidebar">
-      <p class="hidebar" id="title">分類</p>
+    <header>
+      <p onclick="hidebar()" id="title">分類</p>
     </header>
-    <ul class="navi"><span class="navi_span_1"></span><span class="navi_span_2"></span></ul>
+    <ul class="navi"><span class="navi_span_h"></span><span class="navi_span"></span></ul>
 <!--D1----------------------------------------------------------------------------> 
-    <div class="hidebar">
+    <div onclick="hidebar()">
       <h1>7:17</h1>
       <h2>Header last 源標題</h2>
       <h3>Header 3</h3>
