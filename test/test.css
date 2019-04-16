@@ -1,31 +1,72 @@
-      *{ /* width和height的範圍包含padding和border，但不包含margin */
-        box-sizing: border-box;
-      }  
-      html {
-        background-color: lavender;
-      }
-      body{
-        max-width: 1800px;
-        margin: 0 auto 1.5em auto;
-      }
-      header {
-        height: 9.375em;
-      }
-      main{
-        background-color: darkseagreen;
-      }
-      .column{
-        float: left;
-        width: 33.33%;
-        height: 300px;
-      }
-      .row:after{
-        content:"";
-        display: table;
-        clear: both;
-      }
-      @media (max-width: 900px){
-        .column{
-          width: 100%;
-        }
-      }
+/*字體-------------------------------------------------------------*/
+  @font-face{ /* 日系，有角 */
+    font-family: makinas; 
+    src: url(../fonts/cht/Makinas-4-Square.otf);
+  } 
+  @font-face{ /* 標題英文 */
+    font-family: ti-eng; 
+    src: url(../fonts/eng/MavenPro-Medium.ttf);
+  } 
+  @font-face{ /* 源流明體, h1*/
+    font-family: h1; 
+    src: url(../fonts/cht/GenRyuMinTW-Heavy.ttf);
+  }
+  @font-face{ /* 源流明體(幼), h2*/
+    font-family: h2; 
+    src: url(../fonts/cht/GenRyuMinTW-Bold.ttf);
+  }
+  @font-face{ /* Paragraph用的字體，英&中 */
+    font-family: para; 
+    src: url(../fonts/NotoSansTC-Regular.otf);
+  }
+  @font-face{ /* Code用的字體 */
+    font-family: code; 
+    src: url(../fonts/UbuntuMono-Regular.ttf);
+  }
+/*大圍-------------------------------------------------------------*/
+  *{ /* width和height的範圍包含padding和border，但不包含margin */
+    box-sizing: border-box; }
+  html{ /* html底色灰色，內文一般文字，碳灰色 */
+    background-color: gray;
+    font-family: para;
+    font-size: 100%;
+    color: #424949; 
+  }
+  header{ 
+    min-height: 9.375em; 
+  }
+  body{
+    max-width: 60em;
+    margin: 0 auto 1em auto;
+  }
+/*內文-------------------------------------------------------------*/
+  #title{
+    font-family: ti-eng, makinas;
+    text-align: right;
+    margin: 0;
+    padding: 1.4em 0.5em 0 0;
+    font-size: 3em;
+    color: white;
+  }
+  a{
+    color: black;
+  }
+  .drop-content a{ /* 網址顏色，型藍色，本身沒有底線 */
+    color: #2471A3; 
+    font-size: : 1em;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  ul{
+    list-style-type: none;
+    font-size: : 1em;
+    margin: 0;
+    padding: 0;
+  }
+  li.navi{
+    font-size: : 2em;
+    color: black;
+  }
+/*-------------------------------------------------------------*/
