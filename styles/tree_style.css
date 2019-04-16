@@ -37,17 +37,14 @@
   }
   body{
     max-width: 60em;
-    margin: 0 auto 1em auto;
+    margin: 0 auto;
+    padding: 0 1em 1em 1em;
   }
 /*內文-------------------------------------------------------------*/
   div{        
     margin: 0;
     padding: 0.1em;
     background-color: white;
-  }
-  p{ /* 內文一般行高，1.6 */
-    line-height: 1.6;
-    padding: 0 3% 0 3%;
   }
   #title{
     font-family: ti-eng, makinas;
@@ -57,17 +54,22 @@
     font-size: 3em;
     color: white;
   }
-  a{ /* 網址顏色，型藍色，本身沒有底線 */
+  ul{
+    list-style-type: none;
+  }
+  li.navi{
+    padding: 1em;
+  }
+  a.navi{ /* 小頭目 */
+    color: #15955c;
+    font-size: 1.2em;
+    border-style: none;
+  }
+  a{ /* item */
     color: #2471A3; 
     text-decoration: none;
   }
   a:hover{
     text-decoration: underline;
-  }
-  ul{
-    list-style-type: none;
-    line-height: 1.6;
-    margin: 0 auto 0 1em;
-    padding: 0 5% 0 5%;
   }
 /*-------------------------------------------------------------*/

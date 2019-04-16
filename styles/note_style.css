@@ -37,7 +37,8 @@
   }
   body{
     max-width: 60em;
-    margin: 0 auto 1em auto;
+    margin: 0 auto;
+    padding: 0 1em 1em 1em;
   }
 /*內文-------------------------------------------------------------*/
   div{        
@@ -109,7 +110,7 @@
   p.bigcap{
     font-size: 0.85em;
     color: white;
-    background-color: grey;        
+    background-color: #2D2E2F;        
     margin: 0 auto 0 auto;
     padding: auto;
     width: 88%;
@@ -123,7 +124,7 @@
   }
   p.midcap{
     font-size: 0.85em;      color: white;
-    background-color: grey;        
+    background-color: #2D2E2F;        
     margin: 0 auto 0 auto;
     padding: auto;
     width: 75%;
@@ -138,7 +139,7 @@
   p.litcap{
     font-size: 0.85em;
     color: white;
-    background-color: grey;        
+    background-color: #2D2E2F;        
     margin: 0 auto 0 auto;
     padding: auto;
     width: 60%;
