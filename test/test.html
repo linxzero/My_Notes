@@ -3,42 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="test.css" rel="stylesheet" type="text/css">
+    <link href="../styles/tree_style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-
+      $(function(){
+        $(".navi_span").load("../navigations/navi_bar_1.html");
+      });
     </script>
-    <title>Ethernet</title>
+    <title>Telecom</title>
     <style>
       header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
-      li.navi a#layer_1{background-color: #4CAF50;} /* which navi_bar be green */
     </style>
   </head>
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p onclick="hidebar()" id="title">Ethernet</p>
+      <p onclick="hidebar()" id="title">Telecom</p>
     </header>
-      <ul class="avi">
-          <li class="drop-content"><a href="/my_notes/1.telecom/I.layer_1/ethernet.html">Ethernet</a></li>
-          <li class="drop-content"><a href="/my_notes/1.telecom/I.layer_1/fiber.html">Fiber</a></li>
-          <li class="drop-content"><a href="/my_notes/1.telecom/I.layer_1/interface_speed.html">Interface Speed</a></li>
-      </ul>
-      <ul class="avi">
-          <li class="drop-content"><a href="/my_notes/1.telecom/II.mobile_telecom/technology.html">Technology</a></li>
-      </ul>
-<!--D1----------------------------------------------------------------------------> 
-    <div onclick="hidebar()">
-      <h1>7:17</h1>
-      <h2>Header last 源標題</h2>
-      <h3>Header 3</h3>
+    <div>
+      <ul><span class="navi_span"></span></ul>
+    </div>
+<!--------------------------------------------------------------------------------> 
 
 <!-------------------------------------------------------------------------------->    
   </body>
 </html>
-
-
-
 
 
 

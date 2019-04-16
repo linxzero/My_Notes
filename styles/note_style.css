@@ -186,15 +186,10 @@
   li.navi{
     float: left;
     margin: 0;
-    padding: 0;
-    line-height: 0.6;
-  }
-  a.navi{ /* block elements makes the whole link area clickable */
-    display: inline-block; 
+    padding: 14px 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    line-height: 0.6;
   }
   li.navi:hover a.navi{
   /* 掃到自己，或下拖清單被掃時，自己都變色 */

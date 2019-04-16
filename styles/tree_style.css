@@ -41,11 +41,6 @@
     padding: 0 1em 1em 1em;
   }
 /*內文-------------------------------------------------------------*/
-  div{        
-    margin: 0;
-    padding: 0.1em;
-    background-color: white;
-  }
   #title{
     font-family: ti-eng, makinas;
     text-align: right;
@@ -54,20 +49,32 @@
     font-size: 3em;
     color: white;
   }
+  div{        
+    margin: 0;
+    padding: 0.1em;
+    background-color: white;
+  }
+  div.drop-content{
+    padding: 0;
+  }
   ul{
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
-  li.navi{
-    padding: 1em;
-  }
-  a.navi{ /* 小頭目 */
+  li.navi{ /* 小頭目 */
+    padding: 0.1em 5em 0.1em 5em;
     color: #15955c;
     font-size: 1.2em;
-    border-style: none;
   }
   a{ /* item */
+    display: block;
     color: #2471A3; 
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.1em 0.3em 0.1em 0.3em;
     text-decoration: none;
+    border-style: dotted;
+    border-width: 0.01em;
   }
   a:hover{
     text-decoration: underline;
