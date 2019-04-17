@@ -23,7 +23,7 @@
     font-family: code; 
     src: url(../fonts/UbuntuMono-Regular.ttf);
   }
-/*大圍-------------------------------------------------------------*/
+/*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
@@ -32,131 +32,105 @@
     font-size: 100%;
     color: #424949; 
   }
-  header{ 
-    min-height: 9.375em; 
-  }
   body{
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 1em 1em 1em;
+    padding: 0 2em 1em 2em;
+  }
+  header{ 
+    min-height: 9.375em; 
+    margin: 0;
+    padding: 0;
   }
 /*內文-------------------------------------------------------------*/
-  div{        
+  div{ /* default div 冇任何格式 */
     margin: 0;
-    padding: 0.1em;
+    padding: 0;
     background-color: white;
+  }
+  div.block{ /* D1, D2, D3... */
+    float: left;
+    max-width: 60em;
+    padding: 0 2.5em;
+  }
+  div.block_end{
+    float: left;
+    max-width: 60em;
+    margin: 0 0 2em 0;
+    padding: 0 2.5em 5em 2.5em;
+  }
+  div.list{ /* ul, ol, li... */
+    padding: 0.4em 0.25em 0 2.25em;
   }
   h1{
     font-family: h1;
     font-size: 2.5em;
-    font-weight: normal;
     color: #117A65;
-    padding: 0 3% 0 3%;
+    font-weight: normal;
+    margin: 0;
+    padding: 1.2em 0 0 0;
   }
   h2{ 
     font-family: h2;
     font-size: 1.8em;
-    font-weight: normal;
-    line-height: 1;
     color: #2471A3;
-    padding: 0 3% 0 3%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.8em 0 0 0.2em;
   }
   h3{
     font-size: 1.3em;
-    line-height: 1;
-    padding: 0 3% 0 3%;
+    margin: 0;
+    padding: 0.6em 0 0 0.4em;
   }
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
-    padding: 0 3% 0 3%;
+    margin: 0;
+    padding: 0.4em 0 0 0.6em;
   }
-  #title{
+  ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
+    /* 行高比 p 高0.2 */
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+  }
+  p#title{
     font-family: ti-eng, makinas;
+    font-size: 3em;
+    color: white;
     text-align: right;
     margin: 0;
     padding: 1.4em 0.5em 0 0;
-    font-size: 3em;
-    color: white;
   }
-  a{ /* 網址顏色，型藍色，本身沒有底線 */
+  a{ /* 網址顏色，型藍色，沒有底線 */
     color: #2471A3; 
     text-decoration: none;
   }
   a:hover{
     text-decoration: underline;
   }
-  .cod{ /* 打cmd專用格式 */
+  .code{ /* 顯示code專用格式 */
     font-family: code;
     font-size: 1em;
     color: black;
-    line-height: 1.6; /* pre 的行高與 p 一樣 */
-    background-color: #F8F9F9; /* 背景為灰色 */
+    background-color: #F8F9F9;
     border-style: outset;
     border-width: 0.08em;      
-    margin: 0 6% 0 6%;
-    padding: 0 2% 0 2%;
-  }
-  ol, ul, li{
-    line-height: 1.6;
-    margin: 0 auto 0 1em;
-    padding: 0 5% 0 5%;
-  }
-/*圖片-------------------------------------------------------------*/
-  img.big{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 88%;
-  }
-  p.bigcap{
-    font-size: 0.85em;
-    color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0 auto;
-    padding: auto;
-    width: 88%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-  img.mid{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 75%;
-  }
-  p.midcap{
-    font-size: 0.85em;      color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0 auto;
-    padding: auto;
-    width: 75%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-  img.lit{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 60%;
-  }
-  p.litcap{
-    font-size: 0.85em;
-    color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0 auto;
-    padding: auto;
-    width: 60%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
+    margin: 0.6em 1.5em 0.2em 1.5em;
+    padding: 0 1em 0 1em;
   }
 /*行列-------------------------------------------------------------*/
+  /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
   .column3{ /* Create 3 equal columns that floats next to each other */
     float: left;
     width: 33.33%;
-    padding: 10px;
+    padding: 0.4em 0.25em 0 2.25em;
     height: auto;
   }
   .column2{ /* 2 columns version */
     float: left;
     width: 50%;
-    padding: 10px;
+    padding: 0.4em 0.25em 0 2.25em;
     height: auto;
   }
   .row:after{ /* Clear floats after the columns */
@@ -174,49 +148,101 @@
       width: 100%;
     }
   }
+/*圖片-------------------------------------------------------------*/
+  img.big{
+    display: block;
+    margin: 1em auto auto auto;
+    width: 88%;
+  }
+  p.bigcap{
+    font-size: 0.85em;
+    color: white;
+    background-color: #2D2E2F;        
+    margin: 0 auto 0.8em auto;
+    padding: auto;
+    width: 88%;
+    text-align: left;
+    border-left: 1.2em solid #73C6B6;
+  }
+  img.mid{
+    display: block;
+    margin: 1em auto auto auto;
+    width: 75%;
+  }
+  p.midcap{
+    font-size: 0.85em;      color: white;
+    background-color: #2D2E2F;        
+    margin: 0 auto 0.8em auto;
+    padding: auto;
+    width: 75%;
+    text-align: left;
+    border-left: 1.2em solid #73C6B6;
+  }
+  img.little{
+    display: block;
+    margin: 1em auto auto auto;
+    width: 60%;
+  }
+  p.littlecap{
+    font-size: 0.85em;
+    color: white;
+    background-color: #2D2E2F;        
+    margin: 0 auto 0.8em auto;
+    padding: auto;
+    width: 60%;
+    text-align: left;
+    border-left: 1.2em solid #73C6B6;
+  }
 /*導航-------------------------------------------------------------*/
   ul.navi{
     list-style-type: none;
     overflow: hidden;   
-    background-color: #333;
     margin: 0;
     padding: 0;
+    background-color: #333;
     line-height: 0.6;        
   }
   li.navi{
     float: left;
+    display: inline-block;
+  }
+  a.navi_a{ /* I, II, III... */
+    display: inline-block;
     margin: 0;
-    padding: 14px 16px;
+    padding: 0.1em 1em;
     color: white;
     text-align: center;
-    line-height: 0.6;
+    text-decoration: none;
+    cursor: default;
   }
-  li.navi:hover a.navi{
-  /* 掃到自己，或下拖清單被掃時，自己都變色 */
+  li a:hover, li.navi:hover .navi_a{
+  /* 掃到屬於自己的任何 a 時，自己變色 */
     background-color: #111;
   }
-  li.navi:hover .drop-content{
-  /* 掃到有下拖清單的li時，內容才drop */
+  .drop_content a:hover{
+  /* 同上對抗，自己變自己色 */
+    background-color: #f1f1f1;
+  }
+  li.navi:hover .drop_content{
+  /* 掃到 li 時，內容才drop */
     display: block;
   }
-  .drop-content{
+  .drop_content{
     margin: 0;
     padding: 0;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 10em;
+    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
     z-index: 1;
   }
-  .drop-content a{
+  .drop_content a{
     margin: 0;
-    padding: 12px 16px;
-    text-decoration: none;
+    padding: 0.3em 1em;
     display: block;
     text-align: left;
-    color: #424949;
-  } .drop-content a:hover{
-    background-color: #CACFD2;
-  }
+    color: #1B2631;
+    text-decoration: none;
+  } 
 /*-------------------------------------------------------------*/
