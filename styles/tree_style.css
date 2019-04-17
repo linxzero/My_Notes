@@ -23,7 +23,7 @@
     font-family: code; 
     src: url(../fonts/UbuntuMono-Regular.ttf);
   }
-/*大圍-------------------------------------------------------------*/
+/*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
@@ -32,63 +32,217 @@
     font-size: 100%;
     color: #424949; 
   }
-  header{ 
-    min-height: 9.375em; 
-  }
   body{
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 1em 1em 1em;
+    padding: 0 2em 1em 2em;
+  }
+  header{ 
+    min-height: 9.375em; 
+    margin: 0;
+    padding: 0;
   }
 /*內文-------------------------------------------------------------*/
-  #title{
-    font-family: ti-eng, makinas;
-    text-align: right;
+  div{ /* default div 冇任何格式 */
     margin: 0;
-    padding: 1.4em 1.5em 0 0;
-    font-size: 3em;
-    color: white;
-  }
-  div{        
-    margin: 0;
-    padding: 0.1em;
+    padding: 0;
     background-color: white;
   }
-  div.drop-content{
-    padding: 0;
+  div.block{ /* D1, D2, D3... */
+    float: left;
+    max-width: 60em;
+    padding: 0 2.5em;
   }
-  ul{
-    list-style-type: none;
+  div.block_end{
+    float: left;
+    max-width: 60em;
+    margin: 0 0 2em 0;
+    padding: 0 2.5em 5em 2.5em;
+  }
+  div.list{ /* ul, ol, li... */
+    padding: 0.4em 0.25em 0 2.25em;
+  }
+  h1{
+    font-family: h1;
+    font-size: 2.5em;
+    color: #117A65;
+    font-weight: normal;
+    margin: 0;
+    padding: 1.2em 0 0 0;
+  }
+  h2{ 
+    font-family: h2;
+    font-size: 1.8em;
+    color: #2471A3;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.8em 0 0 0.2em;
+  }
+  h3{
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0.6em 0 0 0.4em;
+  }
+  p{ /* 內文一般行高，1.6 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0.4em 0 0 0.6em;
+  }
+  ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
+    /* 行高比 p 高0.2 */
+    line-height: 1.8;
     margin: 0;
     padding: 0;
   }
-  li.navi{ /* 小頭目 */
-    padding: 0.1em 5em 0.1em 5em;
-    color: #15955c;
-    font-size: 1.2em;
+  p#title{
+    font-family: ti-eng, makinas;
+    font-size: 3em;
+    color: white;
+    text-align: right;
+    margin: 0;
+    padding: 1.4em 0.5em 0 0;
   }
-  a{ /* item */
-    display: block;
+  a{ /* 網址顏色，型藍色，沒有底線 */
     color: #2471A3; 
-    margin: 0.5em 0 0.5em 0;
-    padding: 0.1em 0.3em 0.1em 0.3em;
     text-decoration: none;
-    border-style: dotted;
-    border-width: 0.01em;
   }
   a:hover{
     text-decoration: underline;
   }
-<<<<<<< HEAD
-=======
-  ul, li{
-    line-height: 1.6;
-    margin: 0 auto 0 1em;
-    padding: 0 5% 0 5%;
+  .code{ /* 顯示code專用格式 */
+    font-family: code;
+    font-size: 1em;
+    color: black;
+    background-color: #F8F9F9;
+    border-style: outset;
+    border-width: 0.08em;      
+    margin: 0.6em 1.5em 0.2em 1.5em;
+    padding: 0 1em 0 1em;
   }
-  li{
-    display: block;
+/*行列-------------------------------------------------------------*/
+  /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
+  .column3{ /* Create 3 equal columns that floats next to each other */
     float: left;
+    width: 33.33%;
+    padding: 0.4em 0.25em 0 2.25em;
+    height: auto;
   }
->>>>>>> parent of f6c32f1... 5
+  .column2{ /* 2 columns version */
+    float: left;
+    width: 50%;
+    padding: 0.4em 0.25em 0 2.25em;
+    height: auto;
+  }
+  .row:after{ /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media (max-width: 750px){ /* Responsive layout */
+    .column3 {
+      width: 100%;
+    }
+  }
+  @media (max-width: 550px){ /* Responsive layout */
+    .column2 {
+      width: 100%;
+    }
+  }
+/*圖片-------------------------------------------------------------*/
+  img.big{
+    display: block;
+    margin: 1em auto auto auto;
+    width: 88%;
+  }
+  p.bigcap{
+    font-size: 0.85em;
+    color: white;
+    background-color: #2D2E2F;        
+    margin: 0 auto 0.8em auto;
+    padding: auto;
+    width: 88%;
+    text-align: left;
+    border-left: 1.2em solid #73C6B6;
+  }
+  img.mid{
+    display: block;
+    margin: 1em auto auto auto;
+    width: 75%;
+  }
+  p.midcap{
+    font-size: 0.85em;      color: white;
+    background-color: #2D2E2F;        
+    margin: 0 auto 0.8em auto;
+    padding: auto;
+    width: 75%;
+    text-align: left;
+    border-left: 1.2em solid #73C6B6;
+  }
+  img.little{
+    display: block;
+    margin: 1em auto auto auto;
+    width: 60%;
+  }
+  p.littlecap{
+    font-size: 0.85em;
+    color: white;
+    background-color: #2D2E2F;        
+    margin: 0 auto 0.8em auto;
+    padding: auto;
+    width: 60%;
+    text-align: left;
+    border-left: 1.2em solid #73C6B6;
+  }
+/*導航-------------------------------------------------------------*/
+  ul.navi{
+    list-style-type: none;
+    overflow: hidden;   
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    line-height: 0.6;        
+  }
+  li.navi{
+    float: left;
+    display: inline-block;
+  }
+  a.navi_a{ /* I, II, III... */
+    display: inline-block;
+    margin: 0;
+    padding: 0.1em 1em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: default;
+  }
+  li a:hover, li.navi:hover .navi_a{
+  /* 掃到屬於自己的任何 a 時，自己變色 */
+    background-color: #111;
+  }
+  .drop_content a:hover{
+  /* 同上對抗，自己變自己色 */
+    background-color: #f1f1f1;
+  }
+  li.navi:hover .drop_content{
+  /* 掃到 li 時，內容才drop */
+    display: block;
+  }
+  .drop_content{
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10em;
+    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .drop_content a{
+    margin: 0;
+    padding: 0.3em 1em;
+    display: block;
+    text-align: left;
+    color: #1B2631;
+    text-decoration: none;
+  } 
 /*-------------------------------------------------------------*/
