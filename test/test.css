@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*字體-------------------------------------------------------------*/
   @font-face{ /* 日系，有角 */
     font-family: makinas; 
@@ -225,3 +226,36 @@
     background-color: #CACFD2;
   }
 /*-------------------------------------------------------------*/
+=======
+      *{ /* width和height的範圍包含padding和border，但不包含margin */
+        box-sizing: border-box;
+      }  
+      html {
+        background-color: lavender;
+      }
+      body{
+        max-width: 1800px;
+        margin: 0 auto 1.5em auto;
+      }
+      header {
+        height: 9.375em;
+      }
+      main{
+        background-color: darkseagreen;
+      }
+      .column{
+        float: left;
+        width: 33.33%;
+        height: 300px;
+      }
+      .row:after{
+        content:"";
+        display: table;
+        clear: both;
+      }
+      @media (max-width: 900px){
+        .column{
+          width: 100%;
+        }
+      }
+>>>>>>> parent of f6c32f1... 5

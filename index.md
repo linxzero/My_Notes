@@ -1,5 +1,5 @@
 ## CyberOps
-2. [Linux Cmd](1.telecom/I.layer_1/ethernet.html)
+2. [Linux Cmd](1.telecom/1.layer_1/ethernet.html)
 2. []
 
 ## Microsoft Windows
