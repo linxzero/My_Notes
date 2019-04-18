@@ -76,17 +76,17 @@
     color: #2471A3;
     font-weight: normal;
     margin: 0;
-    padding: 0.8em 0 0 0.2em;
+    padding: 0.8em 0.2em 0 0.2em;
   }
   h3{
     font-size: 1.3em;
     margin: 0;
-    padding: 0.6em 0 0 0.4em;
+    padding: 0.6em 0.4em 0 0.4em;
   }
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
     margin: 0;
-    padding: 0.4em 0 0 0.6em;
+    padding: 0.4em 0.6em 0 0.6em;
   }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
     /* 行高比 p 高0.2 */
@@ -100,7 +100,7 @@
     color: white;
     text-align: right;
     margin: 0;
-    padding: 1.4em 0.5em 0 0;
+    padding: 1.4em 0.5em 0 0.5em;
   }
   a{ /* 網址顏色，型藍色，沒有底線 */
     color: #2471A3; 
