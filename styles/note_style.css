@@ -46,15 +46,16 @@
   div{ /* default div 冇任何格式 */
     margin: 0;
     padding: 0;
+    max-width: 60em;
     background-color: white;
   }
   div.block{ /* D1, D2, D3... */
-    float: left;
+    float: top;
     max-width: 60em;
     padding: 0 2% 2.5em 2%;
   }
   div.block_end{
-    float: left;
+    float: top;
     max-width: 60em;
     margin: 0 0 2em 0;
     padding: 0 2% 5em 2%;
