@@ -35,7 +35,7 @@
   body{
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 2em 1em 2em;
+    padding: 0 2% 1em 2%; /* 底邊灰色的闊度 */
   }
   header{ 
     min-height: 9.375em; 
@@ -43,56 +43,56 @@
     padding: 0;
   }
 /*內文-------------------------------------------------------------*/
-  div{ /* default div 冇任何格式 */
+  div{ 
     margin: 0;
-    padding: 0;
+    padding: 1em 0 2em 0; /* 總上下空間 */
+    max-width: 60em; /* 跟隨body */
     background-color: white;
   }
-  div.block{ /* D1, D2, D3... */
-    float: left;
-    max-width: 60em;
-    padding: 0 2.5em;
+  .block{
+    float: top;
   }
-  div.block_end{
-    float: left;
-    max-width: 60em;
-    margin: 0 0 2em 0;
-    padding: 0 2.5em 5em 2.5em;
-  }
-  div.list{ /* ul, ol, li... */
-    padding: 0.4em 0.25em 0 2.25em;
-  }
-  h1{
-    font-family: h1;
-    font-size: 2.5em;
-    color: #117A65;
-    font-weight: normal;
+  ul{
+    list-style-type: none;
     margin: 0;
-    padding: 1.2em 0 0 0;
+    padding: 0 2% 0 4%; /* 總左右空間 */
   }
-  h2{ 
-    font-family: h2;
-    font-size: 1.8em;
-    color: #2471A3;
-    font-weight: normal;
-    margin: 0;
-    padding: 0.8em 0 0 0.2em;
-  }
-  h3{
-    font-size: 1.3em;
-    margin: 0;
-    padding: 0.6em 0 0 0.4em;
-  }
-  p{ /* 內文一般行高，1.6 */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0.4em 0 0 0.6em;
-  }
-  ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
-    /* 行高比 p 高0.2 */
-    line-height: 1.8;
+  li{
     margin: 0;
     padding: 0;
+    min-height: 9em; /* 小頭目(.navi_a)的最小高度，標準是三行小頭目看起來樣子 */
+  }
+  a{
+    color: #2471A3; 
+    text-decoration: none;
+  }
+  a:hover:not(.navi_a){
+    text-decoration: underline;
+  }
+/*//////////////////////////////////////////*/
+  .navi_a{ /* 小頭目 */
+    display: block;
+    float: left;
+    max-width: 5em; /* 要他自動隔行 */
+    padding: 0.9em 0 0 0; /* 與上實線空間 */
+    color: #229954;
+    border-top: solid;
+    font-size: 1.5em;
+    line-height: 1.1;
+    cursor: default;
+  }
+  .drop_content a{
+    display: block;
+    margin: 0.3em 2% 0 45%; /* 與右邊空白，與小頭目距離 */
+    padding: 0 0.3em 0 0.3em; /* 虛線格內的空間 */
+    border-style: dotted;
+    border-width: 0.02em;
+  }
+/*//////////////////////////////////////////*/
+  p{ /* 因為title用到p，所以為了一致，tree都加這句 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0.4em 0.6em 0 0.6em;
   }
   p#title{
     font-family: ti-eng, makinas;
@@ -100,149 +100,6 @@
     color: white;
     text-align: right;
     margin: 0;
-    padding: 1.4em 0.5em 0 0;
+    padding: 1.4em 0.5em 0 0.5em;
   }
-  a{ /* 網址顏色，型藍色，沒有底線 */
-    color: #2471A3; 
-    text-decoration: none;
-  }
-  a:hover{
-    text-decoration: underline;
-  }
-  .code{ /* 顯示code專用格式 */
-    font-family: code;
-    font-size: 1em;
-    color: black;
-    background-color: #F8F9F9;
-    border-style: outset;
-    border-width: 0.08em;      
-    margin: 0.6em 1.5em 0.2em 1.5em;
-    padding: 0 1em 0 1em;
-  }
-/*行列-------------------------------------------------------------*/
-  /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
-  .column3{ /* Create 3 equal columns that floats next to each other */
-    float: left;
-    width: 33.33%;
-    padding: 0.4em 0.25em 0 2.25em;
-    height: auto;
-  }
-  .column2{ /* 2 columns version */
-    float: left;
-    width: 50%;
-    padding: 0.4em 0.25em 0 2.25em;
-    height: auto;
-  }
-  .row:after{ /* Clear floats after the columns */
-    content: "";
-    display: table;
-    clear: both;
-  }
-  @media (max-width: 750px){ /* Responsive layout */
-    .column3 {
-      width: 100%;
-    }
-  }
-  @media (max-width: 550px){ /* Responsive layout */
-    .column2 {
-      width: 100%;
-    }
-  }
-/*圖片-------------------------------------------------------------*/
-  img.big{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 88%;
-  }
-  p.bigcap{
-    font-size: 0.85em;
-    color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0.8em auto;
-    padding: auto;
-    width: 88%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-  img.mid{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 75%;
-  }
-  p.midcap{
-    font-size: 0.85em;      color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0.8em auto;
-    padding: auto;
-    width: 75%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-  img.little{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 60%;
-  }
-  p.littlecap{
-    font-size: 0.85em;
-    color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0.8em auto;
-    padding: auto;
-    width: 60%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-/*導航-------------------------------------------------------------*/
-  ul.navi{
-    list-style-type: none;
-    overflow: hidden;   
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    line-height: 0.6;        
-  }
-  li.navi{
-    float: left;
-    display: inline-block;
-  }
-  a.navi_a{ /* I, II, III... */
-    display: inline-block;
-    margin: 0;
-    padding: 0.1em 1em;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: default;
-  }
-  li a:hover, li.navi:hover .navi_a{
-  /* 掃到屬於自己的任何 a 時，自己變色 */
-    background-color: #111;
-  }
-  .drop_content a:hover{
-  /* 同上對抗，自己變自己色 */
-    background-color: #f1f1f1;
-  }
-  li.navi:hover .drop_content{
-  /* 掃到 li 時，內容才drop */
-    display: block;
-  }
-  .drop_content{
-    margin: 0;
-    padding: 0;
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 10em;
-    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .drop_content a{
-    margin: 0;
-    padding: 0.3em 1em;
-    display: block;
-    text-align: left;
-    color: #1B2631;
-    text-decoration: none;
-  } 
 /*-------------------------------------------------------------*/
