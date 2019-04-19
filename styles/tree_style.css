@@ -102,4 +102,10 @@
     margin: 0;
     padding: 1.4em 0.5em 0 0.5em;
   }
+  span.navi_span_home .drop_content a{
+    color: grey;
+  }
+  span.navi_span_home a.navi_a{
+    color: #515A5A;
+  }
 /*-------------------------------------------------------------*/
