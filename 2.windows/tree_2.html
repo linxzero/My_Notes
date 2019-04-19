@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/my_notes/styles/tree_style.css" rel="stylesheet" type="text/css">
+    <link href="../styles/tree_style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){
-        $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
+        $(".navi_span").load("../navigations/navi_bar_2.html");
+        $(".navi_span_home").load("../navigations/navi_bar_home.html");
       });
     </script>
     <title>Windows</title>
@@ -18,11 +20,15 @@
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p onclick="hidebar()" id="title">Windows</p>
+      <p id="title">Windows</p>
     </header>
-    <ul><span class="navi_span"></span></ul>
-<!--------------------------------------------------------------------------------> 
-
+<!-------------------------------------------------------------------------------->
+    <div class="block">
+      <ul class="tree">
+        <span class="navi_span"></span>
+        <span class="navi_span_home"></span>
+      </ul> 
+    </div>
 <!-------------------------------------------------------------------------------->    
   </body>
 </html>
