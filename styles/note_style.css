@@ -109,6 +109,7 @@
     border-width: 0.08em;      
     margin: 0.6em 0.6em 0.2em 0.6em;
     padding: 0 1em 0 1em;
+    word-break: break-all;
   }
   .note{ /* 顯示note專用格式 */
     font-size: 1em;
