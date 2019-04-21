@@ -39,7 +39,13 @@
       <p>Windows 2000、Windows XP、Windows Server 2003 中是 "Windows Registry Editor Version 5.00"<br>Windows 98、Windows NT 4.0 則是 "REGEDIT4"</p>
 
       <h3>刪除</h3>
-      <p></p>
+      <p>若要以 .reg 來刪除登錄機碼 (Key)，請在 RegistryPath 前面加上減號</p>
+      <p class="code">[-HKEY_LOCAL_MACHINE\Software\Test]</p>
+      <p>若要以 .reg 來刪除登錄值 (Value)，請在 DataItemName 的等號後加上減號</p>
+      <p class="code">"TestValue"=-</p>
+
+      <h2>Delete program's entry from registry</h2>
+      <p>1) HKEY_LOCAL_MACHINE → Software, and identify the program then right click and delete<br>2) HKEY_CURRENT_USER → Software, and identify the program then right click and delete</p>
     </div>
 <!--------------------------------------------------------------------------------> 
     <script>
