@@ -21,7 +21,7 @@
   }
   @font-face{ /* Code用的字體 */
     font-family: code; 
-    src: url(../fonts/LiberationMono-Regular.ttf);
+    src: url(../fonts/SFMono-Light.otf);
   }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */

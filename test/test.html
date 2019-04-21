@@ -29,10 +29,15 @@
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
       <h1>sum 41 + -= * /中字體</h1>
-      <p>sum 41 + -= * /中字體</p>
-      <p class="code" style="font-family: code2, code">sum 41 + -= * /中字體/ code 2</p>
-      <p class="code">sum 41 + -= * /中字體/ code normal</p>
-      <p>parse-dense-mode</p>
+      <p>sum 41 + -= * /中字體</p>>
+      <p class="code">/* Chrome only: */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .test-class { padding-top:100px }
+}
+/* Firefox */
+@-moz-document url-prefix() {
+    .test-class { padding-top:100px }
+  }</p>
     </div>
 <!-------------------------------------------------------------------------------->  
     <script>
