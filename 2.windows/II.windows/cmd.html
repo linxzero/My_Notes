@@ -31,12 +31,12 @@
     <div class="block" onclick="hidebar()">
       <h2>Routing</h2>
       <h3>Add Route</h3>
-      <p class="code">route add <font color="grey">des-network</font> mask <font color="grey">subnet-mask gateway</font></p>
+      <p class="code">route add <font color="silver">des-network</font> mask <font color="silver">subnet-mask gateway</font></p>
       <h3>Check Route</h3>
       <p class="code">route print [-4]</p>
       <p>[4] Specifies the IPv4 routing table</p>
       <h3>Delete Route</h3>
-      <p class="code">route delete <font color="grey">des-network</font></p>
+      <p class="code">route delete <font color="silver">des-network</font></p>
 
       <h2>Network</h2>
       <h3>tracert</h3>
@@ -44,13 +44,13 @@
       <p class="code">tracert des-ip</p>
       <h3>nslookup</h3>
       <p>查看 DNS 上的資料</p>
-      <p class="code">nslookup <font color="grey">name</font><br>e.g. nslookup www.yahoo.com.tw</p>
+      <p class="code">nslookup <font color="silver">name</font><br>e.g. nslookup www.yahoo.com.tw</p>
       <p>Server：DNS server 名稱<br>Name：yahoo 伺服器的真正名字<br>Alias：yahoo 伺服器的別名</p>
       <h3>arp</h3>
       <p>找出本機中 IP 與 MAC 的配對紀錄</p>
       <p class="code">arp -a</p>
       <p>可以利用此功能找出 LAN 內的所有 devices</p>
-      <p class="code">for /L %i in (<font color="grey">star, step, end</font>) do <font color="grey">command</font></p>
+      <p class="code">for /L %i in (<font color="silver">star, step, end</font>) do <font color="silver">command</font></p>
       <p>例子：</p>
       <p class="code">arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
       <p>arp -d：本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除<br>(1,1,254)：由 1 ping 到 254，每次加 1<br>-n 1：每次發 1 個 echo request<br>-w 200：200ms to wait for each reply</p>
@@ -63,7 +63,7 @@
       <p>Show all the dynamic ARP records</p>
 
       <h2>Runas (sudo)</h2>
-      <p class="code">runas /user:<font color="grey">user-name program</font><br>e.g. runas /user:administrator cmd</p>
+      <p class="code">runas /user:<font color="silver">user-name program</font><br>e.g. runas /user:administrator cmd</p>
     </div>
 <!--------------------------------------------------------------------------------> 
     <script>
