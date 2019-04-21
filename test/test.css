@@ -27,6 +27,10 @@
     font-family: code2; 
     src: url(../fonts/CONSOLA.ttf);
   }
+  @font-face{ /* Code用的字體 */
+    font-family: code3; 
+    src: url(../fonts/LiberationMono-Regular.ttf);
+  }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
