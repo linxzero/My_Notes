@@ -40,6 +40,10 @@
       <h3>Step2. Port Forwarding</h3>
       <p>Set the port forwarding rule on your router so the host IP can be reached through the Internet, like this</p>
       <img src="images/remote desktop port forward.PNG" alt="" class="big">
+      <p>3389 is the default TCP port used for RDP (Remote Desktop Protocol)</p>
+      <h3>Step2.1 Change Port</h3>
+      <p>For more security you could change the port to any other else, from 49152 - 65535<br>Registry Editor → HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp → PortNumber → 50001</p>
+      <img src="images/change port.PNG" alt="" class="little">
       <h3>Step3. </h3>
 
       <h2>Turn off theme/wallpaper syncing</h2>
