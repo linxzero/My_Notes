@@ -46,11 +46,18 @@
       <p>查看 DNS 上的資料。</p>
       <p class="code">nslookup <font color="grey">name</font><br>e.g. nslookup www.yahoo.com.tw</p>
       <p>Server：DNS server 名稱<br>Name：yahoo 伺服器的真正名字<br>Alias：yahoo 伺服器的別名</p>
+      <h2>arp</h2>
+      <p>找出本機中 IP 與 MAC 的配對紀錄。</p>
+      <p class="code">arp -a</p>
+      <p>可以利用此功能找出 LAN 內的所有 devices</p>
+      <p class="code">for /L %i in (<font color="grey">star, step, end</font>) do <font color="grey">command</font></p>
+      <p>因為本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除。</p>
+      <p class="code">e.g.<<br>arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
+      <p>(1,1,254)：由 1 ping 到 254，每次加 1<br>-n 1：每次發 1 個 echo request<br>-w 200：200ms to wait for each reply</p>
 
       <h2>Runas (sudo)</h2>
       <p class="code">runas /user:<font color="grey">peter program</font><br>e.g. runas /user:administrator cmd</p>
     </div>
-
 <!--------------------------------------------------------------------------------> 
     <script>
       function hidebar(){
