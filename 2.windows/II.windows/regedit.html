@@ -33,7 +33,7 @@
       <h3>語法</h3>
       <p class="code">RegistryEditorVersion<br><br>[RegistryPath1]<br>"DataItemName1"="DataType1:DataValue1"<br>"DataItemName2"="DataType2:DataValue2"<br><br>[RegistryPath2]<br>"DataItemName3"="DataType3:DataValue3"</p>
       <p>例子：</p>
-      <p class="code">Windows Registry Editor Version 5.00<br><br>[HKEY_LOCAL_ MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]<br>"DefaultUserName"="dc"<br>"DefaultPassword"="88888"<br>"AutoAdminLogon"="1"</p>
+      <p class="code">Windows Registry Editor Version 5.00<br><br>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]<br>"DefaultUserName"="dc"<br>"DefaultPassword"="88888"<br>"AutoAdminLogon"="1"</p>
 
       <h3>版本</h3>
       <p>Windows 2000、Windows XP、Windows Server 2003 中是 "Windows Registry Editor Version 5.00"<br>Windows 98、Windows NT 4.0 則是 "REGEDIT4"</p>
@@ -44,7 +44,11 @@
       <p>若要以 .reg 來刪除登錄值 (Value)，請在 DataItemName 的等號後加上減號</p>
       <p class="code">"TestValue"=-</p>
 
-      <h2>Delete program's entry from registry</h2>
+      <h3>Export</h3>
+      <p>有時發現執行了 .reg 但沒有任何改變，可以在 Key 上右鍵 export 出它的 .reg 來查看，可能會是 path 打錯了</p>
+
+      <h2>御載軟件</h2>
+      <p>御載軟件後，想把所有屬於它的註冊檔都鏟走，可在下面兩個地方做</p>
       <p>1) HKEY_LOCAL_MACHINE → Software, and identify the program then right click and delete<br>2) HKEY_CURRENT_USER → Software, and identify the program then right click and delete</p>
     </div>
 <!--------------------------------------------------------------------------------> 
