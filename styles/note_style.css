@@ -103,8 +103,8 @@
   .code{ /* 顯示code專用格式 */
     font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-size: 1em;
-    color: #0B0B0B;
-    background-color: #F4F6F6;
+    color: #121212;
+    background-color: #F7F9F9;
     border-style: outset;
     border-width: 0.08em;      
     margin: 0.6em 0.6em 0.2em 0.6em;
@@ -119,6 +119,9 @@
     margin: 0.6em 0.6em 0.2em 0.6em;
     padding: 0 1em 0 1em;
   }  
+  .lightup{
+    color: #B2BABB;
+  }
 /*行列-------------------------------------------------------------*/
   /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
   .column3{ /* Create 3 equal columns that floats next to each other */
