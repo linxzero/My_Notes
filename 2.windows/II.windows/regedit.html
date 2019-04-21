@@ -34,7 +34,7 @@
       <p class="code">RegistryEditorVersion<br><br>[RegistryPath1]<br>"DataItemName1"=DataType1:DataValue1<br>"DataItemName2"=DataType2:DataValue2<br><br>[RegistryPath2]<br>"DataItemName3"=DataType3:DataValue3</p>
       <p>例子：</p>
       <p class="code">Windows Registry Editor Version 5.00<br><br>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]<br>"DefaultUserName"="dc"<br>"DefaultPassword"="88888"<br>"AutoAdminLogon"="1"</p>
-      <p>字串(REG_SZ)類型是不需要加 DataType，只要有引號引起來<br>其他類型則要註明 DataType，但不用加引號</p>
+      <p>字串(REG_SZ)類型不需要加 DataType，只要有引號引起來<br>其他類型則需要註明 DataType，但不用加引號</p>
       <p class="code">"DataItemName2"=hex(2):73,00,79,00,73,00,74,00<br>"DataItemName3"=hex(7):5c,00,44,00,65,00,76,00<br>"DataItemName4"=dword:00000006</p>
 
       <h3>版本</h3>

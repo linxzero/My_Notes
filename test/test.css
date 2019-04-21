@@ -23,6 +23,10 @@
     font-family: code; 
     src: url(../fonts/UbuntuMono-Regular.ttf);
   }
+  @font-face{ /* Code用的字體 */
+    font-family: code2; 
+    src: url(../fonts/RobotoMono-Regular.ttf);
+  }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
