@@ -34,7 +34,7 @@
       <p class="code">route add <font color="grey">des-network</font> mask <font color="grey">subnet-mask gateway</font></p>
       <h3>Check Route</h3>
       <p class="code">route print [-4]</p>
-      <p>[4] specifies the IPv4 routing table.</p>
+      <p>[4] Specifies the IPv4 routing table.</p>
       <h3>Delete Route</h3>
       <p class="code">route delete <font color="grey">des-network</font></p>
 
@@ -54,6 +54,13 @@
       <p>因為本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除。</p>
       <p class="code">e.g.<<br>arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
       <p>(1,1,254)：由 1 ping 到 254，每次加 1<br>-n 1：每次發 1 個 echo request<br>-w 200：200ms to wait for each reply</p>
+
+      <h2>Find</h2>
+      <p>好用的查找功能。</p>
+      <p class="code">route print -4 | find "5256"</p>
+      <p>Show the records with Metric 5256.</p>
+      <p class="code">arp -a | find "dynamic"</p>
+      <p>Show the dynamic ARP records.</p>
 
       <h2>Runas (sudo)</h2>
       <p class="code">runas /user:<font color="grey">peter program</font><br>e.g. runas /user:administrator cmd</p>
