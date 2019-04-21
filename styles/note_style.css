@@ -35,7 +35,7 @@
   body{
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 2% 0 2%;
+    padding: 0 2% 2em 2%;
   }
   header{ 
     min-height: 9.375em; 
@@ -53,12 +53,6 @@
     float: top;
     max-width: 60em;
     padding: 0 2% 2.5em 2%;
-  }
-  div.block_end{
-    float: top;
-    max-width: 60em;
-    margin: 0 0 2em 0;
-    padding: 0 2% 5em 2%;
   }
   div.list{ /* ul, ol, li... */
     padding: 0.4em 0.25em 0 2.25em;
