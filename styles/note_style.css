@@ -19,10 +19,6 @@
     font-family: para; 
     src: url(../fonts/NotoSansTC-Regular.otf);
   }
-  @font-face{ /* Code用的字體 */
-    font-family: code; 
-    src: url(../fonts/SFMono-Semibold.otf);
-  }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
@@ -105,10 +101,10 @@
     text-decoration: underline;
   }
   .code{ /* 顯示code專用格式 */
-    font-family: code;
+    font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-size: 1em;
-    color: #FCFCFC;
-    background-color: #1D1D1D;
+    color: #1D1D1D;
+    background-color: #F4F6F6;
     border-style: outset;
     border-width: 0.08em;      
     margin: 0.6em 0.6em 0.2em 0.6em;

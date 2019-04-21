@@ -105,7 +105,7 @@
     text-decoration: underline;
   }
   .code{ /* 顯示code專用格式 */
-    font-family: code;
+    font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-size: 1em;
     color: #FCFCFC;
     background-color: #1D1D1D;
