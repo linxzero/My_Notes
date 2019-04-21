@@ -103,7 +103,7 @@
   .code{ /* 顯示code專用格式 */
     font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-size: 1em;
-    color: #1D1D1D;
+    color: #0B0B0B;
     background-color: #F4F6F6;
     border-style: outset;
     border-width: 0.08em;      
