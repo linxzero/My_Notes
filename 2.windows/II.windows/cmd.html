@@ -52,7 +52,7 @@
       <p>可以利用此功能找出 LAN 內的所有 devices</p>
       <p class="code">for /L %i in (<font color="grey">star, step, end</font>) do <font color="grey">command</font></p>
       <p>因為本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除。</p>
-      <p class="code">e.g.<<br>arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
+      <p class="code">e.g.<br>arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
       <p>(1,1,254)：由 1 ping 到 254，每次加 1<br>-n 1：每次發 1 個 echo request<br>-w 200：200ms to wait for each reply</p>
 
       <h2>Find</h2>
