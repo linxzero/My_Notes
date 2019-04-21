@@ -21,7 +21,7 @@
   }
   @font-face{ /* Code用的字體 */
     font-family: code; 
-    src: url(../fonts/SFMono-Light.otf);
+    src: url(../fonts/SFMono-Semibold.otf);
   }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
@@ -107,8 +107,8 @@
   .code{ /* 顯示code專用格式 */
     font-family: code;
     font-size: 1em;
-    color: black;
-    background-color: #F8F9F9;
+    color: #FCFCFC;
+    background-color: #1D1D1D;
     border-style: outset;
     border-width: 0.08em;      
     margin: 0.6em 0.6em 0.2em 0.6em;
