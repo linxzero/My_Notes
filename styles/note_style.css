@@ -120,6 +120,14 @@
     margin: 0.6em 0.6em 0.2em 0.6em;
     padding: 0 1em 0 1em;
   }
+  .note{ /* 顯示note專用格式 */
+    font-size: 1em;
+    color: #34495E;
+    background-color: #FEF9E7;
+    border-left: 0.8em solid #BA4A00;   
+    margin: 0.6em 0.6em 0.2em 0.6em;
+    padding: 0 1em 0 1em;
+  }  
 /*行列-------------------------------------------------------------*/
   /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
   .column3{ /* Create 3 equal columns that floats next to each other */

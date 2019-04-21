@@ -3,20 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="test.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
+      });
+    </script>
+    <title>Cmd</title>
     <style>
-      header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
+      header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
+      li.navi a#I{background-color: #4CAF50;} /* which one be green */
     </style>
   </head>
 <!-------------------------------------------------------------------------------->
   <body>
-    <header style="min-height: 9.375em; margin: 0; padding: 0; width: 20em;">
+    <header>
+      <p onclick="hidebar()" id="title">Cmd</p>
     </header>
-    <div style="float: left; background-color: red; width: 20em;">
-      <p>hello world</p>
+    <ul class="navi">
+      <span class="navi_span_home"></span>
+      <span class="navi_span"></span>
+    </ul>
+<!--D1----------------------------------------------------------------------------> 
+    <div class="block" onclick="hidebar()">
+      <h1></h1>
+      <p class="code">sum 41</p>
+      <p class="note">sum 41</p>
     </div>
-<!-------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------->  
+    <script>
+      function hidebar(){
+        var x=document.getElementsByClassName("drop_content");
+        x.style.display="none";
+      };
+    </script>  
   </body>
 </html>
+
+
+
 
 
 
