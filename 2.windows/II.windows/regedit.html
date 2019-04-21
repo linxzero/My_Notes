@@ -12,7 +12,7 @@
         $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
       });
     </script>
-    <title>註冊檔</title>
+    <title>.reg</title>
     <style>
       header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
       li.navi a#II{background-color: #4CAF50;} /* which one be green */
@@ -21,7 +21,7 @@
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p onclick="hidebar()" id="title">註冊檔</p>
+      <p onclick="hidebar()" id="title">.reg</p>
     </header>
     <ul class="navi">
       <span class="navi_span_home"></span>
@@ -29,10 +29,17 @@
     </ul>
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
-      <h2>.reg 的撰寫語法</h2>
+      <h2>.reg 的撰寫</h2>
+      <h3>語法</h3>
       <p class="code">RegistryEditorVersion<br><br>[RegistryPath1]<br>"DataItemName1"="DataType1:DataValue1"<br>"DataItemName2"="DataType2:DataValue2"<br><br>[RegistryPath2]<br>"DataItemName3"="DataType3:DataValue3"</p>
       <p>例子：</p>
       <p class="code">Windows Registry Editor Version 5.00<br><br>[HKEY_LOCAL_ MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]<br>"DefaultUserName"="dc"<br>"DefaultPassword"="88888"<br>"AutoAdminLogon"="1"</p>
+
+      <h3>版本</h3>
+      <p>Windows 2000、Windows XP、Windows Server 2003 中是 "Windows Registry Editor Version 5.00"<br>Windows 98、Windows NT 4.0 則是 "REGEDIT4"</p>
+
+      <h3>刪除</h3>
+      <p></p>
     </div>
 <!--------------------------------------------------------------------------------> 
     <script>
