@@ -34,12 +34,12 @@
       <p>"Receiver"<br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成</p>
       <h3>2. Data Integrity</h3>
       <p>"Integrity"<br>訊息內容要完整無缺，任何的更改都能被發覺<br>透過 MD5 or SHA hash-generating algorithms 來完成<br>( MD5 - Message Digest version 5；SHA - Secure Hash Algorithm )</p>
-      <h3>3. Origin Authentication</h3>
+      <h3>3. Origin Authenticity</h3>
       <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息<br>用 HMAC 來完成<br>( HMAC - Hash Message Authentication Code )</p>
       <h3>4. Non-Repudiation</h3>
       <p>"不能否認"<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴</p>
 
-      <h2>Integrity & XXX</h2>
+      <h2>Integrity & Authenticity</h2>
       <h3>Hash</h3>
       <div class="list">
         <ul>
@@ -47,10 +47,16 @@
           <li>Fixed-Length：任何長度的訊息都會消化成固定長度的 hash</li>
         </ul>
       </div>
-      <h3>MD5 (Message Digest version 5)</h3>
-      <p>由 Ron Rivest 於 1992 年發明，生成 128-bit 長 hash</p>
-      <h3>SHA-1 (Secure Hash Algorithm 1)</h3>
-      <p>由 US NIST 於 1994 年發明，與 MD5 很相似，生成 160-bit 長 hash</p>
+      <h3>MD5</h3>
+      <p>(Message Digest version 5)<br>由 Ron Rivest 於 1992 年發布，生成 128-bit 長的 hash</p>
+      <h3>SHA-1</h3>
+      <p>(Secure Hash Algorithm 1)<br>由 US. NIST 於 1994 年發布，與 MD5 很相似，生成 160-bit 長的 hash</p>
+      <h3>SHA-2</h3>
+      <p>(224，256，384，512)<br>由 US. NIST 於 2001 年發布，生成 224-bit，256-bit，384-bit，512-bit 長的 hash</p>
+      <h3>HMAC</h3>
+      <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道 Secret Key<br></p>
+
+      <h2>Confidentiality</h2>
 
       <h2>Key</h2>
       <p>Key Length<br>又稱為 Key Size，單位為 bit<br><br>Key Space<br>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條</p>
