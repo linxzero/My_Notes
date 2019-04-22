@@ -58,18 +58,29 @@
 
       <h1>Confidentiality</h1>
       <h2>Symmetric encryption algorithm</h2>
-      <h3>DES</h3>
-      <p></p>
-      <h3>3DES</h3>
-      <p></p>
+      <p>對稱加密，即加密和解密用的是同一條 key<br>在建立溝通時，每個 communicating party 都要知道同一條 key，叫 Pre-shared Key (又叫 Secret Key)</p>
+      <h3 class="heritage">DES</h3>
+      <p class="heritage">(Data Encryption Standard)<br>Timeline - 1976<br>Key size - 56 bits<br>Block size- 64 bits<br>Speed - Medium<br>Crack - 6.4 days</p>
+      <h3 class="heritage">3DES</h3>
+      <p class="heritage">(Triple DES)<br></p>
       <h3>AES</h3>
-      <p></p>
+      <p>(Advanced Encryption Standard)<br></p>
+      <h3>SEAL</h3>
+      <p>(Software-Optimized Encryption Algorithm)<br></p>
+      <h3>RC</h3>
+      <p>(Rivest Cipher)<br><br></p>
+      <div class="list">
+        <ul>
+          <li>對稱加密好處：佔較少資源，速度較快</li>
+          <li>Block cipher：每次對特定長度的 plaintext 加密，而通常密文為 64-bit 或 128-bit</li>
+          <li>Stream cipher：每次對 1 Byte 或 1 Bit 的 plaintext 加密</li>
+        </ul>
+      </div>
       <h2>Asymmetric encryption algorithm</h2>
 
 
       <h2>Key</h2>
       <p>Key Length<br>又稱為 Key Size，單位為 bit<br><br>Key Space<br>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條</p>
-
 
       <h2>加密 & 解密 (Cryptography & Cryptanalysis)</h2>
       <h3>加密</h3>
