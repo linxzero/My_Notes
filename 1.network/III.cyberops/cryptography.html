@@ -12,7 +12,7 @@
         $(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
       });
     </script>
-    <title>Attack</title>
+    <title>Cryptography 密碼學</title>
     <style>
       header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
       li.navi a#III{background-color: #4CAF50;} /* which one be green */
@@ -21,7 +21,7 @@
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p onclick="hidebar()" id="title">Attack</p>
+      <p onclick="hidebar()" id="title">Cryptography 密碼學</p>
     </header>
     <ul class="navi">
       <span class="navi_span_home"></span>
@@ -29,7 +29,14 @@
     </ul>
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
-      <h1></h1>
+      <h2>保密溝通 (Securing Communication) 四要素</h2>
+      <h3>1. Confidentially</h3>
+      <p>"Receiver"<br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成</p>
+      <h3>2. Data Integrity</h3>
+      <p>"Integrity"<br>訊息內容要完整無缺，任何的更改都能被發覺<br>透過 MD5 or SHA hash-generating algorithms 來完成<br>( MD5 - Message Digest version 5；SHA - Secure Hash Algorithm )</p>
+      <h3>3. Origin Authentication</h3>
+      <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息<br></p>
+
     </div>
 <!-------------------------------------------------------------------------------->  
     <script>
