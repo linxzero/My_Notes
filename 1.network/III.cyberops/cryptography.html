@@ -35,7 +35,9 @@
       <h3>2. Data Integrity</h3>
       <p>"Integrity"<br>訊息內容要完整無缺，任何的更改都能被發覺<br>透過 MD5 or SHA hash-generating algorithms 來完成<br>( MD5 - Message Digest version 5；SHA - Secure Hash Algorithm )</p>
       <h3>3. Origin Authentication</h3>
-      <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息<br></p>
+      <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息<br>用 HMAC 來完成<br>( HMAC - Hash Message Authentication Code )</p>
+      <h3>4. Non-Repudiation</h3>
+      <p>"不能否認"<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴</p>
 
     </div>
 <!-------------------------------------------------------------------------------->  
