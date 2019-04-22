@@ -30,16 +30,16 @@
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
       <h1>保密溝通 (Securing Communication) 四要素</h1>
-      <h3>1. Confidentially</h3>
+      <h2>1. Confidentially</h2>
       <p>"Receiver"<br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成</p>
-      <h3>2. Data Integrity</h3>
+      <h2>2. Data Integrity</h2>
       <p>"Integrity"<br>訊息內容要完整無缺，任何的更改都能被發覺<br>透過 MD5 or SHA hash-generating algorithms 來完成<br>( MD5 - Message Digest version 5；SHA - Secure Hash Algorithm )</p>
-      <h3>3. Origin Authenticity</h3>
+      <h2>3. Origin Authenticity</h2>
       <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息<br>用 HMAC 來完成<br>( HMAC - Hash Message Authentication Code )</p>
-      <h3>4. Non-Repudiation</h3>
+      <h2>4. Non-Repudiation</h2>
       <p>"不能否認"<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴</p>
 
-      <h2>Integrity & Authenticity</h2>
+      <h1>Integrity & Authenticity</h1>
       <h3>Hash</h3>
       <div class="list">
         <ul>
@@ -56,10 +56,15 @@
       <h3>HMAC</h3>
       <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key<br></p>
 
-      <h2>Confidentiality</h2>
-      <h3>Symmetric encryption algorithm</h3>
+      <h1>Confidentiality</h1>
+      <h2>Symmetric encryption algorithm</h2>
+      <h3>DES</h3>
       <p></p>
-      <h3>Asymmetric encryption algorithm</h3>
+      <h3>3DES</h3>
+      <p></p>
+      <h3>AES</h3>
+      <p></p>
+      <h2>Asymmetric encryption algorithm</h2>
 
 
       <h2>Key</h2>
