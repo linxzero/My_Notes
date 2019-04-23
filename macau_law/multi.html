@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Multi</title>
 </head>
-<style>
+<!------Script-------------------------------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+  	$("#show").click(function(){
+    	$(".ans").css("color", "red");
+  	});
+  	$("#hide").click(function(){
+    	$(".ans").css("color", "black");
+  	});
+	});
+	</script>
+<!------Style--------------------------------->
+	<style>
 	* {
 		font-family: "Microsoft JhengHei";
+		color: black;
+	}
+	p {
+		margin: 0;
+		padding: 0;
 	}
 	body {margin:0;}
 	ul {
@@ -21,50 +39,77 @@
 	li {
   		float: left;
 	}
-	li a {
+	.navi_item {
   		display: block;
   		color: white;
   		text-align: center;
   		padding: 14px 16px;
   		text-decoration: none;
 	}
-	li a:hover {
+	.navi_item:hover {
 	 	background-color: #111;
 	}
 	div	{
 		padding: 20px;
 		margin-top: 30px;
 	}
-</style>
-<body>
+	</style>
+<!------Navigation---------------------------->
+	<body>
 	<ul> <!-- navigation -->
-  		<li><a href="#I">I</a></li>
-  		<li><a href="#II">II</a></li>
-  		<li><a href="#III">III</a></li>
-  		<li><a href="#IV">IV</a></li>
-  		<li><a href="#V">V</a></li>
-  		<li><a href="#VI">VI</a></li>
+  		<li><a class="navi_item" href="#I">I</a></li>
+  		<li><a class="navi_item" href="#II">II</a></li>
+  		<li><a class="navi_item" href="#III">III</a></li>
+  		<li><a class="navi_item" href="#IV">IV</a></li>
+  		<li><a class="navi_item" href="#V">V</a></li>
+  		<li><a class="navi_item" href="#VI">VI</a></li>
+  		<li><p class="navi_item" id="show">Show</p></li>
+  		<li><p class="navi_item" id="hide">Hide</p></li>
 	</ul>
-<!-------------------------------------------->
+<!------Multiple Choice----------------------->
 <div>
 <h2 id="I"><br></h2>
-<h2>I</h2>
-<p><br><br><br><br><br></p>
+<h2 class="ans">I</h2>
+<p><br><br><br><br><br>
+
+</p>
+
+
 <h2 id="II"><br></h2>
 <h2>II</h2>
-<p><br><br><br><br><br></p>
+<p><br><br><br><br><br>
+
+</p>
+
+
 <h2 id="III"><br></h2>
 <h2>III</h2>
-<p><br><br><br><br><br></p>
+<p><br><br><br><br><br>
+
+</p>
+
+
 <h2 id="IV"><br></h2>
 <h2>IV</h2>
-<p><br><br><br><br><br></p>
+<p><br><br><br><br><br>
+
+</p>
+
+
 <h2 id="V"><br></h2>
 <h2>V</h2>
-<p><br><br><br><br><br></p>
+<p><br><br><br><br><br>
+
+</p>
+
+
 <h2 id="VI"><br></h2>
 <h2>VI</h2>
-<p><br><br><br><br><br></p>
+<p><br><br><br><br><br>
+
+</p>
+
+
 </div>
 <!-------------------------------------------->
 <div>
