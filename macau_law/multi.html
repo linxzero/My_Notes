@@ -9,11 +9,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
+	$(".more").hide();
   	$("#show").click(function(){
-    	$(".ans").css("color", "#58D68D");
-  	});
-  	$("#hide").click(function(){
-    	$(".ans").css("color", "#444444");
+  		if ($(".ans").css("color")=="rgb(82, 190, 128)") {
+  			$(".ans").css("color", "rgb(68, 68, 68)");
+  		}
+  		else {
+  			$(".ans").css("color", "rgb(82, 190, 128)");
+  		}
+    	$(".more").toggle();
   	});
 	});
 	</script>
@@ -22,7 +26,7 @@
 	* {
 		box-sizing: border-box;
 		font-family: "Microsoft JhengHei";
-		color: #444444;
+		color: rgb(68, 68, 68);
 		margin: 0;
 		padding: 0;
 	}
@@ -54,8 +58,10 @@
 	a {
 		font-size: 1.2em;
 		font-weight: bold;
-		color: #2D2D2D;
 		text-decoration: none;
+	}
+	.more {
+		color: rgb(82, 190, 128);
 	}
 	</style>
 <!------Navigation---------------------------->
@@ -67,43 +73,157 @@
   		<li><a class="navi_item" href="#IV">人員通則</a></li>
   		<li><a class="navi_item" href="#V">勞動合同</a></li>
   		<li><a class="navi_item" href="#VI">評核</a></li>
-  		<li><p class="navi_item" id="show" style="color: #58D68D;float: right;">Show</p></li>
-  		<li><p class="navi_item" id="hide">Hide</p></li>
+  		<li><p class="navi_item" id="show" style="color: rgb(82, 190, 128);float: right;">Show</p></li>
 	</ul>
 <div>
 <!------基本法--------------------------------->
 	<h2 id="I"><br><br><br><br></h2>
 	<h2><基本法></h2>
 	<p>
-	<br>
-	<a href="b.html">
-	4) 下列哪個機關<span class="ans">授權</span>澳門特別行政區依法實行<span class="ans">高度自治</span>?</a><br>
-	A. 中華人民共和國中央人民政府<br>
-	B. 中華人民共和國全國<span class="ans">人民代表大會</span><br>
-	C. 中華人民共和國最高人民法院 <br>
-	D. 中華人民共和國最高人民檢察院<br>
-	<br>
-	<a href="c.html">
-	12) 澳門特別行政區是中華人民共和國的一個享有高度自治權的地方行政區域，<span class="ans">直轄於</span>:</a><br>
-	A. 最高人民法院<br>
-	B. 最高人民檢察院<br>
-	C. <span class="ans">中央人民政府</span> <br>
-	D. 以上皆是<br>
-	<br>
-	<a href="d.html">
-	15) <span class="ans">中央人民政府</span>任免澳門特別行政區:</a><br>
-	A. <span class="ans">行政長官</span><br>
-	B. <span class="ans">政府主要官員</span> <br>
-	C. <span class="ans">檢察長</span><br>
-	D. <span class="ans">以上皆是</span><br>
-	<br>
-	<a href="d.html">
-	16) 澳門特別行政區的立法機關制定的<span class="ans">法律</span>須報下列哪個機關<span class="ans">備案</span>?</a><br>
-	A. 行政長官<br>
-	B. 終審法院院長<br>
-	C. 中央人民政府<br>
-	D. 全國人民代表大會<span class="ans">常務委員會</span><br>
-	
+<br>
+<a href="b.html">
+4) 下列哪個機關<span class="ans">授權</span>澳門特別行政區依法實行<span class="ans">高度自治</span>?</a><br>
+A. 中華人民共和國中央人民政府<br>
+B. 中華人民共和國全國<span class="ans">人民代表大會</span><br>
+C. 中華人民共和國最高人民法院 <br>
+D. 中華人民共和國最高人民檢察院<br>
+<br>
+<a href="c.html">
+12) 澳門特別行政區是中華人民共和國的一個享有高度自治權的地方行政區域，<span class="ans">直轄於</span>:</a><br>
+A. 最高人民法院<br>
+B. 最高人民檢察院<br>
+C. <span class="ans">中央人民政府</span> <br>
+D. 以上皆是<br>
+<br>
+<a href="d.html">
+15) <span class="ans">中央人民政府</span>任免澳門特別行政區:</a><br>
+A. <span class="ans">行政長官</span><br>
+B. <span class="ans">政府主要官員</span> <br>
+C. <span class="ans">檢察長</span><br>
+D. 以上皆是<br>
+<br>
+<a href="d.html">
+16) 澳門特別行政區的立法機關制定的<span class="ans">法律</span>須報下列哪個機關<span class="ans">備案</span>?</a><br>
+A. 行政長官<br>
+B. 終審法院院長<br>
+C. 中央人民政府<br>
+D. 全國人民代表大會<span class="ans">常務委員會</span><br>
+<br>
+<a href="d.html">
+37) 在澳門特別行政區境內的澳門居民以外的其他人：</a><br>
+A. 依法享有基本法規定的澳門居民的權利和自由<br>
+B. 有遵守澳門特別行政區實行的法律的義務<br>
+C. 以上 A 或B<br>
+D. 以上 A 及B<br>
+<br>
+<a href="a.html">
+39) 澳門特別行政區行政長官必須：</a><br>
+A. 年滿四十周歲<br>
+B. 在澳門通常居住連續滿十年<br>
+C. 是澳門特別行政區非永久性居民<br>
+D. 以上皆是<br>
+<span class="more" class="ans">[行政長官年滿40歲，通常居住連續滿20年，永久性居民，中國公民。]<br></span>
+<br>
+<a href="c.html">
+40) 澳門特別行政區<span class="ans">行政長官的產生</span>，是在澳門特別行政區通過：</a><br>
+A. 選舉<br>
+B. 協商<br>
+C. <span class="ans">選舉或協商</span><br>
+D. 以上皆不是<br>
+<br>
+<a href="d.html">
+48) 澳門特別行政區<span class="ans">行政會的委員</span>，從下列哪些人中委任？</a><br>
+A. <span class="ans">政府主要官員</span><br>
+B. <span class="ans">立法會議員</span><br>
+C. <span class="ans">社會人士</span><br>
+D. 以上皆是<br>
+<br>
+<a href="a.html">
+49) 澳門特別行政區<span class="ans">行政會的會議</span>，<span class="ans">每月</span>至少舉行：</a><br>
+A. <span class="ans">一次</span><br>
+B. 兩次<br>
+C. 三次<br>
+D. 四次<br>
+<br>
+<a href="c.html">
+60) 澳門特別行政區<span class="ans">立法會</span>除第一屆另有規定外，每屆任期：</a><br>
+A. 兩年<br>
+B. 三年<br>
+C. <span class="ans">四年</span><br>
+D. 五年<br>
+<br>
+<a href="b.html">
+61) 澳門特別行政區<span class="ans">立法會</span>如經行政長官<span class="ans">解散</span>，須於多長時間內依法重新產生？</a><br>
+A. 三個月<br>
+B. <span class="ans">九十日</span><br>
+C. 六個月<br>
+D. 一百八十日<br>
+<br>
+<a href="b.html">
+67) 澳門特別行政區立法會議員<span class="ans">提出的議案</span>如涉及政府政策，在提出前必須得到：</a><br>
+A. 立法會主席的書面同意<br>
+B. <span class="ans">行政長官的書面同意</span><br>
+C. 終審法院院長的書面同意<br>
+D. 以上皆不是<br>
+<br>
+<a href="a.html">
+70) 澳門特別行政區立法會議員在立法會會議上的<span class="ans">發言和表決</span>：</a><br>
+A. <span class="ans">不受法律追究</span><br>
+B. 視情況不受法律追究<br>
+C. 受法律追究<br>
+D. 視情況受法律追究<br>
+<br>
+<a href="c.html">
+91) 巿政機構的<span class="ans">職權和組成</span>由：</a><br>
+A. 行政法規規定<br>
+B. 批示規定<br>
+C. <span class="ans">法律規定</span><br>
+D. 以上皆不是<br>
+<br>
+<a href=".html">
+99) 澳門特別行政區的貨幣金融制度由：</a><br>
+A. 行政法規規定<br>
+B. 批示規定<br>
+C. 法律規定<br>
+D. 行政法規及批示規定<br>
+<br>
+<a href=".html">
+116) 澳門特別行政區政府自行確定專業制度，在制定有關評審和頒授各種專業和執業資格的辦法時，必須
+根據：</a><br>
+A. 公平原則<br>
+B. 合理原則<br>
+C. 公平合理的原則<br>
+D. 公平公開的原則<br>
+<br>
+<a href=".html">
+121) 澳門特別行政區可根據需要在外國設立官方或半官方的經濟和貿易機構，報：</a><br>
+A. 全國人民代表大會備案<br>
+B. 全國人民代表大會常務委員會備案<br>
+C. 中央人民政府備案<br>
+D. 最高人民法院備案<br>
+<br>
+<a href=".html">
+123) 尚未同中華人民共和國建立正式外交關係的國家在澳門設立的領事機構和其他官方機構，可根據情
+況：</a><br>
+A. 不予保留<br>
+B. 予以保留<br>
+C. 改為半官方機構<br>
+D. 予以保留或改為半官方機構<br>
+<br>
+<a href=".html">
+124) 尚未為中華人民共和國承認的國家，祗能在澳門特別行政區設立：</a><br>
+A. 官方機構<br>
+B. 半官方機構<br>
+C. 官方機構或半官方機構<br>
+D. 民間機構<br>
+<br>
+<a href=".html">
+125) 該法的解釋權及修改權，分別屬於：</a><br>
+A. 全國人民代表大會及中央人民政府<br>
+B. 全國人民代表大會常務委員會及全國人民代表大會<br>
+C. 全國人民代表大會及澳門特別行政區基本法起草委員會<br>
+D. 中央人民政府及澳門特別行政區基本法起草委員會<br>
+
 	</p>
 <!------綱要法--------------------------------->
 	<h2 id="II"><br><br><br><br></h2>
