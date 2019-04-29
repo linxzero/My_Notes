@@ -33,34 +33,41 @@
       <h3>Windows Defender</h3>
       <p>System & Security → Windows Defender Firewall → Advanced settings → Inbound Rules → File & Printer Sharing (Echo Request ICMPv4-In) → Enable</p>
       <p class="note">Windows → wf.msc (快速進入 Firewall Advanced settings)</p>
-      
+      <br>
+      <br>
+
+
       <h2>Enable Remote Desktop</h2>
       <h3>Step1. Enable on server</h3>
       <p>Control Panel → System & Security → System → Remote settings → Allow Remote Assistance, Allow remote connections to this PC</p>
       <h3>Step2. Port Forwarding</h3>
-      <p>Set the port forwarding rule on your router so the host IP can be reached through the Internet, like this</p>
+      <p>Set the port forwarding rule on your router so the host IP can be reached through the Internet, like this :</p>
       <img src="images/remote desktop port forward.PNG" alt="" class="big">
-      <p>3389 is the default TCP port used for RDP (Remote Desktop Protocol)</p>
+      <p>"3389" is the default TCP port used for RDP (Remote Desktop Protocol).</p>
       <h3>Step2.1 Change Port (optional)</h3>
-      <p>For more security you could change the port to anyone else, from 49152 - 65535</p>
+      <p>For more security you could change the port to anyone else, from 49152 - 65535, for example :</p>
       <p class="code">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp<br>PortNumber → <span class="input">50001</span></p>
       <img src="images/change port.PNG" alt="" class="little">
-      <p>The port changing will take effect after restart of computer</p>
+      <p>The port changing will take effect after restart of computer.</p>
       <h3>Step3. Firewall</h3>
       <p>Windows Defender Firewall with Advanced Security → Inbound Rules → Remote Desktop (TCP-In) port 3389，默認已經是 enable 的，沒有的話自己手動 enable<br>若 RDP port 改了其他，就要在 Inbound Rules 手動 New Rule → Port → TCP → 50001</p>
       <h3>Client</h3>
       <p>Remote Desktop Connection → <span class="input">host-IP</span>:<span class="input">port</span></p>
       <p class="note">mstsc (MicroSoft Terminal Services Client)</p>
+      <br>
+      <br>
 
-      <h2>Wake On LAN on PC</h2>
-      <h3>ASUS B360M-A</h3>
-      <p>BIOS setting :<br></p>
-      <p>BIOS → Advanced → APM (Advanced Power Management) → Power on by PCI-e → Enable<br><br>
-      <p>Driver update :<br></p>
-      <p>Login windows → Device Manager → Network adapter → Update driver<br><br></p>
-      <p>Allow wake on LAN :</p>
-      <p>Double click your NIC → Power Management → Allow this device to wake computer (Only allow magic packet to wake)<br></p>
 
+      <h2>Wake On LAN</h2>
+      <p>(以 ASUS B360M-A 為例)</p>
+      <h3>BIOS setting</h3>
+      <p>BIOS → Advanced → APM (Advanced Power Management) → Power on by PCI-e → Enable</p>
+      <h3>Driver update</h3>
+      <p>Login windows → Device Manager → Network adapter → Update driver</p>
+      <h3>Allow wake on LAN</h3>
+      <p>Double click your NIC → Power Management → Allow this device to wake computer (Only allow magic packet to wake)</p>
+      <br>
+      <br>
 
 
       <h2>Turn off theme/wallpaper syncing</h2>

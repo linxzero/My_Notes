@@ -67,8 +67,9 @@
   }
   h3{
     font-size: 1.3em;
+    font-weight: 550;
     margin: 0;
-    padding: 0.6em 0.6em 0 0.6em;
+    padding: 1em 0.6em 0 0.6em;
   }
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
@@ -114,11 +115,10 @@
   }
   .note{ /* 顯示note專用格式 */
     font-size: 1em;
-    color: #34495E;
     background-color: #FEF9E7;
     border-left: 0.8em solid #BA4A00;   
-    margin: 0.6em 0.6em 0.2em 0.6em;
-    padding: 0 1em 0 1em;
+    margin: 0.6em 1em 0.2em 1em;
+    padding: 0 1em 0.1em 1em;
   }  
   .heritage{
     color: #B3B6B7;
