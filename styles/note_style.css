@@ -20,7 +20,7 @@
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
     background-color: gray;
-    font-family: para,'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+    font-family: para, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
     font-size: 100%;
     color: #424949; 
   }
@@ -50,7 +50,7 @@
     padding: 0.4em 0.25em 0 2.25em;
   }
   h1{
-    font-family: h;
+    font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
     font-size: 1.8em;
     color: #117A65;
     font-weight: normal;
@@ -58,7 +58,7 @@
     padding: 2em 0 0 0;
   }
   h2{ 
-    font-family: h;
+    font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
     font-size: 1.5em;
     color: #2471A3;
     font-weight: normal;
@@ -83,7 +83,7 @@
     padding: 0;
   }
   p#title{
-    font-family: ti-eng, makinas;
+    font-family: ti-eng, makinas, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
     font-size: 3em;
     color: white;
     text-align: right;
