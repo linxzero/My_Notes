@@ -7,28 +7,20 @@
     font-family: ti-eng; 
     src: url(../fonts/eng/MavenPro-Medium.ttf);
   } 
-  @font-face{ /* 源流明體, h1*/
-    font-family: h1; 
-    src: url(../fonts/cht/GenRyuMinTW-Heavy.ttf);
-  }
-  @font-face{ /* 源流明體(幼), h2*/
-    font-family: h2; 
+  @font-face{ /* 源流明體(幼), h1 h2*/
+    font-family: h; 
     src: url(../fonts/cht/GenRyuMinTW-Bold.ttf);
   }
   @font-face{ /* Paragraph用的字體，英&中 */
     font-family: para; 
     src: url(../fonts/NotoSansTC-Regular.otf);
   }
-  @font-face{ /* Code用的字體 */
-    font-family: code; 
-    src: url(../fonts/SFMono-Semibold.otf);
-  }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
     background-color: gray;
-    font-family: para;
+    font-family: para,'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
     font-size: 100%;
     color: #424949; 
   }
@@ -47,7 +39,7 @@
     margin: 0;
     padding: 0;
     max-width: 60em;
-    background-color: white;
+    background-color: #F4F6F7;
   }
   div.block{ /* D1, D2, D3... */
     float: top;
@@ -58,33 +50,34 @@
     padding: 0.4em 0.25em 0 2.25em;
   }
   h1{
-    font-family: h1;
-    font-size: 2.5em;
+    font-family: h;
+    font-size: 1.8em;
     color: #117A65;
     font-weight: normal;
     margin: 0;
-    padding: 1.2em 0 0 0;
+    padding: 2em 0 0 0;
   }
   h2{ 
-    font-family: h2;
-    font-size: 1.8em;
+    font-family: h;
+    font-size: 1.5em;
     color: #2471A3;
     font-weight: normal;
     margin: 0;
-    padding: 0.8em 0.2em 0 0.2em;
+    padding: 1em 0.2em 0 0.2em;
   }
   h3{
     font-size: 1.3em;
     margin: 0;
-    padding: 0.6em 0.4em 0 0.4em;
+    padding: 0.6em 0.6em 0 0.6em;
   }
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
     margin: 0;
-    padding: 0.4em 0.6em 0 0.6em;
+    padding: 0.4em 0.8em 0 0.8em;
   }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
     /* 行高比 p 高0.2 */
+    list-style-type: circle;
     line-height: 1.8;
     margin: 0;
     padding: 0;
@@ -107,12 +100,17 @@
   .code{ /* 顯示code專用格式 */
     font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-size: 1em;
-    color: #FCFCFC;
-    background-color: #1D1D1D;
-    border-style: outset;
+    font-weight: lighter;
+    color: #FBFCFC;
+    background-color: #3A3A3A;
+    border-radius: 0.5em;
     border-width: 0.08em;      
-    margin: 0.6em 0.6em 0.2em 0.6em;
-    padding: 0 1em 0 1em;
+    margin: 0.6em 1em 0.2em 1em;
+    padding: 0.4em 0.8em 0.2em 0.8em;
+    word-break: break-all;
+  }
+  .input{ /* input of code */
+    color: #B2BABB;
   }
   .note{ /* 顯示note專用格式 */
     font-size: 1em;
@@ -122,18 +120,21 @@
     margin: 0.6em 0.6em 0.2em 0.6em;
     padding: 0 1em 0 1em;
   }  
+  .heritage{
+    color: #B3B6B7;
+  }
 /*行列-------------------------------------------------------------*/
   /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
   .column3{ /* Create 3 equal columns that floats next to each other */
     float: left;
     width: 33.33%;
-    padding: 0.4em 0.25em 0 2.25em;
+    padding: 0;
     height: auto;
   }
   .column2{ /* 2 columns version */
     float: left;
     width: 50%;
-    padding: 0.4em 0.25em 0 2.25em;
+    padding: 0;
     height: auto;
   }
   .row:after{ /* Clear floats after the columns */

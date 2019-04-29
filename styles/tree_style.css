@@ -6,29 +6,17 @@
   @font-face{ /* 標題英文 */
     font-family: ti-eng; 
     src: url(../fonts/eng/MavenPro-Medium.ttf);
-  } 
-  @font-face{ /* 源流明體, h1*/
-    font-family: h1; 
-    src: url(../fonts/cht/GenRyuMinTW-Heavy.ttf);
-  }
-  @font-face{ /* 源流明體(幼), h2*/
-    font-family: h2; 
-    src: url(../fonts/cht/GenRyuMinTW-Bold.ttf);
   }
   @font-face{ /* Paragraph用的字體，英&中 */
     font-family: para; 
     src: url(../fonts/NotoSansTC-Regular.otf);
-  }
-  @font-face{ /* Code用的字體 */
-    font-family: code; 
-    src: url(../fonts/UbuntuMono-Regular.ttf);
   }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
     background-color: gray;
-    font-family: para;
+    font-family: para,'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
     font-size: 100%;
     color: #424949; 
   }
