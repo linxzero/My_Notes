@@ -47,30 +47,29 @@
       <p class="code">tracert <span class="input">des-ip</span></p>
       <h3>nslookup</h3>
       <p>查看 DNS 上的資料</p>
-      <p class="code">nslookup <span class="input">name</span><br>e.g. nslookup www.yahoo.com.tw</p>
+      <p class="code">nslookup <span class="input">www.yahoo.com.tw</span></p>
       <p>Server：DNS server 名稱<br>Name：yahoo 伺服器的真正名字<br>Alias：yahoo 伺服器的別名</p>
       <h3>arp</h3>
-      <p>找出本機中 IP 與 MAC 的配對紀錄</p>
+      <p>找出本機中 IP 與 MAC 的配對紀錄：</p>
       <p class="code">arp -a</p>
-      <p>可以利用此功能找出 LAN 內的所有 devices</p>
+      <p>配合 for 功能找出 LAN 內的所有 devices：</p>
       <p class="code">for /L %i in (<span class="input">star</span>, <span class="input">step</span>, <span class="input">end</span>) do <span class="input">command</span></p>
-      <p>例子：</p>
+      <p>實例：</p>
       <p class="code">arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
-      <p>arp -d：本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除<br>(1,1,254)：由 1 ping 到 254，每次加 1<br>-n 1：每次發 1 個 echo request<br>-w 200：200ms to wait for each reply</p>
+      <p>arp –d：本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除<br>(1，1，254)：由 1 ping 到 254，每次加 1<br>–n 1：每次發 1 個 echo request<br>–w 200：200ms to wait for each reply</p>
       <br>
       <br>
 
 
       <h2>Find</h2>
-      <p>很好用的查找功能</p>
+      <p>很好用的查找功能，to show IPv4 routes with Metric "5256"：</p>
       <p class="code">route print -4 | find "5256"</p>
-      <p>Show IPv4 routes with Metric 5256</p>
+      <p>Show all the dynamic ARP records：</p>
       <p class="code">arp -a | find "dynamic"</p>
-      <p>Show all the dynamic ARP records</p>
       <br>
       <br>
 
-      
+
       <h2>Runas (sudo)</h2>
       <p class="code">runas /user:<span class="input">user-name program</span><br>e.g. runas /user:administrator cmd</p>
     </div>
