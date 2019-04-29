@@ -37,6 +37,9 @@
       <p>[4] Specifies the IPv4 routing table</p>
       <h3>Delete Route</h3>
       <p class="code">route delete <span class="input">des-network</span></p>
+      <br>
+      <br>
+
 
       <h2>Network</h2>
       <h3>tracert</h3>
@@ -54,6 +57,9 @@
       <p>例子：</p>
       <p class="code">arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
       <p>arp -d：本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除<br>(1,1,254)：由 1 ping 到 254，每次加 1<br>-n 1：每次發 1 個 echo request<br>-w 200：200ms to wait for each reply</p>
+      <br>
+      <br>
+
 
       <h2>Find</h2>
       <p>很好用的查找功能</p>
@@ -61,7 +67,10 @@
       <p>Show IPv4 routes with Metric 5256</p>
       <p class="code">arp -a | find "dynamic"</p>
       <p>Show all the dynamic ARP records</p>
+      <br>
+      <br>
 
+      
       <h2>Runas (sudo)</h2>
       <p class="code">runas /user:<span class="input">user-name program</span><br>e.g. runas /user:administrator cmd</p>
     </div>
