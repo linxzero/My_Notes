@@ -20,7 +20,7 @@
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
     background-color: gray;
-    font-family: para, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
     font-size: 100%;
     color: #424949; 
   }
@@ -50,7 +50,7 @@
     padding: 0.4em 0.25em 0 2.25em;
   }
   h1{
-    font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
+    font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
     font-size: 2em;
     color: #424949;
     text-shadow: 2px 2px #D7DBDD;
@@ -59,6 +59,8 @@
     padding: 2em 0 0 0;
   }
   h2{ 
+    /*font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+    */
     font-size: 1.8em;
     color: #264868;
     text-shadow: 2px 2px #D7DBDD;
@@ -100,8 +102,10 @@
   a:hover{
     text-decoration: underline;
   }
-  .code{ /* 顯示code專用格式 */
-    font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  .code{ 
+    /*font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    */
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
     font-size: 1em;
     font-weight: lighter;
     color: #F4F6F7;
@@ -115,7 +119,7 @@
   .input{ /* input of code */
     color: #B2BABB;
   }
-  .note{ /* 顯示note專用格式 */
+  .note{ /* background : blue */
     font-size: 1em;
     background-color: #EBF5FB;
     border-left: 0.8em solid #7FB3D5;   
