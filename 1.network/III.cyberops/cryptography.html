@@ -29,17 +29,18 @@
     </ul>
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
-      <h1>保密溝通 (Securing Communication) 四要素</h1>
-      <h2>1. Confidentially</h2>
+      <h2>保密溝通 (Securing Communication) 四要素</h2>
+      <h3>I. Confidentially</h3>
       <p>"Receiver"<br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成</p>
-      <h2>2. Data Integrity</h2>
+      <h3>II. Data Integrity</h3>
       <p>"Integrity"<br>訊息內容要完整無缺，任何的更改都能被發覺<br>透過 MD5 or SHA hash-generating algorithms 來完成<br>( MD5 - Message Digest version 5；SHA - Secure Hash Algorithm )</p>
-      <h2>3. Origin Authenticity</h2>
+      <h3>III. Origin Authenticity</h3>
       <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息<br>用 HMAC 來完成<br>( HMAC - Hash Message Authentication Code )</p>
-      <h2>4. Non-Repudiation</h2>
+      <h3>IV. Non-Repudiation</h3>
       <p>"不能否認"<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴</p>
 
-      <h1>Integrity & Authenticity</h1>
+
+      <h2>Integrity & Authenticity</h2>
       <h3>Hash</h3>
       <div class="list">
         <ul>
@@ -54,14 +55,19 @@
       <h3>SHA-2</h3>
       <p>(224，256，384，512)<br>由 US. NIST 於 2001 年發布，生成 224-bit，256-bit，384-bit，512-bit 長的 hash</p>
       <h3>HMAC</h3>
-      <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key<br></p>
+      <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key</p>
 
-      <h1>Confidentiality</h1>
+
+      <h2>Confidentiality</h2>
       <h3>Key</h3>
       <p>Key Length<br>又稱為 Key Size，單位為 bit<br><br>Key Space<br>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條</p>
-      <h2>Symmetric encryption algorithm</h2>
-
+      <h3>Symmetric encryption algorithm</h3>
       <p>對稱加密，用同一條 key 對資料加密和解密。<br>在建立溝通時，每個 communicating party 都要知道同一條 key，叫 Pre-shared Key (又叫 Secret Key)</p>
+      <h3>Asymmetric encryption algorithm</h3>
+      <p>非對稱加密，用不同的 key 對資料加密和解密，分別叫 Public Key 和 Private Key。用公鑰加密後只能用私鑰解密，反之私鑰加密後只能用公鑰解密</p>
+
+
+      <h2>Symmetric encryption algorithm</h2>
       <div class="row">
         <div class="column2">
           <h3 class="heritage">DES</h3>
@@ -93,8 +99,38 @@
         </ul>
       </div>
 
+
       <h2>Asymmetric encryption algorithm</h2>
-      <p>非對稱加密，用不同的 key 對資料加密和解密，分別叫 Public Key 和 Private Key。用公鑰加密後只能用私鑰解密，反之私鑰加密後只能用公鑰解密</p>
+      <div class="row">
+        <div class="column2">
+          <h3 class="heritage">DES</h3>
+          <p class="heritage">(Data Encryption Standard)<br>Timeline - 1976<br>Key size - 56 bits<br>Block size- 64 bits<br>Speed - Medium<br>Crack - 6.4 days</p>
+        </div>
+        <div class="column2">
+          <h3 class="heritage">3DES</h3>
+          <p class="heritage">(Triple DES)<br>Timeline - 1977<br>Key size - 112 and 168 bits<br>Block size - 64 bits<br>Speed - Low<br>Crack - 4.6 billion years</p>
+        </div>
+        <div class="column2">
+          <h3>AES</h3>
+          <p>(Advanced Encryption Standard)<br>Timeline - 2001<br>Key size - 128, 192, 256 bits<br>Block size - 128, 192, 256 bits<br>Speed - High<br>Crack - 149 trillion years</p>
+        </div>
+        <div class="column2">
+          <h3>SEAL</h3>
+          <p>(Software-optimized Encryption Algorithm)<br>Timeline - 1997<br>Key size - 160 bits<br>It is a Stream Cipher<br>Speed - High<br>Crack - Unknown</p>
+        </div>
+        <div class="column2">
+          <h3>RC</h3>
+          <p>(Rivest Cipher)<br>RC2 - 1987 - 40 and 64 bits - Block cipher<br>RC4 - 1987 - 1 to 256 bits - Stream cipher<br>RC5 - 1994 - 0 to 2048 bits - Block cipher<br>RC6 - 1998 - 128, 192, 256 bits - Block cipher<br>( RC4 is widely used in SSL)<br><br></p>
+        </div>
+      </div>
+      <h3>總結</h3>
+      <div class="list">
+        <ul>
+          <li>好處：佔較少資源，速度較快，通常用於加密大量資料，如 VPN traffic</li>
+          <li>Block cipher：每次對特定長度的 plaintext 加密，而通常密文為 64-bit 或 128-bit</li>
+          <li>Stream cipher：每次對 1 Byte 或 1 Bit 的 plaintext 加密</li>
+        </ul>
+      </div>
 
       <br>
       <br>
