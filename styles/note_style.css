@@ -7,14 +7,14 @@
     font-family: ti-eng; 
     src: url(../fonts/eng/MavenPro-Medium.ttf);
   } 
-  @font-face{ /* 源流明體(幼), h1 h2*/
+  /*@font-face{ 
     font-family: h; 
     src: url(../fonts/cht/GenRyuMinTW-Bold.ttf);
-  }
-  @font-face{ /* Paragraph用的字體，英&中 */
+  }*/
+  /*@font-face{ 
     font-family: para; 
     src: url(../fonts/NotoSansTC-Regular.otf);
-  }
+  }*/
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
@@ -113,7 +113,7 @@
     border-radius: 0.5em;
     border-width: 0.08em;      
     margin: 0.6em 1em 0.2em 1em;
-    padding: 0.3em 0.8em 0.2em 0.8em;
+    padding: 0.2em 0.8em 0.2em 0.8em;
     word-break: break-all;
   }
   .input{ /* input of code */
