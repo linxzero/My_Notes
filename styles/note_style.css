@@ -19,7 +19,7 @@
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
-    background-color: gray;
+    background-color: #f1f1f1;
     font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
     font-size: 100%;
     color: #424949; 
@@ -39,7 +39,7 @@
     margin: 0;
     padding: 0;
     max-width: 60em;
-    background-color: #F4F6F7;
+    background-color: #f1f1f1;
   }
   div.block{ /* D1, D2, D3... */
     float: top;
@@ -73,7 +73,7 @@
     color: #383838;
     font-weight: 600;
     margin: 0;
-    padding: 1em 0.6em 0 0;
+    padding: 1em 0.6em 0 0.7em;
   }
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
@@ -117,7 +117,7 @@
     word-break: break-all;
   }
   .input{ /* input of code */
-    color: #B2BABB;
+    color: #a4acad;
   }
   .note{ /* background : blue */
     font-size: 1em;
