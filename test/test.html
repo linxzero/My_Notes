@@ -3,63 +3,63 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/my_notes/styles/tree_style.css" rel="stylesheet" type="text/css">
     <link href="test.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){
-        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
-        $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
+        $(".navi_span").load("../navigations/navi_bar_2.html");
+        $(".navi_span_home").load("../navigations/navi_bar_home.html");
       });
     </script>
-    <title>.reg</title>
+    <title>Windows</title>
     <style>
       header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
-      li.navi a#II{background-color: #4CAF50;} /* which one be green */
     </style>
   </head>
 <!-------------------------------------------------------------------------------->
   <body>
     <header>
-      <p onclick="hidebar()" id="title">.reg</p>
+      <p id="title">Windows</p>
     </header>
-    <ul class="navi">
-      <span class="navi_span_home"></span>
-      <span class="navi_span"></span>
-    </ul>
-<!--D1----------------------------------------------------------------------------> 
-    <div class="block" onclick="hidebar()">
-      <h1>測試 H1 header</h1>
-      <h2>.reg 的撰寫</h2>
-      <h3>語法</h3>
-      <p class="code">RegistryEditorVersion<br><br>[RegistryPath1]<br>"DataItemName1"=DataType1:DataValue1<br>"DataItemName2"=DataType2:DataValue2<br><br>[RegistryPath2]<br>"DataItemName3"=DataType3:DataValue3</p>
-      <p>例子：</p>
-      <p class="code">Windows Registry Editor Version 5.00<br><br>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]<br>{{"DefaultUserName"="dc"}}<br>"DefaultPassword"="88888"<br>"AutoAdminLogon"="1"</p>
-      <p>字串(REG_SZ)類型不需要加 DataType，只要有引號引起來<br>其他類型則需要註明 DataType，但不用加引號</p>
-      <p class="code">"DataItemName2"=hex(2):73,00,79,00,73,00,74,00<br>"DataItemName3"=hex(7):5c,00,44,00,65,00,76,00</p>
+<!-------------------------------------------------------------------------------->
+    <div class="block">
+      <ul class="tree">
 
-      <h3>版本</h3>
-      <p>Windows 2000、Windows XP、Windows Server 2003 中是 "Windows Registry Editor Version 5.00"<br>Windows 98、Windows NT 4.0 則是 "REGEDIT4"</p>
+<li class="navi"><a class="navi_a" href="javascript:void(0)" id="I">CCNA</a>
+  <div class="drop_content">
+    <a href="/my_notes/1.network/I.ccna/cmd.html">Cmd</a>
+    <a href="/my_notes/1.network/I.ccna/routing_protocol.html">Routing Protocol</a>
+    <a href="/my_notes/1.network/I.ccna/stp.html">STP</a>
+  </div>
+</li>
 
-      <h3>刪除</h3>
-      <p>若要以 .reg 來刪除登錄機碼 (Key)，請在 RegistryPath 前面加上減號</p>
-      <p class="code">[-HKEY_LOCAL_MACHINE\Software\Test]</p>
-      <p>若要以 .reg 來刪除登錄值 (Value)，請在 DataItemName 的等號後加上減號</p>
-      <p class="code">"TestValue"=-</p>
+<li class="navi"><a class="navi_a" href="javascript:void(0)" id="II">CCNP</a>
+  <div class="drop_content">
+    <a href="/my_notes/1.network/II.ccnp/eigrp.html">EIGRP</a>
+    <a href="/my_notes/1.network/II.ccnp/ospf.html">OSPF</a>
+  </div>
+</li>
 
-      <h3>Export</h3>
-      <p>有時發現執行了 .reg 但沒有任何改變，可以在 Key 上右鍵 export 出它的 .reg 來查看，可能會是 path 打錯了</p>
+<li class="navi"><a class="navi_a" href="javascript:void(0)" id="III">CyberOps</a>
+  <div class="drop_content">
+    <a href="/my_notes/1.network/III.cyberops/cryptography.html">Cryptography 密碼學</a>
+  </div>
+</li>
 
-      <h2>御載軟件</h2>
-      <p>御載軟件後，想把所有屬於它的登錄檔都鏟走，可在下面兩個地方做</p>
-      <p>1) HKEY_LOCAL_MACHINE → Software, and identify the program then right click and delete<br>2) HKEY_CURRENT_USER → Software, and identify the program then right click and delete</p>
+<li class="navi"><a class="navi_a" href="javascript:void(0)" id="IV">VPN</a>
+  <div class="drop_content">
+    <a href="/my_notes/1.network/IV.vpn/dmvpn.html">DMVPN</a>
+  </div>
+</li>
+
+
+
+
+
+      </ul> 
     </div>
-<!--------------------------------------------------------------------------------> 
-    <script>
-      function hidebar(){
-        var x=document.getElementsByClassName("drop_content");
-        x.style.display="none";
-      };
-    </script>  
+<!-------------------------------------------------------------------------------->    
   </body>
 </html>
 

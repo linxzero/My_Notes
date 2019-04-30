@@ -58,7 +58,7 @@
     display: block;
     float: left;
     max-width: 5em; /* 要他自動隔行 */
-    padding: 0.9em 0 0 0; /* 與上實線空間 */
+    padding: 0.7em 0 0 0; /* 與上實線空間 */
     color: #229954;
     border-top: solid;
     font-size: 1.5em;
