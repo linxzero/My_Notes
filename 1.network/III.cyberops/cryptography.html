@@ -143,12 +143,30 @@
       Known-Plaintext method :<br>既收集密文，又知道訊息內一定含有某些資訊，比如日期、收件人等等<br><br>
       Meet-in-the-Middle method :<br>破解者就在明文與密文之間，收集無窮數據</p>
     </div>
-<!-------------------------------------------------------------------------------->  
+<!--------------------------------------------------------------------------------> 
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">&uarr;</button> 
     <script>
       function hidebar(){
         var x=document.getElementsByClassName("drop_content");
         x.style.display="none";
       };
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+          document.getElementById("TopBtn").style.display = "block";
+        } else {
+          document.getElementById("TopBtn").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>  
   </body>
 </html>
