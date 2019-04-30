@@ -51,7 +51,7 @@
   }
   h1{
     font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
-    font-size: 1.8em;
+    font-size: 2em;
     color: #424949;
     text-shadow: 2px 2px #D7DBDD;
     font-weight: normal;
@@ -59,18 +59,19 @@
     padding: 2em 0 0 0;
   }
   h2{ 
-    font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
-    font-size: 1.5em;
-    color: #424949;
-    font-weight: normal;
+    font-size: 1.8em;
+    color: #264868;
+    text-shadow: 2px 2px #D7DBDD;
+    font-weight: 600;
     margin: 0;
-    padding: 1em 0.2em 0 0.2em;
+    padding: 1em 0.2em 0 0;
   }
   h3{
     font-size: 1.3em;
-    font-weight: 550;
+    color: #383838;
+    font-weight: 600;
     margin: 0;
-    padding: 1em 0.6em 0 0.6em;
+    padding: 1em 0.6em 0 0;
   }
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
@@ -103,7 +104,7 @@
     font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-size: 1em;
     font-weight: lighter;
-    color: #FBFCFC;
+    color: #F4F6F7;
     background-color: #3A3A3A;
     border-radius: 0.5em;
     border-width: 0.08em;      
@@ -116,8 +117,8 @@
   }
   .note{ /* 顯示note專用格式 */
     font-size: 1em;
-    background-color: #FEF9E7;
-    border-left: 0.8em solid #BA4A00;   
+    background-color: #EBF5FB;
+    border-left: 0.8em solid #7FB3D5;   
     margin: 0.6em 1em 0.2em 1em;
     padding: 0 1em 0.1em 1em;
   }  
