@@ -28,7 +28,7 @@
       <span class="navi_span"></span>
     </ul>
 <!--D1----------------------------------------------------------------------------> 
-    <div class="block" onclick="hidebar()" ondblclick="topFunction">
+    <div class="block" onclick="hidebar()">
       <h2>Ping Windows 10</h2>
       <p>修改 Windows Defender 的 Rule：</p>
       <p>System & Security → Windows Defender Firewall → Advanced settings → Inbound Rules → File & Printer Sharing (Echo Request ICMPv4-In) → Enable</p>
@@ -76,12 +76,25 @@
     </div>
 
 <!--------------------------------------------------------------------------------> 
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">&uarr;</button> 
     <script>
       function hidebar(){
         var x=document.getElementsByClassName("drop_content");
         x.style.display="none";
       };
 
+      // When the user scrolls down 520px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+          document.getElementById("TopBtn").style.display = "block";
+        } else {
+          document.getElementById("TopBtn").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
       function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -89,6 +102,8 @@
     </script>  
   </body>
 </html>
+
+
 
 
 
