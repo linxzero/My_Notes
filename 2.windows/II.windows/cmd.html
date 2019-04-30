@@ -28,7 +28,7 @@
       <span class="navi_span"></span>
     </ul>
 <!--D1----------------------------------------------------------------------------> 
-    <div class="block" onclick="hidebar()">
+    <div class="block" onclick="hidebar()" ondblclick="topFunction">
       <h2>Routing</h2>
       <h3>Add Route</h3>
       <p class="code">route add <span class="input">des-network</span> mask <span class="input">subnet-mask gateway</span></p>
@@ -74,25 +74,12 @@
       <p class="code">runas /user:<span class="input">user-name program</span><br>e.g. runas /user:administrator cmd</p>
     </div>
 <!--------------------------------------------------------------------------------> 
-    <button onclick="topFunction()" id="TopBtn" title="Go to top">&uarr;</button> 
     <script>
       function hidebar(){
         var x=document.getElementsByClassName("drop_content");
         x.style.display="none";
       };
 
-      // When the user scrolls down 520px from the top of the document, show the button
-      window.onscroll = function() {scrollFunction()};
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
-          document.getElementById("TopBtn").style.display = "block";
-        } else {
-          document.getElementById("TopBtn").style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
       function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -100,7 +87,6 @@
     </script>  
   </body>
 </html>
-
 
 
 
