@@ -31,40 +31,40 @@
     <div class="block" onclick="hidebar()">
       <h2>保密溝通 (Securing Communication) 四要素</h2>
       <h3>I. Confidentially</h3>
-      <p>"Receiver"<br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成</p>
+      <p>"Receiver"<br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容。<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成。</p>
       <h3>II. Data Integrity</h3>
-      <p>"Integrity"<br>訊息內容要完整無缺，任何的更改都能被發覺<br>透過 MD5 or SHA hash-generating algorithms 來完成<br>( MD5 - Message Digest version 5；SHA - Secure Hash Algorithm )</p>
+      <p>"Integrity"<br>訊息內容要完整無缺，任何的更改都能被發覺。<br>透過 MD5 or SHA hash-generating algorithms 來完成。<br>( MD5 - Message Digest version 5；SHA - Secure Hash Algorithm )</p>
       <h3>III. Origin Authenticity</h3>
-      <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息<br>用 HMAC 來完成<br>( HMAC - Hash Message Authentication Code )</p>
+      <p>"Sender"<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息。<br>用 HMAC 來完成。<br>( HMAC - Hash Message Authentication Code )</p>
       <h3>IV. Non-Repudiation</h3>
-      <p>"不能否認"<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴</p>
+      <p>"不能否認"<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴。</p>
 
 
       <h2>Integrity & Authenticity</h2>
       <h3>Hash</h3>
       <div class="list">
         <ul>
-          <li>One-way：不可逆的，不能由 hash 解成原文</li>
-          <li>Fixed-Length：任何長度的訊息都會消化成固定長度的 hash</li>
+          <li>One-way：不可逆的，不能由 hash 解成原文。</li>
+          <li>Fixed-Length：任何長度的訊息都會消化成固定長度的 hash.</li>
         </ul>
       </div>
       <h3>MD5</h3>
-      <p>(Message Digest version 5)<br>由 Ron Rivest 於 1992 年發布，生成 128-bit 長的 hash</p>
+      <p>(Message Digest version 5)<br>由 Ron Rivest 於 1992 年發布，生成 128-bit 長的 hash.</p>
       <h3>SHA-1</h3>
-      <p>(Secure Hash Algorithm 1)<br>由 US. NIST 於 1994 年發布，與 MD5 很相似，生成 160-bit 長的 hash</p>
+      <p>(Secure Hash Algorithm 1)<br>由 US. NIST 於 1994 年發布，與 MD5 很相似，生成 160-bit 長的 hash.</p>
       <h3>SHA-2</h3>
-      <p>(224，256，384，512)<br>由 US. NIST 於 2001 年發布，生成 224-bit，256-bit，384-bit，512-bit 長的 hash</p>
+      <p>(224，256，384，512)<br>由 US. NIST 於 2001 年發布，生成 224-bit，256-bit，384-bit，512-bit 長的 hash.</p>
       <h3>HMAC</h3>
-      <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key</p>
+      <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key.</p>
 
 
       <h2>Confidentiality</h2>
       <h3>Key</h3>
-      <p>Key Length<br>又稱為 Key Size，單位為 bit<br><br>Key Space<br>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條</p>
+      <p>Key Length：<br>又稱為 Key Size，單位為 bit.<br><br>Key Space：<br>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條。</p>
       <h3>Symmetric encryption algorithm</h3>
-      <p>對稱加密，用同一條 key 對資料加密和解密。<br>在建立溝通時，每個 communicating party 都要知道同一條 key，叫 Pre-shared Key (又叫 Secret Key)</p>
+      <p>對稱加密，用同一條 key 對資料加密和解密。<br>在建立溝通時，每個 communicating party 都要知道同一條 key，叫 Pre-shared Key. (又叫 Secret Key)</p>
       <h3>Asymmetric encryption algorithm</h3>
-      <p>非對稱加密，用不同的 key 對資料加密和解密，分別叫 Public Key 和 Private Key。用公鑰加密後只能用私鑰解密，反之私鑰加密後只能用公鑰解密</p>
+      <p>非對稱加密，用不同的 key 對資料加密和解密，分別叫 Public Key 和 Private Key。用公鑰加密後只能用私鑰解密，反之私鑰加密後只能用公鑰解密。</p>
 
 
       <h2>Symmetric encryption algorithm</h2>
@@ -93,40 +93,42 @@
       <h3>總結</h3>
       <div class="list">
         <ul>
-          <li>好處：佔較少資源，速度較快，通常用於加密大量資料，如 VPN traffic</li>
-          <li>Block cipher：每次對特定長度的 plaintext 加密，而通常密文為 64-bit 或 128-bit</li>
-          <li>Stream cipher：每次對 1 Byte 或 1 Bit 的 plaintext 加密</li>
+          <li>好處：佔較少資源，速度較快，通常用於加密大量資料，如 VPN traffic.</li>
+          <li>Block cipher：每次對特定長度的 plaintext 加密，而通常密文為 64-bit 或 128-bit.</li>
+          <li>Stream cipher：每次對 1 Byte 或 1 Bit 的 plaintext 加密。</li>
         </ul>
       </div>
 
 
       <h2>Asymmetric encryption algorithm</h2>
+      <h3>DH</h3>
+      <p>(Diffie-Hellman algorithm)<br>Timeline - 1976<br>Key size - 768, 1024, 2048, 3072, 4096<br>在收發雙方事前並沒有溝通過的情況下，藉着 DH 仍然可以共悉出一條 Shared Secret Key，流程如下：</p>
+      <img class="big" src="images/DH.png" alt="">
       <div class="row">
         <div class="column2">
-          <h3 class="heritage">DES</h3>
-          <p class="heritage">(Data Encryption Standard)<br>Timeline - 1976<br>Key size - 56 bits<br>Block size- 64 bits<br>Speed - Medium<br>Crack - 6.4 days</p>
+          <h3>RSA</h3>
+          <p>(Rivest, Shamir, Adleman)<br>Timeline - 1977<br>Key size - 512 to 2048</p>
         </div>
         <div class="column2">
-          <h3 class="heritage">3DES</h3>
-          <p class="heritage">(Triple DES)<br>Timeline - 1977<br>Key size - 112 and 168 bits<br>Block size - 64 bits<br>Speed - Low<br>Crack - 4.6 billion years</p>
+          <h3>DSA</h3>
+          <p>(Digital Signature Algorithm)<br>Timeline - 1994<br>Key size - 512 to 1024<br>由 NIST 發怖的 DSS (Digital Signature Standard) 中，包含了 DSA.</p>
         </div>
         <div class="column2">
-          <h3>AES</h3>
-          <p>(Advanced Encryption Standard)<br>Timeline - 2001<br>Key size - 128, 192, 256 bits<br>Block size - 128, 192, 256 bits<br>Speed - High<br>Crack - 149 trillion years</p>
+          <h3>ElGamal</h3>
+          <p>Timeline - 1984<br>Key size - 512 to 1024<br>Encryptyed data becomes twice the size of original data.</p>
         </div>
         <div class="column2">
-          <h3>SEAL</h3>
-          <p>(Software-optimized Encryption Algorithm)<br>Timeline - 1997<br>Key size - 160 bits<br>It is a Stream Cipher<br>Speed - High<br>Crack - Unknown</p>
-        </div>
-        <div class="column2">
-          <h3>RC</h3>
-          <p>(Rivest Cipher)<br>RC2 - 1987 - 40 and 64 bits - Block cipher<br>RC4 - 1987 - 1 to 256 bits - Stream cipher<br>RC5 - 1994 - 0 to 2048 bits - Block cipher<br>RC6 - 1998 - 128, 192, 256 bits - Block cipher<br>( RC4 is widely used in SSL)<br><br></p>
+          <h3>Elliptical curve</h3>
+          <p>Timeline - 1980s<br>Key size - 160<br>Can be used to adapt many algorithms, 
+such as DH or ElGamal.</p><br><br>
         </div>
       </div>
       <h3>總結</h3>
       <div class="list">
         <ul>
-          <li>安全性較高，然而速度慢，適合用於 Digital Signatures and Key Exchange</li>
+          <li>安全性較高，然而速度慢，適合用於 Digital Signatures and Key Exchange.</li>
+          <li>Confidentiality - Sender sends a encrypted data, which is encrypted by Public Key, to recevier.</li>
+          <li>Authentication - Sender sends a encrypted data, which is encrypted by Private Key, to recevier.</li>
         </ul>
       </div>
 
