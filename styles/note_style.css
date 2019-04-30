@@ -52,7 +52,8 @@
   h1{
     font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
     font-size: 1.8em;
-    color: #117A65;
+    color: #424949;
+    text-shadow: 2px 2px #D7DBDD;
     font-weight: normal;
     margin: 0;
     padding: 2em 0 0 0;
@@ -60,7 +61,7 @@
   h2{ 
     font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
     font-size: 1.5em;
-    color: #2471A3;
+    color: #424949;
     font-weight: normal;
     margin: 0;
     padding: 1em 0.2em 0 0.2em;
