@@ -19,7 +19,7 @@
   body{
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 2% 1em 2%; /* 底邊灰色的闊度 */
+    padding: 0 2% 5em 2%; /* 底邊灰色的闊度 */
   }
   header{ 
     min-height: 3em; 
