@@ -34,11 +34,18 @@
       <h3>Command</h3>
       <p class="code">
         int tunnel <span class="input">0</span><br>
-        ip add <span class="input">virtual-ip subnet-mask</span><br>
+        ip add <span class="input">172.16.12.1 255.255.255.252</span><br>
         tunnel mode gre ip<br>
-        tunnel source <span class="input">out-bound-int</span><br>
-        tunnel destination <span class="input">wan-ip</span>
+        tunnel source <span class="input">s0/0/0</span><br>
+        tunnel destination <span class="input">62.45.25.2</span>
       </p>
+      <p>
+        PS :<br>
+        "172.16.12.1" is IP address of virtual interface tunnel 0<br>
+        "s0/0/0" is the out-bound physical interface<br>
+        "62.45.25.2" is WAN IP address of destination
+      </p>
+
 
 
 
