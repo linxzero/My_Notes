@@ -35,7 +35,7 @@
 
       <h2>Digital Signature</h2>
       <h3>Code Signing</h3>
-      <p>在官網下載的 App，都需要有 Code Signing 來保證其 Authenticity 和 Integrity.<br>比如在官網下載的 KMPlayer.exe 上右鍵內容，就能見到他的 Digital Signatures，可以見到是經由 Symantec 公司核實此軟件的真偽。</p>
+      <p>在官網下載的 App，都會有 Code Signing 來保證他的 Authenticity 和 Integrity.<br>比如對在官網下載的 KMPlayer.exe 右鍵內容，就會見到他的 Digital Signatures，可以知道是由 Symantec 公司核查此軟件的真實性。</p>
       <h3>Digital Certificate</h3>
       <div class="list">
         <ul>
@@ -58,6 +58,15 @@
 
 
       <h2>Process</h2>
+      <h3>Bob ⇒ </h3>
+      <div class="list">
+        <ol>
+          <li>Bob is going to send an order confirmation to Alice. His computer creates a Hash of the confirmation message.</li>
+          <li>Then the Hash is encrypted with Bob's Private Key.</li>
+          <li>This encrypted Hash, called Digital Signature, is appended to the confirmation message, and sent to Alice over internet. </li>
+        </ol>
+      </div>
+      <h3>⇒ Alice</h3>
 
 
 
