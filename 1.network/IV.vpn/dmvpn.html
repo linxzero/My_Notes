@@ -39,7 +39,7 @@
       <h3>NHS</h3>
       <p>Next Hop Server，即是 Hub</p>
       <h3>NHC</h3>
-      <p>Next Hop Client，即是 Spoke</p>
+      <p>Next Hop Client，即是 Spoke</p><br>
       <h3>工作原理</h3>
       <p>話說每隻 NHCs 都會把自己的 NBMA address 和 Tunnel IP 傳送給 NHS，當 NHS 收到這些資訊後，就會建立一個 NHRP Table 來儲存這些配對。當有 NHC 要查詢某 Tunnel IP 位置時，NHS 會即時回覆對應的 NBMA address 讓 NHC 能夠直接聯繫。</p>
       <p>DMVPN 分為 Phase 1、2 和 3，接下來要逐一解釋。</p>
