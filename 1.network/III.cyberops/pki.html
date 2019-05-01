@@ -57,7 +57,7 @@
       橢圓曲線配合 DSA，加快運算速度，而且生成更小的 signature.</p>
 
 
-      <h2>Process</h2>
+      <h2>Process of Digital Certificate</h2>
       <h3>Bob ⇒ </h3>
       <div class="list">
         <ol>
@@ -66,6 +66,7 @@
           <li>This encrypted Hash, called Digital Signature, is appended to the confirmation message, and sent to Alice over internet. </li>
         </ol>
       </div>
+      <p class="note">Hash → Encrypt → Attach</p>
       <h3>⇒ Alice</h3>
       <div class="list">
         <ol>
@@ -74,6 +75,7 @@
           <li>Finally, she compares the decrypted Signature Hash to the hash of msg created by her computer. If they match, the message is authentic.</li>
         </ol>
       </div>
+      <p class="note">Public Key → Decrypt → Compare</p>
 
 
 
