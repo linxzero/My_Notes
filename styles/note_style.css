@@ -171,7 +171,7 @@
     color: white;
     background-color: #2D2E2F;        
     margin: 0 auto 0.8em auto;
-    padding: auto;
+    padding: 0 0 0 1em;
     width: 88%;
     text-align: left;
     border-left: 1.2em solid #73C6B6;
@@ -185,7 +185,7 @@
     font-size: 0.85em;      color: white;
     background-color: #2D2E2F;        
     margin: 0 auto 0.8em auto;
-    padding: auto;
+    padding: 0 0 0 1em;
     width: 75%;
     text-align: left;
     border-left: 1.2em solid #73C6B6;
@@ -200,7 +200,7 @@
     color: white;
     background-color: #2D2E2F;        
     margin: 0 auto 0.8em auto;
-    padding: auto;
+    padding: 0 0 0 1em;
     width: 60%;
     text-align: left;
     border-left: 1.2em solid #73C6B6;
