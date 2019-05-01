@@ -35,7 +35,7 @@
 
       <h2>Digital Signature</h2>
       <h3>Code Signing</h3>
-      <p>在官網下載的 App，都需要有 Code Signing 來保證其 Authenticity 和 Integrity.</p>
+      <p>在官網下載的 App，都需要有 Code Signing 來保證其 Authenticity 和 Integrity.<br>比如在官網下載的 KMPlayer.exe 上右鍵內容，就能見到他的 Digital Signatures，可以見到是經由 Symantec 公司核實此軟件的真偽。</p>
       <h3>Digital Certificate</h3>
       <div class="list">
         <ul>
@@ -45,6 +45,19 @@
         </ul>
       </div>
 
+
+      <h2>Algorithm</h2>
+      <p>There are 3 DSS (Digital Signature Standard) algorithms that are used for generating and verifying digital signatures:</p>
+      <h3>DSA</h3>
+      <p>Signature generation is fast, but signature verification is slow.</p>
+      <h3>RSA</h3>
+      <p>Signature verification is fast, but signature generation is slow.</p>
+      <h3>ECDSA</h3>
+      <p>(Elliptical Curve Digital Signature Algorithm)<br>
+      橢圓曲線配合 DSA，加快運算速度，而且生成更小的 signature.</p>
+
+
+      <h2>Process</h2>
 
 
 
