@@ -55,6 +55,20 @@
       <p class="bigcap">All Spokes reach each others directly.</p>
 
 
+      <h2>DMVPN</h2>
+      <p>(Dynamic Multipoint VPN)<br>用傳統做法使用 GRE 來建立 Fully Mesh Topology 所需的設定相當龐大，比較理想的方法是使用 DMVPN.</p>
+      <h3>NHRP</h3>
+      <p>(Next Hop Resolution Protocol)<br>要成就 DMVPN，先要介紹一個重要知識點，NHRP。其實並不複雜，說穿了有點像 ARP。ARP 的用作為 IP 與 MAC 之間的轉換，而 NHRP 則用作 Physical IP 與 Tunnel IP 之間的轉換。</p>
+      <h3>NBMA address</h3>
+      <p>Non-broadcast Multi Access address，即是 Physical IP</p>
+      <h3>NHS</h3>
+      <p>Next Hop Server，即是 Hub</p>
+      <h3>NHC</h3>
+      <p>Next Hop Client，即是 Spoke</p>
+      <h3>工作原理</h3>
+      <p>話說每隻 NHCs 都會把自己的 NBMA address 和 Tunnel IP 傳送給 NHS，當 NHS 收到這些資訊後，就會建立一個 NHRP Table 來儲存這些配對。當有 NHC 要查詢某 Tunnel IP 位置時，NHS 會即時回覆對應的 NBMA address 讓 NHC 能夠直接聯繫。</p>
+
+
 
 
 
