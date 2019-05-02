@@ -55,9 +55,16 @@
         ip nhrp network-id <span class="input">1</span><br>
         nhrp map multicast dynamic<br>
       </p>
-      <p>PS :<br>
-
-      </p>
+      <p>PS :</p>
+      <div class="list">
+        <ul>
+          <li>不需要 tunnel destination 了。</li>
+          <li>mode 由 "gre ip" 改成 "gre multipoint".</li>
+          <li>"network-id" 必須相同，類似 VLAN 的概念，用於辨識不同的 GRE tunnel.</li>
+          <li>允許 Routing Protocol 產生的 multicast 傳送到所有 NHRP dynamic learn 的 Spokes.</li>
+        </ul>
+      </div>
+        
 
 
 
