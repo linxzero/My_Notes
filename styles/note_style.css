@@ -261,7 +261,7 @@
   #TopBtn {
     display: none;
     position: fixed;
-    bottom: 7.5em;
+    bottom: 8em;
     right: 1.5em;
     z-index: 99;
     font-size: 1em;
