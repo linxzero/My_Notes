@@ -46,7 +46,7 @@
 
 
       <h2>Phase 1</h2>
-      <h3>Command</h3>
+      <h3>Command on NHS</h3>
       <p class="code">
         int tunnel <span class="input">0</span><br>
         ip add <span class="input">172.16.123.1 255.255.255.0</span><br>
@@ -58,10 +58,30 @@
       <p>PS :</p>
       <div class="list">
         <ul>
-          <li>不需要 tunnel destination 了。</li>
+          <li>NHS 不需要 tunnel destination.</li>
           <li>mode 由 "gre ip" 改成 "gre multipoint".</li>
           <li>"network-id" 必須相同，類似 VLAN 的概念，用於辨識不同的 GRE tunnel.</li>
           <li>允許 Routing Protocol 產生的 multicast 傳送到所有 NHRP dynamic learn 的 Spokes.</li>
+        </ul>
+      </div>
+      <h3>Command on NHC</h3>
+      <p class="code">
+        int tunnel <span class="input">0</span><br>
+        ip add <span class="input">172.16.123.2 255.255.255.0</span><br>
+        tunnel source <span class="input">e1/0</span><br>
+        tunnel destination <span class="input">10.0.14.1<br>
+        tunnel mode gre ip<br>
+        ip nhrp network-id <span class="input">1</span><br>
+        nhrp nhs <span class="input">172.16.123.1</span><br>
+        nhrp map <span class="input">172.16.123.1 10.0.14.1</span><br>
+        nhrp map multicast <span class="input">10.0.14.1</span>
+      </p>
+      <p>PS :</p>
+      <div class="list">
+        <ul>
+          <li>NHC 與 NHS 之間沿用傳統 GRE tunnel.</li>
+          <li>"nhrp map" 手動配對 NHS 的 NBMA address.</li>
+          <li>"multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 NHS.</li>
         </ul>
       </div>
         
