@@ -39,12 +39,14 @@
         tunnel destination <span class="input">62.45.25.2</span><br>
         tunnel mode gre ip
       </p>
-      <p>
-        PS :<br>
-        "10.0.12.1" is IP address of virtual interface tunnel 0.<br>
-        "s0/0/0" is the out-bound physical interface.<br>
-        "62.45.25.2" is WAN IP address of destination.
-      </p>
+      <p>PS :</p>
+      <div class="list">
+        <ul>
+        <li>"10.0.12.1" is IP address of virtual interface tunnel 0.</li>
+        <li>"s0/0/0" is the out-bound physical interface.</li>
+        <li>"62.45.25.2" is WAN IP address of destination.</li>
+        </ul>
+      </div>
       <h3>Hub-to-Spoke</h3>
       <p>所有 Spokes 只與 Hub 建立 GRE tunnel，然後在 Hub 上做 routing.</p>
       <img src="images/hub_to_spoke.png" class="big">
