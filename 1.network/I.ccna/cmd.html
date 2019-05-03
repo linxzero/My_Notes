@@ -29,32 +29,28 @@
     </ul>
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
-      <h2>GRE</h2>
-      <p>(Generic Routing Encapsulation)</p>
-      <h3>Command</h3>
+      <h3>Initial setting</h3>
+      <p><br></p>
       <p class="code">
-        int tunnel <span class="input">0</span><br>
-        ip add <span class="input">10.0.12.1 255.255.255.252</span><br>
-        tunnel source <span class="input">s0/0/0</span><br>
-        tunnel destination <span class="input">62.45.25.2</span><br>
-        tunnel mode gre ip
+        no ip domain-lookup<br>
+        hostname <span class="input">R1</span><br>
+        banner motd % <span class="input">Welcomm!!</span> %
       </p>
-      <p>PS :</p>
-      <div class="list">
-        <ul>
-        <li>"10.0.12.1" is IP address of virtual interface tunnel 0.</li>
-        <li>"s0/0/0" is the out-bound physical interface.</li>
-        <li>"62.45.25.2" is WAN IP address of destination.</li>
-        </ul>
-      </div>
-      <h3>Hub-to-Spoke</h3>
-      <p>所有 Spokes 只與 Hub 建立 GRE tunnel，然後在 Hub 上做 routing.</p>
-      <img src="images/hub_to_spoke.png" class="big">
-      <p class="bigcap">All Spokes reach each others through Hub.</p>
-      <h3>Fully Mesh</h3>
-      <p>所有 Spokes 之間都建立 GRE tunnel，因此沒有需要做 Routing.</p>
-      <img src="images/fully_mesh.png" class="big">
-      <p class="bigcap">All Spokes reach each others directly.</p>
+      <p>Set console password :</p>
+      <p class="code">
+        line console 0<br>
+        password <span class="input">88888</span><br>
+        login<br>
+      </p>
+      <p>Set virtual terminal password :</p>
+      <p class="code">
+        line vty <span class="input">0 15</span><br>
+        password <span class="input">88888</span><br>
+        login<br>
+        transport input telnet<br>
+      </p>
+
+
 
 
 
