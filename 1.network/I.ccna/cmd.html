@@ -1,104 +1,128 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
-    <link href="../../styles/note_style.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(function(){
-        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
-        $(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
-      });
-    </script>
-    <title>Cmd 匯總</title>
-    <style>
-      header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
-      li.navi a#I{background-color: #4CAF50;} /* which one be green */
-    </style>
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+		<link href="../../styles/note_style.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+				$(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
+			});
+		</script>
+		<title>Cmd 匯總</title>
+		<style>
+			header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
+			li.navi a#I{background-color: #4CAF50;} /* which one be green */
+		</style>
+	</head>
 <!-------------------------------------------------------------------------------->
-  <body>
-    <header>
-      <p onclick="hidebar()" id="title">Cmd 匯總</p>
-    </header>
-    <ul class="navi">
-      <span class="navi_span_home"></span>
-      <span class="navi_span"></span>
-    </ul>
+	<body>
+		<header>
+			<p onclick="hidebar()" id="title">Cmd 匯總</p>
+		</header>
+		<ul class="navi">
+			<span class="navi_span_home"></span>
+			<span class="navi_span"></span>
+		</ul>
 <!--D1----------------------------------------------------------------------------> 
-    <div class="block" onclick="hidebar()">
-      <h3>Initial setting</h3>
-      <p class="code">
-        no ip domain-lookup<br>
-        hostname <span class="input">R1</span><br>
-        banner motd % <span class="input">Welcomm!!</span> %
-      </p>
-      <h3>Console password</h3>
-      <p class="code">
-        line console 0<br>
-        password <span class="input">88888</span><br>
-        login<br>
-      </p>
-      <h3>Virtual terminal password</h3>
-      <p class="code">
-        line vty <span class="input">0 15</span><br>
-        password <span class="input">88888</span><br>
-        login<br>
-        transport input telnet<br>
-      </p>
-      <h3>Privileged mode password</h3>
-      <p class="code">
-        enable password <span class="input">88888</span><br>
-        enable secret <span class="input">99999</span><br>
-      </p>
-      <p>PS : According to the setting above, "99999" will replace "88888" to be the only password to access privileged mode.</p>
-      <h3>NTP</h3>
-      <p class="code">
-        ntp server <span class="input">10.1.1.1</span><br>
-        ntp peer <span class="input">10.1.1.20</span><br>
-        clock set <span class="input">hh:mm:ss 08 jun 1988</span><br>
-        ntp master <span class="input">5</span><br>
-      </p>
-      <p class="code">
-        show ntp status<br>
-        show ntp associations<br>
-        show clock
-      </p>
+		<div class="block" onclick="hidebar()">
+			<h3>Initial setting</h3>
+			<p class="code">
+				no ip domain-lookup<br>
+				hostname <span class="input">R1</span><br>
+				banner motd % <span class="input">Welcomm!!</span> %
+			</p>
+			<h3>Console password</h3>
+			<p class="code">
+				line console 0<br>
+				password <span class="input">88888</span><br>
+				login<br>
+			</p>
+			<h3>Virtual terminal password</h3>
+			<p class="code">
+				line vty <span class="input">0 15</span><br>
+				password <span class="input">88888</span><br>
+				login<br>
+				transport input telnet<br>
+			</p>
+			<p>PS : 
+					<div class="list"> 
+						<ul>  
+							<li>Mostly, the default transport input protocol is "telnet".</li>
+							<li>Before you can remotly access, "Enable password" has to be set.</li>
+						</ul>
+					</div></p>
+			<h3>Enable password</h3>
+			<p class="code">
+				enable password <span class="input">88888</span><br>
+				enable secret <span class="input">99999</span><br>
+			</p>
+			<p>PS : According to the setting above, "99999" will replace "88888" to be the only password to reach privileged mode.</p>
+			<h3>NTP</h3>
+			<p class="code">
+				ntp server <span class="input">time.google.com</span><br>
+				ntp peer <span class="input">10.1.1.20</span><br>
+			</p>
+			<p>
+				PS : 只有與 server 失去聯繫時，才會向 peer 取暖。
+			</p>
+			<p class="code">
+				show ntp status<br>
+				show ntp associations<br>
+				show clock
+			</p>
+			<p>PS : </p>
+			<div class="list">
+				<ul>
+					<li>"show ntp status" 顯示 server 位置、stratum.</li>
+					<li>"show ntp associations" 顯示 peer.</li>
+					<li>Stratum 是層數 (0 – 16)，0 代表時間源頭，16 代表無法同步。</li>
+				</ul>
+			</div>
+			<p class="code">
+				clock set <span class="input">hh:mm:ss 08 jun 1988</span><br>
+				ntp master <span class="input">5</span><br>
+			</p>
+			<p>
+				PS : "5" 的意思為向下校時最多到第 5 層。
+			</p>
+			<h3>Syslog</h3>
 
 
 
 
 
 
-    </div>
+		</div>
 <!--------------------------------------------------------------------------------> 
-    <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
-    <script>
-      function hidebar(){
-        var x=document.getElementsByClassName("drop_content");
-        x.style.display="none";
-      };
+		<button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
+		<script>
+			function hidebar(){
+				var x=document.getElementsByClassName("drop_content");
+				x.style.display="none";
+			};
 
-      // When the user scrolls down 520px from the top of the document, show the button
-      window.onscroll = function() {scrollFunction()};
+			// When the user scrolls down 520px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
 
-      function scrollFunction() {
-        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
-          document.getElementById("TopBtn").style.display = "block";
-        } else {
-          document.getElementById("TopBtn").style.display = "none";
-        }
-      }
+			function scrollFunction() {
+				if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+					document.getElementById("TopBtn").style.display = "block";
+				} else {
+					document.getElementById("TopBtn").style.display = "none";
+				}
+			}
 
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>  
-  </body>
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>  
+	</body>
 </html>
 
 
