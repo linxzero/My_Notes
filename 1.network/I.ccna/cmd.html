@@ -30,32 +30,31 @@
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
       <h3>Initial setting</h3>
-      <p><br></p>
       <p class="code">
         no ip domain-lookup<br>
         hostname <span class="input">R1</span><br>
         banner motd % <span class="input">Welcomm!!</span> %
       </p>
-      <p>Set console password :</p>
+      <h3>Console password</h3>
       <p class="code">
         line console 0<br>
         password <span class="input">88888</span><br>
         login<br>
       </p>
-      <p>Set virtual terminal password :</p>
+      <h3>Virtual terminal password</h3>
       <p class="code">
         line vty <span class="input">0 15</span><br>
         password <span class="input">88888</span><br>
         login<br>
         transport input telnet<br>
       </p>
-      <p>Set privileged mode password :</p>
+      <h3>Privileged mode password</h3>
       <p class="code">
         enable password <span class="input">88888</span><br>
         enable secret <span class="input">99999</span><br>
       </p>
-      <p>PS : According to the setting above, "99999" will replace "88888" to be the only password to access privileged mode.</p><br>
-      <p>Indicate the ntp server :</p>
+      <p>PS : According to the setting above, "99999" will replace "88888" to be the only password to access privileged mode.</p>
+      <h3>NTP</h3>
       <p class="code">
         ntp server <span class="input">10.1.1.1</span><br>
         ntp peer <span class="input">10.1.1.20</span><br>
