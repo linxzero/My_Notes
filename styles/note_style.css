@@ -137,7 +137,7 @@
     width: 95%;
     margin: 0 1em 0 1em;
     padding: auto;
-    font-size: 2vmin; /* 最大去到1.8vw，只能縮小 */
+    font-size: 1.8vmin; /* 最大去到1.8vw，只能縮小 */
   }
   th,td{
     border: 0.8px solid black;
