@@ -140,7 +140,7 @@
     font-size: 1.8vmin; /* 最大去到1.8vw，只能縮小 */
   }
   th,td{
-    border: 0.8px solid black;
+    border: 0.8px solid #3A3A3A;
     text-align: center;
   }
 /*行列-------------------------------------------------------------*/
