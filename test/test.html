@@ -19,8 +19,56 @@
 </head>
 <body>
 
-
-
+<div class="block" onclick="hidebar()">
+      <h3>Initial setting</h3>
+      <p class="code">
+        no ip domain-lookup<br>
+        hostname <span class="input">R1</span><br>
+        banner motd % <span class="input">Welcomm!!</span> %
+      </p>
+      <h3>Console password</h3>
+      <p class="code">
+        line console 0<br>
+        password <span class="input">88888</span><br>
+        login<br>
+      </p>
+      <h3>Virtual terminal password</h3>
+      <p class="code">
+        line vty <span class="input">0 15</span><br>
+        password <span class="input">88888</span><br>
+        login<br>
+        transport input telnet<br>
+      </p>
+      <p>Before you can remotely access, "Enable password" must be set.</p>
+      <h3>Enable password</h3>
+      <p class="code">
+        enable password <span class="input">88888</span><br>
+        enable secret <span class="input">99999</span><br>
+      </p>
+      <p>"secret" has higher level than "password", means "99999" will replace "88888" to be the only password to reach privileged mode.</p>
+      <h3>NTP</h3>
+      <p class="code">
+        ntp server <span class="input">time.google.com</span><br>
+        ntp peer <span class="input">10.1.1.20</span><br>
+      </p>
+      <p>
+        只有 server 失去聯繫時，才會向 peer 取得時間。
+      </p>
+      <p class="code">
+        show ntp status<br>
+        show ntp associations<br>
+        show clock
+      </p>
+      <p>       
+        "ntp status" 顯示 server 位置 & stratum.<br>
+        "ntp associations" 顯示 peer.<br>
+        "stratum" 代表層數，0 – 16 層，0 代表時間源頭，16 代表無法同步。
+      </p>
+      <p class="code">
+        clock set <span class="input">hh:mm:ss 08 jun 1988</span><br>
+        ntp master <span class="input">5</span><br>
+      </p>
+<br><br>
 <table>
   <tr>
     <td></td>
@@ -76,7 +124,7 @@
 
 
 
-
+</div>
 
 
 
