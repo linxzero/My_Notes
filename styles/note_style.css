@@ -132,13 +132,15 @@
     color: #B3B6B7;
   }
   table{
-      width: 95%;
-      margin: auto;
-      padding: auto;
-  }
-  table, th,td{
-    border: 1px solid black;
+    border: 1.5px solid black;
     border-collapse: collapse;
+    width: 95%;
+    margin: auto;
+    padding: auto;
+    font-size: 2vw;
+  }
+  th,td{
+    border: 0.8px solid black;
     text-align: center;
   }
 /*行列-------------------------------------------------------------*/
