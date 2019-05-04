@@ -1,92 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/my_notes/styles/tree_style.css" rel="stylesheet" type="text/css">
-    <link href="test.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(function(){
-        $(".navi_span").load("../navigations/navi_bar_2.html");
-        $(".navi_span_home").load("../navigations/navi_bar_home.html");
-      });
-    </script>
-    <title>Windows</title>
-    <style>
-      header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
-    </style>
-  </head>
-<!-------------------------------------------------------------------------------->
-  <body>
-    <header>
-      <p id="title">Windows</p>
-    </header>
-<!-------------------------------------------------------------------------------->
-    <div class="block">
-      <ul class="tree">
-
-<li class="navi"><a class="navi_a" href="javascript:void(0)" id="I">CCNA</a>
-  <div class="drop_content">
-    <a href="/my_notes/1.network/I.ccna/cmd.html">Cmd</a>
-    <a href="/my_notes/1.network/I.ccna/routing_protocol.html">Routing Protocol</a>
-    <a href="/my_notes/1.network/I.ccna/stp.html">STP</a>
-  </div>
-</li>
-
-<li class="navi"><a class="navi_a" href="javascript:void(0)" id="II">CCNP</a>
-  <div class="drop_content">
-    <a href="/my_notes/1.network/II.ccnp/eigrp.html">EIGRP</a>
-    <a href="/my_notes/1.network/II.ccnp/ospf.html">OSPF</a>
-  </div>
-</li>
-
-<li class="navi"><a class="navi_a" href="javascript:void(0)" id="III">CyberOps</a>
-  <div class="drop_content">
-    <a href="/my_notes/1.network/III.cyberops/cryptography.html">Cryptography 密碼學</a>
-  </div>
-</li>
-
-<li class="navi"><a class="navi_a" href="javascript:void(0)" id="IV">VPN</a>
-  <div class="drop_content">
-    <a href="/my_notes/1.network/IV.vpn/dmvpn.html">DMVPN</a>
-  </div>
-</li>
+<head>
+  <title></title>
+  <style type="text/css">
+    table {
+      width: 90%;
+      margin: auto;
+      padding: auto;
+    }
+    table, th,td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
 
 
 
+<table>
+  <tr>
+    <td></td>
+    <td>TCP/IP</td>
+    <td>OSI</td>
+    <td colspan="2">Protocol</td>
+    <td>PDU</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td rowspan="3">Application</td>
+    <td>Application</td>
+    <td rowspan="3" colspan="2">DNS, DHCP, SMTP, POP, FTP, HTTP</td>
+    <td rowspan="3">Data</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Presentation</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Session</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Transport</td>
+    <td>Transport</td>
+    <td colspan="2">UDP, TCP</td>
+    <td>Segment</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Internet</td>
+    <td>Network</td>
+    <td rowspan="2">ARP</td>
+    <td>NAT, RIP, OSPF, EIGRP, BGP</td>
+    <td>Packet</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td rowspan="2">Network</td>
+    <td>Data Link</td>
+    <td>PPP, Ethernet</td>
+    <td>Frame</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Physical</td>
+    <td colspan="2"></td>
+    <td>Bits</td>
+  </tr>
+</table>
 
 
-      </ul> 
-    </div>
-<!-------------------------------------------------------------------------------->    
-  </body>
+
+
+
+
+
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
