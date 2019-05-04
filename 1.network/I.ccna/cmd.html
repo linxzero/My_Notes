@@ -48,46 +48,37 @@
 				login<br>
 				transport input telnet<br>
 			</p>
-			<p>PS : 
-					<div class="list"> 
-						<ul>  
-							<li>Mostly, the default transport input protocol is "telnet".</li>
-							<li>Before you can remotly access, "Enable password" has to be set.</li>
-						</ul>
-					</div></p>
+			<p>Before you can remotely access, "Enable password" must be set.</p>
 			<h3>Enable password</h3>
 			<p class="code">
 				enable password <span class="input">88888</span><br>
 				enable secret <span class="input">99999</span><br>
 			</p>
-			<p>PS : According to the setting above, "99999" will replace "88888" to be the only password to reach privileged mode.</p>
+			<p>"secret" has higher level than "password", means "99999" will replace "88888" to be the only password to reach privileged mode.</p>
 			<h3>NTP</h3>
 			<p class="code">
 				ntp server <span class="input">time.google.com</span><br>
 				ntp peer <span class="input">10.1.1.20</span><br>
 			</p>
 			<p>
-				PS : 只有與 server 失去聯繫時，才會向 peer 取暖。
+				只有 server 失去聯繫時，才會向 peer 取得時間。
 			</p>
 			<p class="code">
 				show ntp status<br>
 				show ntp associations<br>
 				show clock
 			</p>
-			<p>PS : </p>
-			<div class="list">
-				<ul>
-					<li>"show ntp status" 顯示 server 位置、stratum.</li>
-					<li>"show ntp associations" 顯示 peer.</li>
-					<li>Stratum 是層數 (0 – 16)，0 代表時間源頭，16 代表無法同步。</li>
-				</ul>
-			</div>
+			<p>				
+				"show ntp status" 顯示 server 位置 & stratum.<br>
+				"show ntp associations" 顯示 peer.<br>
+				"stratum" 代表層數，0 – 16 層，0 代表時間源頭，16 代表無法同步。
+			</p>
 			<p class="code">
 				clock set <span class="input">hh:mm:ss 08 jun 1988</span><br>
 				ntp master <span class="input">5</span><br>
 			</p>
 			<p>
-				PS : "5" 的意思為向下校時最多到第 5 層。
+				"5" 代表向下校時最多去到第 5 層。
 			</p>
 			<h3>Syslog</h3>
 			<p class="code">
