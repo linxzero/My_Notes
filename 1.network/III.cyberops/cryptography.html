@@ -42,25 +42,44 @@
 
       <h2>Integrity & Authenticity</h2>
       <h3>Hash</h3>
-      <div class="list">
-        <ul>
-          <li>One-way：不可逆的，不能由 hash 解成原文。</li>
-          <li>Fixed-Length：任何長度的訊息都會消化成固定長度的 hash.</li>
-        </ul>
-      </div>
-      <h3>MD5</h3>
-      <p>(Message Digest version 5)<br>由 Ron Rivest 於 1992 年發布，生成 128-bit 長的 hash.</p>
-      <h3>SHA-1</h3>
-      <p>(Secure Hash Algorithm 1)<br>由 US. NIST 於 1994 年發布，與 MD5 很相似，生成 160-bit 長的 hash.</p>
-      <h3>SHA-2</h3>
-      <p>(224，256，384，512)<br>由 US. NIST 於 2001 年發布，生成 224-bit，256-bit，384-bit，512-bit 長的 hash.</p>
-      <h3>HMAC</h3>
-      <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key.</p>
+      <p>One-way : 不可逆的，不能由 hash 解成原文。</p>
+      <p>Fixed-Length : 任何長度的訊息都會消化成固定長度的 hash.</p>
+
+      
+      <table>
+        <tr>
+          <td style="vertical-align: top;text-align: left;width: 47.5%">
+            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">MD5</p>
+            <p>(Message Digest version 5)<br>由 Ron Rivest 於 1992 年發布，生成 128-bit 長的 hash.</p>
+          </td>
+          <td style="vertical-align: top;text-align: left">
+            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">SHA-1</p>
+            <p>(Secure Hash Algorithm 1)<br>由 US. NIST 於 1994 年發布，與 MD5 很相似，生成 160-bit 長的 hash.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;text-align: left">
+            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">SHA-2</p>
+            <p>(224，256，384，512)<br>由 US. NIST 於 2001 年發布，生成 224-bit，256-bit，384-bit，512-bit 長的 hash.</p>
+          </td>
+          <td style="vertical-align: top;text-align: left">
+            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">HMAC</p>
+            <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key.</p>
+          </td>
+        </tr>
+      </table>
+
+
+
+      
+
+      
+      
 
 
       <h2>Confidentiality</h2>
       <h3>Key</h3>
-      <p>Key Length：<br>又稱為 Key Size，單位為 bit.<br><br>Key Space：<br>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條。</p>
+      <p>Key Length : 又稱為 Key Size，單位為 bit.<br>Key Space : Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條。</p>
       <h3>Symmetric encryption algorithm</h3>
       <p>對稱加密，用同一條 key 對資料加密和解密。<br>在建立溝通時，每個 communicating party 都要知道同一條 key，叫 Pre-shared Key. (又叫 Secret Key)</p>
       <h3>Asymmetric encryption algorithm</h3>
