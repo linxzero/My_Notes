@@ -136,7 +136,7 @@
     border-collapse: collapse;
     width: 95%;
     margin: auto;
-    padding: auto;
+    padding: 0;
     font-size: 1.8vmin; /* 最大去到1.8vw，只能縮小 */
   }
   th,td{
