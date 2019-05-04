@@ -137,7 +137,7 @@
     width: 95%;
     margin: 0 1em 0 1em;
     padding: auto;
-    font-size: 1.8vw;
+    font-size: 1.8vmin;
   }
   th,td{
     border: 0.8px solid black;
