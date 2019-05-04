@@ -135,7 +135,7 @@
     border: 1.5px solid black;
     border-collapse: collapse;
     width: 95%;
-    margin: auto;
+    margin: 0 1em 0 1em;
     padding: auto;
     font-size: 1.8vw;
   }
