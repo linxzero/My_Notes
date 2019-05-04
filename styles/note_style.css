@@ -131,6 +131,16 @@
   .heritage{
     color: #B3B6B7;
   }
+  table{
+      width: 95%;
+      margin: auto;
+      padding: auto;
+  }
+  table, th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
 /*行列-------------------------------------------------------------*/
   /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
   .column3{ /* Create 3 equal columns that floats next to each other */
