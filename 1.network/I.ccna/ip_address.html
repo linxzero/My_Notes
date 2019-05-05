@@ -255,7 +255,7 @@
 			</tr>
 		</table>
 		<p>IPv6 有 128bit，前 64bit 為 Prefix，後 64bit 要人手設定，很痛苦。<br>
-		有見及此，人們會用 EUI-64 來生成 IPv6 後 64bit 的部份。</p>
+		有見及此，一般會用 EUI-64 來生成 IPv6 後 64bit 的部份。</p>
 
 
 
@@ -362,12 +362,12 @@
 
 		<h3>EUI-64</h3>
 		<p>就是利用 Mac Address 生成 IPv6 後 64bit 的部份。<br>
-			原理：<br>Mac Address (48bit) + FFFE (16bit) = 64bit<br><br>
+			原理：<br>Mac Address (48bit) + FFFE (16bit) = 64bit<br>
 			例子：<br>
-			1) MAC : 000a.f30b.a601<br>
-			2) 插入 : 000a : f3<span style="color:red">ff : fe</span>0b : a601<br>
-			3) 把第 7bit 變成 1 : 0<span style="color:red">2</span>0a : f3ff : fe0b : a601<br>
-			3.1) Link-Local就是 FE80 :: 20a : f3ff : fe0b : a601
+			1) MAC Address = 000a.f30b.a601<br>
+			2) 插入後 = 000a : f3<span style="color:red">ff : fe</span>0b : a601<br>
+			3) 把第 7bit 變成 1 = 0<span style="color:red">2</span>0a : f3ff : fe0b : a601<br>
+			4) Link-Local Address = FE80 :: 20a : f3ff : fe0b : a601
 
 
 
