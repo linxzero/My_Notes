@@ -33,9 +33,9 @@
       <h3>I. Confidentially</h3>
       <p>〔Receiver〕</span><br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容。<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成。</p>
       <h3>II. Data Integrity</h3>
-      <p>〔Integrity〕<br>訊息內容要完整無缺，任何的更改都能被發覺。<br>透過 MD5 or SHA hash-generating algorithms 來完成。<br>(MD5 - Message Digest version 5；SHA - Secure Hash Algorithm)</p>
+      <p>〔Integrity〕<br>訊息內容要完整無缺，任何的更改都能被發覺。<br>透過 MD5 or SHA hash-generating algorithms 來完成。</p>
       <h3>III. Origin Authenticity</h3>
-      <p>〔Sender〕<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息。<br>用 HMAC 來完成。<br>(HMAC - Hash Message Authentication Code)</p>
+      <p>〔Sender〕<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息。<br>用 HMAC 來完成。</p>
       <h3>IV. Non-Repudiation</h3>
       <p>〔不能否認〕<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴。</p>
 
@@ -180,12 +180,12 @@
       <br>
       <h2>加密 & 解密 (Cryptography & Cryptanalysis)</h2>
       <h3>加密</h3>
-      <p>Substitution cipher :<br>根據對應表把原文編譯成密文<br><br>Transposition cipher :<br>根據規則把原文重新編排次序，成為密文<br><br>Polyalphabetic cipher :<br>二維對應表的 Substitution cipher</p>
+      <p>〔Substitution cipher〕<br>根據對應表把原文編譯成密文<br><br>〔Transposition cipher〕<br>根據規則把原文重新編排次序，成為密文<br><br>〔Polyalphabetic cipher〕<br>二維對應表的 Substitution cipher</p>
       <h3>解密</h3>
-      <p>Brute-force method :<br>暴力破解，即是窮舉法<br><br>
-      Ciphertext method :<br>不斷收集密文，再交電腦分析<br><br>
-      Known-Plaintext method :<br>既收集密文，又知道訊息內一定含有某些資訊，比如日期、收件人等等<br><br>
-      Meet-in-the-Middle method :<br>破解者就在明文與密文之間，收集無窮數據</p>
+      <p>〔Brute-force method〕<br>暴力破解，即是窮舉法<br><br>
+      〔Ciphertext method〕<br>不斷收集密文，再交電腦分析<br><br>
+      〔Known-Plaintext method〕<br>既收集密文，又知道訊息內一定含有某些資訊，比如日期、收件人等等<br><br>
+      〔Meet-in-the-Middle method〕<br>破解者就在明文與密文之間，收集無窮數據</p>
     </div>
 <!--------------------------------------------------------------------------------> 
     <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
