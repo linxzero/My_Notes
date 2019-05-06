@@ -74,8 +74,8 @@
     line-height: 1;
   }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
-    /* 行高比 p 高0.2 */
-    line-height: 1.7;
+    font-size: 0.9em;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
   }
