@@ -32,7 +32,7 @@
     padding: 0 1% 5em 1%;
   }
   div.list{ /* ul, ol, li... */
-    padding: 0.4em 0.25em 0 2.25em;
+    padding: 0.4em 1.25em 0 1.25em;
   }
 /*內文-------------------------------------------------------------*/
   html{ 
@@ -75,7 +75,7 @@
   }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
     /* 行高比 p 高0.2 */
-    line-height: 1.8;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
   }
@@ -89,6 +89,9 @@
     text-align: right;
     margin: 0;
     padding: 1.4em 0.5em 0 0.5em;
+  }
+  .lilbr{
+    line-height: 0.5;
   }
   a{ /* blue as h2 */
     color: #2471A3; 

@@ -31,24 +31,31 @@
     <div class="block" onclick="hidebar()">
       <h2>Securing Communication</h2>
       <h3>I. Confidentially</h3>
-      <p>〔Receiver〕</span><br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容。<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成。</p>
+      <p>Receiver</p>
+      <p>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容。加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成。</p>
       <h3>II. Data Integrity</h3>
-      <p>〔Integrity〕<br>訊息內容要完整無缺，任何的更改都能被發覺。<br>透過 MD5 or SHA hash-generating algorithms 來完成。</p>
+      <p>Integrity</p>
+      <p>訊息內容要完整無缺，任何的更改都能被發覺。透過 MD5 or SHA hash-generating algorithms 來完成。</p>
       <h3>III. Origin Authenticity</h3>
-      <p>〔Sender〕<br>保證訊息是由信中的發送人本人發出的，不是偽造的訊息。<br>用 HMAC 來完成。</p>
+      <p>Sender</p>
+      <p>保證訊息是由信中的發送人本人發出的，不是偽造的訊息。用 HMAC 來完成。</p>
       <h3>IV. Non-Repudiation</h3>
-      <p>〔不能否認〕<br>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴。</p>
+      <p>不能否認</p>
+      <p>承上啟下，訊息含有發送人的獨有特徵，或者簽署，一定不是其他人發出的，所以無法抵賴。</p>
 
 
       <h2>Integrity & Authenticity</h2>
       <h3>Hash</h3>
-      <p>〔One-way〕<br>不可逆的，不能由 hash 解成原文。</p>
-      <p>〔Fixed-Length〕<br>任何長度的訊息都會消化成固定長度的 hash.</p>
+      <p>One-way</p>
+      <p>不可逆的，不能由 hash 解成原文。</p>
+      <p class="lilbr"><br></p>
+      <p>Fixed-Length</p>
+      <p>任何長度的訊息都會消化成固定長度的 hash.</p>
 
       
       <table>
         <tr>
-          <td style="vertical-align: top;text-align: left;width: 47.5%">
+          <td style="vertical-align: top;text-align: left;width: 49%">
             <p class="h3like">MD5</p>
             <p>(Message Digest version 5)<br>由 Ron Rivest 於 1992 年發布，生成 128-bit 長的 hash.</p>
           </td>
@@ -71,8 +78,11 @@
 
       <h2>Confidentiality</h2>
       <h3>Key</h3>
-      <p>Key Length :<br>又稱為 Key Size，單位為 bit.</p><br>
-      <p>Key Space :<br>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條。</p>
+      <p>Key Length</p>
+      <p>又稱為 Key Size，單位為 bit.</p>
+      <p class="lilbr"><br></p>
+      <p>Key Space</p>
+      <p>Key 的數量，例如 Key Length 為 10-bit，Key Space 為 1024 條。</p>
       <h3>Symmetric encryption algorithm</h3>
       <p>對稱加密，用同一條 key 對資料加密和解密。<br>在建立溝通時，每個 communicating party 都要知道同一條 key，叫 Pre-shared Key. (又叫 Secret Key)</p>
       <h3>Asymmetric encryption algorithm</h3>
@@ -80,10 +90,10 @@
 
 
       <h2>Symmetric encryption algorithm</h2>
-      <br>
+      <p class="lilbr"><br></p>
       <table>
         <tr>
-          <td style="vertical-align: top;text-align: left;width: 47.5%">
+          <td style="vertical-align: top;text-align: left;width: 49%">
             <p class="h3like">DES</p>
             <p class="heritage">(Data Encryption Standard)<br>Timeline - 1976<br>Key size - 56 bits<br>Block size- 64 bits<br>Speed - Medium<br>Crack - 6.4 days</p>
           </td>
@@ -128,11 +138,11 @@
           <td colspan="2" style="vertical-align: top;text-align: left">
             <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">DH</p>
             <p>(Diffie-Hellman algorithm)<br>Timeline - 1976<br>Key size - 768, 1024, 2048, 3072, 4096<br>在收發雙方事前並沒有溝通過的情況下，藉着 DH 仍然可以共悉出一條 Shared Secret Key，流程如下：</p>
-            <img src="images/DH.PNG" style="margin: auto;width: 100%">
+            <img src="images/DH.PNG" style="width: 100%">
           </td>
         </tr>
         <tr>
-          <td style="vertical-align: top;text-align: left;width: 47.5%">
+          <td style="vertical-align: top;text-align: left;width: 49%">
             <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">RSA</p>
             <p>(Rivest, Shamir, Adleman)<br>Timeline - 1977<br>Key size - 512 to 2048</p>
           </td>
@@ -181,12 +191,26 @@
       <br>
       <h2>加密 & 解密 (Cryptography & Cryptanalysis)</h2>
       <h3>加密</h3>
-      <p>〔Substitution cipher〕<br>根據對應表把原文編譯成密文<br><br>〔Transposition cipher〕<br>根據規則把原文重新編排次序，成為密文<br><br>〔Polyalphabetic cipher〕<br>二維對應表的 Substitution cipher</p>
+      <p>Substitution cipher</p>
+      <p>根據對應表把原文編譯成密文</p>
+      <p class="lilbr"><br></p>
+      <p>Transposition cipher</p>
+      <p>根據規則把原文重新編排次序，成為密文</p>
+      <p class="lilbr"><br></p>
+      <p>Polyalphabetic cipher</p>
+      <p>二維對應表的 Substitution cipher</p>
       <h3>解密</h3>
-      <p>〔Brute-force method〕<br>暴力破解，即是窮舉法<br><br>
-      〔Ciphertext method〕<br>不斷收集密文，再交電腦分析<br><br>
-      〔Known-Plaintext method〕<br>既收集密文，又知道訊息內一定含有某些資訊，比如日期、收件人等等<br><br>
-      〔Meet-in-the-Middle method〕<br>破解者就在明文與密文之間，收集無窮數據</p>
+      <p>Brute-force method</p>
+      <p>暴力破解，即是窮舉法</p>
+      <p class="lilbr"><br></p>
+      <p>Ciphertext method</p>
+      <p>不斷收集密文，再交電腦分析</p>
+      <p class="lilbr"><br></p>
+      <p>Known-Plaintext method</p>
+      <p>既收集密文，又知道訊息內一定含有某些資訊，比如日期、收件人等等</p>
+      <p class="lilbr"><br></p>
+      <p>Meet-in-the-Middle method</p>
+      <p>破解者就在明文與密文之間，收集無窮數據</p>
     </div>
 <!--------------------------------------------------------------------------------> 
     <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
