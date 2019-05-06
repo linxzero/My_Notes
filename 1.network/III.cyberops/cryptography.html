@@ -6,7 +6,7 @@
     <link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
     <link href="../../styles/note_style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
+    <script> /*-- Load Navi --*/
       $(function(){
         $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
         $(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
@@ -29,8 +29,7 @@
     </ul>
 <!--D1----------------------------------------------------------------------------> 
     <div class="block" onclick="hidebar()">
-      <h2>保密溝通 四要素<br>
-      (Securing Communication)</h2>
+      <h2>Securing Communication</h2>
       <h3>I. Confidentially</h3>
       <p><span class="high">Receiver</span><br>只有認可的接收者能讀到訊息內容，就算中途被人截取也只是加密後的訊息，無法獲取訊息內容。<br>加密技術可透過 Symmetric or Asymmetric encryption algorithms 來完成。</p>
       <h3>II. Data Integrity</h3>
@@ -50,21 +49,21 @@
       <table>
         <tr>
           <td style="vertical-align: top;text-align: left;width: 47.5%">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">MD5</p>
+            <p class="h3like">MD5</p>
             <p>(Message Digest version 5)<br>由 Ron Rivest 於 1992 年發布，生成 128-bit 長的 hash.</p>
           </td>
           <td style="vertical-align: top;text-align: left">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">SHA-1</p>
+            <p class="h3like">SHA-1</p>
             <p>(Secure Hash Algorithm 1)<br>由 US. NIST 於 1994 年發布，與 MD5 很相似，生成 160-bit 長的 hash.</p>
           </td>
         </tr>
         <tr>
           <td style="vertical-align: top;text-align: left">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">SHA-2</p>
+            <p class="h3like">SHA-2</p>
             <p>(224，256，384，512)<br>由 US. NIST 於 2001 年發布，生成 224-bit，256-bit，384-bit，512-bit 長的 hash.</p>
           </td>
           <td style="vertical-align: top;text-align: left">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">HMAC</p>
+            <p class="h3like">HMAC</p>
             <p>(keyed-Hash Message Authentication Code)<br>光憑普通人都識的 Hash 技術，只能防止訊息在中途被意外更改，防不了 man-in-the-middle attacks。此時就需要 HMAC，他就是在訊息被消化時，加入只有 Sender 與 Receiver 知道的 Secret Key.</p>
           </td>
         </tr>
@@ -84,27 +83,27 @@
       <table>
         <tr>
           <td style="vertical-align: top;text-align: left;width: 47.5%">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">DES</p>
+            <p class="h3like">DES</p>
             <p class="heritage">(Data Encryption Standard)<br>Timeline - 1976<br>Key size - 56 bits<br>Block size- 64 bits<br>Speed - Medium<br>Crack - 6.4 days</p>
           </td>
           <td style="vertical-align: top;text-align: left">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">3DES</p>
+            <p class="h3like">3DES</p>
             <p class="heritage">(Triple DES)<br>Timeline - 1977<br>Key size - 112 and 168 bits<br>Block size - 64 bits<br>Speed - Low<br>Crack - 4.6 billion years</p>
           </td>
         </tr>
         <tr>
           <td style="vertical-align: top;text-align: left">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">AES</p>
+            <p class="h3like">AES</p>
             <p>(Advanced Encryption Standard)<br>Timeline - 2001<br>Key size - 128, 192, 256 bits<br>Block size - 128, 192, 256 bits<br>Speed - High<br>Crack - 149 trillion years</p>
           </td>
           <td style="vertical-align: top;text-align: left">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">SEAL</p>
+            <p class="h3like">SEAL</p>
             <p>(Software-optimized Encryption Algorithm)<br>Timeline - 1997<br>Key size - 160 bits<br>It is a Stream Cipher<br>Speed - High<br>Crack - Unknown</p>
           </td>
         </tr>
         <tr>
           <td colspan="2" style="vertical-align: top;text-align: left">
-            <p style="font-size: 1.3em;color: #383838;font-weight: 600;line-height: 1">RC</p>
+            <p class="h3like">RC</p>
             <p>(Rivest Cipher)<br>RC2 - 1987 - 40 and 64 bits - Block cipher<br>RC4 - 1987 - 1 to 256 bits - Stream cipher<br>RC5 - 1994 - 0 to 2048 bits - Block cipher<br>RC6 - 1998 - 128, 192, 256 bits - Block cipher<br>( RC4 is widely used in SSL)</p>
           </td>
         </tr>

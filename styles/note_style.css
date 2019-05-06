@@ -7,40 +7,19 @@
     font-family: ti-eng; 
     src: url(../fonts/eng/MavenPro-Medium.ttf);
   } 
-  /*@font-face{ 
-    font-family: h; 
-    src: url(../fonts/cht/GenRyuMinTW-Bold.ttf);
-  }*/
-  /*@font-face{ 
-    font-family: para; 
-    src: url(../fonts/NotoSansTC-Regular.otf);
-  }*/
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
-  html{ /* html底色灰色，內文一般文字，碳灰色 */
-    background-color: #f1f1f1;
-    color: #424949; 
-    /*font-family: 'proxima-nova',Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
-    */
-    font-family: proxima-nova, sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 100%;
-    line-height: 1.5;
-    margin: 0;
-  }
   body{
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 2% 8em 2%;
+    padding: 0 1% 8em 1%;
   }
   header{ 
     min-height: 9.375em; 
     margin: 0;
     padding: 0;
   }
-/*內文-------------------------------------------------------------*/
   div{ /* default div 冇任何格式 */
     margin: 0;
     padding: 0;
@@ -50,42 +29,52 @@
   div.block{ /* D1, D2, D3... */
     float: top;
     max-width: 60em;
-    padding: 0 2% 5em 2%;
+    padding: 0 1% 5em 1%;
   }
   div.list{ /* ul, ol, li... */
     padding: 0.4em 0.25em 0 2.25em;
   }
-  h1{
-    font-family: h,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
-    font-size: 2em;
-    color: #424949;
-    text-shadow: 2px 2px #D7DBDD;
-    font-weight: normal;
+/*內文-------------------------------------------------------------*/
+  html{ 
+    background-color: #f1f1f1;
+    color: #444444; /* 灰色 */
+    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.5;
     margin: 0;
-    padding: 2em 0 0 0;
-  }
-  h2{ 
-    /*font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
-    */
-    font-size: 1.5em;
-    color: #264868;
-    text-shadow: 2px 2px #D7DBDD;
-    font-weight: 600;
+    padding: 0;
+  }  
+  p{ 
+    font-size: 0.9em;
     margin: 0;
-    padding: 1em 0 0 0;
+    padding: 0;
   }
   h3{
-    font-size: 1.3em;
-    color: #383838;
+    color: #363636; /* 25% darker than p */
     font-weight: 600;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.6em 0 0 0;
+  }
+  h2{ 
+    color: #2471A3; /* blue as a */
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.6;
     margin: 0;
     padding: 1em 0 0 0;
   }
-  p{ 
-    padding: 0.4em 0 0 0;
+  .h3like{
+    color: #363636; /* 25% darker than p */
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 1;
   }
   span.high{
-    font-weight: bold;
+    font-weight: 600;
   }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
     /* 行高比 p 高0.2 */
@@ -104,7 +93,7 @@
     margin: 0;
     padding: 1.4em 0.5em 0 0.5em;
   }
-  a{ /* 網址顏色，型藍色，沒有底線 */
+  a{ /* blue as h2 */
     color: #2471A3; 
     text-decoration: none;
   }
@@ -137,14 +126,15 @@
   table{
     border: 2px solid #3A3A3A;
     border-collapse: collapse;
-    width: 95%;
+    width: 98%;
     margin: 1em auto 1em auto;
     padding: 0;
-    font-size: 1.8vmin; /* 最大去到1.8vw，只能縮小 */
+    font-size: 1.9vmin; /* 最大去到1.9vw，只能縮小 */
   }
   th,td{
     border: 0.8px solid #3A3A3A;
     text-align: center;
+    padding: 0.2em;
   }
 /*行列-------------------------------------------------------------*/
   /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
