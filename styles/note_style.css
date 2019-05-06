@@ -20,9 +20,14 @@
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
     background-color: #f1f1f1;
-    font-family: 'proxima-nova',Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
-    font-size: 100%;
     color: #424949; 
+    /*font-family: 'proxima-nova',Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
+    */
+    font-family: "proxima-nova",sans-serif;
+    font-weight: 300;
+    font-size: 100%;
+    line-height: 1.6;
+    margin: 0;
   }
   body{
     max-width: 60em;
@@ -75,9 +80,7 @@
     margin: 0;
     padding: 1em 0 0 0;
   }
-  p{ /* 內文一般行高，1.6 */
-    line-height: 1.6;
-    margin: 0;
+  p{ 
     padding: 0.4em 0 0 0;
   }
   span.high{
