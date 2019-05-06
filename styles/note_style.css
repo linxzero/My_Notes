@@ -20,7 +20,7 @@
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
     background-color: #f1f1f1;
-    font-family: "proxima-nova",Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
+    font-family: 'proxima-nova',Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
     font-size: 100%;
     color: #424949; 
   }
