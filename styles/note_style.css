@@ -73,10 +73,6 @@
     font-size: 1.2em;
     line-height: 1;
   }
-  span.high{
-    color: #363636;
-    font-weight: 600;
-  }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
     /* 行高比 p 高0.2 */
     line-height: 1.8;
