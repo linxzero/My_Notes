@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-  <link href="../styles/note_style.css" rel="stylesheet" type="text/css">
-  </style>
-  <style>
-    table {
-      width: 95%;
-      margin: auto;
-      padding: auto;
-    }
-    table, th,td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+    <link href="test.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
+      });
+    </script>
+    <title>Cmd 匯總</title>
+    <style>
+      header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
+      li.navi a#I{background-color: #4CAF50;} /* which one be green */
+    </style>
+  </head>
+<!-------------------------------------------------------------------------------->
+  <body>
+    <header>
+      <p onclick="hidebar()" id="title">Cmd 匯總</p>
+    </header>
+    <ul class="navi">
+      <li class="navi"><a class="navi_a" href="javascript:void(0)" id="I">CCNA</a>
+  <div class="drop_content">
+    <a href="/my_notes/1.network/I.ccna/cmd.html">Cmd 匯總</a>
+    <a href="/my_notes/1.network/I.ccna/osi.html">OSI model</a>
+    <a href="/my_notes/1.network/I.ccna/ip_address.html">IP address</a>
+  </div>
+</li>
 
-<div class="block" onclick="hidebar()">
+<li class="navi"><a class="navi_a" href="javascript:void(0)" id="II">CCNP</a>
+  <div class="drop_content">
+
+  </div>
+</li>
+
+<li class="navi"><a class="navi_a" href="javascript:void(0)" id="III">CyberOps</a>
+  <div class="drop_content">
+    <a href="/my_notes/1.network/III.cyberops/cryptography.html">Cryptography 密碼學</a>
+    <a href="/my_notes/1.network/III.cyberops/pki.html">PKI 公鑰結構</a>
+  </div>
+</li>
+
+<li class="navi"><a class="navi_a" href="javascript:void(0)" id="IV">VPN</a>
+  <div class="drop_content">
+    <a href="/my_notes/1.network/IV.vpn/gre.html">GRE tunnel</a>
+    <a href="/my_notes/1.network/IV.vpn/dmvpn.html">DMVPN</a>
+  </div>
+</li>
+    </ul>
+<!--D1----------------------------------------------------------------------------> 
+    <div class="block" onclick="hidebar()">
       <h3>Initial setting</h3>
       <p class="code">
         no ip domain-lookup<br>
@@ -68,66 +102,79 @@
         clock set <span class="input">hh:mm:ss 08 jun 1988</span><br>
         ntp master <span class="input">5</span><br>
       </p>
-<br><br>
-<table>
-  <tr>
-    <td></td>
-    <td>TCP/IP</td>
-    <td>OSI</td>
-    <td colspan="2">Protocol</td>
-    <td>PDU</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td rowspan="3">Application</td>
-    <td>Application</td>
-    <td rowspan="3" colspan="2">DNS, DHCP, SMTP, POP, FTP, HTTP</td>
-    <td rowspan="3">Data</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Presentation</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Session</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Transport</td>
-    <td>Transport</td>
-    <td colspan="2">UDP, TCP</td>
-    <td>Segment</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Internet</td>
-    <td>Network</td>
-    <td rowspan="2">ARP</td>
-    <td>NAT, RIP, OSPF, EIGRP, BGP</td>
-    <td>Packet</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td rowspan="2">Network</td>
-    <td>Data Link</td>
-    <td>PPP, Ethernet</td>
-    <td>Frame</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Physical</td>
-    <td colspan="2"></td>
-    <td>Bits</td>
-  </tr>
-</table>
-
-
-
-</div>
+      <p>
+        "5" 代表向下校時最多去到第 5 層。
+      </p>
+      <h3>Syslog</h3>
+      <p class="code">
+        logging <span class="input">10.1.1.2</span><br>
+        logging on<br>
+        logging trap <span class="input">severity-level</span><br>
+        no logging console
+      </p>
+      <p>
+        先指出 Syslog server 位置，後設置嚴重等級。<br>
+        "severity-level" is 0 – 7.<br>
+        "no logging console" 關閉 log prompting on console.
+      </p>
 
 
 
 
-</body>
+
+    </div>
+<!--------------------------------------------------------------------------------> 
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
+    <script>
+      function hidebar(){
+        var x=document.getElementsByClassName("drop_content");
+        x.style.display="none";
+      };
+
+      // When the user scrolls down 520px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+          document.getElementById("TopBtn").style.display = "block";
+        } else {
+          document.getElementById("TopBtn").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>  
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
