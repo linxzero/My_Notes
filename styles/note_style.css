@@ -20,7 +20,7 @@
     box-sizing: border-box; }
   html{ /* html底色灰色，內文一般文字，碳灰色 */
     background-color: #f1f1f1;
-    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
+    font-family: "proxima-nova",Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
     font-size: 100%;
     color: #424949; 
   }
@@ -50,7 +50,7 @@
     padding: 0.4em 0.25em 0 2.25em;
   }
   h1{
-    font-family: h, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+    font-family: h,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
     font-size: 2em;
     color: #424949;
     text-shadow: 2px 2px #D7DBDD;
@@ -66,19 +66,19 @@
     text-shadow: 2px 2px #D7DBDD;
     font-weight: 600;
     margin: 0;
-    padding: 1em 0.2em 0 0;
+    padding: 1em 0 0 0;
   }
   h3{
     font-size: 1.3em;
     color: #383838;
     font-weight: 600;
     margin: 0;
-    padding: 1em 0.6em 0 0.7em;
+    padding: 1em 0 0 0;
   }
   p{ /* 內文一般行高，1.6 */
     line-height: 1.6;
     margin: 0;
-    padding: 0.4em 0.8em 0 0.8em;
+    padding: 0.4em 0 0 0;
   }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
     /* 行高比 p 高0.2 */
@@ -101,9 +101,7 @@
     color: #2471A3; 
     text-decoration: none;
   }
-  a:hover{
-    text-decoration: underline;
-  }
+  a:hover{ text-decoration: underline; }
   .code{ 
     /*font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     */
