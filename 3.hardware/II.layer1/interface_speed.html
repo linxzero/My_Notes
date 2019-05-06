@@ -31,15 +31,7 @@
 		<div class="block" onclick="hidebar()">
 		<h3>Virtual Storage</h3>
 		<p>Bit → Byte → KiloByte → MegaByte → GigaByte → TeraByte → PetaByte → ExaByte → ZettaByte → YottaByte → BrontoByte → GeopByte</p>
-		<h3>Bandwidth</h3>
-		<p>導體的傳送能力，受物理定律和編碼技術影響。It is typically measured in Kbps or Mbps.</p>
-		<h3>Throughput</h3>
-		<p>點到點的實際速度，影響因素有 : <br>
-			○ The amount of traffic<br>
-			○ The type of traffic<br>
-			○ The latency created by the number of network devices between source and destination.</p>
-		<h3>Goodput</h3>
-		<p></p>
+		
 		
 		<table> <!--Chart---------------->
 			<tr style="background-color: #3A3A3A; color: #F4F6F7">
@@ -212,7 +204,17 @@
 			</tr>
 		</table>
 
-
+		<h3>Bandwidth</h3>
+		<p>管道的傳送能力，物理上限。或者叫點對點的傳送上限。用 Kbps or Mbps 表示。</p>
+		<h3>Throughput</h3>
+		<p>點對點傳送資料的實際速度，影響因素很多 : <br>
+			○ The amount of traffic<br>
+			○ The type of traffic<br>
+			○ The latency between source and destination</p>
+		<h3>Latency</h3>
+		<p>點對點來回一次 (round-trip) 所需時間。Latency 越大，Throughput 越小。點對點之間 routers 的數量越多，Latency 越大。用 ms 表示，通常去到地球另一端 Latency 不少於 250ms。</p>
+		<h3>Goodput</h3>
+		<p></p>
 
 
 
