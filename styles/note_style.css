@@ -80,6 +80,9 @@
     margin: 0;
     padding: 0.4em 0 0 0;
   }
+  span.high{
+    font-weight: bold;
+  }
   ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
     /* 行高比 p 高0.2 */
     line-height: 1.8;
@@ -116,7 +119,7 @@
     padding: 0.2em 0.8em 0.2em 0.8em;
     word-break: break-all;
   }
-  .input{ /* input of code */
+  .input{ /* input value in code */
     color: #a4acad;
   }
   .note{ /* background : blue */
@@ -126,9 +129,7 @@
     margin: 0.6em 1em 0.2em 1em;
     padding: 0 1em 0.1em 1em;
   }  
-  .heritage{
-    color: #B3B6B7;
-  }
+  .heritage{ color: #B3B6B7; }/* 灰色 */
   table{
     border: 2px solid #3A3A3A;
     border-collapse: collapse;
