@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+		<link href="../../styles/note_style.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+				$(".navi_span").load("/my_notes/navigations/navi_bar_3.html");
+			});
+		</script>
+		<title>802.</title>
+		<style>
+			header{ background-image: linear-gradient( 90deg, #000000 10%, grey 100%); }
+			li.navi a#II{background-color: #4CAF50;} /* which one be green */
+		</style>
+	</head>
+<!-------------------------------------------------------------------------------->
+	<body>
+		<header>
+			<p onclick="hidebar()" id="title">802.</p>
+		</header>
+		<ul class="navi">
+			<span class="navi_span_home"></span>
+			<span class="navi_span"></span>
+		</ul>
+<!--D1----------------------------------------------------------------------------> 
+		<div class="block" onclick="hidebar()">
+		<h3>IEEE 802</h3>
+		<table>
+			<tr>
+				<td>802.1</td>
+				<td style="text-align: left">高層局域網協定 Higher Layer LAN Protocols</td>
+			</tr>
+			<tr>
+				<td>802.2</td>
+				<td style="text-align: left">邏輯鏈路控制 Logical Link Control</td>
+			</tr>
+			<tr>
+				<td>802.3</td>
+				<td style="text-align: left">以太網 Ethernet (CSMA/CD)</td>
+			</tr>
+			<tr>
+				<td>802.4</td>
+				<td style="text-align: left">權杖匯流排 Token Bus</td>
+			</tr>
+			<tr>
+				<td>802.5</td>
+				<td style="text-align: left">權杖環 Token Ring</td>
+			</tr>
+			<tr>
+				<td>802.6</td>
+				<td style="text-align: left">都會區網路</td>
+			</tr>
+			<tr>
+				<td>802.7</td>
+				<td style="text-align: left">寬頻技術</td>
+			</tr>
+			<tr>
+				<td>802.8</td>
+				<td style="text-align: left">光纖技術</td>
+			</tr>
+			<tr>
+				<td>802.9</td>
+				<td style="text-align: left">語音與資料綜合局域網</td>
+			</tr>
+			<tr>
+				<td>802.11</td>
+				<td style="text-align: left">無線局域網 Wireless LAN</td>
+			</tr>
+			<tr>
+				<td>802.12</td>
+				<td style="text-align: left">100VG AnyLAN</td>
+			</tr>
+			<tr>
+				<td>802.15</td>
+				<td style="text-align: left">無線個域網 Wireless Personal Area Network (藍牙)</td>
+			</tr>
+			<tr>
+				<td>802.16</td>
+				<td style="text-align: left">寬頻無線接入 Broadband Wireless Access (WiMAX)</td>
+			</tr>
+			<tr>
+				<td>802.17</td>
+				<td style="text-align: left">彈性分組環 Resilient Packet Ring</td>
+			</tr>
+			<tr>
+				<td>802.18</td>
+				<td style="text-align: left">無線管制 Radio Regulatory TAG</td>
+			</tr>
+			<tr>
+				<td>802.19</td>
+				<td style="text-align: left">共存 Coexistence TAG</td>
+			</tr>
+			<tr>
+				<td>802.20</td>
+				<td style="text-align: left">移動寬頻無線接入 Mobile Broadband Wireless Access (MBWA)</td>
+			</tr>
+			<tr>
+				<td>802.21</td>
+				<td style="text-align: left">媒質無關切換 Media Independent Handoff</td>
+			</tr>
+		</table>
+	
+		</div>
+<!--------------------------------------------------------------------------------> 
+		<button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
+		<script>
+			function hidebar(){
+				var x=document.getElementsByClassName("drop_content");
+				x.style.display="none";
+			};
+
+			// When the user scrolls down 520px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+					document.getElementById("TopBtn").style.display = "block";
+				} else {
+					document.getElementById("TopBtn").style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>  
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
