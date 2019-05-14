@@ -29,10 +29,17 @@
 		</ul>
 <!--D1----------------------------------------------------------------------------> 
 		<div class="block" onclick="hidebar()">
+		<h3>Static Route</h3>
+		<p class="code">ip route <span class="input">172.16.0.0 255.255.0.0 g0/1</span><br>ip route <span class="input">172.17.0.0 255.255.0.0 10.1.1.1</span></p>
+		<p>可以用 exit-intf 或者 next-hop ip.</p>
 
+		<h3>Floating Static Route</h3>
+		<p>作為主 route 的 backup。因此 floating static route 需要 set 更大的 AD.</p>
+		<p class="code">ip route 172.17.0.0 255.255.0.0 10.1.1.1 <span class="input">120</span></p>
+		"120" is AD.
 
-
-
+		<h3>Verify</h3>
+		<p class="code">show ip route</p>
 
 
 
