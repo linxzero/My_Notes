@@ -62,11 +62,15 @@
 
 
       <h2>Remote</h2>
-      <h3>SSH</h3>
-      <p class="code">ssh -l <span class="input">peter 192.168.1.1</span></p>
       <h3>Telnet</h3>
       <p class="code">telnet</p>
-      <p>First of all, "Telnet Client" must be enabled in Windows Features.</p>
+      <p>Firstly, "Telnet Client" must be enabled in Windows Features.<br>
+        Secondly, "Telnet Server" also must be enabled if you want someone access this computer.<br>
+        p.s. Windows 7 can be Telnet server, while Windows 10 can't be Telnet server in any native way, you have to install third-party apps to start serving Telnet on port 23.
+      </p>
+      <h3>SSH</h3>
+      <p class="code">ssh -l <span class="input">peter 192.168.1.1</span></p>
+      <p>Settings → Apps & features → Manage optional features → Add feature → OpenSSH Client</p>
       <br>
       <br>
 
