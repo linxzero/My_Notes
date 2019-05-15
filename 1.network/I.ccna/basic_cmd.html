@@ -29,12 +29,17 @@
 		</ul>
 <!--D1----------------------------------------------------------------------------> 
 		<div class="block" onclick="hidebar()">
-			<h3>Beginning setting</h3>
+			<h2>Beginning setting</h2>
 			<p class="code">
 				no ip domain-lookup<br>
 				hostname <span class="input">R1</span><br>
 				banner motd % <span class="input">Welcomm!!</span> %
 			</p>
+			<h3>Saving</h3>
+			<p class="code">copy running-config startup-config</p>
+
+
+			<h2>Password</h2>
 			<h3>Console password</h3>
 			<p class="code">
 				line console 0<br>
@@ -56,11 +61,15 @@
 			</p>
 			<p>"secret" has higher level than "password", means "99999" will replace "88888" to be the only password to reach privileged mode.</p>
 			
-			<h3>Saving</h3>
-			<p class="code">copy running-config startup-config</p>
+
+			<h2>SSH</h2>
+			<h3>Step1. define crypto</h3>
+			<p class="code">ip domain-name <span class="input">abc</span><br>crypto key generate rsa</p>
 
 
-			<h3>NTP</h3>
+
+
+			<h2>NTP</h2>
 			<p class="code">
 				ntp server <span class="input">time.google.com</span><br>
 				ntp peer <span class="input">10.1.1.20</span><br>
@@ -85,7 +94,7 @@
 			<p>
 				"5" 代表向下校時最多去到第 5 層。
 			</p>
-			<h3>Syslog</h3>
+			<h2>Syslog</h2>
 			<p class="code">
 				logging <span class="input">10.1.1.2</span><br>
 				logging on<br>
