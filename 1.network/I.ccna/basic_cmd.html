@@ -65,6 +65,20 @@
 			<h2>SSH</h2>
 			<h3>Step1. define crypto</h3>
 			<p class="code">ip domain-name <span class="input">abc</span><br>crypto key generate rsa</p>
+			<p></p>
+			<h3>Step2. define SSH</h3>
+			<p class="code">
+				ip ssh version 2<br>
+				ip ssh authentication-retries <span class="input">3</span><br>
+				ip ssh time-out <span class="input">10</span><br>
+				username <span class="input">peter</span> secret <span class="input">88888</span><br>
+			</p>
+			<h3>Step2. set SSH</h3>
+			<p class="code">
+				line vty 0 15<br>
+				login local<br>
+				transport input ssh
+			</p>
 
 
 
