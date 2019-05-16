@@ -62,6 +62,21 @@
 			<p>"secret" has higher level than "password", means "99999" will replace "88888" to be the only password to reach privileged mode.</p>
 			
 
+			<h2>IP setting</h2>
+			<h3>IPv4</h3>
+			<p class="code">
+				int g0/0<br>
+				ip add <span class="input">192.168.1.1 255.255.255.0</span><br>
+				no shutdown
+			</p>
+			<p class="code">
+				int s0/0/0<br>
+				ip add <span class="input">10.1.1.1 255.255.255.0</span><br>
+				clock rate <span class="input">9600</span><br>
+			</p>
+
+
+
 			<h2>SSH</h2>
 			<h3>Step1. define crypto</h3>
 			<p class="code">ip domain-name <span class="input">abc</span><br>crypto key generate rsa</p>
