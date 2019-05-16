@@ -57,8 +57,13 @@
       <p>實例：</p>
       <p class="code">arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
       <p>arp –d：本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除<br>(1，1，254)：由 1 ping 到 254，每次加 1<br>–n 1：每次發 1 個 echo request<br>–w 200：200ms to wait for each reply</p>
+      <h3>netstat</h3>
+      <p>Useful command for checking network status.</p>
+      <p class="code">netstat -a</p>
+      [a] show all connections and ports.
       <br>
       <br>
+
 
 
       <h2>Remote</h2>
