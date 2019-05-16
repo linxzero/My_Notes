@@ -51,7 +51,8 @@
     text-decoration: none;
   }
   a:hover:not(.navi_a){
-    text-decoration: underline;
+    background-color: #2471A3;
+    color: white;
   }
 /*//////////////////////////////////////////*/
   .navi_a{ /* 小頭目 */

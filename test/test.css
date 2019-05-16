@@ -6,284 +6,91 @@
   @font-face{ /* 標題英文 */
     font-family: ti-eng; 
     src: url(../fonts/eng/MavenPro-Medium.ttf);
-  } 
+  }
 /*板塊-------------------------------------------------------------*/
   *{ /* width和height的範圍包含padding和border，但不包含margin */
     box-sizing: border-box; }
+  html{ /* html底色灰色，內文一般文字，碳灰色 */
+    background-color: gray;
+    font-family: 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+    font-size: 100%;
+    color: #424949; 
+  }
   body{
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 1% 8em 1%;
+    padding: 0 2% 15em 2%; /* 底邊灰色的闊度 */
   }
   header{ 
-    min-height: 9.375em; 
+    min-height: 3em; 
     margin: 0;
     padding: 0;
-  }
-  div{ /* default div 冇任何格式 */
-    margin: 0;
-    padding: 0;
-    max-width: 60em;
-    background-color: #f1f1f1;
-  }
-  div.block{ /* D1, D2, D3... */
-    float: top;
-    max-width: 60em;
-    padding: 0 1% 5em 1%;
-  }
-  div.list{ /* ul, ol, li... */
-    padding: 0.4em 1.25em 0 1.25em;
   }
 /*內文-------------------------------------------------------------*/
-  html{ 
-    background-color: #f1f1f1;
-    color: #444444; /* 灰色 */
-    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,'Noto Sans TC','微軟正黑體','Microsoft JhengHei',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    line-height: 1.5;
+  div{ 
     margin: 0;
-    padding: 0;
-  }  
-  p, li{ 
-    font-size: 0.9em;
-    margin: 0;
-    padding: 0;
+    padding: 1em 0 2em 0; /* 總上下空間 */
+    max-width: 60em; /* 跟隨body */
+    background-color: white;
   }
-  h3{
-    color: #363636; /* 25% darker than p */
-    font-weight: 600;
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0.6em 0 0 0;
-  }
-  h2{ 
-    color: #2471A3; /* blue as a */
-    font-weight: 600;
-    font-size: 1.5em;
-    line-height: 1.6;
-    margin: 0;
-    padding: 1em 0 0 0;
-  }
-  .h3like{
-    color: #363636; /* 25% darker than p */
-    font-weight: 600;
-    font-size: 1.2em;
-    line-height: 1;
-  }
-  ol, ul, li{ /* 所有 ol, ul, li 沒甚麼格式，都存在於 div.list 內 */
-    margin: 0;
-    padding: 0;
+  .block{
+    float: top;
   }
   ul{
-    list-style-type: circle;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2% 0 4%; /* 總左右空間 */
+  }
+  li{
+    margin: 0;
+    padding: 0;
+    min-height: 9em; /* 小頭目(.navi_a)的最小高度，標準是三行小頭目看起來樣子 */
+  }
+  a{
+    color: #2471A3; 
+    text-decoration: none;
+  }
+  a:hover:not(.navi_a){
+    background-color: #2471A3;
+    color: white;
+  }
+/*//////////////////////////////////////////*/
+  .navi_a{ /* 小頭目 */
+    display: block;
+    float: left;
+    max-width: 5em; /* 要他自動隔行 */
+    padding: 0.7em 0 0 0; /* 與上實線空間 */
+    color: #229954;
+    border-top: solid;
+    font-size: 1.5em;
+    line-height: 1.1;
+    cursor: default;
+  }
+  .drop_content a{
+    display: block;
+    margin: 0.3em 2% 0 45%; /* 與右邊空白，與小頭目距離 */
+    padding: 0 0.3em 0 0.3em; /* 虛線格內的空間 */
+    border-style: dotted;
+    border-width: 0.02em;
+  }
+/*//////////////////////////////////////////*/
+  p{ /* 因為title用到p，所以為了一致，tree都加這句 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0.4em 0.6em 0 0.6em;
   }
   p#title{
-    font-family: ti-eng, makinas, 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;;
+    font-family: ti-eng, makinas;
     font-size: 3em;
     color: white;
     text-align: right;
     margin: 0;
-    padding: 1.4em 0.5em 0 0.5em;
+    padding: 0.3em 0.5em 0 0.5em;
   }
-  .lilbr{
-    line-height: 0.5;
+  span.navi_span_home .drop_content a{
+    color: grey;
   }
-  a{ /* blue as h2 */
-    color: #2471A3; 
-    text-decoration: none;
+  span.navi_span_home a.navi_a{
+    color: #646666;
   }
-  a:hover{ text-decoration: underline; }
-  .code{ 
-    /*font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-    */
-    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-    font-size: 1em;
-    font-weight: lighter;
-    color: #F4F6F7;
-    background-color: #3A3A3A;
-    border-radius: 0.5em;
-    border-width: 0.08em;      
-    margin: 0.6em 0.2em 0.2em 0.2em;
-    padding: 0.2em 0.8em 0.2em 0.8em;
-    word-break: break-all;
-  }
-  .input{ /* input value in code */
-    color: #a4acad;
-  }
-  .note{ /* background : blue */
-    font-size: 1em;
-    background-color: #EBF5FB;
-    border-left: 0.8em solid #7FB3D5;   
-    margin: 0.6em 1em 0.2em 1em;
-    padding: 0 1em 0.1em 1em;
-  }  
-  .heritage{ color: #B3B6B7; }/* 灰色 */
-  table{
-    border: 2px solid #3A3A3A;
-    border-collapse: collapse;
-    width: 98%;
-    margin: 1em auto 1em auto;
-    padding: 0;
-    font-size: 1.9vmin; /* 最大去到1.9vw，只能縮小 */
-  }
-  th,td{
-    border: 0.8px solid #3A3A3A;
-    text-align: center;
-    padding: 0.2em;
-  }
-/*行列-------------------------------------------------------------*/
-  /* ---所有 ul, ol, li 都是 under div.row, div.column--- */
-  .column3{ /* Create 3 equal columns that floats next to each other */
-    float: left;
-    width: 33.33%;
-    padding: 0;
-    height: auto;
-  }
-  .column2{ /* 2 columns version */
-    float: left;
-    width: 50%;
-    padding: 0;
-    height: auto;
-  }
-  .row:after{ /* Clear floats after the columns */
-    content: "";
-    display: table;
-    clear: both;
-  }
-  @media (max-width: 750px){ /* Responsive layout */
-    .column3 {
-      width: 100%;
-    }
-  }
-  @media (max-width: 550px){ /* Responsive layout */
-    .column2 {
-      width: 100%;
-    }
-  }
-/*圖片-------------------------------------------------------------*/
-  img.big{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 88%;
-  }
-  p.bigcap{
-    font-size: 0.85em;
-    color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0.8em auto;
-    padding: 0 0 0 1em;
-    width: 88%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-  img.mid{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 75%;
-  }
-  p.midcap{
-    font-size: 0.85em;      color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0.8em auto;
-    padding: 0 0 0 1em;
-    width: 75%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-  img.little{
-    display: block;
-    margin: 1em auto auto auto;
-    width: 60%;
-  }
-  p.littlecap{
-    font-size: 0.85em;
-    color: white;
-    background-color: #2D2E2F;        
-    margin: 0 auto 0.8em auto;
-    padding: 0 0 0 1em;
-    width: 60%;
-    text-align: left;
-    border-left: 1.2em solid #73C6B6;
-  }
-/*導航-------------------------------------------------------------*/
-  ul.navi{
-    list-style-type: none;
-    overflow: hidden;   
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    line-height: 0.6;        
-  }
-  li.navi{
-    font-size: 1em;
-    line-height: 1.8;
-    float: left;
-    display: inline-block;
-  }
-  a.navi_a{ /* I, II, III... */
-    display: inline-block;
-    margin: 0;
-    padding: 0.1em 1em;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: default;
-  }
-  li a:hover, li.navi:hover .navi_a{
-  /* 掃到屬於自己的任何 a 時，自己變色 */
-    background-color: #111;
-  }
-  .drop_content a:hover{
-  /* 同上對抗，自己變自己色 */
-    background-color: #f1f1f1;
-  }
-  li.navi:hover .drop_content{
-  /* 掃到 li 時，內容才drop */
-    display: block;
-  }
-  .drop_content{
-    margin: 0;
-    padding: 0;
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 10em;
-    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .drop_content a{
-    margin: 0;
-    padding: 0.3em 1em;
-    display: block;
-    text-align: left;
-    color: #1B2631;
-    text-decoration: none;
-  } 
-/*升天-------------------------------------------------------------*/
-  #TopBtn {
-    display: none;
-    position: fixed;
-    bottom: 8em;
-    right: 1.5em;
-    z-index: 99;
-    font-size: 1em;
-    border: none;
-    outline: none;
-    background-color: #CCD1D1;
-    color: white;
-    cursor: pointer;
-    padding: auto;
-    width: 2em;
-    height: 2em;
-    opacity: 0.5;
-    border-radius: 0.25em;
-  }
-
-  #TopBtn:hover {
-    background-color: #555;
-  }
-
-
+/*-------------------------------------------------------------*/
