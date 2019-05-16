@@ -38,7 +38,7 @@
 		<p class="code">ip route 10.4.0.0 255.255.0.0 10.3.1.1 <span class="input">120</span></p>
 		"120" is AD.
 
-		<h3>Verify</h3>
+		<h3>Show</h3>
 		<p class="code">show ip route</p>
 
 		<h2>RIPv2</h2>
@@ -63,8 +63,20 @@
 			● "redistribute..." 把 OSPF 的 routes 匯入 RIP 中。
 		</p>
 
+		
+		<h2>Verify</h2>
+		<p class="code">
+			show ip route<br>
+			show ip protocols<br>
 
-
+		</p>
+		<p class="code">
+			debug ip <span class="input">rip</span><br>
+			undebug all
+		</p>
+		<p>Real time monitoring of RIP.</p>
+		<p class="code">clear ip route *</p>
+		<p>Delete all routes.</p>
 
 
 		</div>
