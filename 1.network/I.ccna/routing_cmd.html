@@ -54,6 +54,14 @@
 			● "no auto-summary" 實測過就算手動 "auto-summary"，都不會 advertise classful network. Means "10.1.1.0/24" will not become "10.0.0.0/8".<br>
 			● "default..." 把 default route advertise 出去。
 		</p>
+		<p class="code">
+			passive-interface <span class="input">e0/0</span><br>
+			redistribute ospf <span class="input">1</span> metric <span class="input">2</span>
+		</p>
+		<p>
+			● "passive..." no routing updates to e0/0.<br>
+			● "redistribute..." 把 OSPF 的 routes 匯入 RIP 中。
+		</p>
 
 
 
