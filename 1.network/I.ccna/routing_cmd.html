@@ -45,7 +45,14 @@
 		<p class="code">
 			router rip<br>
 			version 2<br>
-			network <span class="input">172.30.0.0</span>
+			network <span class="input">172.30.0.1</span><br>
+			no auto-summary<br>
+			default-information originate
+		</p>
+		<p>
+			● "network" 最方便是輸入 int 的 IP address.<br>
+			● "no auto-summary" 實測過就算手動 "auto-summary"，都不會 advertise classful network. Means "10.1.1.0/24" will not become "10.0.0.0/8".<br>
+			● "default..." 把 default route advertise 出去。
 		</p>
 
 
