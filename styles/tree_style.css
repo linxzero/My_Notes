@@ -56,7 +56,7 @@
   }
   span.navi_span_home .drop_content a:hover:not(.navi_a){
     background-color: #D7DBDD;
-    color: white;
+    color: #363636;
   }
 /*//////////////////////////////////////////*/
   .navi_a{ /* 小頭目 */
