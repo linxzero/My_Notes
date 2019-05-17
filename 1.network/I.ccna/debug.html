@@ -29,12 +29,14 @@
 		</ul>
 <!--D1----------------------------------------------------------------------------> 
 		<div class="block" onclick="hidebar()">
-		
+		<h2>All setting</h2>
 		<p class="code">
 			show running-config<br>
 			show history
 		</p>
 
+
+		<h2>Network</h2>
 		<p class="code">
 			show int <span class="input">g0/0</span><br>
 			show ip int br<br>
@@ -44,6 +46,16 @@
 		<p class="code">
 			show ip route<br>
 			show ip protocols
+		</p>
+
+		<h3>ping</h3>
+		<p class="code">
+			ping <span class="input">10.0.3.3</span><br>
+			traceroute <span class="input">10.0.3.3</span>
+		</p>
+		<p>有時修改後想要 reset routing table，可以用：</p>
+		<p class="code">
+			clear ip route *
 		</p>
 		
 		<p class="code">
