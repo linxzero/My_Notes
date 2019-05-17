@@ -113,7 +113,10 @@
 			</p>
 			<p>The default privilege is 15, so local user "admin" & "peter" have the same privilege level 15, which is the top level.</p>
 			<h3>Idle timer</h3>
-			<p class="code">exec-timeout <span class="input">3</span></p>
+			<p class="code">
+				line vty <span class="input">0 15</span><br>
+				exec-timeout <span class="input">3</span>
+			</p>
 			<p>Log out when idle 3 mins.</p>
 
 
