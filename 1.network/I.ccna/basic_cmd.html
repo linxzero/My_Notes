@@ -110,8 +110,12 @@
 			<p class="code">
 				username <span class="input">peter</span> password <span class="input">1234</span><br>
 				username <span class="input">admin</span> privilege <span class="input">15</span> secret <span class="input">88888</span><br>
+				login block <span class="input">120</span> att <span class="input">3</span> w <span class="input">60</span>
 			</p>
-			<p>The default privilege is 15, so local user "admin" & "peter" have the same privilege level 15, which is the top level.</p>
+			<p>
+				● The default privilege is 15, so local user "admin" & "peter" have the same privilege level 15, which is the top level.<br>
+				● Login block for 120s when 3 wrong attempts in 60s.
+			</p>
 			<h3>Idle timer</h3>
 			<p class="code">
 				line vty <span class="input">0 15</span><br>
