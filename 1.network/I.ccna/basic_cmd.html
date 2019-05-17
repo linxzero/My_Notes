@@ -48,21 +48,18 @@
 				password <span class="input">88888</span><br>
 				login<br>
 			</p>
-			<h3>Virtual terminal password</h3>
-			<p class="code">
-				line vty <span class="input">0 15</span><br>
-				password <span class="input">88888</span><br>
-				login<br>
-				transport input telnet<br>
-			</p>
-			<p>Before you can remotely access, "Enable password" must be set.</p>
 			<h3>Enable password</h3>
 			<p class="code">
 				enable password <span class="input">88888</span><br>
 				enable secret <span class="input">99999</span><br>
 			</p>
 			<p>"secret" has higher level than "password", means "99999" will replace "88888" to be the only password to reach privileged mode.</p>
-			
+			<h3>Password Encrypt</h3>
+			<p class="code">
+				service password-encryption
+			</p>
+
+
 
 			<h2>IP setting</h2>
 			<h3>IPv4</h3>
@@ -99,6 +96,25 @@
 			</p>
 			<p class="code">show ipv6 int br</p>
 
+			
+			<h2>Telnet</h2>
+			<h3>Virtual terminal password</h3>
+			<p class="code">
+				line vty <span class="input">0 15</span><br>
+				password <span class="input">88888</span><br>
+				login<br>
+				transport input telnet<br>
+			</p>
+			<p>Before you can remotely access, "Enable password" must be set !!!</p>
+			<h3>Local user</h3>
+			<p class="code">
+				username <span class="input">peter</span> password <span class="input">1234</span><br>
+				username <span class="input">admin</span> privilege <span class="input">15</span> secret <span class="input">88888</span><br>
+			</p>
+			<p>The default privilege is 15, so local user "admin" & "peter" have the same privilege level 15, which is the top level.</p>
+			<h3>Idle timer</h3>
+			<p class="code">exec-timeout <span class="input">3</span></p>
+			<p>Log out when idle 3 mins.</p>
 
 
 			<h2>SSH</h2>
@@ -110,12 +126,10 @@
 				ip ssh version 2<br>
 				ip ssh authentication-retries <span class="input">3</span><br>
 				ip ssh time-out <span class="input">10</span><br>
-				username <span class="input">peter</span> secret <span class="input">88888</span><br>
 			</p>
 			<p>
 				● maximum attempts of wrong password is 3.<br>
 				● time-out interval is 10 second.<br>
-				● local user "peter" & password "88888".
 			</p>
 			<h3>Step3. set SSH</h3>
 			<p class="code">
