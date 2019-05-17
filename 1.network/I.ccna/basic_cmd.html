@@ -67,12 +67,12 @@
 			<h2>IP setting</h2>
 			<h3>IPv4</h3>
 			<p class="code">
-				int g0/0<br>
+				int <span class="input">g0/0</span><br>
 				ip add <span class="input">192.168.1.1 255.255.255.0</span><br>
 				no shutdown
 			</p>
 			<p class="code">
-				int s0/0/0<br>
+				int <span class="input">s0/0/0</span><br>
 				ip add <span class="input">10.1.1.1 255.255.255.0</span><br>
 				clock rate <span class="input">9600</span><br>
 				no shutdown
@@ -81,7 +81,7 @@
 			<h3>IPv6</h3>
 			<p class="code">
 				ipv6 unicast-routing<br>
-				int g0/0<br>
+				int <span class="input">g0/0</span><br>
 				ipv6 add <span class="input">FE80::1234</span> link-local<br>
 				ipv6 enable<br>
 				ipv6 add <span class="input">FC00::/64</span> eui-64<br>
