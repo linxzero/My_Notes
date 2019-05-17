@@ -114,14 +114,14 @@
 			</p>
 			<p>
 				● The default privilege is 15, so local user "admin" & "peter" have the same privilege level 15, which is the top level.<br>
-				● Login block for 120s when 3 wrong attempts in 60s.
+				● Log-in block for 120s when 3 wrong attempts in 60s.
 			</p>
 			<h3>Idle timer</h3>
 			<p class="code">
 				line vty <span class="input">0 15</span><br>
 				exec-timeout <span class="input">3</span>
 			</p>
-			<p>Log out when idle 3 mins.</p>
+			<p>Account log-out when idle 3 mins.</p>
 
 
 			<h2>SSH</h2>
