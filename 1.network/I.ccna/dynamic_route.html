@@ -113,24 +113,24 @@
 				<td>Term</td>
 				<td></td>
 				<td>
-				．簡單，沒有AS number區分，但可以支援密碼認證，兩隻密碼相同的Router才可進行Route交換。<br>
-				．Metric很單純地用Hop Count來計算，最大為15，16+為Unreachable。</td>
+				● 簡單，沒有AS number區分，但可以支援密碼認證，兩隻密碼相同的Router才可進行Route交換。<br>
+				● Metric很單純地用Hop Count來計算，最大為15，16+為Unreachable。</td>
 				<td></td>
 				<td>
-				．EIGRP是Cisco專屬的Protocol，只有其產品才能執行。<br>
-				．EIGRP會把相鄰Router成為Neighbor，定時檢查他們狀態。<br>
-				．用AS Number分區。<br>
+				● EIGRP是Cisco專屬的Protocol，只有其產品才能執行。<br>
+				● EIGRP會把相鄰Router成為Neighbor，定時檢查他們狀態。<br>
+				● 用AS Number分區。<br>
 				Successor: neighboring router that is the least-cost route to des network.<br>
 				FD: the lowest metric to reach des network. (via successor)<br>
 				FS: neighbor that has path to des network also, and it satisfies FC.<br>
 				FC: a condition when RD is less than FD.<br>
 				RD: the metric that FS reach des network.<br>
-				．選好Successor與FS後，只存放在自己Router內。</td>
+				● 選好Successor與FS後，只存放在自己Router內。</td>
 				<td></td>
 				<td>CCNA冇教。</td>
 				<td>
-				．常用於ISP與ISP之間交換路由，在不同AS之間交換路由資訊。<br>
-				．先建立Peers (Neighbors)，再發佈自己有的網段。</td>
+				● 常用於ISP與ISP之間交換路由，在不同AS之間交換路由資訊。<br>
+				● 先建立Peers (Neighbors)，再發佈自己有的網段。</td>
 			</tr>
 		</table>
 
