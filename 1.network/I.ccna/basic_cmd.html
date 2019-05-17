@@ -119,9 +119,15 @@
 			<h3>Idle timer</h3>
 			<p class="code">
 				line vty <span class="input">0 15</span><br>
+				login local<br>
 				exec-timeout <span class="input">3</span>
 			</p>
-			<p>Account log-out when idle 3 mins.</p>
+			<p>
+				● Use local user as authentication.<br>
+				● Account log-out the vty when idle 3 mins.
+			</p>
+
+	
 
 
 			<h2>SSH</h2>
@@ -144,8 +150,7 @@
 				login local<br>
 				transport input ssh
 			</p>
-			<p>Use local user as authentication.</p>
-
+			
 
 
 
