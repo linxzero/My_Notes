@@ -73,11 +73,13 @@
 			ip rip authen key-chain <span class="input">ChainR1</span><br>
 			ip rip authen mode md5
 		</p>
+		<p>在兩個 Router 之間的接口都需要設置相同密碼。</p>
 		<p>
 			● "ChainR1" is key chain name.<br>
 			● "1" is key identifier.<br>
 			● "3344" is the password.
 		</p>
+		<p>這個 Authen 類似一道閘，只要兩個接口的密碼一致，閘門就打開讓 RIP updates 通過，不管其他網絡有沒有設置密碼。</p>
 
 
 		
