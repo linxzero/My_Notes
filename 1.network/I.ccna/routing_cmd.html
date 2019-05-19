@@ -87,20 +87,23 @@
 		<h2>EIGRP</h2>
 		<p class="code">
 			router eigrp <span class="input">1</span><br>
-			network <span class="input">10.0.1.1 [0.0.0.255]</span><br>
+			network <span class="input">10.0.1.1 0.0.0.255</span><br>
 			no auto-summary<br>	
 			eigrp router-id <span class="input">1.1.1.1</span>
 		</p>
 		<p>
 			● "1" is AS number.<br>
-			● "Wild card mask" is optional.<br>
+			● "Wild card mask" 實測過，最好打埋，否測同一個 class 的接口會全開。<br>
 			● "router-id" is optional.
 		</p>
 		<p class="code">
 			passive-interface <span class="input">e0/0</span><br>
 			redistribute static<br>	
 		</p>
-		<p></p>
+		<p>
+			● "passive..." no routing updates to e0/0.<br>
+
+		</p>
 
 		
 		<h2>Verify</h2>
