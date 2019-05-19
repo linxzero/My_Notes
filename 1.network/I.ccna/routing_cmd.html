@@ -18,7 +18,7 @@
 			li.navi a#I{background-color: #4CAF50;} /* which one be green */
 		</style>
 	</head>
-<!-------------------------------------------------------------------------------->
+<!-------------------------------------------------->
 	<body>
 		<header>
 			<p onclick="hidebar()" id="title">Routing cmd</p>
@@ -27,59 +27,60 @@
 			<span class="navi_span_home"></span>
 			<span class="navi_span"></span>
 		</ul>
-<!--D1----------------------------------------------------------------------------> 
+<!--D1----------------------------------------------> 
 		<div class="block" onclick="hidebar()">
 		<h2>Static Route</h2>
-		<p class="code">ip route <span class="input">10.1.0.0 255.255.0.0 g0/1</span><br>ip route <span class="input">10.2.0.0 255.255.0.0 10.3.1.1</span><br>ip route 0.0.0.0 0.0.0.0 <span class="input">192.168.1.1</span></p>
-		<p>可以用 exit-intf 或者 next-hop ip.</p>
+			<p class="code">ip route <span class="input">10.1.0.0 255.255.0.0 g0/1</span><br>ip route <span class="input">10.2.0.0 255.255.0.0 10.3.1.1</span><br>ip route 0.0.0.0 0.0.0.0 <span class="input">192.168.1.1</span></p>
+			<p>可以用 exit-intf 或者 next-hop ip.</p>
 
-		<h3>Floating Static Route</h3>
-		<p>作為主 route 的 backup。因此 floating static route 需要 set 更大的 AD.</p>
-		<p class="code">ip route 10.4.0.0 255.255.0.0 10.3.1.1 <span class="input">120</span></p>
-		"120" is AD.
+			<h3>Floating Static Route</h3>
+			<p>作為主 route 的 backup。因此 floating static route 需要 set 更大的 AD.</p>
+			<p class="code">ip route 10.4.0.0 255.255.0.0 10.3.1.1 <span class="input">120</span></p>
+			"120" is AD.
 
-		<h3>Show</h3>
-		<p class="code">show ip route</p>
+			<h3>Show</h3>
+			<p class="code">show ip route</p>
+
 
 		<h2>RIPv2</h2>
-		<p class="code">
-			router rip<br>
-			version 2<br>
-			network <span class="input">10.1.1.1</span><br>
-			no auto-summary<br>
-			default-information originate
-		</p>
-		<p>
-			● "network" 最方便是輸入 int 的 IP address.<br>
-			● "no auto-summary" 實測過就算手動 "auto-summary"，都不會 advertise classful network. Means "10.1.1.0/24" will not become "10.0.0.0/8".<br>
-			● "default..." 把 default route advertise 出去。
-		</p>
-		<p class="code">
-			passive-interface <span class="input">e0/0</span><br>
-			redistribute ospf <span class="input">1</span> metric <span class="input">2</span>
-		</p>
-		<p>
-			● "passive..." no routing updates to e0/0.<br>
-			● "redistribute..." 把 OSPF 的 routes 匯入 RIP 中。
-		</p>
-		<h3>Authentication</h3>
-		<p class="code">
-			key chain <span class="input">ChainR1</span><br>
-			key <span class="input">1</span><br>
-			key-string <span class="input">3344</span>
-		</p>
-		<p class="code">
-			int <span class="input">e1/1</span><br>
-			ip rip authen key-chain <span class="input">ChainR1</span><br>
-			ip rip authen mode md5
-		</p>
-		<p>需要在兩個 Router 之間的接口都設置相同密碼。</p>
-		<p>
-			● "ChainR1" is key chain name.<br>
-			● "1" is key identifier.<br>
-			● "3344" is the password.
-		</p>
-		<p>這個 Authen 類似一道閘，只要兩個接口的密碼一致，閘門就打開讓 RIP updates 通過，不管其他網絡有沒有設置密碼。</p>
+			<p class="code">
+				router rip<br>
+				version 2<br>
+				network <span class="input">10.1.1.1</span><br>
+				no auto-summary<br>
+				default-information originate
+			</p>
+			<p>
+				● "network" 最方便是輸入 int 的 IP address.<br>
+				● "no auto-summary" 實測過就算手動 "auto-summary"，都不會 advertise classful network. Means "10.1.1.0/24" will not become "10.0.0.0/8".<br>
+				● "default..." 把 default route advertise 出去。
+			</p>
+			<p class="code">
+				passive-interface <span class="input">e0/0</span><br>
+				redistribute ospf <span class="input">1</span> metric <span class="input">2</span>
+			</p>
+			<p>
+				● "passive..." no routing updates to e0/0.<br>
+				● "redistribute..." 把 OSPF 的 routes 匯入 RIP 中。
+			</p>
+			<h3>Authentication</h3>
+			<p class="code">
+				key chain <span class="input">ChainR1</span><br>
+				key <span class="input">1</span><br>
+				key-string <span class="input">3344</span>
+			</p>
+			<p class="code">
+				int <span class="input">e1/1</span><br>
+				ip rip authen key-chain <span class="input">ChainR1</span><br>
+				ip rip authen mode md5
+			</p>
+			<p>需要在兩個 Router 之間的接口都設置相同密碼。</p>
+			<p>
+				● "ChainR1" is key chain name.<br>
+				● "1" is key identifier.<br>
+				● "3344" is the password.
+			</p>
+			<p>這個 Authen 類似一道閘，只要兩個接口的密碼一致，閘門就打開讓 RIP updates 通過，不管其他網絡有沒有設置密碼。</p>
 
 
 		<h2>EIGRP</h2>
@@ -106,7 +107,7 @@
 
 
 		</div>
-<!--------------------------------------------------------------------------------> 
+<!--------------------------------------------------> 
 		<button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
 		<script>
 			function hidebar(){
