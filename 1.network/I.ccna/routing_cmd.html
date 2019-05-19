@@ -48,20 +48,21 @@
 				version 2<br>
 				network <span class="input">10.1.1.1</span><br>
 				no auto-summary<br>
-				default-information originate
 			</p>
 			<p>
 				● "network" 最方便是輸入 int 的 IP address.<br>
-				● "no auto-summary" 實測過就算手動 "auto-summary"，都不會 advertise classful network. Means "10.1.1.0/24" will not become "10.0.0.0/8".<br>
-				● "default..." 把 default route advertise 出去。
+				● "no auto-summary" 實測過就算手動 "auto-summary"，都不會 advertise classful network. Means "10.1.1.0/24" will not become "10.0.0.0/8".
 			</p>
 			<p class="code">
 				passive-interface <span class="input">e0/0</span><br>
-				redistribute ospf <span class="input">1</span> metric <span class="input">2</span>
+				redistribute static<br>
+				redistribute ospf <span class="input">1</span> metric <span class="input">2</span><br>
+				default-information originate
 			</p>
 			<p>
 				● "passive..." no routing updates to e0/0.<br>
-				● "redistribute..." 把 OSPF 的 routes 匯入 RIP 中。
+				● "redistribute..." 把 static 和 OSPF 的 routes 匯入 RIP 中。<br>
+				● "default..." 把 default route advertise 出去。
 			</p>
 			<h3>Authentication</h3>
 			<p class="code">
@@ -87,23 +88,34 @@
 		<p class="code">
 			router eigrp <span class="input">1</span><br>
 			network <span class="input">10.0.1.1 [0.0.0.255]</span><br>
-
+			no auto-summary<br>	
+			eigrp router-id <span class="input">1.1.1.1</span>
 		</p>
+		<p>
+			● "1" is AS number.<br>
+			● "Wild card mask" is optional.<br>
+			● "router-id" is optional.
+		</p>
+		<p class="code">
+			passive-interface <span class="input">e0/0</span><br>
+			redistribute static<br>	
+		</p>
+		<p></p>
 
 		
 		<h2>Verify</h2>
-		<p class="code">
-			show ip route<br>
-			show ip protocols<br>
+			<p class="code">
+				show ip route<br>
+				show ip protocols<br>
 
-		</p>
-		<p class="code">
-			debug ip <span class="input">rip</span><br>
-			undebug all
-		</p>
-		<p>Real time monitoring of RIP.</p>
-		<p class="code">clear ip route *</p>
-		<p>Delete all routes.</p>
+			</p>
+			<p class="code">
+				debug ip <span class="input">rip</span><br>
+				undebug all
+			</p>
+			<p>Real time monitoring of RIP.</p>
+			<p class="code">clear ip route *</p>
+			<p>Delete all routes.</p>
 
 
 		</div>
