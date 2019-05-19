@@ -106,6 +106,18 @@
 			● "passive..." no routing updates to e0/0.<br>
 			● "redistribute..." 把 static 和 default route 都散出去。
 		</p>
+		<h3>Tunning</h3>
+		<p class="code">
+			int <span class="input">e0/0</span><br>
+			bandwidth <span class="input">1024</span><br>
+			ip hello-interval eigrp <span class="input">1 10</span><br>
+			ip hold-time eigrp <span class="input">1 30</span><br>
+			ip bandwidth-percent eigrp <span class="input">1 40</span>
+		</p>
+		<p>
+			● "bandwidth" to 1024kb/s, it only affects EIGRP metric, not the actual speed.<br>
+			● "bandwidth-percent" is 50% by default, means 50% of bandwidth can be used by EIGRP usage.
+		</p>
 
 		
 		<h2>Verify</h2>
