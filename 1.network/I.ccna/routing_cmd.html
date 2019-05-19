@@ -54,6 +54,7 @@
 				● "no auto-summary" 實測過就算手動 "auto-summary"，都不會 advertise classful network. Means "10.1.1.0/24" will not become "10.0.0.0/8".
 			</p>
 			<p class="code">
+				router rip<br>
 				passive-interface <span class="input">e0/0</span><br>
 				redistribute static<br>
 				redistribute ospf <span class="input">1</span> metric <span class="input">2</span><br>
@@ -93,7 +94,7 @@
 		</p>
 		<p>
 			● "1" is AS number.<br>
-			● "Wild card mask" must be used.<br>
+			● "Wild card mask !"<br>
 			● "router-id" is optional.
 		</p>
 		<p class="code">
