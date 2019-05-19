@@ -98,12 +98,13 @@
 			● "router-id" is optional.
 		</p>
 		<p class="code">
+			router eigrp <span class="input">1</span><br>
 			passive-interface <span class="input">e0/0</span><br>
 			redistribute static<br>	
 		</p>
 		<p>
 			● "passive..." no routing updates to e0/0.<br>
-
+			● "redistribute..." 把 static 和 default route 都散出去。
 		</p>
 
 		
