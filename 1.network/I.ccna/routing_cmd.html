@@ -86,53 +86,63 @@
 
 
 		<h2>EIGRP</h2>
-		<p class="code">
-			router eigrp <span class="input">1</span><br>
-			network <span class="input">10.0.1.1 0.0.0.255</span><br>
-			no auto-summary<br>	
-			eigrp router-id <span class="input">1.1.1.1</span>
-		</p>
-		<p>
-			● "1" is AS number. Updates are current in same AS.<br>
-			● "Wild card mask !"<br>
-			● "router-id" is optional.
-		</p>
-		<p class="code">
-			router eigrp <span class="input">1</span><br>
-			passive-interface <span class="input">e0/0</span><br>
-			redistribute static<br>	
-		</p>
-		<p>
-			● "passive..." no routing updates to e0/0.<br>
-			● "redistribute..." 把 static 和 default route 都散出去。
-		</p>
-		<h3>Tunning</h3>
-		<p class="code">
-			int <span class="input">e0/0</span><br>
-			bandwidth <span class="input">1024</span><br>
-			ip hello-interval eigrp <span class="input">1 10</span><br>
-			ip hold-time eigrp <span class="input">1 30</span><br>
-			ip bandwidth-percent eigrp <span class="input">1 40</span>
-		</p>
-		<p>
-			● "bandwidth" to 1024kb/s, it only affects EIGRP metric, not the actual speed.<br>
-			● "bandwidth-percent" is 50% by default, means 50% of bandwidth can be used by EIGRP usage.
-		</p>
+			<p class="code">
+				router eigrp <span class="input">1</span><br>
+				network <span class="input">10.0.1.1 0.0.0.255</span><br>
+				no auto-summary<br>	
+				eigrp router-id <span class="input">1.1.1.1</span>
+			</p>
+			<p>
+				● "1" is AS number. Updates are current in same AS.<br>
+				● "Wild card mask !"<br>
+				● "router-id" is optional.
+			</p>
+			<p class="code">
+				router eigrp <span class="input">1</span><br>
+				passive-interface <span class="input">e0/0</span><br>
+				redistribute static<br>	
+			</p>
+			<p>
+				● "passive..." no routing updates to e0/0.<br>
+				● "redistribute..." 把 static 和 default route 都散出去。
+			</p>
+			<h3>Tunning</h3>
+			<p class="code">
+				int <span class="input">e0/0</span><br>
+				bandwidth <span class="input">1024</span><br>
+				ip hello-interval eigrp <span class="input">1 10</span><br>
+				ip hold-time eigrp <span class="input">1 30</span><br>
+				ip bandwidth-percent eigrp <span class="input">1 40</span>
+			</p>
+			<p>
+				● "bandwidth" to 1024kb/s, it only affects EIGRP metric, not the actual speed.<br>
+				● "bandwidth-percent" is 50% by default, means 50% of bandwidth can be used by EIGRP usage.
+			</p>
 
 		
 		<h2>Verify</h2>
 			<p class="code">
 				show ip route<br>
 				show ip protocols<br>
-
 			</p>
+
+			<p class="code">clear ip route *</p>
+			<p>Delete all routes.</p>
+
 			<p class="code">
 				debug ip <span class="input">rip</span><br>
 				undebug all
 			</p>
 			<p>Real time monitoring of RIP.</p>
-			<p class="code">clear ip route *</p>
-			<p>Delete all routes.</p>
+
+			<p class="code">
+				show ip eigrp neighbors<br>
+				show ip eigrp topology<br>
+			</p>
+			<p class="code">clear ip eigrp <span class="input">1</span> neighbors<p>
+			<p>Recalculate FD.</p>
+
+			
 
 
 		</div>
