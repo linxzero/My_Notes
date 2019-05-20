@@ -84,17 +84,17 @@
 				ipv6 add <span class="input">2001::/64</span> eui-64
 			</p>
 			<p>
-				● "ipv6 enable" use eui-64 to generate Link-Local address.<br>
-				● "FC00" use eui-64 to generate Unique local address.<br>
-				● "2001" use eui-64 to generate Global aggregatable address.<br>
-				● "eui-64" 是一個自動生成後64位的方法，想手動設定如下：
+				● "ipv6 enable" generate Link-Local address by eui-64.<br>
+				● "FC00" generate Unique local address by eui-64.<br>
+				● "2001" generate Global aggregatable address by eui-64.<br>
+				● "eui-64" 是一個自動生成後64位的方法。<br>
+				想手動設定 address 可用以下 cmd :
 			</p>
 			<p class="code">
 				ipv6 add <span class="input">FE80::1234</span> link-local<br>
 				ipv6 add <span class="input">FC00::1234/64</span><br>
 				ipv6 add <span class="input">2001::1234/64</span>
 			</p>
-			Manually set Link-Local, Unique local, Global aggregatable address.
 			<p class="code">show ipv6 int br</p>
 
 			
