@@ -157,10 +157,13 @@
 			router-id <span class="input">1.1.1.1</span><br>
 			do clear ip ospf process<br>
 			passive-interface <span class="input">e0/2</span><br>
+			redistribute rip subnets<br>
+			redistribute eigrp <span class="input">1</span> metric-type <span class="input">1</span> metric <span class="input">99</span><br>
 			default-information originate 
 		</p>
 		<p>
 			● "do clear..." 更新 router ID，重選 DR.<br>
+			● "metric-type" 預設是 2 (External Router Type 2).
 		</p>
 
 		
