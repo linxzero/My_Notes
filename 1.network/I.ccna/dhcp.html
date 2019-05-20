@@ -30,6 +30,56 @@
 <!--D1----------------------------------------------> 
 		<div class="block" onclick="hidebar()">
 
+		<h2>DHCPv4</h2>
+			<h3>Server</h3>
+			<p class="code">
+				int <span class="input">g0/0</span><br>
+				ip add <span class="input">192.168.1.1 255.255.255.0</span><br>
+				exit
+			</p>
+			<p class="code">
+				ip dhcp excluded-address <span class="input">192.168.1.1 192.168.1.10</span><br>
+				ip dhcp pool <span class="input">dhcp_pool</span><br>
+				network <span class="input">192.168.1.0 255.255.255.0</span><br>
+				default-router <span class="input">192.168.1.1</span><br>
+				dns-server <span class="input">8.8.8.8</span><br>
+				lease <span class="input">2</span>
+			</p>
+			<p>"lease" is optional, lease 2 days.</p>
+
+			<h3>Relay</h3>
+			<p>Server side :</p>
+			<p class="code">
+				int <span class="input">g0/0</span><br>
+				ip add <span class="input">10.1.1.1 255.255.255.0</span><br>
+				exit<br>
+				ip dhcp excluded-address <span class="input">192.168.1.250 192.168.1.254</span><br>
+				ip dhcp pool <span class="input">dhcp_pool</span><br>
+				network <span class="input">192.168.1.0 255.255.255.0</span><br>
+				default-router <span class="input">192.168.1.254</span>
+			</p>
+			<p>Relay side :</p>
+			<p class="code">
+				int <span class="input">g0/1</span><br>
+				ip add <span class="input">192.168.1.254 255.255.255.0</span><br>
+				ip helper add <span class="input">10.1.1.1</span>
+			</p>
+			<p>Client side :</p>
+			<p class="code">
+				int <span class="input">g0/3</span><br>
+				ip add dhcp
+			</p>
+
+			<h3>Verify</h3>
+			<p class="code">
+				show ip dhcp binding<br>
+				show dhcp lease
+			</p>
+			<p>
+				● "dhcp binding" for server's use.<br>
+				● "dhcp lease" for client to check default gateway.
+			</p>
+
 
 
 
