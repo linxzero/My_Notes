@@ -166,6 +166,10 @@
 			● "do clear..." 更新 router ID，重選 DR.<br>
 			● "metric-type" 預設是 2 (External Router Type 2).
 		</p>
+		<h3>Tunning</h3>
+		<p class="code">
+			router ospf <span class="input">1</span><br>
+		</p>
 
 		
 		<h2>Verify</h2>
@@ -189,6 +193,15 @@
 			</p>
 			<p class="code">clear ip eigrp <span class="input">1</span> neighbors<p>
 			<p>Recalculate FD.</p>
+
+			<p class="code">
+				show ip ospf <span class="input">1</span><br>
+				show ip ospf neighbor<br>
+				show ip ospf int br<br>
+				show ip ospf int <span class="input">e1/1</span><br>
+				show interfaces
+			</p>
+			"show interfaces" check bandwidth.
 
 			
 
