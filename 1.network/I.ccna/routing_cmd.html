@@ -142,6 +142,27 @@
 			</p>
 
 
+		<h2>OSPFv2</h2>
+		<p class="code">
+			router ospf <span class="input">1</span><br>
+			network <span class="input">192.168.1.0 0.0.0.255</span> area <span class="input">0</span>
+		</p>
+		<p>
+			● "1" is process ID. Updates are current in same ID.<br>
+			● "Wild card mask !"<br>
+			● "area 0" is backbone, every area must be attached to area 0. 
+		</p>
+		<p class="code">
+			router ospf <span class="input">1</span><br>
+			router-id <span class="input">1.1.1.1</span><br>
+			do clear ip ospf process<br>
+			passive-interface <span class="input">e0/2</span><br>
+			default-information originate 
+		</p>
+		<p>
+			● "do clear..." 更新 router ID，重選 DR.<br>
+		</p>
+
 		
 		<h2>Verify</h2>
 			<p class="code">
