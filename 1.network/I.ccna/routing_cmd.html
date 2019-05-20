@@ -131,7 +131,16 @@
 				ip authen mode eigrp <span class="input">1</span> md5
 			</p>
 			<h3>Variance</h3>
-			
+			<p class="code">
+				router eigrp <span class="input">1</span><br>
+				variance <span class="input">3</span>
+			</p>
+			<p>
+				● Variance 的預設是 1，當兩條 route 的 Metric 相同，Routing Table 會顯示兩條 route，而兩條 route 會做 Load Balancing (預設是平均分配)；<br>
+				● Variance 是 1，當兩條 route 的 Metric 不同，Routing Table 只顯示一條；<br>
+				● Variance 設定成 3，只要 Metric 不大於 3FD 的 route 都可以顯示在 Routing Table，可做 Load Balancing (此時按 Metric 的反比分配)。 例如：Variance 是 3 時，Metric:30 與 Metric:89 可做 Load Balancing。
+			</p>
+
 
 		
 		<h2>Verify</h2>
