@@ -67,18 +67,18 @@
 			</p>
 			<h3>Authentication</h3>
 			<p class="code">
-				key chain <span class="input">ChainR1</span><br>
+				key chain <span class="input">RIPChainR1</span><br>
 				key <span class="input">1</span><br>
 				key-string <span class="input">3344</span>
 			</p>
 			<p class="code">
 				int <span class="input">e1/1</span><br>
-				ip rip authen key-chain <span class="input">ChainR1</span><br>
+				ip rip authen key-chain <span class="input">RIPChainR1</span><br>
 				ip rip authen mode md5
 			</p>
 			<p>需要在兩個 Router 之間的接口都設置相同密碼。</p>
 			<p>
-				● "ChainR1" is key chain name.<br>
+				● "RIPChainR1" is key chain name.<br>
 				● "1" is key identifier.<br>
 				● "3344" is the password.
 			</p>
@@ -120,7 +120,14 @@
 			</p>
 			<h3>Authentication</h3>
 			<p class="code">
-				key chain 
+				key chain <span class="input">EIGRPChainR1</span><br>
+				key <span class="input">1</span><br>
+				key-string <span class="input">3344</span>
+			</p>
+			<p class="code">
+				int <span class="input">e1/1</span><br>
+				ip authen key-chain eigrp <span class="input">1 EIGRPChainR1</span><br>
+				ip authen mode eigrp <span class="input">1</span> md5
 			</p>
 
 		
