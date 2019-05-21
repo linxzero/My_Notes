@@ -47,7 +47,7 @@
 			</p>
 			<p>"lease" is optional, lease 2 days.</p>
 			<h3>Relay</h3>
-			<p>Server side.</p>
+			<p>Server side :</p>
 			<p class="code" style="margin: 0.2em 0.2em 0.6em 0.2em">
 				int <span class="input">g0/0</span><br>
 				ip add <span class="input">10.1.1.1 255.255.255.0</span><br>
@@ -57,13 +57,13 @@
 				network <span class="input">192.168.1.0 255.255.255.0</span><br>
 				default-router <span class="input">192.168.1.254</span>
 			</p>
-			<p>Relay side.</p>
+			<p>Relay side :</p>
 			<p class="code" style="margin: 0.2em 0.2em 0.6em 0.2em">
 				int <span class="input">g0/1</span><br>
 				ip add <span class="input">192.168.1.254 255.255.255.0</span><br>
 				ip helper add <span class="input">10.1.1.1</span>
 			</p>
-			<p>Client side.</p>
+			<p>Client side :</p>
 			<p class="code" style="margin: 0.2em 0.2em 0.6em 0.2em">
 				int <span class="input">g0/3</span><br>
 				ip add dhcp
