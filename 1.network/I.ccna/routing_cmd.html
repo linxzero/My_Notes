@@ -169,6 +169,12 @@
 		<h3>Tunning</h3>
 		<p class="code">
 			router ospf <span class="input">1</span><br>
+			auto-cost reference-bandwidth <span class="input">1000</span>
+		</p>
+		<p>
+			cost = reference bandwidth / interface bandwidth<br>
+			● By default, reference bandwidth is 100Mbps.<br>
+			● All OSPF routers have to be configured with same reference bandwidth.
 		</p>
 
 		
