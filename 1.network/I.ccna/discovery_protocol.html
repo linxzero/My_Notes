@@ -30,10 +30,37 @@
 <!--D1----------------------------------------------> 
 		<div class="block" onclick="hidebar()">
 		<h2>CDP</h2>
+		<p>Cisco Discovery Protocol</p>
+		<p class="code">
+			cdp run<br>
+			no cdp run<br>
+			int <span class="input">g0/0</span><br>
+			no cdp enable
+		</p>
+		<p>By default, cdp is running.</p>
+		<p class="lilbr"><br></p>
+		<p class="code">
+			show cdp neighbors<br>
+			show cdp neighbors detail<br>
+			show cdp interface
+		</p>
 
 
+		
 		<h2>LLDP</h2>
-
+		<p>Link Layer Discovery Protocol</p>
+		<p class="code">
+			lldp run<br>
+			int <span class="input">g0/0</span><br>
+			lldp transmit<br>
+			lldp receive
+		</p>
+		<p>
+			● "transmit" only transmit.<br>
+			● "receive" only receive.
+		</p>
+		<p class="lilbr"><br></p>
+		<p>Cisco devices also support LLDP, which is a vendor-neutral neighbor discovery protocol similar to CDP. LLDP works with network devices, such as routers, switches, and wireless LAN access points. This protocol advertises its identity and capabilities to other devices and receives the information from a physically connected Layer 2 device.</p>
 
 
 
