@@ -75,7 +75,7 @@
 				no shutdown
 			</p>
 			<p class="code">show ip int br<br>show int <span class="input">g0/0</span></p>
-			<h3>IPv6</h3>
+			<h3>IPv6 (SLAAC)</h3>
 			<p class="code">
 				ipv6 unicast-routing<br>
 				int <span class="input">g0/0</span><br>
@@ -87,7 +87,7 @@
 				● "ipv6 enable" generate Link-Local address by eui-64.<br>
 				● "FC00" generate Unique local address by eui-64.<br>
 				● "2001" generate Global aggregatable address by eui-64.<br>
-				● "eui-64" 是一個自動生成後64位的方法。<br>
+				● "eui-64" 是一個自動生成後64位的方法，叫 SLAAC.<br>
 				想手動設定 address 可用以下 cmd :
 			</p>
 			<p class="code">
