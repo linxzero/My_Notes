@@ -29,7 +29,8 @@
 		</ul>
 <!--D1----------------------------------------------> 
 		<div class="block" onclick="hidebar()">
-		<h2>Port LED color code</h2>
+		<h2>Router</h2>
+		<h3>Port LED color code</h3>
 		<p>It depends on the model of your device, here is an example :</p>
 		<table>
 			<tr style="background-color: #3A3A3A; color: #F4F6F7">
@@ -63,7 +64,158 @@
 			</tr>
 		</table>
 
+		<h2>Switch</h2>
+		<h3>2960 Switch LEDs</h3>
 
+
+		<table>
+			<tr style="background-color: #3A3A3A; color: #F4F6F7">
+				<td>Name</td>
+				<td>Stand for</td>
+				<td>Indicator</td>
+				<td>Explain</td>
+				<td>Port LED</td>
+				<td>Explain</td>
+			</tr>
+			<tr>
+				<td rowspan="3">SYST</td>
+				<td rowspan="3">System</td>
+				<td>off</td>
+				<td>system is not powered on</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td>green</td>
+				<td>system is operating normally</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td>amber</td>
+				<td>system is not functioning properly</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td rowspan="4">RPS</td>
+				<td rowspan="4">Redundant Power System</td>
+				<td>off</td>
+				<td>RPS is off</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td>green</td>
+				<td>RPS is connected but is unavailable because it is providing power to another device</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td>amber</td>
+				<td>RPS is in standby mode</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td>blinking amber</td>
+				<td>the internal power supply in the switch has failed, and RPS is providing power</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td rowspan="6">STAT</td>
+				<td rowspan="6">Port Status</td>
+				<td rowspan="6">green</td>
+				<td rowspan="6">the port status mode is selected</td>
+				<td>off</td>
+				<td>no link or port is adminly shut down</td>
+			</tr>
+			<tr>
+				<td>green</td>
+				<td>link is present</td>
+			</tr>
+			<tr>
+				<td>blinking green</td>
+				<td>there is activity and the port is sending or receiving data</td>
+			</tr>
+			<tr>
+				<td>green-amber</td>
+				<td>link fault</td>
+			</tr>
+			<tr>
+				<td>amber</td>
+				<td>port is blocked to ensure that a loop does not exist in the forwarding domain and is not forwarding data</td>
+			</tr>
+			<tr>
+				<td>blinking amber</td>
+				<td>port is blocked to prevent a possible loop in the forwarding domain</td>
+			</tr>
+			<tr>
+				<td rowspan="2">DUPLX</td>
+				<td rowspan="2">Port Duplex</td>
+				<td rowspan="2">green</td>
+				<td rowspan="2">the port duplex mode is selected</td>
+				<td>off</td>
+				<td>in half-duplex mode</td>
+			</tr>
+			<tr>
+				<td>green</td>
+				<td>in full-duplex mode</td>
+			</tr>
+			<tr>
+				<td rowspan="3">SPEED</td>
+				<td rowspan="3">Port Speed</td>
+				<td rowspan="3">green</td>
+				<td rowspan="3">the port speed mode is selected</td>
+				<td>off</td>
+				<td>10Mb/s</td>
+			</tr>
+			<tr>
+				<td>green</td>
+				<td>100Mb/s</td>
+			</tr>
+			<tr>
+				<td>blinking green</td>
+				<td>1000Mb/s</td>
+			</tr>
+			<tr>
+				<td rowspan="7">PoE</td>
+				<td rowspan="7">Power over Ethernet Mode</td>
+				<td>off</td>
+				<td>the PoE mode is not selected and that none of the ports have been denied power or placed in a fault condition</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td>blinking amber</td>
+				<td>the PoE mode is not selected but at least one of the ports has been denied power, or has a PoE fault</td>
+				<td>–</td>
+				<td>–</td>
+			</tr>
+			<tr>
+				<td rowspan="5">green</td>
+				<td rowspan="5">the PoE mode is selected</td>
+				<td>off</td>
+				<td>PoE is off</td>
+			</tr>
+			<tr>
+				<td>green</td>
+				<td>PoE is on</td>
+			</tr>
+			<tr>
+				<td>green-amber</td>
+				<td>PoE is denied because providing power to the powered device will exceed the switch power capacity</td>
+			</tr>
+			<tr>
+				<td>blinking amber</td>
+				<td>PoE is off due to a fault</td>
+			</tr>
+			<tr>
+				<td>amber</td>
+				<td>PoE for the port has been disabled</td>
+			</tr>
+		</table>
 
 
 
