@@ -18,7 +18,7 @@
       li.navi a#II{background-color: #4CAF50;} /* which one be green */
     </style>
   </head>
-<!-------------------------------------------------------------------------------->
+<!-------------------------------------------------->
   <body>
     <header>
       <p onclick="hidebar()" id="title">EIGRP</p>
@@ -27,16 +27,38 @@
       <span class="navi_span_home"></span>
       <span class="navi_span"></span>
     </ul>
-<!--D1----------------------------------------------------------------------------> 
+<!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
-      <h1></h1>
+    
+
+
+
+
     </div>
-<!-------------------------------------------------------------------------------->  
+<!--------------------------------------------------> 
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
     <script>
       function hidebar(){
         var x=document.getElementsByClassName("drop_content");
         x.style.display="none";
       };
+
+      // When the user scrolls down 520px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+          document.getElementById("TopBtn").style.display = "block";
+        } else {
+          document.getElementById("TopBtn").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>  
   </body>
 </html>
