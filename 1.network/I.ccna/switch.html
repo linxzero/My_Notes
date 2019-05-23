@@ -47,6 +47,24 @@
 		switchport trunk native vlan <span class="input">99</span>
 	</p>
 
+	<h2>Router-on-stick</h2>
+	<h3>Router</h3>
+	<p class="code">
+		int <span class="input">g0/0</span><br>
+		no shut<br>
+		exit<br>
+		int <span class="input">g0/0.1</span><br>
+		encapsulation dot1q <span class="input">10</span><br>
+		ip add <span class="input">10.0.10.1 255.255.255.0</span><br>
+		exit<br>
+		int <span class="input">g0/0.2</span><br>
+		encapsulation dot1q <span class="input">20</span><br>
+		ip add <span class="input">10.0.10.2 255.255.255.0</span><br>
+	</p>
+	<p>
+		● Can't assign IP address on g0/0.<br>
+		● "dot1q 10" means vlan 10.<br>
+	</p>
 
 
 
