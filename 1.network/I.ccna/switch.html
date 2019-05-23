@@ -66,6 +66,37 @@
 			● "dot1q 10" means vlan 10.<br>
 		</p>
 
+	<h2>Security</h2>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			switchport mode access<br>
+			switchport port-security<br>
+			switchport port-security maximum <span class="input">3</span>
+		</p>
+		<p>
+			● "access" 一定要在 access mode 上設定 port security.<br>
+			● "port-security" 開啟 port security.<br>
+			● "maximum" 最多在 f0/1 上同時接 3 個 devices.
+		</p>
+		<h3>其他</h3>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			switchport port-security maximum <span class="input">3</span><br>
+			switchport port-security mac-address sticky
+		</p>
+		<p>只學最先學到的 3 個 mac-address, 再有第 4 個就 violation.</p>
+		<h3>白名單</h3>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			switchport port-security mac-address <span class="input">1212.3434.0101</span>
+		</p>
+		<h3>Violation</h3>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			switchport port-security violation <span class="input">shutdown</span><br>
+			switchport port-security violation <span class="input">protect</span><br>
+			switchport port-security violation <span class="input">restrict</span>
+		</p>
 
 
 	<h2>Verifying</h2>
