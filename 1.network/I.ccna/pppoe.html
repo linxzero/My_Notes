@@ -35,146 +35,146 @@
 				<td colspan="3">PPPoE 即用套路</td>
 			</tr>
 			<tr>
-				<td>ISP(config)#</td>
-				<td>username Cust1 password ciscopppoe</td>
+				<td style="text-align: right;">ISP(config)#</td>
+				<td style="text-align: left;">username Cust1 password ciscopppoe</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config)#</td>
-				<td>ip local pool PPPoEPOOL  10.0.0.1  10.0.0.10</td>
+				<td style="text-align: right;">ISP(config)#</td>
+				<td style="text-align: left;">ip local pool PPPoEPOOL  10.0.0.1  10.0.0.10</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config)#</td>
-				<td>int virtual-template 1</td>
+				<td style="text-align: right;">ISP(config)#</td>
+				<td style="text-align: left;">int virtual-template 1</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-if)#</td>
-				<td>ip add 10.0.0.254 255.255.255.0</td>
+				<td style="text-align: right;">ISP(config-if)#</td>
+				<td style="text-align: left;">ip add 10.0.0.254 255.255.255.0</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-if)#</td>
-				<td>mtu 1492</td>
+				<td style="text-align: right;">ISP(config-if)#</td>
+				<td style="text-align: left;">mtu 1492</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-if)#</td>
-				<td>peer default ip address pool PPPoEPOOL</td>
+				<td style="text-align: right;">ISP(config-if)#</td>
+				<td style="text-align: left;">peer default ip address pool PPPoEPOOL</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-if)#</td>
-				<td>ppp authentication chap callin</td>
+				<td style="text-align: right;">ISP(config-if)#</td>
+				<td style="text-align: left;">ppp authentication chap callin</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-if)#</td>
-				<td>exit</td>
+				<td style="text-align: right;">ISP(config-if)#</td>
+				<td style="text-align: left;">exit</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config)#</td>
-				<td>bba-group pppoe global</td>
+				<td style="text-align: right;">ISP(config)#</td>
+				<td style="text-align: left;">bba-group pppoe global</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-bba-group)#</td>
-				<td>virtual-template 1</td>
+				<td style="text-align: right;">ISP(config-bba-group)#</td>
+				<td style="text-align: left;">virtual-template 1</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-bba-group)#</td>
-				<td>exit</td>
+				<td style="text-align: right;">ISP(config-bba-group)#</td>
+				<td style="text-align: left;">exit</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config)#</td>
-				<td>int g0/1</td>
+				<td style="text-align: right;">ISP(config)#</td>
+				<td style="text-align: left;">int g0/1</td>
 				<td>associate bba-group with physical int</td>
 			</tr>
 			<tr>
-				<td>ISP(config-if)#</td>
-				<td>pppoe enable group global</td>
+				<td style="text-align: right;">ISP(config-if)#</td>
+				<td style="text-align: left;">pppoe enable group global</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>ISP(config-if)#</td>
-				<td>no shutdown</td>
+				<td style="text-align: right;">ISP(config-if)#</td>
+				<td style="text-align: left;">no shutdown</td>
 				<td></td>
 			</tr>
 			<tr>
 				<td colspan="3"></td>
 			</tr>
 			<tr>
-				<td>Cust1(config)#</td>
-				<td>int g0/1</td>
+				<td style="text-align: right;">Cust1(config)#</td>
+				<td style="text-align: left;">int g0/1</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>pppoe enable</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">pppoe enable</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>pppoe-client dial-pool-number 1</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">pppoe-client dial-pool-number 1</td>
 				<td>bundle dialer 1 with g0/1</td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>exit</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">exit</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config)#</td>
-				<td>int dialer 1</td>
+				<td style="text-align: right;">Cust1(config)#</td>
+				<td style="text-align: left;">int dialer 1</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>mtu 1492</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">mtu 1492</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>ip add negotiated</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">ip add negotiated</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>encapsulation ppp</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">encapsulation ppp</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>dialer pool 1</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">dialer pool 1</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>ppp authentication chap callin</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">ppp authentication chap callin</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>ppp chap hostname Cust1</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">ppp chap hostname Cust1</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>ppp chap password ciscopppoe</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">ppp chap password ciscopppoe</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config-if)#</td>
-				<td>exit</td>
+				<td style="text-align: right;">Cust1(config-if)#</td>
+				<td style="text-align: left;">exit</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Cust1(config)#</td>
-				<td>ip route 0.0.0.0  0.0.0.0 dialer 1</td>
+				<td style="text-align: right;">Cust1(config)#</td>
+				<td style="text-align: left;">ip route 0.0.0.0  0.0.0.0 dialer 1</td>
 				<td></td>
 			</tr>
 		</table>
