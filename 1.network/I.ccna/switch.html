@@ -31,6 +31,7 @@
 	<div class="block" onclick="hidebar()">
 		
 	<h2>Vlan</h2>
+	<h3>Access port</h3>
 	<p class="code">
 		int range <span class="input">f0/1-10</span><br>
 		switchport mode access<br>
@@ -39,7 +40,12 @@
 	<p>
 		By default, all ports access vlan 1.
 	</p>
-	<p></p>
+	<h3>Trunk port</h3>
+	<p class="code">
+		int <span class="input">g0/1</span><br>
+		switchport mode trunk<br>
+		switchport trunk native vlan <span class="input">99</span>
+	</p>
 
 
 
