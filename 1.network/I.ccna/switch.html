@@ -44,8 +44,10 @@
 		<p class="code">
 			int <span class="input">g0/1</span><br>
 			switchport mode trunk<br>
-			switchport trunk native vlan <span class="input">99</span>
+			switchport trunk native vlan <span class="input">99</span><br>	
+			switchport trunk encapsulation dot1Q
 		</p>
+		<p>Some switches' default encapsulation are ISL (legacy).</p>
 		<p class="lilbr"><br></p>
 		<p class="note">
 			Access port (Untagged port)<br>
