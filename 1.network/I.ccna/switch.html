@@ -49,13 +49,14 @@
 		<p class="lilbr"><br></p>
 		<p class="note">
 			Access port (Untagged port)<br>
-			out→ : packet with no tag<br>
-			in← : forward to same vlan & trunk<br><br>
+			in← : forward to same vlan & trunk<br>
+			out→ : packet with no tag<br><br>
 			Trunk port (Tagged port)<br>
-			out→ : packet from native vlan with no tag<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;packet from other vlan with tag<br>
 			in← : forward non-tagged to native vlan & trunk<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forward tagged to tag vlan & trunk
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forward tagged to tag vlan & trunk<br>	
+			out→ : packet from native vlan with no tag<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;packet from other vlan with tag
+			
 		</p>
 
 
