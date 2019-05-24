@@ -72,12 +72,14 @@
 			ip add <span class="input">10.0.10.1 255.255.255.0</span><br>
 			exit<br>
 			int <span class="input">g0/0.2</span><br>
-			encapsulation dot1q <span class="input">20</span><br>
+			encapsulation dot1q <span class="input">20</span> native<br>
 			ip add <span class="input">10.0.10.2 255.255.255.0</span><br>
 		</p>
 		<p>
 			● Can't assign IP address on g0/0.<br>
+			● "g0/0.1" is sub-interface.<br>	
 			● "dot1q 10" means vlan 10.<br>
+			● "native" define 20 as native vlan.
 		</p>
 
 
