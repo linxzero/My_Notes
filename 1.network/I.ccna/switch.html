@@ -46,6 +46,18 @@
 			switchport mode trunk<br>
 			switchport trunk native vlan <span class="input">99</span>
 		</p>
+		<p class="lilbr"><br></p>
+		<p class="note">
+			Access port (Untagged port)<br>
+			out→ : packet with no tag<br>
+			in← : forward to same vlan and trunk<br>
+			Trunk port (Tagged port)<br>
+			out→ : packet from native vlan with no tag<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;packet from other vlan with tag<br>
+			in← : with no tag, forward to native vlan and trunk<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;with tag, forward to tag vlan and trunk
+		</p>
+
 
 	<h2>Router-on-stick</h2>
 		<h3>Router</h3>
@@ -65,6 +77,7 @@
 			● Can't assign IP address on g0/0.<br>
 			● "dot1q 10" means vlan 10.<br>
 		</p>
+
 
 	<h2>Security</h2>
 		<p class="code">
