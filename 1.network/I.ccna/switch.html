@@ -64,6 +64,19 @@
 			● 帶 tag 的，交給所屬 vlan.
 		</p>
 
+		<h3>SVI</h3>
+		<p class="code">
+			vlan <span class="input">10</span><br>
+			int vlan <span class="input">10</span><br>
+			ip add <span class="input">10.0.10.1 255.255.255.0</span>
+		</p>
+		<p>
+			"SVI vlan 10" 天生就屬於 access port vlan 10.
+		</p>
+		<p class="lilbr"><br></p>
+		<p class="code">ip routing</p>
+		<p>如果想在多個 SVI 之間 route 通 (像 router 一樣)，需要在 config mode "ip routing".</p>
+
 
 	<h2>Router-on-stick</h2>
 		<h3>Router</h3>
