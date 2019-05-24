@@ -48,14 +48,16 @@
 		</p>
 		<p class="lilbr"><br></p>
 		<p class="note">
-			Trunk port (Tagged port)<br>
-			out→ : packet from native vlan won't be tagged<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;packet from other vlan will be tagged<br>
-			in← : forward non-tagged to native vlan & trunk<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forward tagged to vlan tag & trunk<br>	<br>
 			Access port (Untagged port)<br>
-			out→ : packet with no tag<br>
-			in← : forward to same vlan & trunk<br>
+			離開或進入 access port 的 packet 都不帶 tag.<br>	<br>	
+
+			Trunk port (Tagged port)<br>
+			離開 trunk port :<br>	
+			● 來自 native vlan，不帶 tag.<br>	
+			● 來自 other vlan, 需要帶 tag.<br>	
+			進入 trunk port :<br>	
+			● 不帶 tag，交給 native vlan.<br>	
+			● 帶 tag，交給所屬 vlan.
 		</p>
 
 
