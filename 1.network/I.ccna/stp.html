@@ -167,13 +167,14 @@
 
 		<h3>Uplinkfast</h3>
 		<img src="images/uplinkfast.PNG" alt="" class="mid">
-		<p>當 e0/0 突然死掉時，e0/2 需要等待 30 秒才能進入狀態。為了解決這個問題 Cisco 用了 Uplinkfast.</p>
+		<p>當 e0/0 突然死掉時，e0/2 需要等待 30 秒才能進入狀態。為了解決這個 Directly Fail 問題 Cisco 用了 Uplinkfast.</p>
 		<p class="code">
 			spanning-tree uplinkfast
 		</p>
 		<p>啟動了 Uplinkfast 的 switch 會自動選一個 blocking port 變成 standby 狀態，當 root port 死掉時即時頂上。因此，uplinkfast 不應在 root switch 上執行。</p>
 
-		
+		<h3>Backbonefast</h3>
+		<img src="images/backbonefast.PNG" alt="" class="little">
 
 
 
