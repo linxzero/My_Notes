@@ -155,8 +155,27 @@
 
 	<h2>STP</h2>
 		<p>Spanning Tree</p>
-		<p class="code"></p>
+		<img src="images/switch_port_stp_role.png" alt="" class="big">
+		<p class="bigcap">Root Port → Designated Port → Root Bridge</p>
+		<p class="code">
+			spanning-tree mode rapid-pvst<br>
+			spanning-tree vlan <span class="input">10</span> priority <span class="input">64</span><br>
+		</p>
+		<p>
+			● "pvst" 是 cisco 專利，每個 vlan 都可以有不同的 stp topology.<br>
+			● "priority" 最小的成為 root bridge，相同就楝 Mac 最小的。
+		</p>
+		<p class="code">
+			spanning-tree vlan <span class="input">10</span> root primary<br>
+			spanning-tree vlan <span class="input">10</span> root secondary
+		</p>
+		<p>或者直接指定為 root bridge.</p>
+		<p class="code">
+			show spanning-tree<br>
+			show spanning-tree vlan <span class="input">10</span>
+		</p>
 
+		
 
 	<h2>EtherChannnel</h2>
 		<p>PAgP : Cisco-proprietary<br>LACP : IEEE 802.3ad</p>
