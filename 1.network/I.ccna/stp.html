@@ -127,6 +127,7 @@
 
 
 		<h3>Roles</h3>
+		<p>無論用仼何 protocol，都是用以下這些 roles.</p>
 		<img src="images/switch_port_stp_role.png" alt="" class="big">
 		<p class="bigcap">Root Port → Designated Port → Root Bridge</p>
 		<p class="code">
@@ -142,9 +143,16 @@
 			spanning-tree vlan <span class="input">10</span> root secondary
 		</p>
 		<p>或者直接指定為 root bridge.</p>
+
 				
 	<h2>Optimizing</h2>
-
+		<h3>PortFast</h3>
+		<p>有些 port 是用來插電腦的，肯定不會改變 STP topology，如果還要等 30 秒才能上線實在是太無謂，這時可以用 PortFast，可以跳過所有 state 直接到 Forwarding.</p>
+		<p class="code">
+			int <span class="input">f0/10</span><br>
+			spanning-tree portfast
+		</p>
+		<p>設定成 PortFast 後，如果收到 BPDU 的話，還是會依正常情序進入 Listening & Learning.</p>
 
 		
 
