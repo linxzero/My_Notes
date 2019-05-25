@@ -32,8 +32,72 @@
 
 
 	<h2>Spanning Tree</h2>
+		<h3>Port State</h3>
+		<p>傳統 STP 的 port 由 down 到 up 需要經歷 5 個狀態：</p>
+		<table>
+			<tr style="background-color: #3A3A3A; color: #F4F6F7">
+				<td>狀態</td>
+				<td>Disabled</td>
+				<td>Blocking</td>
+				<td>Listening</td>
+				<td>Learning</td>
+				<td>Forwarding</td>
+			</tr>
+			<tr>
+				<td>接收 BPDU</td>
+				<td>No</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>發送 BPDU</td>
+				<td>No</td>
+				<td>No</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Learn Mac Address</td>
+				<td>No</td>
+				<td>No</td>
+				<td>No</td>
+				<td>Yes</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Forward Data Frame</td>
+				<td>No</td>
+				<td>No</td>
+				<td>No</td>
+				<td>No</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>維持時間</td>
+				<td>直到 no shut</td>
+				<td>直到 topology 有變</td>
+				<td>Forward Delay (15s)</td>
+				<td>Forward Delay (15s)</td>
+				<td>直到 shutdown 或成為 Alternate port</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
 		<img src="images/switch_port_stp_role.png" alt="" class="big">
 		<p class="bigcap">Root Port → Designated Port → Root Bridge</p>
+
+		<h3>Protocol</h3>
+
+
 		<p class="code">
 			spanning-tree mode rapid-pvst<br>
 			spanning-tree vlan <span class="input">10</span> priority <span class="input">64</span><br>
@@ -48,7 +112,8 @@
 		</p>
 		<p>或者直接指定為 root bridge.</p>
 				
-		<h3>優化</h3>
+	<h2>優化</h2>
+
 
 		
 
