@@ -134,7 +134,7 @@
 			switchport port-security mac-address sticky
 		</p>
 		<p>只學最先學到的 3 個 mac-address, 再有第 4 個就 violation.</p>
-		<h3>白名單</h3>
+		<h3>White-list</h3>
 		<p class="code">
 			int <span class="input">f0/1</span><br>
 			sw port-security mac-address <span class="input">1212.3434.0101</span>
@@ -161,13 +161,13 @@
 	<h2>HSRP on switch</h2>
 		<p>Hot Standby Router Protocol, 是 Cisco 專利</p>
 		<p class="lilbr"><br></p>
-		<p>On Switch 1 :</p>
+		<p>On Switch-1 :</p>
 		<p class="code">
 			int vlan <span class="input">10</span><br>
 			ip add <span class="input">10.0.0.1 255.255.255.0</span><br>
 			standby <span class="input">1</span> ip <span class="input">192.168.1.254</span>
 		</p>
-		<p>On Switch 2 :</p>
+		<p>On Switch-2 :</p>
 		<p class="code">
 			int vlan <span class="input">10</span><br>
 			ip add <span class="input">10.0.0.2 255.255.255.0</span><br>
