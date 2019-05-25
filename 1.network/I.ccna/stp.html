@@ -182,6 +182,20 @@
 		<p>必需在所有 switch 都使用。Backbonefast 加上 Uplinkfast，可以在無間斷內跳轉 root port.</p>
 
 
+	<h2>Topology protection</h2>
+		<h3>Root Guard</h3>
+		<p class="code">
+			int <span class="input">f0/10</span><br>
+			spanning-tree guard root
+		</p>
+		<p>當有比 root switch 的 priority 更小的 switch 插入 f0/10 企圖奪位時，f0/10 會變成 "Root Inconsistent" 狀態，同 Blocking 一樣，不接收不發出 frame.</p>
+
+		<h3>BPDU Guard</h3>
+		<p class="code">
+			int <span class="input">f0/10</span><br>
+			spanning-tree bpduguard enable
+		</p>
+		<p>只要收到 BPDU 就將 f0/10 變成 Error Disable，不管你奪不奪位。</p>
 
 
 
