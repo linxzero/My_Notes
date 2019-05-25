@@ -175,6 +175,11 @@
 
 		<h3>Backbonefast</h3>
 		<img src="images/backbonefast.PNG" alt="" class="little">
+		<p>解決了上面的 Directly Fail 問題，還有 Indirectly Fail 問題。當 e0/1 或 e0/0 出現問題，S3 是懵然不知，等到 S1 與 S3 重新連上需要 50 秒，Cisco 為了解決此問題用了 Backbonefast.</p>
+		<p class="code">
+			spanning-tree backbonefast
+		</p>
+		<p>必需在所有 switch 都使用。Backbonefast 加上 Uplinkfast，可以在無間斷內跳轉 root port.</p>
 
 
 
