@@ -84,19 +84,51 @@
 				<td>直到 shutdown 或成為 Alternate port</td>
 			</tr>
 		</table>
+
+
 		<h3>Protocols</h3>
+		<table>
+			<tr>
+				<td>Protocol</td>
+				<td>Standard</td>
+				<td>Resources needed</td>
+				<td>Convergence</td>
+				<td>Number of Trees</td>
+			</tr>
+			<tr>
+				<td>STP</td>
+				<td>802.1d</td>
+				<td>Low</td>
+				<td>Slow</td>
+				<td>One</td>
+			</tr>
+			<tr>
+				<td>RSTP</td>
+				<td>802.1w</td>
+				<td>Medium</td>
+				<td>Fast</td>
+				<td>One</td>
+			</tr>
+			<tr>
+				<td>PVST+</td>
+				<td>Cisco</td>
+				<td>High</td>
+				<td>Slow</td>
+				<td>One per VLAN</td>
+			</tr>
+			<tr>
+				<td>Rapid PVST+</td>
+				<td>Cisco</td>
+				<td>Very High</td>
+				<td>Fast</td>
+				<td>One per VLAN</td>
+			</tr>
+		</table>
 
 
-
-
-
-
+		<h3>Roles</h3>
 		<img src="images/switch_port_stp_role.png" alt="" class="big">
 		<p class="bigcap">Root Port → Designated Port → Root Bridge</p>
-
-		<h3>Command</h3>
-
-
 		<p class="code">
 			spanning-tree mode rapid-pvst<br>
 			spanning-tree vlan <span class="input">10</span> priority <span class="input">64</span><br>
