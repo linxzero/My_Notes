@@ -124,10 +124,15 @@
 				<td>One per VLAN</td>
 			</tr>
 		</table>
+		<p>
+			● "RSTP" 是 STP 的 Rapid 版。通過加入了 Synchronization process，和改變了發放 BPDU 的一些規則。<br>
+			● "PVST+" 是 RSTP 的多 VLAN 版。<br>
+			● "RPVST+" 是 PVST+ 的 Rapid 版。
+		</p>
 
 
 		<h3>Roles</h3>
-		<p>無論用仼何 protocol，都是用以下這些 roles.</p>
+		<p>無論用仼何 protocol，port roles 都大同小異。</p>
 		<img src="images/switch_port_stp_role.png" alt="" class="big">
 		<p class="bigcap">Root Port → Designated Port → Root Bridge</p>
 		<p class="code">
