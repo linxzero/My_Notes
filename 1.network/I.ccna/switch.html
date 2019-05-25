@@ -30,7 +30,7 @@
 <!--D1----------------------------------------------> 
 	<div class="block" onclick="hidebar()">
 		
-	<h2>Vlan</h2>
+	<h2>VLAN</h2>
 		<h3>Access port</h3>
 		<p class="code">
 			vlan <span class="input">10</span><br>
@@ -77,25 +77,14 @@
 			exit<br>
 			ip default-gateway <span class="input">10.0.0.254 255.255.255.0</span>
 		</p>
-		"default-gateway" 視乎是否需要。
-		<h3>Lanbase-routing</h3>
-		<p>如果想在多個 SVI 之間 route 通 (像 router 一樣)，需要輸入以下 cmd :</p>
-		<p class="code">
-			sdm prefer lanbase-routing<br>
-			do reload<br>
-			ip routing
-		</p>
-		<p class="code">show sdm prefer</p>
-		<h3>Router port</h3>
-		<p class="code">
-			int <span class="input">g1/0</span><br>
-			no switchport<br>
-			ip add <span class="input">172.16.10.1 255.255.255.0</span><br>
-		</p>
+		<p>"default-gateway" 視乎是否需要。</p>
 
 
-	<h2>Router-on-stick</h2>
-		<h3>Router</h3>
+		
+
+
+	<h2>Inter-VLAN routing</h2>
+		<h3>Router-on-stick</h3>
 		<p class="code">
 			int <span class="input">g0/0</span><br>
 			no shut<br>
@@ -112,6 +101,22 @@
 			● "dot1q 10" means vlan 10.<br>
 			● "native" define 20 as native vlan.
 		</p>
+		
+		<h3>Inter-VLAN routing on switch</h3>
+		<p>在多個 SVI 之間 route 通 (像 router 一樣)，需要在 switch 上輸入：</p>
+		<p class="code">
+			sdm prefer lanbase-routing<br>
+			do reload<br>
+			ip routing
+		</p>
+		<p class="code">show sdm prefer</p>
+		<h3>Router port</h3>
+		<p>直頭將 switch port 變成 router port.</p>
+		<p class="code">
+			int <span class="input">g1/0</span><br>
+			no switchport<br>
+		</p>
+
 
 
 	<h2>Security</h2>
@@ -152,25 +157,34 @@
 		</p>
 
 
+	<h2>STP</h2>
+		<p>Spanning Tree</p>
+		<p class="code"></p>
+
+
+	<h2>EtherChannnel</h2>
+		<p>PAgP : Cisco-proprietary<br>LACP : IEEE 802.3ad</p>
+
+
 	<h2>HSRP on switch</h2>
-	<p>Hot Standby Router Protocol, 是 Cisco 專利</p>
-	<p class="lilbr"><br></p>
-	<p>On Switch 1 :</p>
-	<p class="code">
-		int vlan <span class="input">10</span><br>
-		ip add <span class="input">10.0.0.1 255.255.255.0</span><br>
-		standby <span class="input">1</span> ip <span class="input">192.168.1.254</span>
-	</p>
-	<p>On Switch 2 :</p>
-	<p class="code">
-		int vlan <span class="input">10</span><br>
-		ip add <span class="input">10.0.0.2 255.255.255.0</span><br>
-		standby <span class="input">1</span> ip <span class="input">192.168.1.254</span>
-	</p>
-	<p>
-		● "10.0.0.1" and "10.0.0.2" is physical address.<br>
-		● "192.168.1.254" is virtual address, it is gateway.
-	</p>
+		<p>Hot Standby Router Protocol, 是 Cisco 專利</p>
+		<p class="lilbr"><br></p>
+		<p>On Switch 1 :</p>
+		<p class="code">
+			int vlan <span class="input">10</span><br>
+			ip add <span class="input">10.0.0.1 255.255.255.0</span><br>
+			standby <span class="input">1</span> ip <span class="input">192.168.1.254</span>
+		</p>
+		<p>On Switch 2 :</p>
+		<p class="code">
+			int vlan <span class="input">10</span><br>
+			ip add <span class="input">10.0.0.2 255.255.255.0</span><br>
+			standby <span class="input">1</span> ip <span class="input">192.168.1.254</span>
+		</p>
+		<p>
+			● "10.0.0.1" and "10.0.0.2" is physical address.<br>
+			● "192.168.1.254" is virtual address, it is gateway.
+		</p>
 
 
 	<h2>VTP</h2>
