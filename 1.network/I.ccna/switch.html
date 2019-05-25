@@ -82,9 +82,7 @@
 		<p>如果想在多個 SVI 之間 route 通 (像 router 一樣)，需要輸入以下 cmd :</p>
 		<p class="code">
 			sdm prefer lanbase-routing<br>
-			end<br>
-			reload<br>
-			conf t<br>
+			do reload<br>
 			ip routing
 		</p>
 		<p class="code">show sdm prefer</p>
@@ -101,11 +99,9 @@
 		<p class="code">
 			int <span class="input">g0/0</span><br>
 			no shut<br>
-			exit<br>
 			int <span class="input">g0/0.1</span><br>
 			encapsulation dot1q <span class="input">10</span><br>
 			ip add <span class="input">10.0.10.1 255.255.255.0</span><br>
-			exit<br>
 			int <span class="input">g0/0.2</span><br>
 			encapsulation dot1q <span class="input">20</span> native<br>
 			ip add <span class="input">10.0.10.2 255.255.255.0</span><br>
