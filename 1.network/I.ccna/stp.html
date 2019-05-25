@@ -135,7 +135,9 @@
 			spanning-tree vlan <span class="input">10</span> priority <span class="input">64</span><br>
 		</p>
 		<p>
+			● "mode" default 是 STP (ieee-802.1d).<br>
 			● "pvst" 是 cisco 專利，每個 vlan 都可以有不同的 stp topology.<br>
+			● 遇到另一端 switch 不支援 RSTP 的話，會自動降為 STP 運作。<br>
 			● "priority" 最小的成為 root bridge，相同就楝 Mac 最小的。
 		</p>
 		<p class="code">
@@ -152,7 +154,11 @@
 			int <span class="input">f0/10</span><br>
 			spanning-tree portfast
 		</p>
-		<p>設定成 PortFast 後，如果收到 BPDU 的話，還是會依正常情序進入 Listening & Learning.</p>
+		<p>設定成 PortFast 的 port 如果收到 BPDU，還是會依正常情序進入 Listening & Learning.</p>
+		<p class="code">
+			spanning-tree portfast default
+		</p>
+		<p>或者在 global mode 一次過把所有 port 設成 portfast.</p>
 
 		
 
