@@ -163,7 +163,12 @@
 			int port-channel <span class="input">1</span><br>
 			switchport mode trunk
 		</p>
-		<p>Channel mode 都可以動態，</p>
+		<p>
+			● 多個 physical interfaces 合成一條 virtual interface，叫做 "port channel"。<br>
+			● 當有兩條 port channel 在兩個 switch 之間存在，STP 會 block 掉較差的 port channel 內的所有 physical interfaces. (sem3 4.1.1.2)<br>
+			● 當 port channel 內其中一個 physical interface 死掉，port channel 仍然運作，只是速度變慢。
+		</p>
+		<h3>Negotiation</h3>
 
 
 	<h2>HSRP on switch</h2>
@@ -226,6 +231,14 @@
 			show mac address-table<br>
 			show int <span class="input">f0/1</span><br>
 			show port-security int <span class="input">f0/1</span>
+		</p>
+		<p class="lilbr"><br></p>
+		<p class="code">
+			show run int <span class="input">f0/1</span><br>
+			show int <span class="input">f0/1</span> sw<br>
+			show int port-channel <span class="input">1</span><br>
+			show int port-channel <span class="input">1</span> sw<br>
+			show etherchannel summary
 		</p>
 
 
