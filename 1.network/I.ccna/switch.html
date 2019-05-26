@@ -243,13 +243,13 @@
 		</p>
 
 		<h3>Load Balance</h3>
-		<p>假設把 4 個 100 Mb 的 port bundle 在一起，頻寬會變成 400 Mb，switch 會把任務"平均"分配給各個 port，即 Load Balance。不過需要留意 Load Balance 是 Flow-base 的，即一條 traffice flow 不能分給 4 個 port 同時發送。</p>
+		<p>假設把 4 個 100 Mb 的 port bundle 在一起，頻寬會變成 400 Mb，switch 會把任務"平均"分配給 4 個 port，即 Load Balance。不過需要留意 Load Balance 是 Flow-base 的，即一條 traffice flow 不能分給 4 個 port 同時發送。</p>
 		<p class="lilbr"><br></p>
-		<p>把甚麼 load 派去哪個 port 可以自己制定：</p>
-		<p class="note">
+		<p>而 switch 跟據甚麼"平均"地把哪些 load 分派去哪個 port 呢？</p>
+		<p class="code">
 			port-channel load-balance <span class="input">src-ip</span>
 		</p>
-		<p>"src-ip" 跟據 source IP address 來計算派去哪一個 port. 因此得出一個結論，越接近 user 的 switch 不要用 dst-ip，因為會導致所有 load 都經同一個 port，無法平均分配負載。相反，接近 file server 的 switch 不要用 src-ip.</p>
+		<p>"src-ip" 跟據 source IP address 來計算派去哪一個 port.<br> 因此可以得出結論，越接近 user 的 switch 不要用 dst-ip，因為會導致所有 load 都經同一個 port，無法平均分配負載。相反，接近 file server 的 switch 不要用 src-ip.</p>
 
 
 	<h2>HSRP on switch</h2>
