@@ -154,7 +154,6 @@
 
 
 	<h2>EtherChannnel</h2>
-		<p>PAgP : Cisco-proprietary<br>LACP : IEEE 802.3ad</p>
 		<p class="code">
 			int range <span class="input">f0/1-2</span><br>
 			channel-group <span class="input">1</span> mode <span class="input">desirable</span>
@@ -169,6 +168,71 @@
 			● 當 port channel 內其中一個 physical interface 死掉，port channel 仍然運作，只是速度變慢。
 		</p>
 		<h3>Negotiation</h3>
+		<table>
+			<tr colspan="5" style="background-color: #3A3A3A; color: #F4F6F7">
+				<td>Protocol</td>
+				<td>Mode</td>
+				<td>Mean</td>
+				<td>Mode</td>
+				<td>Protocol</td>
+			</tr>
+			<tr>
+				<td rowspan="3">PAgP<br>(Cisco-proprietary)</td>
+				<td>on</td>
+				<td>我話一定要做</td>
+				<td>on</td>
+				<td rowspan="3">LACP<br>(IEEE 802.3ad)</td>
+			</tr>
+			<tr>
+				<td>desirable</td>
+				<td>我想同你傾下</td>
+				<td>active</td>
+			</tr>
+			<tr>
+				<td>auto</td>
+				<td>你想傾就傾下</td>
+				<td>passive</td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td></td>
+				<td>on</td>
+				<td>desirable</td>
+				<td>auto</td>
+				<td>no setting</td>
+			</tr>
+			<tr>
+				<td>on</td>
+				<td>O</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
+			</tr>
+			<tr>
+				<td>desirable</td>
+				<td>X</td>
+				<td>O</td>
+				<td>O</td>
+				<td>X</td>
+			</tr>
+			<tr>
+				<td>auto</td>
+				<td>X</td>
+				<td>O</td>
+				<td>X</td>
+				<td>X</td>
+			</tr>
+			<tr>
+				<td>no setting</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
+				<td>X</td>
+			</tr>
+		</table>
+
 
 
 	<h2>HSRP on switch</h2>
