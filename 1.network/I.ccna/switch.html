@@ -155,7 +155,15 @@
 
 	<h2>EtherChannnel</h2>
 		<p>PAgP : Cisco-proprietary<br>LACP : IEEE 802.3ad</p>
-		<p class="code"></p>
+		<p class="code">
+			int range <span class="input">f0/1-2</span><br>
+			channel-group <span class="input">1</span> mode <span class="input">desirable</span>
+		</p>
+		<p class="code">
+			int port-channel <span class="input">1</span><br>
+			switchport mode trunk
+		</p>
+		<p>Channel mode 都可以動態，</p>
 
 
 	<h2>HSRP on switch</h2>
@@ -202,11 +210,6 @@
 		</p>
 
 
-
-
-
-
-
 	<h2>Verifying</h2>
 		<p class="code">
 			show vlan brief<br>
@@ -224,8 +227,6 @@
 			show int <span class="input">f0/1</span><br>
 			show port-security int <span class="input">f0/1</span>
 		</p>
-
-
 
 
 	</div>
