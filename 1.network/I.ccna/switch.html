@@ -259,17 +259,18 @@
 		<p class="code">
 			int vlan <span class="input">10</span><br>
 			ip add <span class="input">10.0.0.1 255.255.255.0</span><br>
-			standby <span class="input">1</span> ip <span class="input">192.168.1.254</span>
+			standby <span class="input">1</span> ip <span class="input">10.0.0.254</span>
 		</p>
 		<p>On Switch-2 :</p>
 		<p class="code">
 			int vlan <span class="input">10</span><br>
 			ip add <span class="input">10.0.0.2 255.255.255.0</span><br>
-			standby <span class="input">1</span> ip <span class="input">192.168.1.254</span>
+			standby <span class="input">1</span> ip <span class="input">10.0.0.254</span>
 		</p>
 		<p>
 			● "10.0.0.1" and "10.0.0.2" is physical address.<br>
-			● "192.168.1.254" is virtual address, it is gateway.
+			● "192.168.1.254" is virtual address, it is gateway.<br>
+			● "1" is Group ID.
 		</p>
 
 
