@@ -85,6 +85,40 @@
 			<p>(Excel...)</p>
 
 
+		<h2>ACL</h2>
+			<p class="code">
+				ip access-list extended <span class="input">100/Name</span><br>
+				permit tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> eq <span class="input">80</span><br>
+				permit icmp <span class="input">10.1.1.0 0.0.0.255  10.2.2.0 0.0.0.255</span><br>
+				deny ip any any<br>
+				<span class="input">15</span> deny tcp any any eq <span class="input">23</span>
+			</p>
+			<p>
+				● "Standard list" 1~99，或改名。<br>
+				● Standard list 條件只有 IP address 或者 Subnet.<br>
+				● "Extended list" 100~199，或改名。<br>
+				● Extended list 條件包括 source & destination address, protocol, port number.<br>
+				● "10.1.1.5" 是 source, "10.2.2.5" 是 destination.<br>
+				● "deny any any" 是預設隱藏在最後的。<br>
+				● "15" 是手動加入排位號，用來插隊。<br>
+				● 
+				● 
+				● 
+				● 
+				
+			</p>
+			<p class="code">
+				int g0/0
+				ip access-group <span class="input">100/Name</span> in
+			</p>
+			<p class="code">
+				line vty 0 15
+				access-class <span class="input">100/Name</span> in
+			</p>
+			<p>放在 "in" 還是 "out" 要想清楚。</p>
+			<p class="code">show access-lists</p>
+
+
 		<h2>HSRP</h2>
 			<p>Hot Standby Router Protocol, 是 Cisco 專利</p>
 			<p class="lilbr"><br></p>
@@ -122,6 +156,7 @@
 			<p>Gateway Load Balancing Protocol, Cisco-proprietary.<br>
 			基本同 HSRP 和 VRRP 相似，另外多了 load balancing between a group of redundant routers.</p>
 		
+
 
 
 
