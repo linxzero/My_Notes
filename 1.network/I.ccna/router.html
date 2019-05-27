@@ -86,6 +86,7 @@
 
 
 		<h2>ACL</h2>
+			<h3>Create</h3>
 			<p class="code">
 				ip access-list extended <span class="input">100/Name</span><br>
 				per tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> eq <span class="input">80</span><br>
@@ -103,6 +104,7 @@
 				● "deny any any" 是自動隱藏在最後的。<br>
 				● "15" 是手動加入排位號，用來插隊。<br>		
 			</p>
+			<h3>Assign</h3>
 			<p class="code">
 				int g0/0<br>	
 				ip access-group <span class="input">100/Name</span> in
@@ -112,7 +114,7 @@
 				access-class <span class="input">100/Name</span> in
 			</p>
 			<p>放在 "in" 還是 "out" 要想清楚。</p>
-			<p class="lilbr"><br></p>
+			<h3>Verify</h3>
 			<p class="code">show access-lists</p>
 
 
