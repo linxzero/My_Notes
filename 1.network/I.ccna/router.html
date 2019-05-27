@@ -12,7 +12,7 @@
 				$(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
 			});
 		</script>
-		<title>DHCP</title>
+		<title>Router</title>
 		<style>
 			header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
 			li.navi a#I{background-color: #4CAF50;} /* which one be green */
@@ -21,7 +21,7 @@
 <!-------------------------------------------------->
 	<body>
 		<header>
-			<p onclick="hidebar()" id="title">DHCP</p>
+			<p onclick="hidebar()" id="title">Router</p>
 		</header>
 		<ul class="navi">
 			<span class="navi_span_home"></span>
@@ -82,8 +82,46 @@
 
 
 		<h2>DHCPv6</h2>
-		<p>(Excel...)</p>
+			<p>(Excel...)</p>
 
+
+		<h2>HSRP</h2>
+			<p>Hot Standby Router Protocol, 是 Cisco 專利</p>
+			<p class="lilbr"><br></p>
+			<p>On Router-1 :</p>
+			<p class="code">
+				int <span class="input">g0/1</span><br>
+				ip add <span class="input">10.0.0.1 255.255.255.0</span><br>
+				standby <span class="input">1</span> ip <span class="input">10.0.0.254</span><br>
+				standby version 2<br>
+				standby <span class="input">1</span> priority <span class="input">150</span><br>
+				standby <span class="input">1</span> preempt
+			</p>
+			<p>On Router-2 :</p>
+			<p class="code">
+				int vlan <span class="input">10</span><br>
+				ip add <span class="input">10.0.0.2 255.255.255.0</span><br>
+				standby <span class="input">1</span> ip <span class="input">10.0.0.254</span><br>
+				standby version 2
+			</p>
+			<p>
+				● "10.0.0.1" and "10.0.0.2" is physical address.<br>
+				● "10.0.0.254" is virtual address, it is gateway.<br>
+				● "1" is Group ID.<br>
+				● "version 2" is HSRP version.<br>
+				● "priority" 預設是 100, 最大的做 active router.<br>
+				● "preempt"，跟據預設，有新 router 上線不會引起選舉，即 active router 由誰當不會因為新 router 的 priority 而變。除非新 router enable 了 preempt。例如我們期望 R1 永遠當 active router，假如 R1 因電力問題掉線而讓出了 active router，當 R1 回復電力時需要重奪 active router 之位，我們就要在 R1 上 enable preempt.
+			</p>
+			<p class="lilbr"><br></p>
+			<p class="code">show standby</p>
+
+			<h3>VRRPv3</h3>
+			<p>Virtual Router Redundancy Protocol, non-proprietary.</p>
+
+			<h3>GLBP</h3>
+			<p>Gateway Load Balancing Protocol, Cisco-proprietary.<br>
+			基本同 HSRP 和 VRRP 相似，另外多了 load balancing between a group of redundant routers.</p>
+		
 
 
 
