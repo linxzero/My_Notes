@@ -88,8 +88,8 @@
 		<h2>ACL</h2>
 			<p class="code">
 				ip access-list extended <span class="input">100/Name</span><br>
-				permit tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> eq <span class="input">80</span><br>
-				permit icmp <span class="input">10.1.1.0 0.0.0.255  10.2.2.0 0.0.0.255</span><br>
+				per tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> eq <span class="input">80</span><br>
+				per icmp <span class="input">10.1.1.0 0.0.0.4 10.2.2.0 0.0.0.4</span><br>
 				deny ip any any<br>
 				<span class="input">15</span> deny tcp any any eq <span class="input">23</span>
 			</p>
