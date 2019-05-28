@@ -120,6 +120,13 @@
 
 
 		<h2>Switch</h2>
+			<h3> Port Security</h3>
+			<p class="code">
+				show mac address-table<br>
+				show int <span class="input">f0/1</span><br>
+				show port-security int <span class="input">f0/1</span>
+			</p>
+
 			<h3>VLAN</h3>
 			<p class="code">
 				show vlan brief<br>
@@ -132,11 +139,10 @@
 				● "f0/1 sw" show the switchport mode.
 			</p>
 
-			<h3>Security</h3>
+			<h3>STP</h3>
 			<p class="code">
-				show mac address-table<br>
-				show int <span class="input">f0/1</span><br>
-				show port-security int <span class="input">f0/1</span>
+				show spanning-tree<br>
+				show spanning-tree vlan <span class="input">10</span>
 			</p>
 
 			<h3>Etherchannel</h3>
@@ -148,11 +154,7 @@
 				show etherchannel summary
 			</p>
 
-			<h3>STP</h3>
-			<p class="code">
-				show spanning-tree<br>
-				show spanning-tree vlan <span class="input">10</span>
-			</p>
+
 
 
 

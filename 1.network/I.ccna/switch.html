@@ -29,7 +29,50 @@
 		</ul>
 <!--D1----------------------------------------------> 
 	<div class="block" onclick="hidebar()">
-		
+	<h2>Port Security</h2>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			switchport mode access<br>
+			switchport port-security<br>
+			switchport port-security maximum <span class="input">3</span>
+		</p>
+		<p>
+			● "access" 一定要在 access mode 上設定 port security.<br>
+			● "port-security" 開啟 port security.<br>
+			● "maximum" 在 f0/1 最多同時接上 3 個 devices.
+		</p>
+		<h3>Sticky</h3>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			switchport port-security maximum <span class="input">3</span><br>
+			switchport port-security mac-address sticky
+		</p>
+		<p>只學最先學到的 3 個 mac-address, 再有第 4 個就 violation.</p>
+		<h3>White-list</h3>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			sw port-security mac-address <span class="input">1212.3434.0101</span>
+		</p>
+		<h3>Violation</h3>
+		<p class="code">
+			int <span class="input">f0/1</span><br>
+			switchport port-security violation <span class="input">shutdown</span><br>
+			switchport port-security violation <span class="input">protect</span><br>
+			switchport port-security violation <span class="input">restrict</span>
+		</p>
+		<p>
+			● "shutdown", default violation, change port to error disable.<br>
+			● "protect", 以 sticky 為例，第 4 個 mac-address 的 frame 不能通過。<br>
+			● "restrict" 同 protect 一樣，再加上統計次數的功能。
+		</p>
+		<h3>Verify</h3>
+		<p class="code">
+			show mac address-table<br>
+			show int <span class="input">f0/1</span><br>
+			show port-security int <span class="input">f0/1</span>
+		</p>
+
+
 	<h2>VLAN</h2>
 		<h3>Access port</h3>
 		<p class="code">
@@ -124,50 +167,6 @@
 		<p class="code">
 			int <span class="input">g1/0</span><br>
 			no switchport<br>
-		</p>
-
-
-	<h2>Security</h2>
-		<p class="code">
-			int <span class="input">f0/1</span><br>
-			switchport mode access<br>
-			switchport port-security<br>
-			switchport port-security maximum <span class="input">3</span>
-		</p>
-		<p>
-			● "access" 一定要在 access mode 上設定 port security.<br>
-			● "port-security" 開啟 port security.<br>
-			● "maximum" 在 f0/1 最多同時接上 3 個 devices.
-		</p>
-		<h3>Sticky</h3>
-		<p class="code">
-			int <span class="input">f0/1</span><br>
-			switchport port-security maximum <span class="input">3</span><br>
-			switchport port-security mac-address sticky
-		</p>
-		<p>只學最先學到的 3 個 mac-address, 再有第 4 個就 violation.</p>
-		<h3>White-list</h3>
-		<p class="code">
-			int <span class="input">f0/1</span><br>
-			sw port-security mac-address <span class="input">1212.3434.0101</span>
-		</p>
-		<h3>Violation</h3>
-		<p class="code">
-			int <span class="input">f0/1</span><br>
-			switchport port-security violation <span class="input">shutdown</span><br>
-			switchport port-security violation <span class="input">protect</span><br>
-			switchport port-security violation <span class="input">restrict</span>
-		</p>
-		<p>
-			● "shutdown", default violation, change port to error disable.<br>
-			● "protect", 以 sticky 為例，第 4 個 mac-address 的 frame 不能通過。<br>
-			● "restrict" 同 protect 一樣，再加上統計次數的功能。
-		</p>
-		<h3>Verify</h3>
-		<p class="code">
-			show mac address-table<br>
-			show int <span class="input">f0/1</span><br>
-			show port-security int <span class="input">f0/1</span>
 		</p>
 
 
