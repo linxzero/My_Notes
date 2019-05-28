@@ -77,7 +77,19 @@
 			exit<br>
 			ip default-gateway <span class="input">10.0.0.254 255.255.255.0</span>
 		</p>
-		<p>"default-gateway" 視乎是否需要。</p>
+		<p>需要跨網絡 telnet switch 時就需要 "gateway".</p>
+
+		<h3>Verify</h3>
+		<p class="code">
+			show vlan brief<br>
+			show int trunk<br>
+			show int switchport<br>
+			show int <span class="input">f0/1</span> sw
+		</p>
+		<p>
+			● "vlan brief" show all vlans.<br>
+			● "f0/1 sw" show the switchport mode.
+		</p>
 
 
 	<h2>Inter-VLAN routing</h2>
@@ -150,6 +162,12 @@
 			● "shutdown", default violation, change port to error disable.<br>
 			● "protect", 以 sticky 為例，第 4 個 mac-address 的 frame 不能通過。<br>
 			● "restrict" 同 protect 一樣，再加上統計次數的功能。
+		</p>
+		<h3>Verify</h3>
+		<p class="code">
+			show mac address-table<br>
+			show int <span class="input">f0/1</span><br>
+			show port-security int <span class="input">f0/1</span>
 		</p>
 
 
@@ -251,6 +269,15 @@
 		</p>
 		<p>"src-ip" 跟據 source IP address 來計算派去哪一個 port.<br> 因此可以得出結論，越接近 user 的 switch 不要用 dst-ip，因為會導致所有 load 都經同一個 port，無法平均分配負載。相反，接近 file server 的 switch 不要用 src-ip.</p>
 
+		<h3>Verify</h3>
+		<p class="code">
+			show run int <span class="input">f0/1</span><br>
+			show int <span class="input">f0/1</span> sw<br>
+			show int port-channel <span class="input">1</span><br>
+			show int port-channel <span class="input">1</span> sw<br>
+			show etherchannel summary
+		</p>
+
 
 	<h2>HSRP on switch</h2>
 		<p>Hot Standby Router Protocol, 是 Cisco 專利</p>
@@ -294,33 +321,6 @@
 		<p class="code">
 			show vtp status<br>
 			show int <span class="input">f0/1</span> sw
-		</p>
-
-
-	<h2>Verifying</h2>
-		<p class="code">
-			show vlan brief<br>
-			show int trunk<br>
-			show int switchport<br>
-			show int <span class="input">f0/1</span> sw
-		</p>
-		<p>
-			● "vlan brief" show all vlans.<br>
-			● "f0/1 sw" show the switchport mode.
-		</p>
-		<p class="lilbr"><br></p>
-		<p class="code">
-			show mac address-table<br>
-			show int <span class="input">f0/1</span><br>
-			show port-security int <span class="input">f0/1</span>
-		</p>
-		<p class="lilbr"><br></p>
-		<p class="code">
-			show run int <span class="input">f0/1</span><br>
-			show int <span class="input">f0/1</span> sw<br>
-			show int port-channel <span class="input">1</span><br>
-			show int port-channel <span class="input">1</span> sw<br>
-			show etherchannel summary
 		</p>
 
 

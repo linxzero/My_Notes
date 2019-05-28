@@ -12,7 +12,7 @@
 				$(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
 			});
 		</script>
-		<title>Routing cmd</title>
+		<title>Routing</title>
 		<style>
 			header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
 			li.navi a#I{background-color: #4CAF50;} /* which one be green */
@@ -21,7 +21,7 @@
 <!-------------------------------------------------->
 	<body>
 		<header>
-			<p onclick="hidebar()" id="title">Routing cmd</p>
+			<p onclick="hidebar()" id="title">Routing</p>
 		</header>
 		<ul class="navi">
 			<span class="navi_span_home"></span>
@@ -38,6 +38,14 @@
 			<p class="code">ip route 10.4.0.0 255.255.0.0 10.3.1.1 <span class="input">120</span></p>
 			"120" is AD.
 
+			<h3>Verify</h3>
+			<p class="code">
+				show ip route<br>
+				show ip protocols
+			</p>
+			<p class="code">clear ip route *</p>
+			<p>[*] means delete all routes.</p>
+			<p class="lilbr"><br></p>
 
 
 		<h2>RIPv2</h2>
@@ -83,6 +91,12 @@
 			</p>
 			<p>這個 Authen 類似一道閘，只要兩個接口的密碼一致，閘門就打開讓 RIP updates 通過，不管其他網絡有沒有設置密碼。</p>
 			<p class="code">show key chain <span class="input">RIPChainR1</span></p>
+			<h3>Verify</h3>
+			<p class="code">
+				debug ip <span class="input">rip</span><br>
+				undebug all
+			</p>
+			<p>Real time monitoring of RIP.</p>
 
 
 		<h2>EIGRP</h2>
@@ -140,6 +154,13 @@
 				● Variance 是 1，當兩條 route 的 Metric 不同，Routing Table 只顯示一條；<br>
 				● Variance 設定成 3，只要 Metric 不大於 3FD 的 route 都可以顯示在 Routing Table，可做 Load Balancing (此時按 Metric 的反比分配)。 例如：Variance 是 3 時，Metric:30 與 Metric:89 可做 Load Balancing。
 			</p>
+			<h3>Verify</h3>
+			<p class="code">
+				show ip eigrp neighbors<br>
+				show ip eigrp topology<br>
+			</p>
+			<p class="code">clear ip eigrp <span class="input">1</span> neighbors<p>
+			<p>Recalculate FD.</p>
 
 
 		<h2>OSPFv2</h2>
@@ -182,34 +203,7 @@
 				ip ospf priority <span class="input">100</span><br>
 			</p>
 			<p>"priority" 最大的做 DR，第二大的做 BDR.</p>
-
-		
-		<h2>Verifying</h2>
-			<p class="code">
-				show arp<br>
-				show ip route<br>
-				show ip protocols
-			</p>
-
-			<p class="code">clear ip route *</p>
-			<p>Delete all routes.</p>
-			<p class="lilbr"><br></p>
-
-			<p class="code">
-				debug ip <span class="input">rip</span><br>
-				undebug all
-			</p>
-			<p>Real time monitoring of RIP.</p>
-			<p class="lilbr"><br></p>
-
-			<p class="code">
-				show ip eigrp neighbors<br>
-				show ip eigrp topology<br>
-			</p>
-			<p class="code">clear ip eigrp <span class="input">1</span> neighbors<p>
-			<p>Recalculate FD.</p>
-			<p class="lilbr"><br></p>
-
+			<h3>Verify</h3>
 			<p class="code">
 				show ip ospf <span class="input">1</span><br>
 				show ip ospf neighbor<br>
@@ -219,7 +213,11 @@
 			</p>
 			<p>"show interfaces" check bandwidth.</p>
 
-			
+
+
+
+
+		
 
 
 		</div>
