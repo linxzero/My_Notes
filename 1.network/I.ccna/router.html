@@ -90,11 +90,13 @@
 			<h3>Standard</h3>
 			<p class="code">
 				access-list <span class="input">10</span> permit <span class="input">10.0.0.0 0.0.0.3</span><br>
-				access-list <span class="input">11</span> permit host <span class="input">10.0.0.1</span>
+				access-list <span class="input">11</span> permit host <span class="input">10.0.0.1</span><br>
+				access-list <span class="input">11</span> remark Permit NAS
 			</p>
 			<p>
 				● "Standard list" 1~99，或改名。<br>
-				● Standard list 條件只有 Network 或 IP address.
+				● Standard list 條件只有 Network 或 IP address.<br>
+				● "remark" lets the list easier to read.
 			</p>
 
 
@@ -119,15 +121,19 @@
 			<h3>Assign</h3>
 			<p class="code">
 				int g0/0<br>	
-				ip access-group <span class="input">100/Name</span> in
+				ip access-group <span class="input">10/100/Name</span> in
 			</p>
 			<p class="code">
 				line vty 0 15<br>	
-				access-class <span class="input">100/Name</span> in
+				access-class <span class="input">10/100/Name</span> in
 			</p>
 			<p>放在 "in" 還是 "out" 要想清楚。</p>
+
 			<h3>Verify</h3>
-			<p class="code">show access-lists</p>
+			<p class="code">
+				show access-lists<br>
+				show run | include access-list <span class="input">10</span>
+			</p>
 
 
 		<h2>HSRP</h2>
