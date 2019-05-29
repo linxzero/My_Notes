@@ -124,7 +124,7 @@
 			<p class="lilbr"><br></p>
 			<p class="code">
 				ip access-list extended <span class="input">100/Name</span><br>
-				per tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> [eq <span class="input">80</span>]<br>
+				per tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> eq <span class="input">80</span><br>
 				per icmp <span class="input">10.1.1.0 0.0.0.3 10.2.2.0 0.0.0.3</span><br>
 				deny ip any any<br>
 				<span class="input">15</span> deny tcp any any eq <span class="input">23</span>
