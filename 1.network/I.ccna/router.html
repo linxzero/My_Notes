@@ -86,25 +86,36 @@
 
 
 		<h2>ACL</h2>
-			<h3>Create</h3>
+			<p>Packet Filtering</p>
+			<h3>Standard</h3>
+			<p class="code">
+				access-list <span class="input">10</span> permit <span class="input">10.0.0.0 0.0.0.3</span><br>
+				access-list <span class="input">11</span> permit host <span class="input">10.0.0.1</span>
+			</p>
+			<p>
+				● "Standard list" 1~99，或改名。<br>
+				● Standard list 條件只有 Network 或 IP address.
+			</p>
+
+
+			<h3>Extended</h3>
 			<p class="code">
 				ip access-list extended <span class="input">100/Name</span><br>
 				per tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> [eq <span class="input">80</span>]<br>
-				per icmp <span class="input">10.1.1.0 0.0.0.4 10.2.2.0 0.0.0.4</span><br>
+				per icmp <span class="input">10.1.1.0 0.0.0.3 10.2.2.0 0.0.0.3</span><br>
 				deny ip any any<br>
 				<span class="input">15</span> deny tcp any any eq <span class="input">23</span>
 			</p>
 			<p>
-				● "Standard list" 1~99，或改名。<br>
-				● Standard list 條件只有 IP address 或者 Subnet.<br>
 				● "Extended list" 100~199，或改名。<br>
 				● Extended list 條件包括 source & destination address, protocol, port number.<br>
 				● "10.1.1.5" 是 source, "10.2.2.5" 是 destination.<br>
-				● ACL 用 wildcard mask.<br>
+				● Wildcard Masking.<br>
 				● 放在後面的 "eq" 是 destination port。Optional 的。<br>
 				● "deny any any" 是自動隱藏在最後的。<br>
 				● "15" 是手動加入排位號，用來插隊。<br>		
 			</p>
+
 			<h3>Assign</h3>
 			<p class="code">
 				int g0/0<br>	
