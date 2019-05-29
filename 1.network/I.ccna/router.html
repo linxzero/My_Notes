@@ -91,12 +91,20 @@
 			<p class="code">
 				access-list <span class="input">10</span> permit <span class="input">10.0.0.0 0.0.0.3</span><br>
 				access-list <span class="input">11</span> permit host <span class="input">10.0.0.1</span><br>
-				access-list <span class="input">11</span> remark Permit NAS
+				access-list <span class="input">11</span> remark <span class="input">Permit NAS</span>
 			</p>
 			<p>
-				● "Standard list" 1~99，或改名。<br>
-				● Standard list 條件只有 Network 或 IP address.<br>
+				● Standard list 1~99。<br>
+				● Standard list 只針對 Network 或 IP address.<br>
 				● "remark" lets the list easier to read.
+			</p>
+			<p class="lilbr"><br></p>
+			<p class="code">
+				ip access-list standard <span class="input">NO_IN</span><br>
+				deny host <span class="input">192.168.1.11</span>
+			</p>
+			<p>
+				● Named standard ACL is slightly different.
 			</p>
 
 
