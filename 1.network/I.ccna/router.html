@@ -120,6 +120,7 @@
 				● Extended list 100~199。<br>
 				● Extended list 針對 Protocol, Source & Des Network, Source & Des IP address, Source & Des Port.<br>
 				● Wildcard Masking.<br>
+				● "80" is destination port.
 			</p>
 			<p class="lilbr"><br></p>
 			<p class="code">
@@ -130,9 +131,8 @@
 				<span class="input">15</span> deny tcp any any eq <span class="input">23</span>
 			</p>
 			<p>
-				● 放在後面的 "eq" 是 destination port。Optional 的。<br>
-				● "deny any any" 是自動隱藏在最後的。<br>
-				● "15" 是手動加入排位號，用來插隊。<br>		
+				● "deny any any" 同樣自動隱藏在最後。<br>
+				● "15" is Sequence number.<br>		
 			</p>
 
 			<h3>Assign</h3>
