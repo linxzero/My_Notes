@@ -98,6 +98,7 @@
 			<p>
 				● Standard list 1~99。<br>
 				● Standard list 只針對 Source Network 或 Source IP address.<br>
+				● Wildcard Masking.<br>
 				● "deny any " 是自動存在於最後的。<br>
 				● "remark" lets the list easier to read.
 			</p>
@@ -118,7 +119,9 @@
 			<p>
 				● Extended list 100~199，或 Name.<br>
 				● Extended list 針對 Protocol, Source & Des Network, Source & Des IP address, Source & Des Port.<br>
+				● Wildcard Masking.<br>
 			</p>
+			<p class="lilbr"><br></p>
 			<p class="code">
 				ip access-list extended <span class="input">100/Name</span><br>
 				per tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> [eq <span class="input">80</span>]<br>
@@ -127,9 +130,6 @@
 				<span class="input">15</span> deny tcp any any eq <span class="input">23</span>
 			</p>
 			<p>
-				
-				● "10.1.1.5" 是 source, "10.2.2.5" 是 destination.<br>
-				● Wildcard Masking.<br>
 				● 放在後面的 "eq" 是 destination port。Optional 的。<br>
 				● "deny any any" 是自動隱藏在最後的。<br>
 				● "15" 是手動加入排位號，用來插隊。<br>		
