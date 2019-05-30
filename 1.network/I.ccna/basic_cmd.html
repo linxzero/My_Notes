@@ -40,10 +40,12 @@
 		<h3>Save</h3>
 		<p class="code">
 			copy running-config startup-config<br>
-			copy running-config tftp
+			copy running-config tftp<br>
+			copy running-config <span class="input">usbflash0:</span>
 		</p>
 		<p>
-			● "tftp" 然後你要輸入 remote host 的 IP。
+			● "tftp" 然後你要輸入 remote host 的 IP。<br>
+			● "usb" 要用 "show file system" 來確認名稱。
 		</p>
 		<h3>Verify</h3>
 		<p class="code">show running-config<br>show history</p>
