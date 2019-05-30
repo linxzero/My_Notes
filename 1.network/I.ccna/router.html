@@ -224,8 +224,13 @@
 
 			<h3>Port forward</h3>
 			<p class="code">
-				ip nat inside source static tcp <span class="input">192.168.1.198 8080 122.0.0.181 80</span>
+				ip nat inside source static tcp <span class="input">192.168.1.198 80 122.0.0.181 8080</span>
 			</p>
+			<p>
+				● "80" is local port, which the local server is listening on.<br>
+				● "8080" is global port, which the outside client will use to reach internal server.
+			</p>
+
 
 
 			
