@@ -149,7 +149,7 @@
 			spanning-tree vlan <span class="input">10</span> root primary<br>
 			spanning-tree vlan <span class="input">10</span> root secondary
 		</p>
-		<p>或者直接指定為 root bridge.</p>
+		<p>● 或者直接指定為 root bridge.</p>
 
 		<h3>Verify</h3>
 		<p class="code">
@@ -165,11 +165,11 @@
 			int <span class="input">f0/10</span><br>
 			spanning-tree portfast
 		</p>
-		<p>設定成 PortFast 的 port 如果收到 BPDU，還是會依正常情序進入 Listening & Learning.</p>
+		<p>● 設定成 PortFast 的 port 如果收到 BPDU，還是會依正常情序進入 Listening & Learning.</p>
 		<p class="code">
 			spanning-tree portfast default
 		</p>
-		<p>或者在 global mode 一次過把所有 port 設成 portfast.</p>
+		<p>● 或者在 global mode 一次過把所有 port 設成 portfast.</p>
 
 		<h3>Uplinkfast</h3>
 		<img src="images/uplinkfast.PNG" alt="" class="mid">
@@ -177,7 +177,7 @@
 		<p class="code">
 			spanning-tree uplinkfast
 		</p>
-		<p>啟動了 Uplinkfast 的 switch 會自動選一個 blocking port 變成 standby 狀態，當 root port 死掉時即時頂上。因此，uplinkfast 不應在 root switch 上執行。</p>
+		<p>● 啟動了 Uplinkfast 的 switch 會自動選一個 blocking port 變成 standby 狀態，當 root port 死掉時即時頂上。因此，uplinkfast 不應在 root switch 上執行。</p>
 
 		<h3>Backbonefast</h3>
 		<img src="images/backbonefast.PNG" alt="" class="little">
@@ -185,7 +185,7 @@
 		<p class="code">
 			spanning-tree backbonefast
 		</p>
-		<p>必需在所有 switch 都使用。Backbonefast 加上 Uplinkfast，可以在無間斷內跳轉 root port.</p>
+		<p>● 必需在所有 switch 都使用。有 Backbonefast 加上 Uplinkfast，可以在無間斷內跳轉 root port.</p>
 
 
 	<h2>Topology protection</h2>

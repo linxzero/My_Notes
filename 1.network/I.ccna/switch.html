@@ -47,7 +47,7 @@
 			switchport port-security maximum <span class="input">3</span><br>
 			switchport port-security mac-address sticky
 		</p>
-		<p>只學最先學到的 3 個 mac-address, 再有第 4 個就 violation.</p>
+		<p>● 只學最先學到的 3 個 mac-address, 再有第 4 個就 violation.</p>
 		<h3>White-list</h3>
 		<p class="code">
 			int <span class="input">f0/1</span><br>
@@ -82,7 +82,7 @@
 			switchport access vlan <span class="input">10</span>
 		</p>
 		<p>
-			By default, all ports access vlan 1.
+			● By default, all ports access vlan 1.
 		</p>
 		<h3>Trunk port</h3>
 		<p class="code">
@@ -92,7 +92,7 @@
 			switchport trunk native vlan <span class="input">99</span><br>	
 			switchport trunk encapsulation dot1Q
 		</p>
-		<p>Some switches' default encapsulation are ISL (legacy).</p>
+		<p>● Some switches' default encapsulation are ISL (legacy).</p>
 		<p class="lilbr"><br></p>
 		<p class="note">
 			Access port (Untagged port)<br>
@@ -119,13 +119,13 @@
 			ip add <span class="input">10.0.10.1 255.255.255.0</span>
 		</p>
 		<p>
-			"SVI vlan 10" 天生就屬於 access port vlan 10.
+			● "SVI vlan 10" 天生就屬於 access port vlan 10.
 		</p>
 		<p class="code">
 			exit<br>
 			ip default-gateway <span class="input">10.0.0.254 255.255.255.0</span>
 		</p>
-		<p>需要跨網絡 SSH switch 時就需要 "gateway".</p>
+		<p>● 需要跨網絡 SSH switch 時就需要 "gateway".</p>
 
 		<h3>Verify</h3>
 		<p class="code">
@@ -271,7 +271,7 @@
 		<p class="code">
 			port-channel load-balance <span class="input">src-ip</span>
 		</p>
-		<p>"src-ip" 跟據 source IP address 來計算派去哪一個 port.<br> 因此可以得出結論，越接近 user 的 switch 不要用 dst-ip，因為會導致所有 load 都經同一個 port，無法平均分配負載。相反，接近 file server 的 switch 不要用 src-ip.</p>
+		<p>● "src-ip" 跟據 source IP address 來計算派去哪一個 port.<br> 因此可以得出結論，越接近 user 的 switch 不要用 dst-ip，因為會導致所有 load 都經同一個 port，無法平均分配負載。相反，接近 file server 的 switch 不要用 src-ip.</p>
 
 		<h3>Verify</h3>
 		<p class="code">

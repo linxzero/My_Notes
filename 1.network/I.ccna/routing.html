@@ -31,12 +31,12 @@
 		<div class="block" onclick="hidebar()">
 		<h2>Static Route</h2>
 			<p class="code">ip route <span class="input">10.1.0.0 255.255.0.0 g0/1</span><br>ip route <span class="input">10.2.0.0 255.255.0.0 10.3.1.1</span><br>ip route 0.0.0.0 0.0.0.0 <span class="input">192.168.1.1</span></p>
-			<p>可以用 exit-intf 或者 next-hop ip.</p>
+			<p>● 可以用 exit-intf 或者 next-hop ip.</p>
 
 			<h3>Floating Static Route</h3>
 			<p>作為主 route 的 backup。因此 floating static route 需要 set 更大的 AD.</p>
 			<p class="code">ip route 10.4.0.0 255.255.0.0 10.3.1.1 <span class="input">120</span></p>
-			"120" is AD.
+			<p>● "120" is AD.</p>
 
 			<h3>Verify</h3>
 			<p class="code">
@@ -44,7 +44,7 @@
 				show ip protocols
 			</p>
 			<p class="code">clear ip route *</p>
-			<p>[*] means delete all routes.</p>
+			<p>● [*] means delete all routes.</p>
 			<p class="lilbr"><br></p>
 
 
@@ -83,8 +83,8 @@
 				ip rip authen key-chain <span class="input">RIPChainR1</span><br>
 				ip rip authen mode md5
 			</p>
-			<p>需要在兩個 Router 之間的接口都設置相同密碼。</p>
-			<p>
+			<p>	
+				● 需要在兩個 Router 之間的接口都設置相同密碼。<br>
 				● "RIPChainR1" is key chain name.<br>
 				● "1" is key identifier.<br>
 				● "3344" is the password.
@@ -96,7 +96,7 @@
 				debug ip <span class="input">rip</span><br>
 				undebug all
 			</p>
-			<p>Real time monitoring of RIP.</p>
+			<p>● Real time monitoring of RIP.</p>
 
 
 		<h2>EIGRP</h2>
@@ -160,7 +160,7 @@
 				show ip eigrp topology<br>
 			</p>
 			<p class="code">clear ip eigrp <span class="input">1</span> neighbors<p>
-			<p>Recalculate FD.</p>
+			<p>● Recalculate FD.</p>
 
 
 		<h2>OSPFv2</h2>
@@ -202,7 +202,7 @@
 				int <span class="input">e0/0</span><br>
 				ip ospf priority <span class="input">100</span><br>
 			</p>
-			<p>"priority" 最大的做 DR，第二大的做 BDR.</p>
+			<p>● "priority" 最大的做 DR，第二大的做 BDR.</p>
 			<h3>Verify</h3>
 			<p class="code">
 				show ip ospf <span class="input">1</span><br>
@@ -211,7 +211,7 @@
 				show ip ospf int <span class="input">e1/1</span><br>
 				show interfaces
 			</p>
-			<p>"show interfaces" check bandwidth.</p>
+			<p>● "show interfaces" check bandwidth.</p>
 
 
 
