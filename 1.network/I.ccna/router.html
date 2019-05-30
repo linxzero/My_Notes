@@ -184,7 +184,50 @@
 					<td>8.8.8.8</td>
 				</tr>
 			</table>
-			<p></p>
+			<h3>Tranditional NAT</h3>
+			<p class="code">
+				int <span class="input">f0/1</span><br>
+				ip nat inside<br>
+				int <span class="input">g0/1</span><br>
+				ip nat outside<br>
+				ip nat inside source static <span class="input">192.168.1.198 122.100.237.181</span> 
+			</p>
+			<p>
+				● 1 Inside-Local to 1 Inside-Global.
+			</p>
+
+			<h3>PAT</h3>
+			<p class="code">
+				access-list	<span class="input">3</span> per <span class="input">192.168.1.0 0.0.0.255</span><br>
+				access-list <span class="input">3</span> deny any<br>
+			</p>
+			<p class="code">
+				ip nat pool <span class="input">myPUB 122.100.237.181 122.100.237.183</span> netmask <span class="input">255.255.255.0</span><br>
+				ip nat inside source list <span class="input">3</span> pool <span class="input">myPUB</span> overload
+			</p>
+			<p class="code">
+				int <span class="input">f0/1</span><br>
+				ip nat inside<br>
+				int <span class="input">g0/1</span><br>
+				ip nat outside<br>
+			</p>
+			<p>
+				● Multiple Inside-Local to 1 Inside-Global.
+			</p>
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
 
 
 		<h2>HSRP</h2>
