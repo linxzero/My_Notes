@@ -38,7 +38,13 @@
 			banner motd % <span class="input">Welcomm!!</span> %
 		</p>
 		<h3>Save</h3>
-		<p class="code">copy running-config startup-config</p>
+		<p class="code">
+			copy running-config startup-config<br>
+			copy running-config tftp
+		</p>
+		<p>
+			● "tftp" 然後你要輸入 remote host 的 IP。
+		</p>
 		<h3>Verify</h3>
 		<p class="code">show running-config<br>show history</p>
 
@@ -188,16 +194,23 @@
 
 
 	<h2>Syslog</h2>
+		<h3>Syslog client</h3>
 		<p class="code">
 			logging <span class="input">10.1.1.2</span><br>
-			logging on<br>
 			logging trap <span class="input">4</span><br>
+			logging on<br>
 			no logging console
 		</p>
 		<p>
-			● 先指出 Syslog server 位置，後設置嚴重等級。<br>
-			● "4" is severity (0 – 7)，0 最嚴重。<br>
+			● "10.1.1.2" 是 syslog server 位置。<br>
+			● "4" 是 severity (0 – 7)，0 最嚴重。<br>
 			● "no logging console" 關閉 log prompting on console.
+		</p>
+		<h3>Verify</h3>
+		<p class="code">
+			show logging<br>
+			show logging | include <span class="input">changed state to up</span><br>
+			show logging | begin <span class="input">Jun 12 22:35</span>
 		</p>
 
 
