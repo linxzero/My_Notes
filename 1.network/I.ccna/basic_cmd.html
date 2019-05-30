@@ -223,7 +223,12 @@
 			► Change confreg from "0x2102" to "0x2142", to skip startup-config.<br>
 			► Restart router.
 		</p>
-		<p class="code"></p>
+		<p class="code">
+			erase startup-config<br>
+			conf t<br>
+			config-register 0x2102<br>
+			do show version
+		</p>
 		<p>
 			● 
 			● 
