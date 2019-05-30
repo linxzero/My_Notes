@@ -103,12 +103,10 @@
 				● "remark" lets the list easier to read.
 			</p>
 			<p class="lilbr"><br></p>
+			<p>Named standard ACL syntax :</p>
 			<p class="code">
 				ip access-list standard <span class="input">NO_IN</span><br>
 				deny host <span class="input">192.168.1.11</span>
-			</p>
-			<p>
-				● Named standard ACL is slightly different.
 			</p>
 
 
@@ -123,6 +121,7 @@
 				● "80" is destination port.
 			</p>
 			<p class="lilbr"><br></p>
+			<p>Named extended ACL syntax :</p>
 			<p class="code">
 				ip access-list extended <span class="input">100/Name</span><br>
 				per tcp host <span class="input">10.1.1.5</span> host <span class="input">10.2.2.5</span> eq <span class="input">80</span><br>
@@ -131,7 +130,6 @@
 				<span class="input">15</span> deny tcp any any eq <span class="input">23</span>
 			</p>
 			<p>
-				● Named extended ACL.<br>
 				● "deny any any" 同樣自動隱藏在最後。<br>
 				● "15" is Sequence number.<br>		
 			</p>
