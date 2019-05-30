@@ -186,11 +186,11 @@
 			</table>
 			<h3>Tranditional NAT</h3>
 			<p class="code">
+				ip nat inside source static <span class="input">192.168.1.198 122.100.237.181</span> <br>
 				int <span class="input">f0/1</span><br>
 				ip nat inside<br>
 				int <span class="input">g0/1</span><br>
-				ip nat outside<br>
-				ip nat inside source static <span class="input">192.168.1.198 122.100.237.181</span> 
+				ip nat outside				
 			</p>
 			<p>
 				● 1 Inside-Local to 1 Inside-Global.
