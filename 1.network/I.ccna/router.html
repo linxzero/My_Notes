@@ -202,7 +202,7 @@
 				access-list <span class="input">3</span> deny any<br>
 			</p>
 			<p class="code">
-				ip nat pool <span class="input">myPUB 122.0.0.181 122.0.0.183</span> netmask <span class="input">255.255.255.0</span><br>
+				ip nat pool <span class="input">myPUB 122.0.0.181 122.0.0.183</span> netmask <span class="input">255.255.255.224</span><br>
 				ip nat ins sou list <span class="input">3</span> pool <span class="input">myPUB</span> overload
 			</p>
 			<p class="code">
@@ -220,6 +220,11 @@
 			<p class="code">
 				show ip nat translations<br>
 				show ip nat statistics
+			</p>
+
+			<h3>Port forward</h3>
+			<p class="code">
+				ip nat inside source static tcp <span class="input">192.168.1.198 8080 122.0.0.181 80</span>
 			</p>
 
 
