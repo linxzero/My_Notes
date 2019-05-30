@@ -202,7 +202,7 @@
 				access-list <span class="input">3</span> deny any<br>
 			</p>
 			<p class="code">
-				ip nat pool <span class="input">myPUB 122.100.237.181 122.100.237.183</span> netmask <span class="input">255.255.255.0</span><br>
+				ip nat pool <span class="input">myPUB 122.0.0.181 122.0.0.183</span> netmask <span class="input">255.255.255.0</span><br>
 				ip nat inside source list <span class="input">3</span> pool <span class="input">myPUB</span> overload
 			</p>
 			<p class="code">
@@ -212,7 +212,8 @@
 				ip nat outside<br>
 			</p>
 			<p>
-				● Multiple Inside-Local to 1 Inside-Global.
+				● Multiple Inside-Local to 1 Inside-Global.<br>
+				● "ACL" 指出內部 IP，"pool" 指出出街 IP.
 			</p>
 
 
