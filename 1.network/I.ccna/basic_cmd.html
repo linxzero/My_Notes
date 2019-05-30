@@ -44,7 +44,7 @@
 			copy running-config <span class="input">usbflash0:</span>
 		</p>
 		<p>
-			● "tftp" 然後你要輸入 remote host 的 IP。<br>
+			● "tftp" 然後你要輸入 TFTP server 的 IP。<br>
 			● "usb" 要用 "show file system" 來確認名稱。
 		</p>
 		<h3>Verify</h3>
@@ -219,7 +219,7 @@
 	<h2>Password reset</h2>
 		<h3>Router</h3>
 		<p>
-			► Access ROMmon mode by press "Ctrl+Break".<br>
+			► Access ROMMON mode by press "Ctrl+Break".<br>
 			► Change confreg from "0x2102" to "0x2142", to skip startup-config.<br>
 			► Restart router.
 		</p>
@@ -238,6 +238,26 @@
 		<p>
 			● 
 			● 
+		</p>
+
+
+	<h2>Upgrade IOS</h2>
+		<h3>get from TFTP server</h3>
+		<p class="code">
+			show flash<br>
+			copy tftp flash<br>
+		</p>
+		<p>
+			● 在 flash 中檢查自己的 IOS.bin 版本是否有需要更新。<br>
+			● "copy tftp..." 會要求你輸入 server 位置，並輸入 .bin 檔名稱。<br>
+			● 
+		</p>
+		<h3>Install</h3>
+		<p class="code">
+			conf t<br>
+			no boot system<br>
+			boot system flash:<span class="input">new_ver.bin</span><br>
+			do reload
 		</p>
 
 
