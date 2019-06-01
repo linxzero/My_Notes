@@ -41,7 +41,7 @@
 			<p>On SNMP agent :</p>
 			<p class="code">
 				snmp-server community <span class="input">Macau</span> ro <span class="input">s_ACL</span><br>
-				snmp-server host <span class="input">192.168.1.10</span> version <span class="input">2c Macau</span> <br>	
+				snmp-server host <span class="input">192.168.1.10</span> version <span class="input">2c Macau</span> <br>
 				snmp-server enable traps
 			</p>		
 			<p class="code">
@@ -52,15 +52,20 @@
 				● "ro" Read-only, can read MIB variables, but doesn't allow these to be changed.<br>
 				● "rw" Read-wirte, can read and write all objects in MIB.<br>
 				● "Macau" is community string.<br>
-				● "s_ACL"
+				● "s_ACL" defines which one can read MIB.<br>
+				● "host" defines where are logs sending to.<br>
 			</p>
 
 			<p class="lilbr"><br></p>
 			<p>Optional setting :</p>
 			<p class="code">
 				snmp-server location <span class="input">Mo_manager"</span><br>	
-				snmp-server contact <span class="input">Wayne world</span><br>	
+				snmp-server contact <span class="input">Wayne world</span>
 			<p></p>
+			<p>● 都係改名。</p>
+
+			<h3>Verify</h3>
+			<p class="code">show snmp</p>
 
 
 
