@@ -37,8 +37,7 @@
 			<h3>SNMPv3</h3>
 			<p>It provides secure access to devices by authenticating and encrypting packets over the network.</p>
 
-			<p class="lilbr"><br></p>
-			<p>On SNMP agent :</p>
+			<h3>SNMP agent</h3>
 			<p class="code">
 				snmp-server community <span class="input">Macau</span> ro <span class="input">s_ACL</span><br>
 				snmp-server host <span class="input">192.168.1.10</span> version <span class="input">2c Macau</span> <br>
@@ -52,8 +51,14 @@
 				● "ro" Read-only, can read MIB variables, but doesn't allow these to be changed.<br>
 				● "rw" Read-wirte, can read and write all objects in MIB.<br>
 				● "Macau" is community string.<br>
-				● "s_ACL" defines which one can read MIB.<br>
-				● "host" defines where are logs sending to.<br>
+				● "s_ACL" defines which one can get (poll for) MIB.<br>
+				● "host" defines where are traps going to.<br>
+				● "enable trap", by default SNMP disable traps.
+			</p>
+			<p class="note">
+				"poll" 類似 get，是 manager 問 agents 攞資料。<br>
+				"trap" 是 agents 自動向 manager 發送 log.<br>
+				"MIB" Management Information Base, 每個 SNMP agent 都有自己的 MIB。
 			</p>
 
 			<p class="lilbr"><br></p>
@@ -66,6 +71,9 @@
 
 			<h3>Verify</h3>
 			<p class="code">show snmp</p>
+
+			<h3>SNMP manager</h3>
+			<p>Download and install <a href="https://www.manageengine.com/products/mibbrowser-free-tool/download.html">ManageEngine</a> MIB browser on PC.</p>
 
 
 
