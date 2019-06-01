@@ -37,17 +37,28 @@
 			<h3>SNMPv3</h3>
 			<p>It provides secure access to devices by authenticating and encrypting packets over the network.</p>
 
-
-
-
-
-
-
-			
+			<p class="lilbr"><br></p>
+			<p>On SNMP agent :</p>
+			<p class="code">
+				snmp-server community <span class="input">Macau</span> ro <span class="input">snmp_ACL</span><br>
+			</p>		
+			<p class="code">
+				ip access-list standard <span class="input">snmp_ACL</span><br>
+				permit <span class="input">192.168.1.10</span>
+			</p>
 			<p>
 				● "ro" Read-only, can read MIB variables, but doesn't allow these to be changed.<br>
-				● "rw" Read-wirte, can read and write all objects in MIB.
+				● "rw" Read-wirte, can read and write all objects in MIB.<br>
+				● "Macau" is community string.<br>
+				● "snmp_ACL"
 			</p>
+
+			<p class="lilbr"><br></p>
+			<p>Optional setting :</p>
+			<p class="code">
+				snmp-server location<br>	
+				snmp-server contact
+			<p></p>
 
 
 
