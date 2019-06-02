@@ -61,7 +61,7 @@
 			</tr>
 		</table>
 		
-		<h3>Command</h3>
+		<h3>PAP</h3>
 		<p class="code">
 			int <span class="input">s0/0/0</span><br>
 			encapsulation ppp<br>
@@ -86,6 +86,21 @@
 		<p class="code">
 			int <span class="input">s0/0/0</span><br>
 			ppp pap sent-username <span class="input">u3</span> password <span class="input">888</span>
+		</p>
+
+		<h3>CHAP</h3>
+		<p>R1 :</p>
+		<p class=" code">
+			username <span class="input">R3</span> password <span class="input">888</span><br>
+			int <span class="input">s0/0/0</span><br>
+			ppp authentication chap
+		</p>
+		<p class="lilbr"><br></p>
+		<p>R3 :</p>
+		<p class=" code">
+			username <span class="input">R1</span> password <span class="input">888</span><br>
+			int <span class="input">s0/0/0</span><br>
+			ppp authentication chap
 		</p>
 
 
