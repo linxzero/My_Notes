@@ -39,13 +39,15 @@
 			icmp-echo <span class="input">192.168.1.1</span><br>
 			frequency <span class="input">30</span>
 		</p>
-		<p class="code">
-			ip sla schedule <span class="input">1</span> start-time now life forever
-		</p>
 		<p>
 			● "1" is the operation number.<br>
 			● "icmp" 不停 ping 192.168.1.1 (gateway).<br>
 			● "frequency" 每 30s 做一次。<br>
+		</p>
+		<p class="code">
+			ip sla schedule <span class="input">1</span> start-time now life forever
+		</p>
+		<p>
 			● "now" SLA operation number 1 即時生效。<br>
 			● "forever" 直到手動停止。
 		</p>
