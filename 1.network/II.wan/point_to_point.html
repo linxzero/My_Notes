@@ -71,21 +71,21 @@
 			● 因為 Cisco 的 serial port 預設都是 HDLC，所以要先改回 PPP。<br>
 			● "70" 當 link quality 小於 70，link down.
 		</p>
+		<p class="lilbr"><br></p>
+		<p>這是認證別人身份的一方：</p>
 		<p class=" code">
 			username <span class="input">u3</span> password <span class="input">888</span><br>
 			int <span class="input">s0/0/0</span><br>
 			ppp authentication pap
 		</p>
 		<p>
-			● 這是認證別人身份的一方。<br>
 			● "pap" 明文認證。
 		</p>
+		<p class="lilbr"><br></p>
+		<p>這是向別人證明自己的一方：</p>
 		<p class="code">
 			int <span class="input">s0/0/0</span><br>
 			ppp pap sent-username <span class="input">u3</span> password <span class="input">888</span>
-		</p>
-		<p>
-			● 這是向別人證明自己的一方。
 		</p>
 
 
