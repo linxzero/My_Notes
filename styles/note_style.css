@@ -250,7 +250,7 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 10em;
+    min-width: 2em;
     box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
     z-index: 1;
   }

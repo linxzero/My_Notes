@@ -7,71 +7,254 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function(){
-        $(".navi_span").load("../navigations/navi_bar_1.html");
-        $(".navi_span_home").load("../navigations/navi_bar_home.html");
+        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
       });
     </script>
-    <title>Network</title>
+    <title>PPPoE</title>
     <style>
       header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
+      li.navi a#I{background-color: #4CAF50;} /* which one be green */
     </style>
   </head>
-<!-------------------------------------------------------------------------------->
+<!-------------------------------------------------->
   <body>
     <header>
-      <p id="title">Network</p>
+      <p onclick="hidebar()" id="title">PPPoE</p>
     </header>
-<!-------------------------------------------------------------------------------->
-    <div class="block">
-      <ul class="tree">
-        <li class="navi"><a class="navi_a" href="javascript:void(0)" id="I">CCNA</a>
-          <div class="drop_content">
-            <a href="/my_notes/1.network/I.ccna/basic_cmd.html">Basic cmd</a>
-            <a href="/my_notes/1.network/I.ccna/routing_cmd.html">Routing cmd</a>
-            <a href="/my_notes/1.network/I.ccna/osi.html">OSI model</a>
-            <a href="/my_notes/1.network/I.ccna/ip_address.html">IP address</a>
-            <a href="/my_notes/1.network/I.ccna/device_leds.html">Device LEDs</a>
-            <a href="/my_notes/1.network/I.ccna/routing_cmd_v6.html">Routing cmd (IPv6)</a>
-            
-
-          </div>
-        </li>
-
-        <li class="navi"><a class="navi_a" href="javascript:void(0)" id="II">CCNP</a>
-          <div class="drop_content">
-
-          </div>
-        </li>
-
-        <li class="navi"><a class="navi_a" href="javascript:void(0)" id="III">CyberOps</a>
-          <div class="drop_content">
-            <a href="/my_notes/1.network/III.cyberops/cryptography.html">Cryptography 密碼學</a>
-            <a href="/my_notes/1.network/III.cyberops/pki.html">PKI 公鑰結構</a>
-          </div>
-        </li>
-
-        <li class="navi"><a class="navi_a" href="javascript:void(0)" id="IV">VPN</a>
-          <div class="drop_content">
-            <a href="/my_notes/1.network/IV.vpn/gre.html">GRE tunnel</a>
-            <a href="/my_notes/1.network/IV.vpn/dmvpn.html">DMVPN</a>
-          </div>
-        </li>
-        <li class="navi"><a class="navi_a" href="javascript:void(0)" id="home">Home</a>
-  <div class="drop_content">
-    <a href="/my_notes/1.network/tree_1.html">Network</a>
-    <a href="/my_notes/2.windows/tree_2.html">Windows</a>
-    <a href="/my_notes/3.hardware/tree_3.html">Hardware</a>
-    <a href="/my_notes/4.telecom/tree_4.html">Telecom</a>
-    <a href="/my_notes/5.physics/tree_5.html">Physics</a>
-    <a href="/my_notes/6.av/tree_6.html">AV</a>
-  </div>
-</li>
+    <ul class="navi">
 
 
+      <li class="navi"><a class="navi_a" href="javascript:void(0)" id="I">CCNA</a>
+        <div class="drop_content">
+          <a href="/my_notes/1.network/I.ccna/basic_cmd.html">Basic cmd</a>
+          <a href="/my_notes/1.network/I.ccna/router.html">Router</a>
+          <a href="/my_notes/1.network/I.ccna/routing.html">Routing</a>
+          <a href="/my_notes/1.network/I.ccna/routing_v6.html">Routing (IPv6)</a>
+          <a href="/my_notes/1.network/I.ccna/dynamic_route.html">Dynamic route</a>
+          <a href="/my_notes/1.network/I.ccna/switch.html">Switch</a>
+          <a href="/my_notes/1.network/I.ccna/stp.html">STP</a>
+          <a href="/my_notes/1.network/I.ccna/osi.html">OSI model</a>
+          <a href="/my_notes/1.network/I.ccna/ip_address.html">IP address</a>
+          <a href="/my_notes/1.network/I.ccna/show.html">Show</a>
+          <a href="/my_notes/1.network/I.ccna/snmp.html">SNMP</a>
+          <a href="/my_notes/1.network/I.ccna/span.html">SPAN</a>
+          <a href="/my_notes/1.network/I.ccna/ip_sla.html">IP SLA</a>
+          <a href="/my_notes/1.network/I.ccna/discovery_protocol.html">Discovery Protocol</a>
+          <a href="/my_notes/1.network/I.ccna/pppoe.html">PPPoE</a>
+          <a href="/my_notes/1.network/I.ccna/device_leds.html">Device LEDs</a>
+        </div>
+      </li>
 
-      </ul> 
+
+      <li class="navi"><a class="navi_a" href="javascript:void(0)" id="II">CyOps</a>
+        <div class="drop_content">
+          <a href="/my_notes/1.network/II.cyberops/cryptography.html">Cryptography</a>
+          <a href="/my_notes/1.network/II.cyberops/pki.html">PKI 公鑰結構</a>
+          <a href="/my_notes/1.network/II.cyberops/malware.html">Malware</a>
+        </div>
+      </li>
+
+
+      <li class="navi"><a class="navi_a" href="javascript:void(0)" id="III">VPN</a>
+        <div class="drop_content">
+          <a href="/my_notes/1.network/III.vpn/gre.html">GRE tunnel</a>
+          <a href="/my_notes/1.network/III.vpn/dmvpn.html">DMVPN</a>
+        </div>
+      </li>
+
+
+      <li class="navi"><a class="navi_a" href="javascript:void(0)" id="IV">CCNP</a>
+        <div class="drop_content">
+          <a href="/my_notes/1.network/IV.ccnp/eigrp.html">EIGRP</a>
+          <a href="/my_notes/1.network/IV.ccnp/ospf.html">OSPF</a>
+        </div>
+      </li>
+
+
+      <span class="navi_span_home"></span>
+      <span class="navi_span"></span>
+    </ul>
+<!--D1----------------------------------------------> 
+    <div class="block" onclick="hidebar()">
+
+    <table>
+      <tr style="background-color: #3A3A3A; color: #F4F6F7">
+        <td colspan="3">PPPoE 即用套路</td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config)#</td>
+        <td style="text-align: left;">username Cust1 password ciscopppoe</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config)#</td>
+        <td style="text-align: left;">ip local pool PPPoEPOOL 10.0.0.1  10.0.0.10</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config)#</td>
+        <td style="text-align: left;">int virtual-template 1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config-if)#</td>
+        <td style="text-align: left;">ip add 10.0.0.254 255.255.255.0</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config-if)#</td>
+        <td style="text-align: left;">mtu 1492</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config-if)#</td>
+        <td style="text-align: left;">peer default ip address pool PPPoEPOOL</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config-if)#</td>
+        <td style="text-align: left;">ppp authentication chap callin</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config-if)#</td>
+        <td style="text-align: left;">exit</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config)#</td>
+        <td style="text-align: left;">bba-group pppoe global</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">(config-bba-group)#</td>
+        <td style="text-align: left;">virtual-template 1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">(config-bba-group)#</td>
+        <td style="text-align: left;">exit</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config)#</td>
+        <td style="text-align: left;">int g0/1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config-if)#</td>
+        <td style="text-align: left;">pppoe enable group global</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">ISP(config-if)#</td>
+        <td style="text-align: left;">no shutdown</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config)#</td>
+        <td style="text-align: left;">int g0/1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">pppoe enable</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">pppoe-client dial-pool-number 1</td>
+        <td>bundle dialer 1 with g0/1</td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">exit</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config)#</td>
+        <td style="text-align: left;">int dialer 1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">mtu 1492</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">ip add negotiated</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">encapsulation ppp</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">dialer pool 1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">ppp authentication chap callin</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">ppp chap hostname Cust1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">ppp chap password ciscopppoe</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config-if)#</td>
+        <td style="text-align: left;">exit</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;">Cust1(config)#</td>
+        <td style="text-align: left;">ip route 0.0.0.0  0.0.0.0 dialer 1</td>
+        <td></td>
+      </tr>
+    </table>
+
+
+
     </div>
-<!-------------------------------------------------------------------------------->    
+<!--------------------------------------------------> 
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
+    <script>
+      function hidebar(){
+        var x=document.getElementsByClassName("drop_content");
+        x.style.display="none";
+      };
+
+      // When the user scrolls down 520px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+          document.getElementById("TopBtn").style.display = "block";
+        } else {
+          document.getElementById("TopBtn").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>  
   </body>
 </html>
 
