@@ -15,7 +15,7 @@
 		<title>Basic cmd</title>
 		<style>
 			header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
-			a#II{background-color: #4CAF50;} /* which one be green */
+			a#I{background-color: #4CAF50;} /* which one be green */
 		</style>
 	</head>
 <!-------------------------------------------------->
@@ -268,10 +268,8 @@
 			window.onscroll = function() {scrollFunction()};
 
 			function hidebar(){
-				var x=document.getElementsByClassName("drop_content");
-				document.getElementById("I").style.backgroundcolor="#4CAF50";
-				x.style.display="none";
-			}
+				document.getElementsByClassName("drop_content").style.display="none";
+				document.getElementById("III").style.backgroundcolor="#4CAF50";
 
 			function scrollFunction() {
 				if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
