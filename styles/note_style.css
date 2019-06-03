@@ -213,12 +213,12 @@
     border-left: 1.2em solid #73C6B6;
   }
 /*導航-------------------------------------------------------------*/
-  ul.navi{
+  ul.navi{ /* 一開始背景黑色 */
     list-style-type: none;
     overflow: hidden;   
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: #333; 
     line-height: 0.6;        
   }
   li.navi{
@@ -227,7 +227,7 @@
     float: left;
     display: inline-block;
   }
-  a.navi_a{ /* I, II, III... */
+  a.navi_a{ /* 小頭目，文字白色 */
     display: inline-block;
     margin: 0;
     padding: 0.1em 1em;
@@ -237,7 +237,7 @@
     cursor: default;
   }
   li a:hover, li.navi:hover .navi_a{
-  /* 掃到屬於自己的任何 a 時，自己變色 */
+  /* 掃到自己，或掃到屬於自己的任何 a 時，小頭目變深黑色 */
     background-color: #111;
   }
   .drop_content a:hover{
