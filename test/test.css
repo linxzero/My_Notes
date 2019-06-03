@@ -246,8 +246,8 @@
     display: block;
   }
   .drop_content{
-    margin: 0;
-    padding: 0;
+    margin: 0.01em;
+    padding: 0.01em;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -256,7 +256,7 @@
     z-index: 1;
   }
   .drop_content a{
-    margin: 0;
+    margin: 0.01em;
     padding: 0.3em 1em;
     display: block;
     text-align: left;
