@@ -226,11 +226,12 @@
   a.navi_a{ /* I, II, III... */
     display: inline-block;
     margin: 0;
-    padding: 0.1em 1em;
+    padding: 0.1em;
     color: white;
     text-align: center;
     text-decoration: none;
     cursor: default;
+    width: 5em;
   }
   li a:hover, li.navi:hover .navi_a{
   /* 掃到屬於自己的任何 a 時，自己變色 */
