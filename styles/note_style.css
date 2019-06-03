@@ -241,14 +241,14 @@
     background-color: #111;
   }
   .drop_content a:hover{
-  /* 同上對抗，自己變自己色 */
+  /* 掃到就變深少少灰色 */
     background-color: #f1f1f1;
   }
   li.navi:hover .drop_content{
   /* 掃到 li 時，內容才drop */
     display: block;
   }
-  .drop_content{
+  .drop_content{ /* 本來淺灰 */
     margin: 0;
     padding: 0;
     display: none;

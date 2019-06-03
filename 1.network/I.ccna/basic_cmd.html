@@ -15,7 +15,7 @@
 		<title>Basic cmd</title>
 		<style>
 			header{ background-image: linear-gradient( 90deg, #21618C 10%, #229954 100%); }
-			a#I{background-color: #4CAF50;} /* which one be green */
+			li.navi a#I{background-color: #4CAF50;} /* which one be green */
 		</style>
 	</head>
 <!-------------------------------------------------->
@@ -264,12 +264,13 @@
 <!--------------------------------------------------> 
 		<button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
 		<script>
+			function hidebar(){
+				var x=document.getElementsByClassName("drop_content");
+				x.style.display="none";
+			};
+
 			// When the user scrolls down 520px from the top of the document, show the button
 			window.onscroll = function() {scrollFunction()};
-
-			function hidebar(){
-				document.getElementsByClassName("drop_content").style.display="none";
-				document.getElementById("III").style.backgroundcolor="#4CAF50";
 
 			function scrollFunction() {
 				if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
@@ -287,8 +288,6 @@
 		</script>  
 	</body>
 </html>
-
-
 
 
 
