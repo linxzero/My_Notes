@@ -46,6 +46,12 @@
     <h3>eBGP</h3>
     <p>(External BGP)<br>在不同 AS 之間的 routers，用 iBGP。CCNA 只講 eBGP。</p>
 
+    <p class="lilbr"><br></p>
+    <p class="code">
+      router bgp <span class="input">65500</span><br>
+      neighbor <span class="input">209.16.21.1</span> remote-as <span class="input">65501</span><br>
+      network <span class="input">198.133.9.0</span> mask <span class="input">255.255.255.0</span>
+    </p>
 
 
 
