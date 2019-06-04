@@ -230,12 +230,11 @@
   a.navi_a{ /* 小頭目，文字白色 */
     display: inline-block;
     margin: 0;
-    padding: 0.1em;
+    padding: 0.1em 1em;
     color: white;
     text-align: center;
     text-decoration: none;
     cursor: default;
-    width: 5em;
   }
   li a:hover, li.navi:hover .navi_a{
   /* 掃到自己，或掃到屬於自己的任何 a 時，小頭目變深黑色 */
