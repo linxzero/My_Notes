@@ -44,7 +44,10 @@
       </p>
       
       <h3>Verify</h3>
-      <p class="code">show ip int br</p>
+      <p class="code">
+        show ip int br<br>
+        show ip int br | include tunnel
+      </p>
 
       <h3>Hub-to-Spoke</h3>
       <p>所有 Spokes 只與 Hub 建立 GRE tunnel，然後在 Hub 上做 routing.</p>
