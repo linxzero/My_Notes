@@ -166,29 +166,31 @@
 		<button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
 		<script>
 			function hidebar(){
-				var x=document.getElementsByClassName("drop_content");
-				x.style.display="none";
+				$(function(){
+				$(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+				$(".navi_span").load("/my_notes/navigations/navi_bar_1.html");
+			});
 			};
 
 			// When the user scrolls down 520px from the top of the document, show the button
 			window.onscroll = function() {scrollFunction()};
-
 			function scrollFunction() {
 				if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
 					document.getElementById("TopBtn").style.display = "block";
 				} else {
 					document.getElementById("TopBtn").style.display = "none";
 				}
-			}
+			};
 
 			// When the user clicks on the button, scroll to the top of the document
 			function topFunction() {
 				document.body.scrollTop = 0;
 				document.documentElement.scrollTop = 0;
-			}
+			};
 		</script>  
 	</body>
 </html>
+
 
 
 
