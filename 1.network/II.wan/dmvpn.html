@@ -78,8 +78,10 @@
         <div class="list">
           <ul>
             <li>首先要主動與 NHS 建立 GRE tunnel.</li>
-            <li>"nhrp map" 手動配對 NHS 的 NBMA address.</li>
-            <li>"multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 NHS.</li>
+            <li>"mode" 是 ip.</li>
+            <li>"nhrp nhs" 指出 NHS 的 tunnel address.</li>
+            <li>"nhrp map" 配對 NHS 的 tunnel address & NBMA address.</li>
+            <li>"multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 10.0.14.1.</li>
           </ul>
         </div>
         <h3>Topology</h3>
