@@ -83,8 +83,6 @@
         <h3>Topology</h3>
         <img src="images/hub_to_spoke.png" class="big">
         <p class="bigcap">Normally, it's just a Hub-to-Spoke topology.</p>
-        <p>Phase 1 完成後，其實跟 Hub-to-Spoke GRE tunnel 無分別，traceroute 一下就知道 R2 去 R3 其實都要經過 R1.</p>
-        <br>
         <p>
           因為 R1 只有一個 interface Tunnel 0，基於 Split Horizon 規則，EIGRP 不能把收到的 advertisment 經同一個口發報出去。如果用 EIGRP 把 Lo 0 發報出去的話，要注意一下：
         </p>
@@ -98,6 +96,7 @@
           show dmvpn<br>
           show ip nhrp
         </p>
+        <p>Phase 1 完成後，其實跟 Hub-to-Spoke GRE tunnel 無分別，traceroute 一下就知道 R2 去 R3 其實都要經過 R1.</p>
 
 
 
