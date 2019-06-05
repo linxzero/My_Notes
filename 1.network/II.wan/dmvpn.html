@@ -55,14 +55,12 @@
           ip nhrp network-id <span class="input">1</span><br>
           ip nhrp map multicast dynamic<br>
         </p>
-        <div class="list">
-          <ul>
-            <li>"tunnel destination" 不需要。</li>
-            <li>"mode" 改成 multipoint.</li>
-            <li>"network-id" 必須相同才能互通。</li>
-            <li>"multicast dynamic" Routing Protocol 產生的 multicast 傳送到所有 NHRP dynamic-learn 的 Spokes.</li>
-          </ul>
-        </div>
+        <p>
+          ● "tunnel destination" 不需要。<br>
+          ● "mode" 改成 multipoint.<br>
+          ● "network-id" 必須相同才能互通。<br>
+          ● "multicast dynamic" Routing Protocol 產生的 multicast 傳送到所有 NHRP dynamic-learn 的 Spokes.
+        </p>
         <h3>Command on NHC</h3>
         <p class="code">
           int tunnel <span class="input">0</span><br>
@@ -75,15 +73,13 @@
           ip nhrp map <span class="input">172.16.123.1 10.0.14.1</span><br>
           ip nhrp map multicast <span class="input">10.0.14.1</span>
         </p>
-        <div class="list">
-          <ul>
-            <li>首先要主動與 NHS 建立 GRE tunnel.</li>
-            <li>"mode" 是 ip.</li>
-            <li>"nhrp nhs" 指出 NHS 的 tunnel address.</li>
-            <li>"nhrp map" 配對 NHS 的 tunnel address & NBMA address.</li>
-            <li>"multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 10.0.14.1.</li>
-          </ul>
-        </div>
+        <p>
+          ● 首先要主動與 NHS 建立 GRE tunnel.<br>
+          ● "mode" 是 ip.<br>
+          ● "nhrp nhs" 指出 NHS 的 tunnel address.<br>
+          ● "nhrp map" 配對 NHS 的 tunnel address & NBMA address.<br>
+          ● "multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 10.0.14.1.
+        </p>
         <h3>Topology</h3>
         <img src="images/hub_to_spoke.png" class="big">
         <p class="bigcap">Normally, it's just a Hub-to-Spoke topology.</p>
