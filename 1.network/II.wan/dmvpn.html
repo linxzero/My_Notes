@@ -31,66 +31,66 @@
     <div class="block" onclick="hidebar()">
 
       <h2>DMVPN</h2>
-      <p>(Dynamic Multipoint VPN)<br>用傳統做法使用 GRE 來建立 Fully Mesh Topology 所需的設定相當龐大，比較理想的方法是使用 DMVPN.</p>
-      <h3>NHRP</h3>
-      <p>(Next Hop Resolution Protocol)<br>要成就 DMVPN，先要介紹一個重要知識點，NHRP。其實並不複雜，說穿了有點像 ARP。ARP 的作用為 IP 與 MAC 之間的轉換，而 NHRP 則用作 Physical IP 與 Tunnel IP 之間的轉換。</p>
-      <h3>NBMA address</h3>
-      <p>Non-broadcast Multi Access address，即是 Physical IP</p>
-      <h3>NHS</h3>
-      <p>Next Hop Server，即是 Hub</p>
-      <h3>NHC</h3>
-      <p>Next Hop Client，即是 Spoke</p><br>
-      <h3>工作原理</h3>
-      <p>話說每隻 NHCs 都會把自己的 NBMA address 和 Tunnel IP 傳送給 NHS，當 NHS 收到這些資訊後，就會建立一個 NHRP Table 來儲存這些配對。當有 NHC 要查詢某 Tunnel IP 位置時，NHS 會即時回覆對應的 NBMA address 讓 NHC 能夠直接聯繫。</p>
-      <p>DMVPN 分為 Phase 1、2 和 3，接下來要逐一解釋。</p>
+        <p>(Dynamic Multipoint VPN)<br>用傳統做法使用 GRE 來建立 Fully Mesh Topology 所需的設定相當龐大，比較理想的方法是使用 DMVPN.</p>
+        <h3>NHRP</h3>
+        <p>(Next Hop Resolution Protocol)<br>要成就 DMVPN，先要介紹一個重要知識點，NHRP。其實並不複雜，說穿了有點像 ARP。ARP 的作用為 IP 與 MAC 之間的轉換，而 NHRP 則用作 Physical IP 與 Tunnel IP 之間的轉換。</p>
+        <h3>NBMA address</h3>
+        <p>Non-broadcast Multi Access address，即是 Physical IP.</p>
+        <h3>NHS</h3>
+        <p>Next Hop Server，即是 Hub.</p>
+        <h3>NHC</h3>
+        <p>Next Hop Client，即是 Spoke.</p><br>
+        <h3>工作原理</h3>
+        <p>話說每隻 NHCs 都會把自己的 NBMA address 和 Tunnel address 傳送給 NHS，當 NHS 收到這些資訊後，就會建立一個 NHRP Table 來儲存這些配對。當有 NHC 要查詢某 Tunnel address 位置時，NHS 會即時回覆相應的 NBMA address，然後 NHC 能夠直接聯繫。</p>
+        <p>DMVPN 分為 Phase 1、2 和 3，接下來要逐一解釋。</p>
 
 
       <h2>Phase 1</h2>
-      <h3>Command on NHS</h3>
-      <p class="code">
-        int tunnel <span class="input">0</span><br>
-        ip add <span class="input">172.16.123.1 255.255.255.0</span><br>
-        tunnel source <span class="input">e1/0</span><br>
-        tunnel mode gre multipoint<br>
-        ip nhrp network-id <span class="input">1</span><br>
-        ip nhrp map multicast dynamic<br>
-      </p>
-      <div class="list">
-        <ul>
-          <li>NHS 不需要 tunnel destination.</li>
-          <li>mode 由 "gre ip" 改成 "gre multipoint".</li>
-          <li>"network-id" 必須相同才能互通。</li>
-          <li>允許 Routing Protocol 產生的 multicast 傳送到所有 NHRP dynamic learn 的 Spokes.</li>
-        </ul>
-      </div>
-      <h3>Command on NHC</h3>
-      <p class="code">
-        int tunnel <span class="input">0</span><br>
-        ip add <span class="input">172.16.123.2 255.255.255.0</span><br>
-        tunnel source <span class="input">e1/0</span><br>
-        tunnel destination <span class="input">10.0.14.1</span><br>
-        tunnel mode gre ip<br>
-        ip nhrp network-id <span class="input">1</span><br>
-        ip nhrp nhs <span class="input">172.16.123.1</span><br>
-        ip nhrp map <span class="input">172.16.123.1 10.0.14.1</span><br>
-        ip nhrp map multicast <span class="input">10.0.14.1</span>
-      </p>
-      <div class="list">
-        <ul>
-          <li>NHC 與 NHS 之間沿用傳統 GRE tunnel.</li>
-          <li>"nhrp map" 手動配對 NHS 的 NBMA address.</li>
-          <li>"multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 NHS.</li>
-        </ul>
-      </div>
-      <h3>Topology</h3>
-      <img src="images/hub_to_spoke.png" class="big">
-      <p class="bigcap">Normally, it's just a Hub-to-Spoke topology.</p>
-      <br>
-      <h3>Verify</h3>
-      <p class="code">
-        show dmvpn<br>
-        show ip nhrp
-      </p>
+        <h3>Command on NHS</h3>
+        <p class="code">
+          int tunnel <span class="input">0</span><br>
+          ip add <span class="input">172.16.123.1 255.255.255.0</span><br>
+          tunnel source <span class="input">e1/0</span><br>
+          tunnel mode gre multipoint<br>
+          ip nhrp network-id <span class="input">1</span><br>
+          ip nhrp map multicast dynamic<br>
+        </p>
+        <div class="list">
+          <ul>
+            <li>"tunnel destination" 不需要。</li>
+            <li>"mode" 改成 multipoint.</li>
+            <li>"network-id" 必須相同才能互通。</li>
+            <li>"multicast dynamic" Routing Protocol 產生的 multicast 傳送到所有 NHRP dynamic-learn 的 Spokes.</li>
+          </ul>
+        </div>
+        <h3>Command on NHC</h3>
+        <p class="code">
+          int tunnel <span class="input">0</span><br>
+          ip add <span class="input">172.16.123.2 255.255.255.0</span><br>
+          tunnel source <span class="input">e1/0</span><br>
+          tunnel destination <span class="input">10.0.14.1</span><br>
+          tunnel mode gre ip<br>
+          ip nhrp network-id <span class="input">1</span><br>
+          ip nhrp nhs <span class="input">172.16.123.1</span><br>
+          ip nhrp map <span class="input">172.16.123.1 10.0.14.1</span><br>
+          ip nhrp map multicast <span class="input">10.0.14.1</span>
+        </p>
+        <div class="list">
+          <ul>
+            <li>首先要主動與 NHS 建立 GRE tunnel.</li>
+            <li>"nhrp map" 手動配對 NHS 的 NBMA address.</li>
+            <li>"multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 NHS.</li>
+          </ul>
+        </div>
+        <h3>Topology</h3>
+        <img src="images/hub_to_spoke.png" class="big">
+        <p class="bigcap">Normally, it's just a Hub-to-Spoke topology.</p>
+        <br>
+        <h3>Verify</h3>
+        <p class="code">
+          show dmvpn<br>
+          show ip nhrp
+        </p>
 
 
 
