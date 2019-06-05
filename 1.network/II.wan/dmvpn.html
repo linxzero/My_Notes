@@ -53,7 +53,7 @@
         tunnel source <span class="input">e1/0</span><br>
         tunnel mode gre multipoint<br>
         ip nhrp network-id <span class="input">1</span><br>
-        nhrp map multicast dynamic<br>
+        ip nhrp map multicast dynamic<br>
       </p>
       <div class="list">
         <ul>
@@ -71,9 +71,9 @@
         tunnel destination <span class="input">10.0.14.1</span><br>
         tunnel mode gre ip<br>
         ip nhrp network-id <span class="input">1</span><br>
-        nhrp nhs <span class="input">172.16.123.1</span><br>
-        nhrp map <span class="input">172.16.123.1 10.0.14.1</span><br>
-        nhrp map multicast <span class="input">10.0.14.1</span>
+        ip nhrp nhs <span class="input">172.16.123.1</span><br>
+        ip nhrp map <span class="input">172.16.123.1 10.0.14.1</span><br>
+        ip nhrp map multicast <span class="input">10.0.14.1</span>
       </p>
       <div class="list">
         <ul>
