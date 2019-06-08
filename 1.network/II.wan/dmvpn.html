@@ -101,6 +101,11 @@
           int tunnel <span class="input">0</span><br>
           ip ospf network broadcast
         </p>
+        <p>再令所有 NHC 放棄選 DR.</p>
+        <p>
+          int tunnel <span class="input">0</span><br>
+          ip ospf priority 0
+        </p>
 
         <h3>Verify</h3>
         <p class="code">
