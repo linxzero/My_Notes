@@ -84,13 +84,22 @@
         </p>
         <h3>Topology</h3>
         <img src="images/hub_to_spoke.png" class="big">
-        <p class="bigcap">Normally, it's just a Hub-to-Spoke topology.</p>
+        <p class="bigcap">與 GRE 相同的 topology.</p>
+
+        <h3>EIGRP</h3>
         <p>
-          因為 R1 只有一個 interface Tunnel 0，基於 Split Horizon 規則，EIGRP 不能把收到的 advertisement 經同一個口發報出去。如果用 EIGRP 把 Lo 0 發報出去的話，要注意一下：
+          如果用 EIGRP 把 Lo 0 發報出去的話，由於 R1 只有一個 interface Tunnel 0，基於 Split Horizon 規則，EIGRP 不能把收到的 advertisement 經同一個口發報出去，需要注意一下：
         </p>
         <p class="code">
           interface tunnel <span class="input">0</span><br>
           no ip split-horizon eigrp <span class="input">1</span>
+        </p>
+
+        <h3>OSPF</h3>
+        <p>OSPF 是 link-state，沒有 split-horizon 問題，但也有其他問題，因為 tunnel 默認為 point-point，當 adjacency 多於一個時，鄰居關係會一直 up down，這是 OSPF 的基礎知識。需要在所有 tunnel 改：</p>
+        <p class="code">
+          int tunnel <span class="input">0</span><br>
+          ip ospf network broadcast
         </p>
 
         <h3>Verify</h3>
@@ -102,6 +111,7 @@
 
 
       <h2>Phase 2</h2>
+        <p>Phase 2 先真正完成了 Fully mesh.</p>
         <h3>Command on NHC</h3>
         <p class="code">
           int tunnel <span class="input">0</span><br>
