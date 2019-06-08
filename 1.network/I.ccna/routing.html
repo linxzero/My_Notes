@@ -41,7 +41,11 @@
 			<h3>Verify</h3>
 			<p class="code">
 				show ip route<br>
-				show ip protocols
+				show ip protocols<br>
+				show ip cef
+			</p>
+			<p>
+				● "cef" CEF 是 Cisco 特有的，為了省掉 route lookup 的程序，把路由結果放在 CEF table，當再有相同 destination 的 packet 就能快速轉走，這就是所謂的 Route Once Switch Many.
 			</p>
 			<p class="code">clear ip route *</p>
 			<p>● [*] means delete all routes.</p>

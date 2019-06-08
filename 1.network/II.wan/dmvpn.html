@@ -78,7 +78,8 @@
           ● "mode" 是 ip.<br>
           ● "nhrp nhs" 指出 NHS 的 tunnel address.<br>
           ● "nhrp map" 配對 NHS 的 tunnel address & NBMA address.<br>
-          ● "multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 10.0.14.1.
+          ● "multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 10.0.14.1.<br>
+          ● 只要將 tunnel address 改一下，就可以 copy & paste 到任何 NHC.
         </p>
         <h3>Topology</h3>
         <img src="images/hub_to_spoke.png" class="big">
@@ -96,7 +97,7 @@
           show dmvpn<br>
           show ip nhrp
         </p>
-        <p>Phase 1 完成後，其實跟 Hub-to-Spoke GRE tunnel 無分別，traceroute 一下就知道 R2 去 R3 其實都要經過 R1.</p>
+        <p>Phase 1 完成後，其實跟 Hub-to-Spoke GRE tunnel 無分別，traceroute 一測試就知道 R2 去 R3 其實都要經過 R1.</p>
 
 
       <h2>Phase 2</h2>
@@ -138,9 +139,6 @@
     </script>  
   </body>
 </html>
-
-
-
 
 
 
