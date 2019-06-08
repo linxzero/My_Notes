@@ -43,11 +43,9 @@
         <p>Next Hop Client，即是 Spoke.</p><br>
         <h3>工作原理</h3>
         <p>話說每隻 NHCs 都會把自己的 NBMA address 和 Tunnel address 傳送給 NHS，當 NHS 收到這些資訊後，就會建立一個 NHRP Table 來儲存這些配對。當有 NHC 要查詢某 Tunnel address 位置時，NHS 會即時回覆相應的 NBMA address，然後 NHC 能夠直接聯繫。</p>
-        <p>DMVPN 分為 Phase 1、2 和 3，接下來要逐一解釋。</p>
 
-
-      <h2>Phase 1</h2>
-        <h3>Command on NHS</h3>
+      <h2>Command</h2>
+        <h3>on NHS</h3>
         <p class="code">
           int tunnel <span class="input">0</span><br>
           ip add <span class="input">172.16.123.1 255.255.255.0</span><br>
@@ -62,21 +60,20 @@
           ● "network-id" 必須相同才能互通。<br>
           ● "multicast dynamic" Routing Protocol 產生的 multicast 傳送到所有 NHRP dynamic-learn 的 Spokes.
         </p>
-        <h3>Command on NHC</h3>
+
+        <h3>on NHC</h3>
+        <p>基本同 NHS 一樣：</p>
         <p class="code">
           int tunnel <span class="input">0</span><br>
           ip add <span class="input">172.16.123.2 255.255.255.0</span><br>
           tunnel source <span class="input">e1/0</span><br>
-          tunnel destination <span class="input">10.0.14.1</span><br>
-          tunnel mode gre ip<br>
+          tunnel mode gre multipoint<br>
           ip nhrp network-id <span class="input">1</span><br>
           ip nhrp nhs <span class="input">172.16.123.1</span><br>
           ip nhrp map <span class="input">172.16.123.1 10.0.14.1</span><br>
           ip nhrp map multicast <span class="input">10.0.14.1</span>
         </p>
         <p>
-          ● 首先要主動與 NHS 建立 GRE tunnel.<br>
-          ● "mode" 是 ip.<br>
           ● "nhrp nhs" 指出 NHS 的 tunnel address.<br>
           ● "nhrp map" 配對 NHS 的 tunnel address & NBMA address.<br>
           ● "multicast 10.0.14.1" 把 Routing Protocol 產生的 multicast 傳送到 10.0.14.1.<br>
@@ -86,6 +83,16 @@
         <img src="images/hub_to_spoke.png" class="big">
         <p class="bigcap">與 GRE 相同的 topology.</p>
 
+        <h3>Verify</h3>
+        <p class="code">
+          show dmvpn<br>
+          show ip nhrp
+        </p>
+        <p>完成後就是 fully mesh，用 traceroute 測試一下就知道 R2 去 R3 是直去。</p>
+
+
+
+      <h2>Dynamic Route</h2>
         <h3>EIGRP</h3>
         <p>
           如果用 EIGRP 把 Lo 0 發報出去的話，由於 R1 只有一個 interface Tunnel 0，基於 Split Horizon 規則，EIGRP 不能把收到的 advertisement 經同一個口發報出去，需要注意一下：
@@ -107,27 +114,9 @@
           ip ospf priority 0
         </p>
 
-        <h3>Verify</h3>
-        <p class="code">
-          show dmvpn<br>
-          show ip nhrp
-        </p>
-        <p>Phase 1 完成後，其實跟 Hub-to-Spoke GRE tunnel 無分別，traceroute 一測試就知道 R2 去 R3 其實都要經過 R1。還是趕緊進入 Phase 2 吧。</p>
 
 
-      <h2>Phase 2</h2>
-        <p><a href="https://www.jannet.hk/zh-Hant/post/dynamic-multipoint-virtual-private-network-dmvpn/#phase2">Phase 2</a> 先真正完成了 Fully mesh.</p>
-        <h3>Command on NHC</h3>
-        <p class="code">
-          int tunnel <span class="input">0</span><br>
-          no tunnel destination<br>
-          tunnel mode gre multipoint
-        </p>
-        <p>然後 shutdown 所有 Tunnel，先重開 NHS，後重開 NHC。</p>
 
-        
-      <h2>Phace 3</h2>
-        <p><a href="https://www.jannet.hk/zh-Hant/post/dynamic-multipoint-virtual-private-network-dmvpn/#phase3">Phase 3</a> 優化了 summary route.</p>
 
 
     </div>
