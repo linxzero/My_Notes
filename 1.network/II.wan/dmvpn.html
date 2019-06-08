@@ -96,7 +96,7 @@
         </p>
 
         <h3>OSPF</h3>
-        <p>OSPF 是 link-state，沒有 split-horizon 問題，但也有其他問題，因為 tunnel 默認為 point-point，當 adjacency 多於一個時，鄰居關係會一直 up down，這是 OSPF 的基礎知識。需要在所有 tunnel 改：</p>
+        <p>OSPF 是 link-state，沒有 split-horizon 問題，但也有其他問題，因為 tunnel 默認為 point-point，當 adjacency 多於一個時，鄰居關係會一直 up down，這是 OSPF 的基礎知識。需要在所有 int tunnel 改：</p>
         <p class="code">
           int tunnel <span class="input">0</span><br>
           ip ospf network broadcast
