@@ -128,23 +128,23 @@
         </p>
 
       <h2>Authentication</h2>
-      <p>由於只要知道 NHS 的 IP 就可以與他建立 tunnel，基於保安理由，可以用 tunnel key 的方式加入認證：</p>
-      <p class="code">
-        int tunnel <span class="input">0</span><br>
-        tunnel key <span class="input">1234</span>
-      </p>
-      <p>
-        ● 在 Hub 和 Spokes 上都設置一樣的 key.
-      </p>
-      <p class="lilbr"><br></p>
-      <p>還可以用 NHRP authen 的方式做認證，兩者分別不詳：</p>
-      <p class="code">
-        int tunnel <span class="input">0</span><br>
-        ip nhrp authentication <span class="input">ccie</span>
-      </p>
-      <p>
-        ● 同樣在 Hub 和 Spokes 上都設置一樣的 key.
-      </p>
+        <p>由於只要知道 NHS 的 IP 就可以與他建立 tunnel，基於保安理由，可以用 tunnel key 的方式加入認證：</p>
+        <p class="code">
+          int tunnel <span class="input">0</span><br>
+          tunnel key <span class="input">1234</span>
+        </p>
+        <p>
+          ● 在 Hub 和 Spokes 上都設置一樣的 key.
+        </p>
+        <p class="lilbr"><br></p>
+        <p>還可以用 NHRP authen 的方式做認證，兩者分別不詳：</p>
+        <p class="code">
+          int tunnel <span class="input">0</span><br>
+          ip nhrp authentication <span class="input">ccie</span>
+        </p>
+        <p>
+          ● 同樣在 Hub 和 Spokes 上都設置一樣的 key.
+        </p>
 
 
 
