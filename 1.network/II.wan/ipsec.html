@@ -42,7 +42,13 @@
       <h3>Phase 2</h3>
       <p>真正建立IPsec VPN管道，使資訊在上面傳送。</p>
 
-
+    
+    <h2>Command</h2>
+      <h3>ACL</h3>
+      <p class="code">
+        ip access-list extend <span class="input">VPN_traffic</span><br>
+        per ip <span class="input">192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
+      </p>
 
 
 
