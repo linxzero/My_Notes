@@ -30,7 +30,9 @@
     </ul>
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
-
+    
+    <h3>前言</h3>
+    <p>IPsec VPN 與 GRE tunnel 沒有關係，是兩種不同的管道。</p>
     <h2>IKE</h2>
       <p>(Internet Key Exchange)<br>
         IPsec VPN 用 IKE 來建立連線，所以要先了解 IKE。它分為 Phase 1 和 Phase 2。
@@ -55,12 +57,16 @@
         ip access-list extend <span class="input">VPN_traffic</span><br>
         per ip <span class="input">192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
       </p>
+      <p>
+        ● 符合由 192.168.10.0/24 去 192.168.20.0/24 的 packet 才能夠使用管道。
+      </p>
 
       <h3>Pre-share key</h3>
       <p class="code">
         crypto isakmp key 6 <span class="input">ccie</span> add <span class="input">192.168.23.2</span>
       </p>
       <p>
+        ● 針對 IP address 來設置密碼。<br>
         ● "6" specifies the password is encrypted.<br>
         ● "ccie" is the password.
       </p>
@@ -86,6 +92,7 @@
       <h3>IKE Phase 2</h3>
       <p>設定 "transform-set" :</p>
       <p class="code">crypto ipsec transform-set <span class="input">TS</span> ?</p>
+      <p>● "TS" 為 transform-set 的名字。</p>
       <p>然後你可以自由任搭以下四類：(選越多越安全，但越耗資源。)</p>
       <table>
         <tr style="background-color: #F2D7D5">
@@ -140,7 +147,7 @@
         exit
       </p>
       <p>
-        ● "CMAP" map 的名字。<br>
+        ● "CMAP" 把 map 命名為 CMAP。<br>
         ● "1" sequence number，不重要。<br>
         ● "ipsec-isakmp" 代表 IPsec with ISAKMP.
       </p>
