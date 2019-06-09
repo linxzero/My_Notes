@@ -44,6 +44,15 @@
     <p class="code">
       crypto ipsec transform-set <span class="input">TS esp-3des esp-sha-hmac</span>
     </p>
+    <p>然後不用 map，用 profile :</p>
+    <p class="code">
+      crypto ipsec profile <span class="input">PF</span><br>
+      set transform-set <span class="input">TS</span>
+    </p>
+    <p class="code">
+      int tunnel <span class="input">0</span><br>
+      tunnel protection ipsec profile <span class="input">PF</span>
+    </p>
 
 
 
