@@ -32,7 +32,15 @@
     <div class="block" onclick="hidebar()">
 
     <h2>IKE</h2>
-    <p>(Internet Key Exchange)</p>
+      <p>(Internet Key Exchange)<br>
+        IPsec VPN 用 IKE 來建立連線，所以要先了解 IKE。它分為 Phase 1 和 Phase 2。
+      </p>
+
+      <h3>Phase 1</h3>
+      <p>主要工作是做 Authen。Router 1 與 Router 2 想建立 VPN，首先要知道同一個 share secret.<br>另外一個工作是透過 DH algorithm 產生一個 key，這個 DH key 是以後 Encrypt 資訊時用的。</p>
+
+      <h3>Phase 2</h3>
+      <p>真正建立IPsec VPN管道，使資訊在上面傳送。</p>
 
 
 
