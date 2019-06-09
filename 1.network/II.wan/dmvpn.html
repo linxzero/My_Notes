@@ -43,6 +43,11 @@
         <p>Next Hop Client，即是 Spoke.</p><br>
         <h3>工作原理</h3>
         <p>話說每隻 NHCs 都會把自己的 NBMA address 和 Tunnel address 傳送給 NHS，當 NHS 收到這些資訊後，就會建立一個 NHRP Table 來儲存這些配對。當有 NHC 要查詢某 Tunnel address 位置時，NHS 會即時回覆相應的 NBMA address，然後 NHC 能夠直接聯繫。</p>
+        <h3>優點</h3>
+        <p>
+          1) 工作量大減，在 spokes 只需設置相同的 command 就可以實現 fully mesh.<br>
+          2) Spokes 不需要有 static public IP，因為 spokes 會自動向 NHS 注冊自己的 physical IP.
+        </p>
 
       <h2>Command</h2>
         <h3>on NHS</h3>
@@ -96,7 +101,7 @@
       <h2>Dynamic Route</h2>
         <h3>EIGRP</h3>
         <p>
-          如果用 EIGRP 把 Lo 0 發報出去的話，由於 R1 只有一個 interface Tunnel 0，基於 Split Horizon 規則，EIGRP 不能把收到的 advertisement 經同一個口發報出去，需要注意一下：
+          如果用 EIGRP 把 Lo 0 發報出去的話，由於 R1 只有一個 interface Tunnel 0，基於 Split Horizon 規則，EIGRP 不能把收到的 advertisement 經同一個口發報出去，需要修改一下：
         </p>
         <p class="code">
           interface tunnel <span class="input">0</span><br>
