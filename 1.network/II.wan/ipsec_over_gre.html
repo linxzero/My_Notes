@@ -34,13 +34,16 @@
    
 
     <h3>Command</h3>
+    <p>Pre-share key :</p>
     <p class="code">
-      crypto isakmp key <span class="input">ccie</span> add <span class="input">xxx</span><br>
+      crypto isakmp key <span class="input">ccie</span> add <span class="input">10.0.24.2</span><br>
     </p>
+    <p>ISAKMP policy :</p>
     <p class="code">
       crypto isakmp policy <span class="input">10</span><br>
       authentication pre-share
     </p>
+    <p>Transform-set :</p>
     <p class="code">
       crypto ipsec transform-set <span class="input">TS esp-3des esp-sha-hmac</span>
     </p>
@@ -49,9 +52,13 @@
       crypto ipsec profile <span class="input">PF</span><br>
       set transform-set <span class="input">TS</span>
     </p>
+    <p>Assign :</p>
     <p class="code">
       int tunnel <span class="input">0</span><br>
       tunnel protection ipsec profile <span class="input">PF</span>
+    </p>
+    <p>
+      ● 注意，與 "pre-share key" 配對的是 physical IP 而不是 tunnel IP.<br>
     </p>
 
 
