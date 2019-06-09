@@ -55,6 +55,15 @@
         per ip <span class="input">192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
       </p>
 
+      <h3>Pre-share Key</h3>
+      <p class="code">
+        crypto isakmp key 6 <span class="input">ccie</span> add <span class="input">192.168.23.2</span>
+      </p>
+      <p>
+        ● "6" specifies the password is encrypted.<br>
+        ● 
+      </p>
+
       <h3>IKE Phase 1</h3>
       <p>主要都在設定 ISAKMP policy :</p>
       <p class="code">
@@ -74,8 +83,50 @@
       </p>
 
       <h3>IKE Phase 2</h3>
-      <p class="code"></p>
-
+      <p class="code">crypto ipsec transform-set <span class="input">TS</span> ?</p>
+      <p>然後你可以自由任搭以下四類：(選越多越安全，但越耗資源。)</p>
+      <table>
+        <tr style="background-color: #F2D7D5">
+          <td rowspan="2">AH transform</td>
+          <td>ah-md5-hmac</td>
+        </tr>
+        <tr style="background-color: #F2D7D5">
+          <td>ah-sha-hmac</td>
+        </tr>
+        <tr style="background-color: #FCF3CF">
+          <td rowspan="6">ESP encrypt</td>
+          <td>esp-des</td>
+        </tr>
+        <tr style="background-color: #FCF3CF">
+          <td>esp-3des</td>
+        </tr>
+        <tr style="background-color: #FCF3CF">
+          <td>esp-aes</td>
+        </tr>
+        <tr style="background-color: #FCF3CF">
+          <td>esp-gcm</td>
+        </tr>
+        <tr style="background-color: #FCF3CF">
+          <td>esp-seal</td>
+        </tr>
+        <tr style="background-color: #FCF3CF">
+          <td>esp-null</td>
+        </tr>
+        <tr style="background-color: #D6EAF8">
+          <td rowspan="2">ESP authen</td>
+          <td>esp-md5-hmac</td>
+        </tr>
+        <tr style="background-color: #D6EAF8">
+          <td>esp-sha-hmac</td>
+        </tr>
+        <tr style="background-color: #D4EFDF">
+          <td>Compression</td>
+          <td>comp-lzs</td>
+        </tr>
+      </table>
+      <p class="code">
+        crypto ipsec transform-set <span class="input">TS ah-sha-hmac esp-3des</span> 
+      </p>
 
 
 
