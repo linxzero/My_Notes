@@ -44,11 +44,37 @@
 
     
     <h2>Command</h2>
+      
+      <h3>Topology</h3>
+      <img src="" class="big">
+
       <h3>ACL</h3>
+      <p>以 R1 為例：</p>
       <p class="code">
         ip access-list extend <span class="input">VPN_traffic</span><br>
         per ip <span class="input">192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
       </p>
+
+      <h3>IKE Phase 1</h3>
+      <p>主要都在設定 ISAKMP policy :</p>
+      <p class="code">
+        crypto isakmp policy <span class="input">1</span><br>
+        authentication pre-share<br>
+        hash md5<br>
+        group <span class="input">2</span><br>
+        encryption aes<br>
+        lifetime <span class="input">30000</span>
+      </p>
+      <p>
+        ● "1" 類似改名，定義 priority of protection suite. (1~10000)<br>
+        ● "pre-share" 以 pre-share key 的形式做 authen.<br>
+        ● "group 2" DH group 2，即 1024-bit.<br>
+        ● "aes" 用最安全的 AES 做對稱加密。<br>
+        ● "lifetime" 為管道的 lifetime，單位為秒。
+      </p>
+
+      <h3>IKE Phase 2</h3>
+      <p class="code"></p>
 
 
 
