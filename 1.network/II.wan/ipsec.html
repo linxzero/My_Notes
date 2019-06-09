@@ -65,7 +65,7 @@
       </p>
 
       <h3>IKE Phase 1</h3>
-      <p>主要都在設定 ISAKMP policy :</p>
+      <p>設定 "ISAKMP policy" :</p>
       <p class="code">
         crypto isakmp policy <span class="input">1</span><br>
         authentication pre-share<br>
@@ -83,6 +83,7 @@
       </p>
 
       <h3>IKE Phase 2</h3>
+      <p>設定 "transform-set" :</p>
       <p class="code">crypto ipsec transform-set <span class="input">TS</span> ?</p>
       <p>然後你可以自由任搭以下四類：(選越多越安全，但越耗資源。)</p>
       <table>
@@ -128,6 +129,26 @@
         crypto ipsec transform-set <span class="input">TS ah-sha-hmac esp-3des</span> 
       </p>
 
+      <h3>Map</h3>
+      <p>把剛剛所有設定 map 一起：</p>
+      <p class="code">
+        crypto map <span class="input">CMAP</span> 1 ipsec-isakmp<br>
+        set peer <span class="input">192.168.23.2</span><br>
+        set transform-set <span class="input">TS</span><br>
+        match address <span class="input">VPN_traffic</span><br>
+        exit
+      </p>
+      <p>
+        ● "CMAP" map 的名字。<br>
+        ● "1" sequence number，不重要。<br>
+        ● "ipsec-isakmp" 代表 IPsec with ISAKMP.
+      </p>
+      <br>
+      <p>最後把 map assign 到 interface :</p>
+      <p class="code">
+        int <span class="input">e0/0</span><br>
+        crypto map <span class="input">CMAP</span>
+      </p>
 
 
 
