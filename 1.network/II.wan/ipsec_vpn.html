@@ -34,8 +34,7 @@
     <h3>前言</h3>
     <p>
       ● IPsec VPN 與 GRE tunnel 沒有關係，是兩種不同的管道。<br>
-      ● IPsec VPN <span class="high">不需要 virtual IP address</span> (tunnel IP).<br>
-      ● 成功後不需要 routing，可以想像為 R1 與 R2 二合為一。
+      ● IPsec VPN <span class="high">不需要 virtual IP address</span> (tunnel IP).
     </p>
     <h2>IKE</h2>
       <p>(Internet Key Exchange)<br>
@@ -164,11 +163,13 @@
       </p>
 
       <h2>Verify</h2>
-      <p>1) 用 PC1 ping PC2 應該直接通了：</p>
+      <p>1) 用 PC1 ping PC2 直接通了：</p>
       <p class="code">ping <span class="input">192.168.20.2</span></p>
       <p class="lilbr"><br></p>
       <p>2) 用 R1 的 .10.1 的 interface 來 ping，同樣是通：</p>
       <p class="code">ping <span class="input">192.168.20.2</span> source <span class="input">192.168.10.1</span></p>
+      <p class="lilbr"><br></p>
+      <p>假如內網多幾層 router，就需要用 dynamic route，此時在 IPsec VPN 上加一條 GRE tunnel 會方便設置。</p>
 
 
 
