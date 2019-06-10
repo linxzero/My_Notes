@@ -88,7 +88,43 @@
 
     <h2>GRE over IPsec</h2>
       <p>先建立 IPsec VPN，後在兩端 set GRE tunnel.</p>
-      <p class="code"></p>
+
+      <h3>Command</h3>
+      <p>簡單地先建立 IPsec VPN :</p>
+      <p class="code">
+        ip access-list extend <span class="input">VPN_traffic</span><br>
+        per ip any any
+      </p>
+      <p class="code">
+        crypto isakmp key <span class="input">ccie</span> add <span class="input">192.168.23.2</span><br>
+      </p>
+      <p class="code">
+        crypto isakmp policy <span class="input">10</span><br>
+        authentication pre-share
+      </p>
+      <p class="code">
+        crypto ipsec transform <span class="input">TS esp-3des</span>
+      </p>
+      <p class="code">
+        crypto map <span class="input">GOI</span> 10 ipsec-isakmp<br>
+        set peer <span class="input">192.168.23.2</span><br>
+        set transform-set <span class="input">TS</span><br>
+        match address <span class="input">VPN_traffic</span>
+      </p>
+      <p>Assign :</p>
+      <p class="code">
+        int <span class="input">e0/0</span><br>
+        crypto map <span class="input">GOI</span>
+      </p>
+      <p class="code">
+        
+      </p>
+      <p class="code">
+        
+      </p>
+      <p class="code">
+        
+      </p>
 
 
      
