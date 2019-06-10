@@ -87,10 +87,10 @@
 
 
     <h2>GRE over IPsec</h2>
-      <p>先建立 IPsec VPN，後在兩端 set GRE tunnel.</p>
+      <p>先 set IPsec VPN，後在兩端建立 GRE tunnel.</p>
 
       <h3>Command</h3>
-      <p>簡單地先建立 IPsec VPN :</p>
+      <p>簡單地先 set IPsec VPN :</p>
       <p class="code">
         ip access-list extend <span class="input">VPN_traffic</span><br>
         per ip any any
