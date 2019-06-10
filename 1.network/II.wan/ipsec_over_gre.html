@@ -62,6 +62,15 @@
     </p>
 
 
+    <h3>Steps</h3>
+    <p>1) 先建立 GRE tunnel，完成後在中間任何一個 interface 截取 ICMP packet，得到是明文的 packet。</p>
+    <p class="lilbr"><br></p>
+    <p>2) 在 tunnel 的兩端 interface 加入 ipsec profile，再次截取 packet，只能見到一大堆 ESP (Encapsulating Secuirty Payload)，密文的不知是甚麼 protocol 的 payload。</p>
+
+
+
+
+
 
 
 
