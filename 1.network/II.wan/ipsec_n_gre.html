@@ -75,8 +75,10 @@
     </p>
     <h3>總結</h3>
     <p>
-      1) 跟據 ACL，
-      End users 的 unicast packets 會加密，但 routing packet 就不加密。
+      1) 跟據 ACL，R11 ping R22 加密。但 R11 ping R2 e0/0 就不加密。<br>
+      2) 將所有 ACL 清空，所有 packet 都不加密。<br>
+      3) ACL 不對稱，不通。<br>
+      4) ACL any any，所有 packet 都加密，包括 R1 0/0 到 R2 e0/0.<br>
     </p>
 
     <h3>Topology</h3>
