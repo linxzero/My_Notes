@@ -30,6 +30,9 @@
     </ul>
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
+
+    <h3>Topology</h3>
+    <img src="images/ipsec_over_gre.png" class="big">
     
     <h2>IPsec over GRE</h2>
       <p>先建立 tunnel，後加密 tunnel 上的 ACL 所指 packet.</p>
@@ -81,9 +84,6 @@
         ● ACL any any，所有 packet 都加密，包括 R1 0/0 到 R2 e0/0.<br>
         ● 實測過，any any 下所有 routing packet 都加密。
       </p>
-
-      <h3>Topology</h3>
-      <img src="images/ipsec_over_gre.png" class="big">
 
 
     <h2>GRE over IPsec</h2>
