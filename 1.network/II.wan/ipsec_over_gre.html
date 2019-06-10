@@ -36,7 +36,7 @@
     <h3>Command</h3>
     <p>Pre-share key :</p>
     <p class="code">
-      crypto isakmp key <span class="input">ccie</span> add <span class="input">10.0.24.2</span><br>
+      crypto isakmp key <span class="input">ccie</span> add <span class="input">192.168.23.2</span><br>
     </p>
     <p>ISAKMP policy :</p>
     <p class="code">
@@ -68,7 +68,8 @@
     <p>2) 在 tunnel 的兩端 interface 加入 ipsec profile，再次截取 packet，只能見到一大堆 ESP (Encapsulating Secuirty Payload)，密文的不知是甚麼 protocol 的 payload。</p>
 
 
-
+    <h3>Topology</h3>
+    <img src="images/ipsec.PNG" class="big">
 
 
 
