@@ -30,11 +30,12 @@
     </ul>
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
-    
+    <h3>前言</h3>
+    <p>不用 map ，用 profile 形式。不需要 ACL.</p>
    
 
     <h3>Command</h3>
-    <p>Pre-share key :</p>
+    <p>Pre-share key : (用實體 IP !)</p>
     <p class="code">
       crypto isakmp key <span class="input">ccie</span> add <span class="input">192.168.23.2</span><br>
     </p>
@@ -47,7 +48,7 @@
     <p class="code">
       crypto ipsec transform-set <span class="input">TS esp-3des esp-sha-hmac</span>
     </p>
-    <p><span class="high">不用 map，用 profile</span> :</p>
+    <p>用 profile :</p>
     <p class="code">
       crypto ipsec profile <span class="input">PF</span><br>
       set transform-set <span class="input">TS</span>
