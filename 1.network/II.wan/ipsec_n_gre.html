@@ -31,11 +31,12 @@
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
 
-    <br>
+    <h3>前言</h3>
+    <p>GRE tunnel 方便於設置 dynamic route，而 IPsec VPN 可以幫資料加密，兩者可同時使用。本文附上兩個範例，只有地址設定上有少許不同，需要注意，其餘大致相同。</p>
     <img src="images/ipsec_over_gre.png" class="big">
     
     <h2>IPsec over GRE</h2>
-      <p>先建立 tunnel，後加密 tunnel 上的 packet.<br>(只有 ACL 所指的 packet 被加密。)</p>
+      <p>先建立 GRE tunnel，後在 tunnel 上 set IPsec VPN.</p>
       <h3>Command</h3>
       <p>簡單地先建立 GRE tunnel :</p>
       <p class="code">
@@ -78,7 +79,7 @@
       </p>
       <h3>總結</h3>
       <p>
-        ● 跟據 ACL，R11 ping R22 加密。但 R11 ping R2 e0/0 就不加密。<br>
+        ● 跟據 ACL，R11 ping R22 加密。而 R11 ping R2 e0/0 就不加密。<br>
         ● 將所有 ACL 清空，所有 packet 都不加密。<br>
         ● ACL 不對稱，不通。<br>
         ● ACL any any，所有 packet 都加密，包括 R1 0/0 到 R2 e0/0.<br>
