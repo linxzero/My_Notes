@@ -45,20 +45,31 @@
       net <span class="input">172.16.12.1</span>
       net <span class="input">192.168.10.1</span>
     </p>
+    <br>
     <p class="code">
-      
+      ip access-list extend <span class="input">VPN_traffic</span><br>
+      per ip <span class="input">192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255</span>
     </p>
     <p class="code">
-      
+      crypto isakmp key <span class="input">ccie</span> add <span style="background-color: yellow">172.16.12.2</span>
     </p>
     <p class="code">
-      
+      crypto isakmp policy <span class="input">10</span><br>
+      authentication pre-share
     </p>
     <p class="code">
-      
+      crypto ipsec transform <span class="input">TS esp-3des</span>
     </p>
     <p class="code">
-      
+      crypto map <span class="input">IOG</span> 10 ipsec-isakmp<br>
+      set peer <span class="input">172.16.12.2</span><br>
+      set transform-set <span class="input">TS</span>
+      match address <span class="input">VPN_traffic</span>
+    </p>
+    <br>
+    <p class="code">
+      int tunnel <span class="input">0</span><br>
+      crypto map <span class="input">IOG</span>
     </p>
 
 
