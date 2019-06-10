@@ -47,7 +47,7 @@
       <p class="code">
         router eigrp <span class="input">1</span><br>
         no auto-summary<br>
-        net <span class="input">172.16.12.1</span>
+        net <span class="input">172.16.12.1</span><br>
         net <span class="input">192.168.10.1</span>
       </p>
       <p>然後 set IPsec VPN :</p>
@@ -116,16 +116,19 @@
         int <span class="input">e0/0</span><br>
         crypto map <span class="input">GOI</span>
       </p>
+      <p>然後建立 GRE tunnel :</p>
       <p class="code">
-        
+        int tunnel <span class="input">0</span><br>
+        ip add <span class="input">172.16.12.1 255.255.255.0</span><br>
+        tunnel source <span class="input">e0/0</span><br>
+        tunnel destin <span class="input">192.168.23.2</span>
       </p>
       <p class="code">
-        
+        router eigrp <span class="input">1</span><br>
+        no auto-summary<br>
+        net <span class="input">172.16.12.1</span><br>
+        net <span class="input">192.168.10.1</span>
       </p>
-      <p class="code">
-        
-      </p>
-
 
      
 
