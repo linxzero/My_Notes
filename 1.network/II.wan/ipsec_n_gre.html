@@ -33,6 +33,8 @@
     
     <h2>IPsec over GRE</h2>
     <p>先建立 tunnel，後加密 tunnel 上的 unicast packet.</p>
+    <h3>Command</h3>
+    <p>簡單地先建立 GRE tunnel :</p>
     <p class="code">
       int tunnel <span class="input">0</span><br>
       ip add <span class="input">172.16.12.1 255.255.255.0</span><br>
@@ -45,13 +47,13 @@
       net <span class="input">172.16.12.1</span>
       net <span class="input">192.168.10.1</span>
     </p>
-    <br>
+    <p>然後 set IPsec VPN :</p>
     <p class="code">
       ip access-list extend <span class="input">VPN_traffic</span><br>
       per ip <span class="input">192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255</span>
     </p>
     <p class="code">
-      crypto isakmp key <span class="input">ccie</span> add <span style="background-color: yellow">172.16.12.2</span>
+      crypto isakmp key <span class="input">ccie</span> add <span class="input">172.16.12.2</span>
     </p>
     <p class="code">
       crypto isakmp policy <span class="input">10</span><br>
@@ -63,14 +65,16 @@
     <p class="code">
       crypto map <span class="input">IOG</span> 10 ipsec-isakmp<br>
       set peer <span class="input">172.16.12.2</span><br>
-      set transform-set <span class="input">TS</span>
+      set transform-set <span class="input">TS</span><br>
       match address <span class="input">VPN_traffic</span>
     </p>
-    <br>
+    <p>Assign :</p>
     <p class="code">
       int tunnel <span class="input">0</span><br>
       crypto map <span class="input">IOG</span>
     </p>
+    <h3>總結</h3>
+    <p>End users 的 unicast packets 會加密，但 routing packet 就不加密。</p>
 
 
     <h2>GRE over IPsec</h2>
