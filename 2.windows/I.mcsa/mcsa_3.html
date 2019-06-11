@@ -13,7 +13,7 @@
         $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
       });
     </script>
-    <title>2. Local Storage</title>
+    <title>3. Enterprise Storage Solutions</title>
     <style>
       header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
       li.navi a#I{background-color: #4CAF50;} /* which one be green */
@@ -22,7 +22,7 @@
 <!-------------------------------------------------->
   <body>
     <header>
-      <p onclick="hidebar()" id="title">2. Local Storage</p>
+      <p onclick="hidebar()" id="title">3. Enterprise Storage Solutions</p>
     </header>
     <ul class="navi">
       <span class="navi_span_home"></span>
@@ -31,54 +31,8 @@
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
     
-    <h2>Partition Table Format</h2>
-      <h3>MBR (master boot record)</h3>
-      <p>自1980s，最多 4 個 primary partition，每個 partition 最大 2TB。</p>
-
-      <h3>GPT (globally unique identifier)</h3>
-      <p>自2000s，最多 128 個 partition，每個 partition 最大 18EB。 (GB→TB→PB→EB)</p>
 
 
-    <h2>Disk Type</h2>
-      <h3>Basic disk</h3>
-      <p>正常用法，可以分 partition。</p>
-      <h3>Dynamic disk</h3>
-      <p>可以在電腦正在運行的時侯設置 RAID，在 disk manager 入面 set。實際使用只比在 BIOS 設置的 RAID 慢少許。Dynamic disk 分的叫做 volume 而不是 partition。<br>Basic disk 可以轉成 Dynamic disk，但 Dynamic 就不能轉成 Basic。</p>
-
-
-    <h2>File System</h2>
-      <h3>FAT</h3>
-      <p>沒有任何 security，支持容量少。<br>(FAT 支持 2GB，FAT32 支持 2TB，exFAT 支持大於 2TB)</p>
-      <h3>NTFS</h3>
-      <p>
-        ● Reliability – 對於突然斷電的保護更好<br>
-        ● Permission<br>
-        ● Encryption<br>
-        ● DC<br>
-        ● Compression<br>
-        ● 可以 Extend or Shrink
-      </p>
-      <h3>ReFS</h3>
-      <p>NTFS 的加强版，各項都强啲。但只可以 Extend。</p>
-
-
-    <h2>Virtual Disk</h2>
-      <h3>.vhd</h3>
-      <p>舊版</p>
-      <h3>.vhdx</h3>
-      <p>Windows 8 or later, Windows server 2012 or later, 你就可以用 .vhdx。支持更大容量，最大去到 64TB。</p>
-      <p>(可以改 sector size，即每一次最少讀多大 size 的內容，你可以選擇 512 bytes 到 64 KB。)</p>
-
-
-    <h2>Volume Type</h2>
-      <p>(用 Dynamic disk 才可以揀 volume type)</p>
-      <p>
-        ● Simple – 普通盤<br>
-        ● Spanned – 跨兩隻盤，最多可以跨到32隻<br>
-        ● Striped – RAID-0<br>
-        ● Mirrored – RAID-1<br>
-        ● RAID-5 – 浪費1/n，建基在 RAID-0 上，但有容錯 (有一隻做 partiy)
-      </p>
 
 
 
