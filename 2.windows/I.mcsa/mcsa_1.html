@@ -78,7 +78,7 @@
 
 
     <h3>Remote Management</h3>
-    <p>1) RSAT (Remote Server Administration Tools)<br>2) Windows Powershell<br>3) Remote desktop<br>4) GPO (group policy), centralized control in same domain.</p>
+    <p>1) RSAT (remote server administration tools)<br>2) Windows Powershell<br>3) Remote desktop<br>4) GPO (group policy), centralized control in same domain.</p>
 
 
     <h3>Service Channel</h3>
@@ -96,6 +96,27 @@
       2) MDT (Microsoft Deployment Toolkit)<br>
       That's free from microsoft, task sequencing, different apps installed in different image.
     </p>
+
+
+    <h3>Migrating Server</h3>
+    <p>ADMT (active directory migration tool)<br>When migrating server roles across domain of forest, use tool ADMT, that's free.</p>
+
+
+    <h3>Activation</h3>
+    <table>
+      <tr>
+        <td style="text-align: left" width="20%">1) KMS</td>
+        <td style="text-align: left">舊款機用，先起一個 KMS host，然後 KMS client 會自己去搵 host 激活，免卻了每部機都去搵 Microsoft 來激活。有最低消費，最少要激活 5 部 server 和 25 部 client。</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">2) AD-Based</td>
+        <td style="text-align: left">新款機可以用，用 AD DS (active directory domain services) 來儲存 activation objects，然後 clients 自己搵 AD DS 獲得 activation objects，同樣免卻了每部機搵微軟。激活的機要是 Windows Server 2012 以上，或 Windows 8 以上。而 AD DS schema 要是 Windows Server 2012 以上。</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">3) MAK</td>
+        <td style="text-align: left">(multiple activation key)，其實是一條 volume license key，當你公司的電腦有很多不在公司，分散在各地，或者當地沒有網絡，就可用這方法。</td>
+      </tr>
+    </table>
 
 
 
