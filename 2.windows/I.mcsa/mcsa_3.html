@@ -34,7 +34,7 @@
     <h3>DAS (direct-attached storage)</h3>
     <p>
       就是本地直連硬盤。<br>
-      ● 好處：easy to configure，inexpensive<br>
+      ● 好處：easy to configure，inexpensive.<br>
       ● 壞處：server 之間的硬盤互相孤立，而部署起來也欠缺靈活性，擴展亦有限。
     </p>
 
@@ -49,20 +49,20 @@
     <h3>SAN （storage area network)</h3>
     <p>
       比 NAS 高級少少，可以用到 cluster 等功能。<br>
-      ● 好處：high level of redundancy<br>
-      ● 壞處：more expensive, requires specialized skills
+      ● 好處：high level of redundancy.<br>
+      ● 壞處：more expensive, requires specialized skills.
     </p>
     <p class="lilbr"><br></p>
     <p>
-      需要用到一些特別的設備<br>
+      需要用到一些特別的設備：<br>
       ● HBA (host bus adapter)：特別的介面卡 (或 switch)，可以做 redundancy.<br>
       ● LUN (logical unit number)：SAN 用來儲存資料的邏輯盤叫做 LUN.
     </p>
     <p class="lilbr"><br></p>
     <p>
       註：現在 NAS 與 SAN 都難以區分，就只有接入方式不同：<br>
-      SAN 用 Fibre Channel over Ethernet, or iSCSI<br>
-      NAS 用 SMB, or NFS
+      ● SAN 用 Fibre Channel over Ethernet, or iSCSI。<br>
+      ● NAS 用 SMB, or NFS。
     </p>
 
     <h3>Scenario</h3>
@@ -82,7 +82,7 @@
     <p>所需元件：<br>
       ● SAN，<br>
       ● HBA card (attached to computer)，<br>
-      ● Fibre Channel switch</p>
+      ● Fibre Channel switch。</p>
 
     <h3>iSCSI</h3>
     <p>又稱為 IP-SAN，所需元件：<br>
@@ -101,7 +101,7 @@
     <p>
       SMB 的 share profile :<br>
       ● Quick：一般使用。<br>
-      ● Advanced：比 Quick 多了 data classification 和 quota，需要先安裝 FSRM. (file server resource manager)<br>
+      ● Advanced：比 Quick 多了 data classification 和 quota，需要先安裝 FSRM。(file server resource manager)<br>
       ● Application：適合用於 Hyper-V 和 database 等程式。
     </p>
     <table>
