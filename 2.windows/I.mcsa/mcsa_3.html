@@ -91,14 +91,68 @@
       ● iSCSI initiators (即係 client)，<br>
       ● iSCSI qualified name / IQN (即係 iSCSI device 的 ID)。</p>
 
-    <h3></h3>
-    <p></p>
+    <h3>MPIO</h3>
+    <p>很多網卡都內建的功能，Multi-Path IO，一張網卡有兩個 RJ45 (兩個 IP)，backup 連去 server 條 path。</p>
 
-    <h3></h3>
-    <p></p>
+    <h3>Scale-Out File Server</h3>
+    <p>多個 file server 同時連着一個大 volume，client 就連上隨便一個 file server 都可以存取到 volume 內的資料。</p>
 
-    <h3></h3>
-    <p></p>
+    <h3>SMB</h3>
+    <p>
+      SMB 的 share profile :<br>
+      ● Quick：一般使用。<br>
+      ● Advanced：比 Quick 多了 data classification 和 quotas，需要先安裝 FSRM. (file server resource manager)<br>
+      ● Application：適合用於 Hyper-V 和 database 等程式。
+    </p>
+    <table>
+      <tr>
+        <td>Share Type</td>
+        <td width="15%">Quick</td>
+        <td width="15%">Advanced</td>
+        <td width="15%">Application</td>
+      </tr>
+      <tr>
+        <td>Access-Based enumeration</td>
+        <td>O</td>
+        <td>O</td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>Share caching</td>
+        <td>O</td>
+        <td>O</td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>Encrypted data access</td>
+        <td>O</td>
+        <td>O</td>
+        <td>O</td>
+      </tr>
+      <tr>
+        <td>Default data classification</td>
+        <td>X</td>
+        <td>O</td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>Quota</td>
+        <td>X</td>
+        <td>O</td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>Permission</td>
+        <td>O</td>
+        <td>O</td>
+        <td>O</td>
+      </tr>
+    </table>
+
+
+
+
+
 
 
     </div>
