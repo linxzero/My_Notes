@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/note_style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/my_notes/logo/windows.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
+      });
+    </script>
+    <title>4. Storage Space & Data Deduplication</title>
+    <style>
+      header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
+      li.navi a#I{background-color: #4CAF50;} /* which one be green */
+    </style>
+  </head>
+<!-------------------------------------------------->
+  <body>
+    <header>
+      <p onclick="hidebar()" id="title">4. Storage Space & Data Deduplication</p>
+    </header>
+    <ul class="navi">
+      <span class="navi_span_home"></span>
+      <span class="navi_span"></span>
+    </ul>
+<!--D1----------------------------------------------> 
+    <div class="block" onclick="hidebar()">
+    
+    
+  
+   
+
+
+
+
+
+
+    </div>
+<!--------------------------------------------------> 
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
+    <script>
+      function hidebar(){
+        $(function(){
+        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
+      });
+      };
+
+      // When the user scrolls down 520px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+          document.getElementById("TopBtn").style.display = "block";
+        } else {
+          document.getElementById("TopBtn").style.display = "none";
+        }
+      };
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      };
+    </script>  
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
