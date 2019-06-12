@@ -34,29 +34,29 @@
     <h3>DAS (direct-attached storage)</h3>
     <p>
       就是本地直連硬盤。<br>
-      好處：easy to configure，inexpensive<br>
-      壞處：server 之間的硬盤互相孤立，而部署起來也欠缺靈活性，擴展亦有限。
+      ● 好處：easy to configure，inexpensive<br>
+      ● 壞處：server 之間的硬盤互相孤立，而部署起來也欠缺靈活性，擴展亦有限。
     </p>
 
     <h3>NAS (network attached storage)</h3>
     <p>
       作為 file server.<br>
-      Windows : SMB / CIFS<br>
-      Linux : NFS<br>
-      壞處：比 SAN 慢，對一些 data-intensive 的情況不太適用，比如 SQL server.
+      ● Windows : SMB / CIFS<br>
+      ● Linux : NFS<br>
+      ● 壞處：比 SAN 慢，對一些 data-intensive 的情況不太適用，比如 SQL server.
     </p>
 
     <h3>SAN （storage area network)</h3>
     <p>
       比 NAS 高級少少，可以用到 cluster 等功能。<br>
-      好處：high level of redundancy<br>
-      壞處：more expensive, requires specialized skills
+      ● 好處：high level of redundancy<br>
+      ● 壞處：more expensive, requires specialized skills
     </p>
     <p class="lilbr"><br></p>
     <p>
       需要用到一些特別的設備<br>
-      HBA (host bus adapter)：特別的介面卡 (或 switch)，可以做 redundancy.<br>
-      LUN (logical unit number)：SAN 用來儲存資料的邏輯盤叫做 LUN.
+      ● HBA (host bus adapter)：特別的介面卡 (或 switch)，可以做 redundancy.<br>
+      ● LUN (logical unit number)：SAN 用來儲存資料的邏輯盤叫做 LUN.
     </p>
     <p class="lilbr"><br></p>
     <p>
@@ -67,20 +67,38 @@
 
     <h3>Scenario</h3>
     <p>
-      DAS：最簡單，少成本。<br>
-      NAS：互補了 DAS 和 SAN 的不足。<br>
-      SAN：最高效率，最多功能。<br>
+      ● DAS：最簡單，少成本。<br>
+      ● NAS：互補了 DAS 和 SAN 的不足。<br>
+      ● SAN：最高效率，最多功能。<br>
     </p>
 
     <h3>Block-level vs. File-level storage</h3>
     <p>
-      Block-level storage：傳輸快。<br>
-      File-level storage：傳輸慢。
+      ● Block-level storage：傳輸快。<br>
+      ● File-level storage：傳輸慢。
     </p>
+
+    <h3>Fibre channel</h3>
+    <p>所需元件：<br>
+      ● SAN，<br>
+      ● HBA card (attached to computer)，<br>
+      ● Fibre Channel switch</p>
+
+    <h3>iSCSI</h3>
+    <p>又稱為 IP-SAN，所需元件：<br>
+      ● IP network，<br>
+      ● iSCSI targets (即係 server)，<br>
+      ● iSCSI initiators (即係 client)，<br>
+      ● iSCSI qualified name / IQN (即係 iSCSI device 的 ID)。</p>
 
     <h3></h3>
     <p></p>
 
+    <h3></h3>
+    <p></p>
+
+    <h3></h3>
+    <p></p>
 
 
     </div>
