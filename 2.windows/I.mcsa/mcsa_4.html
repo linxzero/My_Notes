@@ -32,15 +32,23 @@
     <div class="block" onclick="hidebar()">
     
     <h3>Storage Space</h3>
-    <p>所有 SSD，HDD，USB，SAS 大集合，成為一個 storage pool，再用它生成 virtual disk (or storage space)，之後再間盤。</p>
+    <p>所有 SSD，HDD，USB，SAS 大集合，成為一個 storage pool，再用它生成 virtual disk (or storage space)，之後再分盤。</p>
     <p class="lilbr"><br></p>
-    <p>Physical disks ⇒ Storage pool ⇒ Virtual disk ⇒ Disk drive</p>
+    <p class="note">Physical disks ⇒ Storage pool ⇒ Virtual disk ⇒ Disk drive</p>
     <p class="lilbr"><br></p>
-    <p></p>
 
-
-    <h3></h3>
-    <p></p>
+    <h3>Enterprise storage needs</h3>
+    <p>
+      Storage space 事關重大，所以你可以采用以下方案來保障服務質素：<br>
+      ● Mirror/Parity support   (RAID 1)<br>
+      ● Data Stripping   (RAID 0)<br>
+      ● Enclosure Awareness<br>
+      ● Storage Tiering   (分 SSD 和 HDD 兩層，常用放在 SSD，不常用放 HDD，詳細看 L4-24)<br>
+      ● Storage Replication<br>
+      ● Data Deduplication<br>
+      ● Data Encryption<br>
+      ● Performance Analysis
+    </p>
 
     <h3></h3>
     <p></p>
