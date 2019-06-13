@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/my_notes/styles/note_style.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/note_style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/my_notes/logo/windows.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
+      });
+    </script>
+    <title>5. Installing Hyper-V</title>
+    <style>
+      header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
+      li.navi a#I{background-color: #4CAF50;} /* which one be green */
+    </style>
+  </head>
+<!-------------------------------------------------->
+  <body>
+    <header>
+      <p onclick="hidebar()" id="title">5. Installing Hyper-V</p>
+    </header>
+    <ul class="navi">
+      <span class="navi_span_home"></span>
+      <span class="navi_span"></span>
+    </ul>
+<!--D1----------------------------------------------> 
+    <div class="block" onclick="hidebar()">
+    
+    <h3>Storage Space</h3>
+    <p>所有 SSD，HDD，USB，SAS 大集合，成為一個 storage pool，再用它生成 virtual disk (or storage space)，之後再分盤。</p>
+    <p class="lilbr"><br></p>
+    <p class="note">Physical disks ⇒ Storage pool ⇒ Virtual disk ⇒ Disk drive</p>
+    <p class="lilbr"><br></p>
+
+    <h3>Enterprise storage needs</h3>
+    <p>
+      Storage space 事關重大，所以你可以采用以下方案來保障服務質素：<br>
+      ● Mirror/Parity support   (RAID 1)<br>
+      ● Data Stripping   (RAID 0)<br>
+      ● Enclosure Awareness<br>
+      ● Storage Tiering   (分 SSD 和 HDD 兩層，常用放在 SSD，不常用放 HDD，詳細看 L4-24)<br>
+      ● Storage Replication<br>
+      ● Data Deduplication<br>
+      ● Data Encryption<br>
+      ● Performance Analysis
+    </p>
+    <br>
+
+    <h3>Data Deduplication</h3>
+    <p>將多個 files 中重複的部份，變成一個 chunk，只存一份，可以節省空間。</p>
+    <img src="images/data_deduplication.png" class="big">
+
+    <h3>Role Service of Data Deduplication</h3>
+    <p>
+      ● Optimization：file 儲存了多少天之後才做 data deduplication。<br>
+      ● Scrubbing：當有很多 file 用同一個 chunk 時，會為這個 chunk 做 mirror。
+    </p>
+    <p class="lilbr"><br></p>
+
+    <p>(如果想將 Data Deduplication 取消，把 file 打返成原整一個 file，需要一些部驟，詳見 4-37)</p>
+  
+  
+   
+
+
+
+
+
+
+    </div>
+<!--------------------------------------------------> 
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
+    <script>
+      function hidebar(){
+        $(function(){
+        $(".navi_span_home").load("/my_notes/navigations/navi_bar_home.html");
+        $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
+      });
+      };
+
+      // When the user scrolls down 520px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+          document.getElementById("TopBtn").style.display = "block";
+        } else {
+          document.getElementById("TopBtn").style.display = "none";
+        }
+      };
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      };
+    </script>  
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
