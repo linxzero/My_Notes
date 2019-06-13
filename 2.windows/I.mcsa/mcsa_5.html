@@ -31,42 +31,10 @@
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
     
-    <h3>Storage Space</h3>
-    <p>所有 SSD，HDD，USB，SAS 大集合，成為一個 storage pool，再用它生成 virtual disk (or storage space)，之後再分盤。</p>
-    <p class="lilbr"><br></p>
-    <p class="note">Physical disks ⇒ Storage pool ⇒ Virtual disk ⇒ Disk drive</p>
-    <p class="lilbr"><br></p>
-
-    <h3>Enterprise storage needs</h3>
-    <p>
-      Storage space 事關重大，所以你可以采用以下方案來保障服務質素：<br>
-      ● Mirror/Parity support   (RAID 1)<br>
-      ● Data Stripping   (RAID 0)<br>
-      ● Enclosure Awareness<br>
-      ● Storage Tiering   (分 SSD 和 HDD 兩層，常用放在 SSD，不常用放 HDD，詳細看 L4-24)<br>
-      ● Storage Replication<br>
-      ● Data Deduplication<br>
-      ● Data Encryption<br>
-      ● Performance Analysis
-    </p>
-    <br>
-
-    <h3>Data Deduplication</h3>
-    <p>將多個 files 中重複的部份，變成一個 chunk，只存一份，可以節省空間。</p>
-    <img src="images/data_deduplication.png" class="big">
-
-    <h3>Role Service of Data Deduplication</h3>
-    <p>
-      ● Optimization：file 儲存了多少天之後才做 data deduplication。<br>
-      ● Scrubbing：當有很多 file 用同一個 chunk 時，會為這個 chunk 做 mirror。
-    </p>
-    <p class="lilbr"><br></p>
-
-    <p>(如果想將 Data Deduplication 取消，把 file 打返成原整一個 file，需要一些部驟，詳見 4-37)</p>
-  
-  
-   
-
+    <h3>Structure</h3>
+    <p>Hyper-V 是 Hardware Level / Server Level 的虛擬技術，VMs 共用整部主機的硬件。Hardware virtualization 比 OS-level virtualization 快。</p>
+    <img src="images/hardware_virtualization.png" class="big">
+    
 
 
 
