@@ -107,8 +107,95 @@
       </tr>
     </table>
 
+    <h3>約束</h3>
+    <table>
+      <tr>
+        <td>域完整性</td>
+        <td>某一列都是(8)位，或者都是男/女</td>
+        <td>檢查約束、默認值、非空約束</td>
+      </tr>
+      <tr>
+        <td>實體完整性</td>
+        <td>行與行之間的數據不能重覆</td>
+        <td>唯一約束、主鍵約束、標識列</td>
+      </tr>
+      <tr>
+        <td>引用完整性</td>
+        <td>要求與第二張表的數據有正確性</td>
+        <td>外鍵約束</td>
+      </tr>
+      <tr>
+        <td>自定義完整性</td>
+        <td></td>
+        <td>用觸發器檢查信用值</td>
+      </tr>
+    </table>
 
-
+    <h3>數據類型</h3>
+    <table>
+      <tr>
+        <td rowspan="3">整數</td>
+        <td>bigint</td>
+        <td>(-2^63) ~ (2^63)-1</td>
+      </tr>
+      <tr>
+        <td>int</td>
+        <td>(-2^31) ~ (2^31)-1</td>
+      </tr>
+      <tr>
+        <td>smallint</td>
+        <td>(-2^15) ~ (2^15)-1</td>
+      </tr>
+      <tr>
+        <td rowspan="3">小數</td>
+        <td>decimal</td>
+        <td>(-10^38)+1 ~ (10^38)-1</td>
+      </tr>
+      <tr>
+        <td>numeric</td>
+        <td>同上</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>(-1.79E+308) ~ (1.79E+308)</td>
+      </tr>
+      <tr>
+        <td rowspan="2">貨幣</td>
+        <td>money</td>
+        <td>(-2^63) ~ (2^63)-1</td>
+      </tr>
+      <tr>
+        <td>smallmoney</td>
+        <td>(-214748.3648) ~ (214748.3647)</td>
+      </tr>
+      <tr>
+        <td>固定長度字符</td>
+        <td>char</td>
+        <td>如果設定為 5，"Ben" 會變成 "Ben__"</td>
+      </tr>
+      <tr>
+        <td rowspan="2">可變長度字符</td>
+        <td>varchar</td>
+        <td>如果設定為 5，"Ben" 就只是 "Ben"</td>
+      </tr>
+      <tr>
+        <td>nvarchar</td>
+        <td>用雙字節結構，方便用中文字</td>
+      </tr>
+      <tr>
+        <td>文章</td>
+        <td>text</td>
+        <td>2147483647 個字符</td>
+      </tr>
+      <tr>
+        <td>時間</td>
+        <td>datetime</td>
+        <td></td>
+      </tr>
+    </table>
+    <p>
+      ● 例如：numeric(15,2)，即整數 13 位，小數 2 位。<br>
+    </p>
 
 
     </div>
