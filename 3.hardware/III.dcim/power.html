@@ -31,7 +31,76 @@
 <!--D1----------------------------------------------> 
 		<div class="block" onclick="hidebar()">
 
+		<h2>Uptime Institute's Tier</h2>
+		<table>
+			<tr style="background-color: #3A3A3A; color: #F4F6F7">
+				<td>Tier</td>
+				<td></td>
+				<td>Uptime</td>
+				<td>Devices</td>
+				<td>Meaning</td>
+				<td>Downtime</td>
+			</tr>
+			<tr>
+				<td>Tier 1</td>
+				<td>基本</td>
+				<td>99.671%</td>
+				<td>UPS，冷氣，Generator</td>
+				<td>Non-redundant capacity</td>
+				<td>28.8hr</td>
+			</tr>
+			<tr>
+				<td>Tier 2</td>
+				<td>冗餘</td>
+				<td>99.749%</td>
+				<td>模塊化 UPS，冷氣，水泵，Generator</td>
+				<td>Partial redundancy in power and cooling</td>
+				<td>22hr</td>
+			</tr>
+			<tr>
+				<td>Tier 3</td>
+				<td>並行可維護</td>
+				<td>99.982%</td>
+				<td>同上</td>
+				<td>Tier 2 + Dual-power</td>
+				<td>1.6hr</td>
+			</tr>
+			<tr>
+				<td>Tier 4</td>
+				<td>容錯</td>
+				<td>99.995%</td>
+				<td>同上</td>
+				<td>All components are fully fault-tolerant (2N+1)</td>
+				<td>26.3min</td>
+			</tr>
+		</table>
 
+
+
+
+		<h3>名詞解釋</h3>
+		<table>
+			<tr>
+				<td style="background-color: #dbdbdb">N</td>
+				<td>Normal，N 電，市電</td>
+			</tr>
+			<tr>
+				<td style="background-color: #dbdbdb">E</td>
+				<td>Emergency，E 電，發電機電</td>
+			</tr>
+			<tr>
+				<td style="background-color: #dbdbdb">PDU</td>
+				<td>Power Distribution Unit，插排</td>
+			</tr>
+			<tr>
+				<td style="background-color: #dbdbdb">MBP</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td style="background-color: #dbdbdb">ATS</td>
+				<td>Automatic Transfer Switch，輸入接發電機和市電，輸出接負載，作用是在兩個輸入之間自動跳轉</td>
+			</tr>
+		</table>
 
 
 		</div>
