@@ -205,6 +205,9 @@
 		<p>只要收到 BPDU 就將 f0/10 變成 Error Disable，不管你奪不奪位。</p>
 
 
+	<h2>MSTP</h2>
+		<p>(Multiple Spanning Tree Protocol)，其實去到 CCIE 先教，但係政府工有考，所以輕輕講一下。</p>
+		<p>MSTP 又叫 802.1s，繼承了 RSTP 的 Synchronization Process 來達成高速收斂，但比 RSTP 更不花硬件資源。RSTP 是 per-VLAN 的，即 100 個 VLAN 就有 100 個 spanning tree topology，因此 VLAN 越多，switch 的 CPU 和 RAM 就越大壓力。MSTP 引入 instance 概念，把多個 VLAN 分派到 instance 內，只生成一個 spanning tree topology，例如前 50 個 VLAN 分派到 instance 1，後 50 個 VLAN 分派到 instance 2，總的 spanning tree topology 就只有 2 個。</p>
 
 
 
