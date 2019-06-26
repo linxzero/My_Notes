@@ -31,37 +31,123 @@
 <!--D1----------------------------------------------> 
 		<div class="block" onclick="hidebar()">
 		<h2>CDP</h2>
-		<p>Cisco Discovery Protocol</p>
-		<p class="code">
-			cdp run<br>
-			no cdp run<br>
-			int <span class="input">g0/0</span><br>
-			no cdp enable
-		</p>
-		<p>● By default, cdp is running.</p>
-		<p class="lilbr"><br></p>
-		<p class="code">
-			show cdp neighbors<br>
-			show cdp neighbors detail<br>
-			show cdp interface
-		</p>
+			<p>(Cisco Discovery Protocol)</p>
+			<p class="code">
+				cdp run<br>
+				no cdp run<br>
+				int <span class="input">g0/0</span><br>
+				no cdp enable
+			</p>
+			<p>● By default, cdp is running.</p>
+			<p class="lilbr"><br></p>
+			<p class="code">
+				show cdp neighbors<br>
+				show cdp neighbors detail<br>
+				show cdp interface
+			</p>
 
 
 		
 		<h2>LLDP</h2>
-		<p>Link Layer Discovery Protocol</p>
-		<p class="code">
-			lldp run<br>
-			int <span class="input">g0/0</span><br>
-			lldp transmit<br>
-			lldp receive
-		</p>
-		<p>
-			● "transmit" only transmit.<br>
-			● "receive" only receive.
-		</p>
-		<p class="lilbr"><br></p>
-		<p>Cisco devices also support LLDP, which is a vendor-neutral neighbor discovery protocol similar to CDP. LLDP works with network devices, such as routers, switches, and wireless LAN access points. This protocol advertises its identity and capabilities to other devices and receives the information from a physically connected Layer 2 device.</p>
+			<p>(Link Layer Discovery Protocol)</p>
+			<p class="code">
+				lldp run<br>
+				int <span class="input">g0/0</span><br>
+				lldp transmit<br>
+				lldp receive
+			</p>
+			<p>
+				● "transmit" only transmit.<br>
+				● "receive" only receive.
+			</p>
+		
+			<h3>概述</h3>
+			<p>
+				● LLDP 是 IEEE 的鄰居發現協議，Cisco 設備都支援 LLDP。<br>
+				● LLDP 在網絡設備上工作，例如 router、switch、AP 等等。<br>
+				● 網絡設備把自己的設備信息組織成 TLV (Type/Length/Value，類型/長度/值) 封裝在 LLDPDU (LLDP Data Unit) 中發送給<span class="high">直連</span>的鄰居，同時把鄰居發送過來的 LLDPDU 以標準 MIB (Management Information Base) 的形式保存起來。<br>
+				● 通過 LLDP，設備可以保存和管理自己以及直連鄰居的信息，以供管理系統查詢和判斷鏈路的狀況。
+			</p>
+
+			<h3>信息類型</h3>
+			<p>TLV 內的信息可以包括：<br>
+				● 基本 TLV<br>
+				● 組織定義 TLV<br>
+				● MED (Media Endpoint Discovery)
+			</p>
+			<table>
+				<tr style="background-color: #3A3A3A; color: #F4F6F7">
+					<td>TLV type</td>
+					<td>TLV name</td>
+					<td>說明</td>
+					<td width="8%">必須</td>
+				</tr>
+				<tr>
+					<td>0</td>
+					<td>End Of LLDPDU</span></td>
+					<td>標誌 LLDPDU 結束。</td>
+					<td>O</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Chassis ID</span></td>
+					<td>發送設備的橋 MAC 位址。</td>
+					<td>O</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Port ID</span></td>
+					<td>用來標識 LLDPDU 發送端的埠。當設備不發送 MED TLV 時，內容為埠名稱。當設備發送 MED TLV 時，內容為埠的 MAC 位址，沒有埠 MAC 時使用橋 MAC。</td>
+					<td>O</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Time To Live</span></td>
+					<td>本設備資訊在鄰居設備上的存活時間。</td>
+					<td>O</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Port Description</span></td>
+					<td>乙太網埠的描述字串。</td>
+					<td>X</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>System Name</span></td>
+					<td>設備的名稱。</td>
+					<td>X</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>System Description</span></td>
+					<td>系統描述。</td>
+					<td>X</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>System Capabilities</span></td>
+					<td>系統的主要功能以及有哪些主要功能被使能。</td>
+					<td>X</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Management Address</span></td>
+					<td>管理位址，以及對應的介面號和 OID (Object Identifier)。管理位址內容為使用者指定的 IP 位址，如果使用者沒有配置，管理位址為介面允許通過且 VLAN ID 值最小的 VLAN 的主 IP 地址，若 VLAN ID 值最小的 VLAN 未配置主 IP 位址，管理地址值為 127.0.0.1。</td>
+					<td>X</td>
+				</tr>
+			</table>
+			<h3></h3>
+			<p></p>
+
+			<h3></h3>
+			<p></p>
+
+			<h3></h3>
+			<p></p>
+
+
+
 
 
 
