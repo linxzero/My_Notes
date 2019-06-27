@@ -63,9 +63,10 @@
 		
 			<h3>概述</h3>
 			<p>
-				● LLDP 是 IEEE 的鄰居發現協議，Cisco 設備都支援 LLDP。<br>
-				● LLDP 在網絡設備上工作，例如 router、switch、AP 等等。<br>
-				● 網絡設備把自己的設備信息組織成 TLV (Type/Length/Value，類型/長度/值) 封裝在 LLDPDU (LLDP Data Unit) 中發送給<span class="high">直連</span>的鄰居，同時把鄰居發送過來的 LLDPDU 以標準 MIB (Management Information Base) 的形式保存起來。<br>
+				● LLDP 是 IEEE 的 Layer 2 discovery protocol，Cisco 設備都支援 LLDP。<br>
+				● Used by network devices for advertising identity, capabilities and neighbors.<br>
+				● 網絡設備把自己的設備信息組織成 TLV (Type/Length/Value，類型/長度/值) 封裝在 LLDPDU (LLDP Data Unit) 中發送給<span class="high">直連</span>的鄰居。<br>
+				● 鄰居發送過來的 LLDPDU 以標準 MIB (Management Information Base) 的形式保存起來。<br>
 				● 通過 LLDP，設備可以保存和管理自己以及直連鄰居的信息，以供管理系統查詢和判斷鏈路的狀況。
 			</p>
 
