@@ -47,7 +47,10 @@
         <p>"3389" is the default TCP port used for RDP (Remote Desktop Protocol).</p>
         <h3>2.1 Change Port (optional)</h3>
         <p>For more security you could change the port to anyone else, from 49152 - 65535, for example :</p>
-        <p class="code">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp<br>PortNumber → <span class="input">50001</span></p>
+        <p class="code">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</p>
+        <p>
+          ● PortNumber → 50001
+        </p>
         <img src="images/change port.PNG" alt="" class="little">
         <p>The port changing will take effect after restart of computer.</p>
         <h3>3. Firewall</h3>
