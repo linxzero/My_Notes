@@ -31,6 +31,54 @@
 <!--D1----------------------------------------------> 
 		<div class="block" onclick="hidebar()">
 
+		<table>
+			<tr style="background-color: #3A3A3A; color: #F4F6F7">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="4">Modulation (調變技術)</td>
+				<td>ASK</td>
+				<td>用振幅大小來表示 0 與 1</td>
+				<td rowspan="3"></td>
+			</tr>
+			<tr>
+				<td>FSK</td>
+				<td>用頻率大小來表示 0 與 1</td>
+			</tr>
+			<tr>
+				<td>PSK</td>
+				<td>用相位的分別來表示 0 與 1</td>
+			</tr>
+			<tr>
+				<td>QAM</td>
+				<td>同時用振幅大小與相位分別來表示 0 與 1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="4">Multiplex (多工技術)</td>
+				<td>TDMA</td>
+				<td>Time Division Multiplex Access，每個 time frame (週期) 內，用戶只能利用他 time slot 內的時間傳送資料。例如第二代 GSM 系統將 frame 切割成 8 個 slots，所以總共有 8 個用戶輪流使用，每人用 1/8 time frame。</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>FDMA</td>
+				<td>Frequency Division Multiplex Access，將原本的頻段切割成三個頻道，將甲乙丙的資料同時傳送。由於每個人只能使用原來 1/3 的頻寬來傳送資料，因此會需要更長時間完成。</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>CDMA</td>
+				<td>Code Division Multiplex Access，對每個用戶的資料用特定的 code (正交展頻碼) 來運算，像是給人進行編號。在區分用戶時只要看碼的不同，就知道是誰的資料。CDMA 達到擴頻效果，而且具有抗干擾能力和保密性。</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>OFDMA</td>
+				<td>Orthogonal FDMA，用戶間使用的頻段有重疊，但是頻段互相正交，所以就算重疊也容易分辨出來，不會造成干擾。</td>
+				<td></td>
+			</tr>
+		</table>
 
 
 
