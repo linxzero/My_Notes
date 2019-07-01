@@ -80,7 +80,60 @@
 			</tr>
 		</table>
 
-
+		<table>
+			<tr>
+				<td rowspan="12">說話<br><br>↓<br><br>發射</td>
+				<td colspan="2">Voice (低頻模擬)</td>
+				<td rowspan="12">接收<br><br>↓<br><br>聆聽</td>
+				<td colspan="2">RF</td>
+			</tr>
+			<tr>
+				<td colspan="2">ADC (低頻轉換)</td>
+				<td colspan="2">ADC</td>
+			</tr>
+			<tr>
+				<td rowspan="8">BB (基頻芯片)</td>
+				<td>Data Encoding</td>
+				<td rowspan="8">BB</td>
+				<td>De-modulation</td>
+			</tr>
+			<tr>
+				<td>加 CRC (循環式重複檢查碼)</td>
+				<td>De-multiplexing</td>
+			</tr>
+			<tr>
+				<td>Channel coding</td>
+				<td>De- formatting</td>
+			</tr>
+			<tr>
+				<td>Inter-leaving</td>
+				<td>De-ciphering</td>
+			</tr>
+			<tr>
+				<td>Ciphering</td>
+				<td>De-inter-leaving</td>
+			</tr>
+			<tr>
+				<td>Formatting</td>
+				<td>Channel decoding</td>
+			</tr>
+			<tr>
+				<td>Multiplexing</td>
+				<td>解 CRC</td>
+			</tr>
+			<tr>
+				<td>Modulation</td>
+				<td>Data Decoding</td>
+			</tr>
+			<tr>
+				<td colspan="2">DAC (高頻轉換，轉成電磁波)</td>
+				<td colspan="2">DAC</td>
+			</tr>
+			<tr>
+				<td colspan="2">RF (射頻芯片)</td>
+				<td colspan="2">Voice</td>
+			</tr>
+		</table>
 
 
 
