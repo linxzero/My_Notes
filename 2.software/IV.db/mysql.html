@@ -31,14 +31,14 @@
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
 
-    <h3>Database 產品</h3>
+    <h3>Database</h3>
       <table>
         <tr style="background-color: #3A3A3A; color: #F4F6F7">
-          <td>產品</td>
+          <td>牌子</td>
           <td>公司</td>
           <td>特點</td>
           <td>介面</td>
-          <td>使用實體</td>
+          <td>用家</td>
         </tr>
         <tr>
           <td>Oracle DB</td>
@@ -73,8 +73,41 @@
     <h2>mySQL</h2>
       <h3>Syntax</h3>
       <p class="code">
-        
+        select * from dept;
       </p>
+      <p>● 全查找。</p>
+      <p class="code">
+        select * from emp<br>
+        where sal > 2000;
+      </p>
+      <p>● 查找 salary 大於 2000 的目標。</p>
+      <p class="code">
+        select 1+1;
+      </p>
+      <p class="code">
+        select 1+1 from dept;
+      </p>
+      <p>● 運算。</p>
+      <p class="code">
+        select manager_id, location_id<br>
+        from departments;
+      </p>
+      <p>● 查找指定 column。</p>
+      <p class="code">
+        select ename, sal, sal+500<br>
+        from emp;
+      </p>
+      <p>● 查找指定 column，且用 column 上的資料運算。</p>
+      <p class="code">
+        select ename as name, sal salary, sal+500 "NEW"<br>
+        from emp;
+      </p>
+      <p>● 指定 column 顯示的名稱。</p>
+      <p class="code">
+        select distinct deptno<br>
+        from emp;
+      </p>
+      <p>● 不重複地顯示所有 "deptno"。</p>
  
 
 
