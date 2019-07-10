@@ -13,7 +13,7 @@
         $(".navi_span").load("/my_notes/navigations/navi_bar_2.html");
       });
     </script>
-    <title>SQL server</title>
+    <title>mySQL</title>
     <style>
       header{ background-image: linear-gradient( 90deg, #0a253e 10%, #2d5b7c 100%); }
       li.navi a#IV{background-color: #4CAF50;} /* which one be green */
@@ -22,7 +22,7 @@
 <!-------------------------------------------------->
   <body>
     <header>
-      <p onclick="hidebar()" id="title">SQL server</p>
+      <p onclick="hidebar()" id="title">mySQL</p>
     </header>
     <ul class="navi">
       <span class="navi_span_home"></span>
@@ -32,178 +32,52 @@
     <div class="block" onclick="hidebar()">
 
     <h3>Database 產品</h3>
-    <table>
-      <tr style="background-color: #3A3A3A; color: #F4F6F7">
-        <td>產品</td>
-        <td>公司</td>
-        <td>特點</td>
-        <td>介面</td>
-        <td>使用實體</td>
-      </tr>
-      <tr>
-        <td>Oracle DB</td>
-        <td>Oracle</td>
-        <td>產品免費，服務收費</td>
-        <td>Developer</td>
-        <td>銀行、保險</td>
-      </tr>
-      <tr>
-        <td>SQL Server</td>
-        <td>Microsoft</td>
-        <td>有圖形界面，簡單好用</td>
-        <td>Management Studio</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>MySQL</td>
-        <td>Oracle</td>
-        <td>開放源，免費使用</td>
-        <td>MySQL Workbench</td>
-        <td>企業</td>
-      </tr>
-      <tr>
-        <td>DB2</td>
-        <td>IBM</td>
-        <td>支持多種平台、硬件和設備</td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
+      <table>
+        <tr style="background-color: #3A3A3A; color: #F4F6F7">
+          <td>產品</td>
+          <td>公司</td>
+          <td>特點</td>
+          <td>介面</td>
+          <td>使用實體</td>
+        </tr>
+        <tr>
+          <td>Oracle DB</td>
+          <td>Oracle</td>
+          <td>產品免費，服務收費</td>
+          <td>Developer</td>
+          <td>銀行、保險</td>
+        </tr>
+        <tr>
+          <td>SQL Server</td>
+          <td>Microsoft</td>
+          <td>有圖形界面，簡單好用</td>
+          <td>Management Studio</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>MySQL</td>
+          <td>Oracle</td>
+          <td>開放源，免費使用</td>
+          <td>MySQL Workbench</td>
+          <td>企業</td>
+        </tr>
+        <tr>
+          <td>DB2</td>
+          <td>IBM</td>
+          <td>支持多種平台、硬件和設備</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
 
-    <h2>SQL Server</h2>
-    <h3>結構</h3>
-    <table>
-      <tr>
-        <td rowspan="4">System Database</td>
-        <td>master</td>
-        <td rowspan="4">Please leave these alone.</td>
-      </tr>
-      <tr>
-        <td>model</td>
-      </tr>
-      <tr>
-        <td>msdb</td>
-      </tr>
-      <tr>
-        <td>tempdb</td>
-      </tr>
-      <tr>
-        <td>User Database</td>
-        <td></td>
-        <td>我們自己創建的 Database.</td>
-      </tr>
-    </table>
+    <h2>mySQL</h2>
+      <h3>Syntax</h3>
+      <p class="code">
+        
+      </p>
+ 
 
-    <h3>文件</h3>
-    <table>
-      <tr>
-        <td rowspan="2" width="15%">數據文件<br>(Data)</td>
-        <td>主要數據文件</td>
-        <td>有且只有一個 (.mdf)</td>
-      </tr>
-      <tr>
-        <td>次要數據文件</td>
-        <td>沒有或者多個 (.ndf)</td>
-      </tr>
-      <tr>
-        <td>日誌文件 (Log)</td>
-        <td></td>
-        <td>至少一個 (.ldf)</td>
-      </tr>
-    </table>
 
-    <h3>約束</h3>
-    <table>
-      <tr>
-        <td>域完整性</td>
-        <td>某一列都是(8)位，或者都是男/女</td>
-        <td>檢查約束、默認值、非空約束</td>
-      </tr>
-      <tr>
-        <td>實體完整性</td>
-        <td>行與行之間的數據不能重覆</td>
-        <td>唯一約束、Primary Key、Identity</td>
-      </tr>
-      <tr>
-        <td>引用完整性</td>
-        <td>要求與第二張表的數據有正確性</td>
-        <td>外鍵約束</td>
-      </tr>
-      <tr>
-        <td>自定義完整性</td>
-        <td></td>
-        <td>用觸發器檢查信用值</td>
-      </tr>
-    </table>
-
-    <h3>數據類型</h3>
-    <table>
-      <tr>
-        <td rowspan="3">整數</td>
-        <td>bigint</td>
-        <td>(-2^63) ~ (2^63)-1</td>
-      </tr>
-      <tr>
-        <td>int</td>
-        <td>(-2^31) ~ (2^31)-1</td>
-      </tr>
-      <tr>
-        <td>smallint</td>
-        <td>(-2^15) ~ (2^15)-1</td>
-      </tr>
-      <tr>
-        <td rowspan="3">小數</td>
-        <td>decimal</td>
-        <td>(-10^38)+1 ~ (10^38)-1</td>
-      </tr>
-      <tr>
-        <td>numeric</td>
-        <td>同上</td>
-      </tr>
-      <tr>
-        <td>float</td>
-        <td>(-1.79E+308) ~ (1.79E+308)</td>
-      </tr>
-      <tr>
-        <td rowspan="2">貨幣</td>
-        <td>money</td>
-        <td>(-2^63) ~ (2^63)-1</td>
-      </tr>
-      <tr>
-        <td>smallmoney</td>
-        <td>(-214,748.3648) ~ (214,748.3647)</td>
-      </tr>
-      <tr>
-        <td>固定長度字符</td>
-        <td>char</td>
-        <td>如果設定為 5，"Ben" 會變成 "Ben__"</td>
-      </tr>
-      <tr>
-        <td rowspan="2">可變長度字符</td>
-        <td>varchar</td>
-        <td>如果設定為 5，"Ben" 就只是 "Ben"</td>
-      </tr>
-      <tr>
-        <td>nvarchar</td>
-        <td>用雙字節結構，方便用中文字</td>
-      </tr>
-      <tr>
-        <td>文章</td>
-        <td>text</td>
-        <td>2,147,483,647 個字符</td>
-      </tr>
-      <tr>
-        <td>時間</td>
-        <td>datetime</td>
-        <td></td>
-      </tr>
-    </table>
-    <p>
-      ● 例如：numeric(15,2)，即整數 13 位，小數 2 位。<br>
-    </p>
-
-    <h3>主表，從表</h3>
-    <p>從表要引用主表的數據。</p>
 
     </div>
 <!--------------------------------------------------> 
