@@ -31,7 +31,8 @@
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
 
-    <h3>Database</h3>
+    <h3>前言</h3>
+    <p>現時主流 database 品牌有三間，都使用 ANSI 所規範的 SQL (Structured Query Language)，然而每間公司都有自行開發少量獨有的語言。</p>
       <table>
         <tr style="background-color: #3A3A3A; color: #F4F6F7">
           <td>數據庫</td>
@@ -71,43 +72,112 @@
       </table>
 
     <h2>mySQL</h2>
-      <h3>Syntax</h3>
-      <p class="code">
-        select * from dept;
-      </p>
-      <p>● 全查找。</p>
-      <p class="code">
-        select * from emp<br>
-        where sal > 2000;
-      </p>
-      <p>● 查找 salary 大於 2000 的目標。</p>
-      <p class="code">
-        select 1+1;
-      </p>
-      <p class="code">
-        select 1+1 from dept;
-      </p>
-      <p>● 運算。</p>
-      <p class="code">
-        select manager_id, location_id<br>
-        from departments;
-      </p>
-      <p>● 查找指定 column。</p>
-      <p class="code">
-        select ename, sal, sal+500<br>
-        from emp;
-      </p>
-      <p>● 查找指定 column，且用 column 上的資料運算。</p>
-      <p class="code">
-        select ename as name, sal old, sal+50 "NEW"<br>
-        from emp;
-      </p>
-      <p>● 指定 column 顯示的名稱。</p>
-      <p class="code">
-        select distinct deptno<br>
-        from emp;
-      </p>
-      <p>● 不重複地顯示所有 "deptno"。</p>
+      <p>SQL is <span class="high">not case sensitive</span> 的，以下是語法：</p>
+
+
+<table>
+  <tr>
+    <td style="text-align: left;">select * from dept;</td>
+    <td>show 所有 column</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select manager_id, location_id<br>from departments;</td>
+    <td>show 指定的 column</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select ename, sal, sal+500<br>from emp;</td>
+    <td>對 column 運算</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select ename as name, sal old, sal+50 "NEW"<br>from emp;</td>
+    <td>set Alias</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">describe dept;</td>
+    <td>query table 內有甚麼 column</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select distinct deptno from emp;</td>
+    <td>query column 入面有甚麼種類</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select distinct vend_id, prod_price<br>from products;</td>
+    <td>兩個都一樣先 dedup</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">--</td>
+    <td>leave comment</td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>where sal < 8000;</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>where ename = 'KING';</td>
+    <td>注意！標題用 double quote，字串用 single quote！</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>where hiredate >= '1983-01-01';</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>where mgr is null;</td>
+    <td>null 用 is, 或者 is not</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>where hiredate > '1982'<br>and sal >1200<br>and job ='clerk';</td>
+    <td>and, or, not</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select ename, sal from emp<br>where sal between 1000 and 1500;</td>
+    <td>[1000,1500]</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select empno, ename, sal, mgr from emp<br>where mgr in (7902, 7566);</td>
+    <td>是指定的值</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select ename from emp<br>where ename like 's%';</td>
+    <td>% 是任何個數的糢糊值</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select ename from emp<br>where ename like 's_';</td>
+    <td>_ 一個單位的糢糊值</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select ename from emp<br>where ename like 'a%n';</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select ename from emp<br>where ename like 'S\_%';</td>
+    <td>如果真係想 search 下加線，可以用 \_</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select * from products<br>where (A and B) or (C and E and F);</td>
+    <td>如果情況太多可以用括號來區分</td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>order by sal desc;</td>
+    <td>descendent 由大到細, default 係由細到大</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>order by deptno, sal desc;</td>
+    <td>先排 deptno, 後排 sal</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">select * from emp<br>order by 3;</td>
+    <td>排第三個 column</td>
+  </tr>
+</table>
+
  
 
 
