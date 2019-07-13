@@ -100,11 +100,11 @@
           <td>query table 內有甚麼 column</td>
         </tr>
         <tr style="background-color: #dadada">
-          <td style="text-align: left;"><span class="sql">select</span> distinct deptno <span class="sql">from</span> emp;</td>
+          <td style="text-align: left;"><span class="sql">select distinct</span> deptno <span class="sql">from</span> emp;</td>
           <td>query column 入面有甚麼種類</td>
         </tr>
         <tr style="background-color: #dadada">
-          <td style="text-align: left;"><span class="sql">select</span> distinct vend_id, prod_price<br><span class="sql">from</span> products;</td>
+          <td style="text-align: left;"><span class="sql">select distinct</span>   vend_id, prod_price<br><span class="sql">from</span> products;</td>
           <td>兩個都一樣先 dedup</td>
         </tr>
         <tr style="background-color: #dadada">
@@ -116,51 +116,51 @@
       <table>
         <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">Restriction</td>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>where sal < 8000;</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> sal < 8000;</td>
           <td></td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>where ename = 'KING';</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> ename = 'KING';</td>
           <td>注意！標題用 double quote，字串用 single quote！</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>where hiredate >= '1983-01-01';</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> hiredate >= '1983-01-01';</td>
           <td></td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>where mgr is null;</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> mgr is null;</td>
           <td>null 用 is, 或者 is not</td>
         </tr>
         <tr style="background-color: #dadada">
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>where hiredate > '1982'<br>and sal >1200<br>and job ='clerk';</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> hiredate > '1982'<br><span class="sql">and</span> sal >1200<br><span class="sql">and</span> job ='clerk';</td>
           <td>and, or, not</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> ename, sal <span class="sql">from</span> emp<br>where sal between 1000 and 1500;</td>
+          <td style="text-align: left;"><span class="sql">select</span> ename, sal <span class="sql">from</span> emp<br><span class="sql">where</span> sal <span class="sql">between</span> 1000 <span class="sql">and</span> 1500;</td>
           <td>[1000,1500]</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> empno, ename, sal, mgr <span class="sql">from</span> emp<br>where mgr in (7902, 7566);</td>
+          <td style="text-align: left;"><span class="sql">select</span> empno, ename, sal, mgr <span class="sql">from</span> emp<br><span class="sql">where</span> mgr <span class="sql">in</span> (7902, 7566);</td>
           <td>是指定的值</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br>where ename like 's%';</td>
+          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 's%';</td>
           <td>% 是任何個數的糢糊值</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br>where ename like 's_';</td>
+          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 's_';</td>
           <td>_ 一個單位的糢糊值</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br>where ename like 'a%n';</td>
+          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 'a%n';</td>
           <td></td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br>where ename like 'S\_%';</td>
+          <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 'S\_%';</td>
           <td>如果真係想 search 下加線，可以用 \_</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> products<br>where (A and B) or (C and E and F);</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> products<br><span class="sql">where</span> (A <span class="sql">and</span> B) <span class="sql">or</span> (C <span class="sql">and</span> E <span class="sql">and</span> F);</td>
           <td>如果情況太多可以用括號來區分</td>
         </tr>
       </table>
@@ -168,15 +168,15 @@
       <table>
         <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">排序</td>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>order by sal desc;</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">order by</span> sal <span class="sql">desc</span>;</td>
           <td>descendent 由大到細, default 係由細到大</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>order by deptno, sal desc;</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">order by</span> deptno, sal <span class="sql">desc</span>;</td>
           <td>先排 deptno, 後排 sal</td>
         </tr>
         <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br>order by 3;</td>
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">order by</span> 3;</td>
           <td>排第三個 column</td>
         </tr>
       </table>
