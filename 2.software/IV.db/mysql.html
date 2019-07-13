@@ -79,37 +79,35 @@
   <tr>
     <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">基本</td>
   </tr>
-  <tr style="background-color: #dadada">
+  <tr>
     <td style="text-align: left;">select * from dept;</td>
     <td>show 所有 column</td>
   </tr>
-  <tr style="background-color: #dadada">
+  <tr>
     <td style="text-align: left;">select manager_id, location_id<br>from departments;</td>
     <td>show 指定的 column</td>
   </tr>
-  <tr style="background-color: #dadada">
+  <tr>
     <td style="text-align: left;">select ename, sal, sal+500<br>from emp;</td>
     <td>對 column 運算</td>
   </tr>
-  <tr style="background-color: #dadada">
+  <tr>
     <td style="text-align: left;">select ename as name, sal old, sal+50 "NEW"<br>from emp;</td>
     <td>set Alias</td>
   </tr>
-
-
-  <tr style="background-color: #eaeaea">
+  <tr style="background-color: #dadada">
     <td style="text-align: left;">describe dept;</td>
     <td>query table 內有甚麼 column</td>
   </tr>
-  <tr style="background-color: #eaeaea">
+  <tr style="background-color: #dadada">
     <td style="text-align: left;">select distinct deptno from emp;</td>
     <td>query column 入面有甚麼種類</td>
   </tr>
-  <tr style="background-color: #eaeaea">
+  <tr style="background-color: #dadada">
     <td style="text-align: left;">select distinct vend_id, prod_price<br>from products;</td>
     <td>兩個都一樣先 dedup</td>
   </tr>
-  <tr style="background-color: #eaeaea">
+  <tr style="background-color: #dadada">
     <td style="text-align: left;">--</td>
     <td>leave comment</td>
   </tr>
@@ -134,12 +132,10 @@
     <td style="text-align: left;">select * from emp<br>where mgr is null;</td>
     <td>null 用 is, 或者 is not</td>
   </tr>
-  <tr><td colspan="2" style="background-color: #D7DBDD"></td></tr>
-  <tr>
+  <tr style="background-color: #dadada">
     <td style="text-align: left;">select * from emp<br>where hiredate > '1982'<br>and sal >1200<br>and job ='clerk';</td>
     <td>and, or, not</td>
   </tr>
-  <tr><td colspan="2" style="background-color: #D7DBDD"></td></tr>
   <tr>
     <td style="text-align: left;">select ename, sal from emp<br>where sal between 1000 and 1500;</td>
     <td>[1000,1500]</td>
