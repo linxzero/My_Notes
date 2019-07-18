@@ -77,9 +77,6 @@
       <h3>Basic retrieve</h3>
       <table> <!-- Basic retrieve -->
         <tr>
-          <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">Basic retrieve</td>
-        </tr>
-        <tr>
           <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> dept;</td>
           <td>show 所有 column</td>
         </tr>
@@ -167,6 +164,7 @@
 
       <h3>Order</h3>
       <table> <!-- Order -->
+        <tr>
           <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">order by</span> sal <span class="sql">desc</span>;</td>
           <td>descendent 由大到細, default 係由細到大</td>
         </tr>
@@ -182,9 +180,6 @@
 
       <h3>Null</h3>
       <table> <!-- Null -->
-        <tr style="background-color: #3A3A3A; color: #F4ecF7">
-          <td colspan="2">Null</td>
-        </tr>
         <tr>
           <td colspan="2">任何野加減乘除 null，結果都係 null</td>
         </tr>
@@ -199,9 +194,6 @@
 
       <h3>Text manipulation</h3>
       <table> <!-- Text manipulation -->
-        <tr style="background-color: #3A3A3A; color: #F4ecF7">
-          <td colspan="3">Text manipulation</td>
-        </tr>
         <tr>
           <td style="text-align: left;"><span class="sql_b">concat</span>('A',' ','B')</td>
           <td>A B</td>
@@ -265,9 +257,6 @@
       <h3>Number manipulation</h3>
       <table> <!-- Number manipulation -->
         <tr>
-          <td colspan="3" style="background-color: #3A3A3A; color: #F4ecF7">Number manipulation</td>
-        </tr>
-        <tr>
           <td style="text-align: left;"><span class="sql_b">ceiling</span>(1.23)</td>
           <td>1</td>
           <td>下一個整數</td>
@@ -316,9 +305,6 @@
 
       <h3>Date manipulation</h3>
       <table> <!-- Date manipulation -->
-        <tr>
-          <td style="background-color: #3A3A3A; color: #F4ecF7" colspan="2">Date manipulation</td>
-        </tr>
         <tr>
           <td style="text-align: left;"><span class="sql_b">now</span>()</td>
           <td>年月日時分秒</td>
