@@ -181,7 +181,169 @@
         </tr>
       </table>
 
- 
+      <table> <!-- Null -->
+        <tr style="background-color: #3A3A3A; color: #F4ecF7">
+          <td colspan="2">Null</td>
+        </tr>
+        <tr>
+          <td colspan="2">任何野加減乘除 null，結果都係 null</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">ifnull(comm, 0)</td>
+          <td>如果 comm 是 null 時，值為 0</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: left;"><span class="sql">select</span> ename, sal, ifnull(comm, 0), sal + ifnull(comm, 0) <span class="sql">from</span> emp;</td>
+        </tr>
+      </table>
+
+      <table> <!-- Text -->
+        <tr style="background-color: #3A3A3A; color: #F4ecF7">
+          <td colspan="3">Text manipulation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">concat('A',' ','B')</td>
+          <td>A B</td>
+          <td>合拼文字</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;" colspan="3"><span class="sql">select</span> concat(first_name, ' ', last_name) <span class="sql">from</span> employees;</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">length('eugene')</td>
+          <td>6</td>
+          <td>計長度</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">upper(ename)</td>
+          <td>SMITH</td>
+          <td>變大草</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">lower('ABC')</td>
+          <td>abc</td>
+          <td>變小草</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">lpad('hello', 7, '*')</td>
+          <td>**hello</td>
+          <td>顯示固定長度(7位)，左邊補*</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">lpad('hello', 1, '*')</td>
+          <td>h</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">rpad('rose', 7, '?')</td>
+          <td>rose???</td>
+          <td>顯示固定長度(7位)，右邊補?</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">substring('rosemary', 5, 4)</td>
+          <td>mary</td>
+          <td>由第 5 位開始取 4 個位</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">ltrim(' rose')</td>
+          <td>rose</td>
+          <td>左邊去空格，無論多少個</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">rtrim('rose ')</td>
+          <td>rose</td>
+          <td>右邊去空格，無論多少個</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">replace('www', 'w', 'W')</td>
+          <td>WWW</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <table> <!-- Number -->
+        <tr>
+          <td colspan="3" style="background-color: #3A3A3A; color: #F4ecF7">Number manipulation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">ceiling(1.23)</td>
+          <td>1</td>
+          <td>下一個整數</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">floor(-1.23)</td>
+          <td>-2</td>
+          <td>上一個整數</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">power(2,3)</td>
+          <td>8</td>
+          <td>2^3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">round(5.49, 1)</td>
+          <td>5.5</td>
+          <td>四捨五入，1是小數點後位置</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">round(24.49, -1)</td>
+          <td>20</td>
+          <td>小數點前一位</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">truncate(101.6, 0)</td>
+          <td>101</td>
+          <td>一刀切，取整</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">greatest(5,3,1)</td>
+          <td>5</td>
+          <td>揀最大</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">least()</td>
+          <td></td>
+          <td>揀最小</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">rand()</td>
+          <td></td>
+          <td>隨機數</td>
+        </tr>
+      </table>
+
+      <table> <!-- Date -->
+        <tr>
+          <td style="background-color: #3A3A3A; color: #F4ecF7" colspan="2">Date manipulation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">now()</td>
+          <td>年月日時分秒</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">curdate()</td>
+          <td>日子</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">curtime()</td>
+          <td>時間</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">sysdate()</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">adddate(now(),3)</td>
+          <td>加三日</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">adddate(now(), interval 10 year)</td>
+          <td>十年後</td>
+        </tr>
+      </table>
+
+
+
 
 
 
