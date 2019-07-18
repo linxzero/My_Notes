@@ -75,9 +75,9 @@
       <p>SQL is <span class="high">not case sensitive</span> 的，以下是語法：</p>
 
 
-      <table>
+      <table> <!-- Basic retrieve -->
         <tr>
-          <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">基本</td>
+          <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">Basic retrieve</td>
         </tr>
         <tr>
           <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> dept;</td>
@@ -97,11 +97,11 @@
         </tr>
         <tr style="background-color: #dadada">
           <td style="text-align: left;"><span class="sql">describe</span> dept;</td>
-          <td>query table 內有甚麼 column</td>
+          <td>show table 內有甚麼 column</td>
         </tr>
         <tr style="background-color: #dadada">
           <td style="text-align: left;"><span class="sql">select distinct</span> deptno <span class="sql">from</span> emp;</td>
-          <td>query column 入面有甚麼種類</td>
+          <td>show column 入面有甚麼種類</td>
         </tr>
         <tr style="background-color: #dadada">
           <td style="text-align: left;"><span class="sql">select distinct</span>   vend_id, prod_price<br><span class="sql">from</span> products;</td>
@@ -113,11 +113,11 @@
         </tr>
       </table>
 
-      <table>
+      <table> <!-- Restriction -->
         <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">Restriction</td>
         <tr>
           <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> sal < 8000;</td>
-          <td></td>
+          <td>數值，不用 quote</td>
         </tr>
         <tr>
           <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> ename = 'KING';</td>
@@ -135,38 +135,38 @@
           <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">where</span> hiredate > '1982'<br><span class="sql">and</span> sal >1200<br><span class="sql">and</span> job ='clerk';</td>
           <td>and, or, not</td>
         </tr>
+        <tr style="background-color: #dadada">
+          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> products<br><span class="sql">where</span> (A <span class="sql">and</span> B) <span class="sql">or</span> (C <span class="sql">and</span> E <span class="sql">and</span> F);</td>
+          <td>如果有多個邏輯，可以用括號區分級別</td>
+        </tr>
         <tr>
           <td style="text-align: left;"><span class="sql">select</span> ename, sal <span class="sql">from</span> emp<br><span class="sql">where</span> sal <span class="sql">between</span> 1000 <span class="sql">and</span> 1500;</td>
           <td>[1000,1500]</td>
         </tr>
         <tr>
           <td style="text-align: left;"><span class="sql">select</span> empno, ename, sal, mgr <span class="sql">from</span> emp<br><span class="sql">where</span> mgr <span class="sql">in</span> (7902, 7566);</td>
-          <td>是指定的值</td>
+          <td>是給出的實際值</td>
         </tr>
-        <tr>
+        <tr style="background-color: #dadada">
           <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 's%';</td>
           <td>% 是任何個數的糢糊值</td>
         </tr>
-        <tr>
+        <tr style="background-color: #dadada">
           <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 's_';</td>
           <td>_ 一個單位的糢糊值</td>
         </tr>
-        <tr>
+        <tr style="background-color: #dadada">
           <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 'a%n';</td>
           <td></td>
         </tr>
-        <tr>
+        <tr style="background-color: #dadada">
           <td style="text-align: left;"><span class="sql">select</span> ename <span class="sql">from</span> emp<br><span class="sql">where</span> ename <span class="sql">like</span> 'S\_%';</td>
           <td>如果真係想 search 下加線，可以用 \_</td>
         </tr>
-        <tr>
-          <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> products<br><span class="sql">where</span> (A <span class="sql">and</span> B) <span class="sql">or</span> (C <span class="sql">and</span> E <span class="sql">and</span> F);</td>
-          <td>如果情況太多可以用括號來區分</td>
-        </tr>
       </table>
 
-      <table>
-        <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">排序</td>
+      <table> <!-- Order -->
+        <td colspan="2" style="background-color: #3A3A3A; color: #F4ecF7">Order</td>
         <tr>
           <td style="text-align: left;"><span class="sql">select</span> * <span class="sql">from</span> emp<br><span class="sql">order by</span> sal <span class="sql">desc</span>;</td>
           <td>descendent 由大到細, default 係由細到大</td>
