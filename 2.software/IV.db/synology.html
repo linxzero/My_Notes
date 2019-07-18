@@ -32,12 +32,20 @@
     <div class="block" onclick="hidebar()">
 
       <h3>實體機</h3>
-        <p>步驟：</p>
+        <p>引渡手指制作步驟：</p>
         <p>
           1) 記低 USB 手指的 VID 和 PID (by using ChipEasy).<br>
           2) 刪除 USB 手指的所有分區 (by using DiskGenius).<br>
           3) 把 boot file (.img) 寫入 USB 手指 (by using Win32Diskimager).<br>
           4) 把 USB 手指內的 grub.cfg 拖到桌面修改 (by using DiskGenius)，把 vid= 和 pid= 改成上面的值，mac 改成 NAS 網卡地址，然後拖回原位置。<br>
+        </p>
+      
+      <h3>虛擬機</h3>
+        <p>注意點：</p>
+        <p>
+          ● boot file (.img) 要轉成 .vmdk (by using StarWind)。轉換時選 VMware growable image > IDE.<br>
+          ● Create VM 選 Linux > Ubuntu 64。硬盤指向上面的 .vmdk。<br>
+          ● Create 完要再加一個 10GB 左右硬盤 (SATA) 作為系統盤。<br>          
         </p>
 
 
