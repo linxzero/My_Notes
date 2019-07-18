@@ -189,11 +189,11 @@
           <td colspan="2">任何野加減乘除 null，結果都係 null</td>
         </tr>
         <tr>
-          <td style="text-align: left;">ifnull(comm, 0)</td>
+          <td style="text-align: left;"><span class="sql_b">ifnull</span>(comm, 0)</td>
           <td>如果 comm 是 null 時，值為 0</td>
         </tr>
         <tr>
-          <td colspan="2" style="text-align: left;"><span class="sql">select</span> ename, sal, ifnull(comm, 0), sal + ifnull(comm, 0) <span class="sql">from</span> emp;</td>
+          <td colspan="2" style="text-align: left;"><span class="sql">select</span> ename, sal, <span class="sql_b">ifnull</span>(comm, 0), sal + <span class="sql_b">ifnull</span>(comm, 0) <span class="sql">from</span> emp;</td>
         </tr>
       </table>
 
@@ -202,60 +202,60 @@
           <td colspan="3">Text manipulation</td>
         </tr>
         <tr>
-          <td style="text-align: left;">concat('A',' ','B')</td>
+          <td style="text-align: left;"><span class="sql_b">concat</span>('A',' ','B')</td>
           <td>A B</td>
           <td>合拼文字</td>
         </tr>
         <tr>
-          <td style="text-align: left;" colspan="3"><span class="sql">select</span> concat(first_name, ' ', last_name) <span class="sql">from</span> employees;</td>
+          <td style="text-align: left;" colspan="3"><span class="sql">select</span> <span class="sql_b">concat</span>(first_name, ' ', last_name) <span class="sql">from</span> employees;</td>
         </tr>
         <tr>
-          <td style="text-align: left;">length('eugene')</td>
+          <td style="text-align: left;"><span class="sql_b">length</span>('eugene')</td>
           <td>6</td>
           <td>計長度</td>
         </tr>
         <tr>
-          <td style="text-align: left;">upper(ename)</td>
+          <td style="text-align: left;"><span class="sql_b">upper</span>(ename)</td>
           <td>SMITH</td>
           <td>變大草</td>
         </tr>
         <tr>
-          <td style="text-align: left;">lower('ABC')</td>
+          <td style="text-align: left;"><span class="sql_b">lower</span>('ABC')</td>
           <td>abc</td>
           <td>變小草</td>
         </tr>
         <tr>
-          <td style="text-align: left;">lpad('hello', 7, '*')</td>
+          <td style="text-align: left;"><span class="sql_b">lpad</span>('hello', 7, '*')</td>
           <td>**hello</td>
           <td>顯示固定長度(7位)，左邊補*</td>
         </tr>
         <tr>
-          <td style="text-align: left;">lpad('hello', 1, '*')</td>
+          <td style="text-align: left;"><span class="sql_b">lpad</span>('hello', 1, '*')</td>
           <td>h</td>
           <td></td>
         </tr>
         <tr>
-          <td style="text-align: left;">rpad('rose', 7, '?')</td>
+          <td style="text-align: left;"><span class="sql_b">rpad</span>('rose', 7, '?')</td>
           <td>rose???</td>
           <td>顯示固定長度(7位)，右邊補?</td>
         </tr>
         <tr>
-          <td style="text-align: left;">substring('rosemary', 5, 4)</td>
+          <td style="text-align: left;"><span class="sql_b">substring</span>('rosemary', 5, 4)</td>
           <td>mary</td>
           <td>由第 5 位開始取 4 個位</td>
         </tr>
         <tr>
-          <td style="text-align: left;">ltrim(' rose')</td>
+          <td style="text-align: left;"><span class="sql_b">ltrim</span>(' rose')</td>
           <td>rose</td>
           <td>左邊去空格，無論多少個</td>
         </tr>
         <tr>
-          <td style="text-align: left;">rtrim('rose ')</td>
+          <td style="text-align: left;"><span class="sql_b">rtrim</span>('rose ')</td>
           <td>rose</td>
           <td>右邊去空格，無論多少個</td>
         </tr>
         <tr>
-          <td style="text-align: left;">replace('www', 'w', 'W')</td>
+          <td style="text-align: left;"><span class="sql_b">replace</span>('www', 'w', 'W')</td>
           <td>WWW</td>
           <td></td>
         </tr>
@@ -266,47 +266,47 @@
           <td colspan="3" style="background-color: #3A3A3A; color: #F4ecF7">Number manipulation</td>
         </tr>
         <tr>
-          <td style="text-align: left;">ceiling(1.23)</td>
+          <td style="text-align: left;"><span class="sql_b">ceiling</span>(1.23)</td>
           <td>1</td>
           <td>下一個整數</td>
         </tr>
         <tr>
-          <td style="text-align: left;">floor(-1.23)</td>
+          <td style="text-align: left;"><span class="sql_b">floor</span>(-1.23)</td>
           <td>-2</td>
           <td>上一個整數</td>
         </tr>
         <tr>
-          <td style="text-align: left;">power(2,3)</td>
+          <td style="text-align: left;"><span class="sql_b">power</span>(2,3)</td>
           <td>8</td>
           <td>2^3</td>
         </tr>
         <tr>
-          <td style="text-align: left;">round(5.49, 1)</td>
+          <td style="text-align: left;"><span class="sql_b">round</span>(5.49, 1)</td>
           <td>5.5</td>
           <td>四捨五入，1是小數點後位置</td>
         </tr>
         <tr>
-          <td style="text-align: left;">round(24.49, -1)</td>
+          <td style="text-align: left;"><span class="sql_b">round</span>(24.49, -1)</td>
           <td>20</td>
           <td>小數點前一位</td>
         </tr>
         <tr>
-          <td style="text-align: left;">truncate(101.6, 0)</td>
+          <td style="text-align: left;"><span class="sql_b">truncate</span>(101.6, 0)</td>
           <td>101</td>
           <td>一刀切，取整</td>
         </tr>
         <tr>
-          <td style="text-align: left;">greatest(5,3,1)</td>
+          <td style="text-align: left;"><span class="sql_b">greatest</span>(5,3,1)</td>
           <td>5</td>
           <td>揀最大</td>
         </tr>
         <tr>
-          <td style="text-align: left;">least()</td>
+          <td style="text-align: left;"><span class="sql_b">least</span>()</td>
           <td></td>
           <td>揀最小</td>
         </tr>
         <tr>
-          <td style="text-align: left;">rand()</td>
+          <td style="text-align: left;"><span class="sql_b">rand</span>()</td>
           <td></td>
           <td>隨機數</td>
         </tr>
@@ -317,27 +317,27 @@
           <td style="background-color: #3A3A3A; color: #F4ecF7" colspan="2">Date manipulation</td>
         </tr>
         <tr>
-          <td style="text-align: left;">now()</td>
+          <td style="text-align: left;"><span class="sql_b">now</span>()</td>
           <td>年月日時分秒</td>
         </tr>
         <tr>
-          <td style="text-align: left;">curdate()</td>
+          <td style="text-align: left;"><span class="sql_b">curdate</span>()</td>
           <td>日子</td>
         </tr>
         <tr>
-          <td style="text-align: left;">curtime()</td>
+          <td style="text-align: left;"><span class="sql_b">curtime</span>()</td>
           <td>時間</td>
         </tr>
         <tr>
-          <td style="text-align: left;">sysdate()</td>
+          <td style="text-align: left;"><span class="sql_b">sysdate</span>()</td>
           <td></td>
         </tr>
         <tr>
-          <td style="text-align: left;">adddate(now(),3)</td>
+          <td style="text-align: left;"><span class="sql_b">adddate</span>(<span class="sql_b">now</span>(),3)</td>
           <td>加三日</td>
         </tr>
         <tr>
-          <td style="text-align: left;">adddate(now(), interval 10 year)</td>
+          <td style="text-align: left;"><span class="sql_b">adddate</span>(<span class="sql_b">now</span>(), <span class="sql">interval</span> 10 year)</td>
           <td>十年後</td>
         </tr>
       </table>
