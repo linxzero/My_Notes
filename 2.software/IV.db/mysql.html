@@ -409,20 +409,12 @@
 <h3>Group by</h3>
 <table>
   <tr>
-    <td style="text-align: left;">select deptno, avg(sal), max(sal), sum(sal) from emp<br>group by deptno;</td>
+    <td style="text-align: left;"><span class="sql">select</span> deptno, avg(sal), max(sal), sum(sal) <span class="sql">from</span> emp<br><span class="sql">group by</span> deptno;</td>
     <td>按不同部門分 group，都生一筆數據</td>
   </tr>
   <tr>
-    <td style="text-align: left;">select deptno, avg(sal), max(sal), sum(sal) from emp<br>group by deptno<br>having avg(sal) > 2000;</td>
-    <td>不同部門都生一筆數據，然後只顯示平均收入高的</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
+    <td style="text-align: left;"><span class="sql">select</span> deptno, avg(sal), max(sal), sum(sal) <span class="sql">from</span> emp<br><span class="sql">group by</span> deptno<br><span class="sql">having</span> avg(sal) > 2000;</td>
+    <td>不同部門都生一筆數據，然後再 filter 一次，只顯示平均收入高過 2000 的</td>
   </tr>
 </table>
 
