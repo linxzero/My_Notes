@@ -334,7 +334,7 @@
       </table>
  
       <h3>Conversion (Date ↔ String)</h3>
-      <table>
+      <table> <!-- Conversion (Date ↔ String) -->
         <tr>
           <td style="text-align: left;"><span class="sql_b">date_format</span>(<span class="sql_b">now</span>(), '%Y.%m.%d')</td>
           <td>2012.01.12</td>
@@ -363,6 +363,34 @@
       </table>
 
 
+      <h3>Aggregating data</h3>
+      <p>結果只顯示一行 row，因此吾好 show 這 5 個 function 以外的 column。</p>
+      <table> <!-- Aggregating data -->
+        <tr>
+          <td style="text-align: left;">avg(sal)</td>
+          <td>平均值</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">count(sal)</td>
+          <td>個數</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">max(sal)</td>
+          <td>最大</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">min(sal)</td>
+          <td>最小</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">sum(sal)</td>
+          <td>總數</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">select avg(sal), count(sal), max(sal), min(sal), sum(sal) from emp<br>where job like 'clerk';</td>
+          <td>先找出所有 clerk，<br>計平均月薪、個數﹑最大最小月薪﹑總月薪和</td>
+        </tr>
+      </table>
 
 
     </div>
