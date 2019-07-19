@@ -336,29 +336,29 @@
       <h3>Conversion (Date ↔ String)</h3>
       <table>
         <tr>
-          <td style="text-align: left;">date_format(now(), '%Y.%m.%d')</td>
+          <td style="text-align: left;"><span class="sql_b">date_format</span>(<span class="sql_b">now</span>(), '%Y.%m.%d')</td>
           <td>2012.01.12</td>
-          <td>日期格式</td>
+          <td><a href="https://www.w3schools.com/sql/func_mysql_date_format.asp">日期變文字</a></td>
         </tr>
         <tr>
-          <td style="text-align: left;">date_format(hiredate, '%M %d, %Y')</td>
+          <td style="text-align: left;"><span class="sql_b">date_format</span>(hiredate, '%M %d, %Y')</td>
           <td>Februray 22, 1988</td>
-          <td>W3schools</td>
+          <td></td>
         </tr>
         <tr>
-          <td style="text-align: left;">extract(year from '2009-07-02')</td>
+          <td style="text-align: left;"><span class="sql_b">extract</span>(year <span class="sql">from</span> '2009-07-02')</td>
           <td>2009</td>
-          <td>抽取</td>
+          <td><a href="https://www.w3schools.com/sql/func_mysql_extract.asp">抽取</a></td>
         </tr>
         <tr>
-          <td style="text-align: left;">extract(quarter from hiredate)</td>
-          <td></td>
-          <td>W3schools</td>
+          <td style="text-align: left;"><span class="sql_b">extract</span>(quarter <span class="sql">from</span> hiredate)</td>
+          <td>4</td>
+          <td>季度</td>
         </tr>
-        <tr>
-          <td style="text-align: left;">str_to_date('Februray 22, 1988', '%M %d, %Y')</td>
-          <td>2/22/1988</td>
-          <td></td>
+        <tr style="background-color: #dadada">
+          <td style="text-align: left;">str_to_date('February 22, 1988', '%M %d, %Y')</td>
+          <td>1988-02-22</td>
+          <td>文字變日期</td>
         </tr>
       </table>
 
