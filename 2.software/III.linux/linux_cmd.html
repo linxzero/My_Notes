@@ -142,7 +142,7 @@
 				</p>
 				<p>
 					● "update" 更新源。<br>
-					● "upgrade" 更新已安裝的 package。
+					● "upgrade" 升級已安裝的 package。
 				</p>
 				<p class="code">
 					sudo apt-get install <span class="input">package1</span><br>
@@ -168,8 +168,6 @@
 					● 查看安裝了甚麼。
 				</p>
 
-
-
 			<h3>yum</h3>
 				<p>yum 命令用於 redhat 系統下的軟件安裝與更新。</p>
 				<p class="code">
@@ -179,6 +177,16 @@
 					● 首先需要安裝 yum 源。
 				</p>
 				<p class="code">
+					yum update<br>
+					yum check-update<br>
+					yum upgrade <span class="input">package1</span>
+				</p>
+				<p>
+					● "update" 更新源。<br>
+					● "check-update" 檢查有沒有更新。<br>
+					● "upgrade" 升
+				</p>
+				<p class="code">
 					yum install<br>
 					yum install <span class="input">package1</span>
 				</p>
@@ -186,12 +194,7 @@
 					● 1) 安裝全部；<br>
 					● 2) 或者指定安裝某個 package1。
 				</p>
-				<p class="code">
-					yum update<br>
-					yum update <span class="input">package1</span><br>
-					yum check-update<br>
-					yum <span class="input">package1</span>
-				</p>
+				
 
 
 
