@@ -97,7 +97,6 @@
       	● ">" Clean all line from aa.txt, then add 'Hello_world' to aa.txt.<br>
       	● ">>" Add 'Hello_world' to the end of aa.txt.
       </p>      
-      <p class="lilbr"><br></p>
       <p class="code">
       	cp <span class="input">file1 file2</span><br>
       	cp <span class="input">file1 file2 dir</span><br>
@@ -133,6 +132,66 @@
 			<p>● Show Kernel release version.</p>
 
 
+		<h2>Install</h2>
+			
+			<h3>apt-get</h3>
+				<p>用於 ubuntu 系統下的軟件安裝與更新。不需要安裝源，可以直接使用。</p>
+				<p class="code">
+					sudo apt-get update<br>
+					sudo apt-get upgrade
+				</p>
+				<p>
+					● "update" 更新源。<br>
+					● "upgrade" 更新已安裝的 package。
+				</p>
+				<p class="code">
+					sudo apt-get install <span class="input">package1</span><br>
+					sudo apt-get install <span class="input">package1</span> --reinstall<br>
+				</p>
+				<p>
+					● "install" 安裝 package1。<br>
+					● "reinstall" 重新安裝 package1。
+				</p>
+				<p class="code">
+					sudo apt-get remove <span class="input">package1</span><br>
+					sudo apt-get remove <span class="input">package1</span> --purge<br>
+				</p>
+				<p>
+					● "remove" 御載 package1。<br>
+					● "purge" 連同配置文件一起刪除。
+				</p>
+				<p class="code">
+					apt list --installed<br>
+					apt list --installed | grep <span class="input">yum</span>
+				</p>
+				<p>
+					● 查看安裝了甚麼。
+				</p>
+
+
+
+			<h3>yum</h3>
+				<p>yum 命令用於 redhat 系統下的軟件安裝與更新。</p>
+				<p class="code">
+					sudo apt install yum
+				</p>
+				<p>
+					● 首先需要安裝 yum 源。
+				</p>
+				<p class="code">
+					yum install<br>
+					yum install <span class="input">package1</span>
+				</p>
+				<p>
+					● 1) 安裝全部；<br>
+					● 2) 或者指定安裝某個 package1。
+				</p>
+				<p class="code">
+					yum update<br>
+					yum update <span class="input">package1</span><br>
+					yum check-update<br>
+					yum <span class="input">package1</span>
+				</p>
 
 
 
