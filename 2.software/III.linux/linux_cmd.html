@@ -31,6 +31,10 @@
 <!--D1----------------------------------------------------------------------------> 
 		<div class="block" onclick="hidebar()">
 
+		<h3>Caution</h3>
+			<p>Linux cmd is <span class="high">case sensitive</span>，大小寫要注意！</p>
+
+
 		<h2>Network</h2>
 			<p class="code">
 				ip addr show<br>
@@ -40,7 +44,7 @@
 				ip link set <span class="input">eth1</span> up
 			</p>
 
-
+		
 		<h2>Directory</h2>
 			<p class="code">
 				cd ..<br>
@@ -115,6 +119,14 @@
 
 
 		<h2>System</h2>
+			<p class="code">
+				ps<br>
+				ps <span class="input">-j</span>
+			</p>
+			<p>
+				● "ps" Show process status.<br>
+				● "-j" Process can be presented in several formats. "j" for Jobs format.
+			</p>
 			<p class="code">
 				uname -r
 			</p>
