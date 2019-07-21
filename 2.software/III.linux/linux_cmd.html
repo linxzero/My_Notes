@@ -75,6 +75,15 @@
 
 		<h2>Edit</h2>
 			<p class="code">
+				nano <span class="input">aa.txt</span> <br>
+				nano -l <span class="input">aa.txt</span> <br>
+				nano <span class="input">new.txt</span> 
+			</p>
+			<p>
+				● "-l" Turn on line number.<br>
+				● Or create a new text file.
+			</p>
+			<p class="code">
 				vi <span class="input">/etc/netplan/*yaml</span>
 			</p>
 			<p>
@@ -90,7 +99,6 @@
 				● "q!" 不保存退出。<br>
 				● "wq!" 保存並退出。
 			</p>
-      <p class="lilbr"><br></p>
       <p class="code">
       	cat <span class="input">/proc/version</span><br>
       	more <span class="input">/proc/version</span>
@@ -130,11 +138,13 @@
 		<h2>System</h2>
 			<p class="code">
 				sudo bash<br>
+				exit<br>
 				su - <span class="input">eugene</span><br>
 				passwd
 			</p>
 			<p>
 				● "sudo bash" 轉為 root 帳戶，符號變成 #<br>
+				● "exit" 離開 root 帳戶。<br>
 				● "su -" 轉為 eugene 帳戶，符號變成 $<br>
 				● "passwd" 修改現在帳戶密碼。
 			</p>
@@ -147,9 +157,16 @@
 				● "-j" Process can be presented in several formats. "j" for Jobs format.
 			</p>
 			<p class="code">
-				uname -r
+				uname -r<br>
+				uname -a<br>
+				uname --all<br>
+				hostname
 			</p>
-			<p>● Show Kernel release version.</p>
+			<p>
+				● "-r" Show Kernel release version.<br>
+				● "-a" and "--all" Show 本機名稱 & 版本號信息。<br>
+				● "hostname" Show 本機名稱。<br>
+			</p>
 
 
 		<h2>Install</h2>
@@ -230,6 +247,20 @@
 				</p>
 
 
+		<h2>Application</h2>
+			<p class="code">
+				<span class="input">firefox</span><br>
+				<span class="input">firefox</span> &
+			</p>
+			<p>
+				● "冇 &" 直接跳去程序介面。<br>
+				● "有 &" 後台運行程序，可留在原介面入 cmd。<br>
+				● Ctrl-C 終止程序。<br>
+				● Ctrl-Z 暫停程序。<br>
+			</p>
+			<p class="note">
+				
+			</p>
 
 
 
