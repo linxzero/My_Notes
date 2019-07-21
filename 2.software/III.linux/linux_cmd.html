@@ -77,15 +77,18 @@
 			<p class="code">
 				vi <span class="input">/etc/netplan/*yaml</span>
 			</p>
+			<p>
+				● 用 i，o，a，r 進入編輯 mode；用 Esc 離開編輯 mode。
+			</p>
 			<p class="code">
 				/ <br>
-				:quit <span class="input">&#8629;</span><br>
+				:q!<br>
 				:wq!
 			</p>
 			<p>
-				● "/" <br>
-				● <br>
-				● 
+				● "/" 找尋。<br>
+				● "q!" 不保存退出。<br>
+				● "wq!" 保存並退出。
 			</p>
       <p class="lilbr"><br></p>
       <p class="code">
@@ -127,11 +130,13 @@
 		<h2>System</h2>
 			<p class="code">
 				sudo bash<br>
-				su - <span class="input">eugene</span>
+				su - <span class="input">eugene</span><br>
+				passwd
 			</p>
 			<p>
 				● "sudo bash" 轉為 root 帳戶，符號變成 #<br>
-				● "su -" 轉為 eugene 帳戶，符號變成 $
+				● "su -" 轉為 eugene 帳戶，符號變成 $<br>
+				● "passwd" 修改現在帳戶密碼。
 			</p>
 			<p class="code">
 				ps<br>
