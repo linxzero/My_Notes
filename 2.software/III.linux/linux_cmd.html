@@ -38,10 +38,11 @@
 		<h2>Network</h2>
 			<p class="code">
 				ip addr show<br>
-				ip route show
+				ip route show<br>
+				ip link set <span class="input">eth1</span> up
 			</p>
 			<p class="code">
-				ip link set <span class="input">eth1</span> up
+				telnet <span class="input">192.168.31.1</span><br>
 			</p>
 			<h3>net-tools</h3>
 			<p class="code">
@@ -53,6 +54,7 @@
 				ifconfig -a<br>
 				ifconfig <span class="input">ens33</span> up<br>
 				ifconfig <span class="input">ens33 192.168.31.2</span> netmask <span class="input">255.0.0.0</span> <br>
+				route add default gw <span class="input">8.8.8.8</span><br>
 				netstat
 			</p>
 			<p>
@@ -60,8 +62,6 @@
 				● "-a" Show all, even the down interfaces.<br>
 				● "up" 開 port，可以用 "down" 熄 port。<br>
 				● "netstat" Show network servers.<br>
-				● <br>
-				● 
 			</p>
 
 		
