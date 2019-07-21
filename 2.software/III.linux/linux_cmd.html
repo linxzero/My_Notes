@@ -55,12 +55,14 @@
 				ifconfig <span class="input">ens3</span> up<br>
 				ifconfig <span class="input">ens3 192.168.1.2</span> netmask <span class="input">255.0.0.0</span> <br>
 				route add default gw <span class="input">8.8.8.8</span><br>
+				route -n<br>
 				netstat
 			</p>
 			<p>
 				● "ifconfig" Show interfaces information.<br>
 				● "-a" Show all, even the down interfaces.<br>
 				● "up" 開 port，可以用 "down" 熄 port。<br>
+				● "route -n" Show route，其中 "UG" 代表 Up & Gateway。<br>
 				● "netstat" Show network servers.<br>
 			</p>
 
