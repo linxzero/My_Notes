@@ -149,14 +149,6 @@
 				● "passwd" 修改現在帳戶密碼。
 			</p>
 			<p class="code">
-				ps<br>
-				ps -j
-			</p>
-			<p>
-				● "ps" Show process status.<br>
-				● "-j" Process can be presented in several formats. "j" for Jobs format.
-			</p>
-			<p class="code">
 				uname -r<br>
 				uname -a<br>
 				uname --all<br>
@@ -166,6 +158,14 @@
 				● "-r" Show Kernel release version.<br>
 				● "-a" and "--all" Show 本機名稱 & 版本號信息。<br>
 				● "hostname" Show 本機名稱。<br>
+			</p>
+			<p class="code">
+				clear <br>
+				history
+			</p>
+			<p>
+				● "clear" 清空面版。<br>
+				● "history" 返查 cmd 記錄。
 			</p>
 
 
@@ -255,11 +255,22 @@
 			<p>
 				● "冇 &" 直接跳去程序介面。<br>
 				● "有 &" 後台運行程序，可留在原介面入 cmd。<br>
-				● Ctrl-C 終止程序。<br>
-				● Ctrl-Z 暫停程序。<br>
+				● Ctrl-C 結束程序。<br>
+				● Ctrl-Z 暫停程序，程序會凍結左。<br>
 			</p>
-			<p class="note">
-				
+			<p class="code">
+				ps<br>
+				ps -j<br>
+				jobs<br>
+				bg <span class="input">2</span><br>
+				kill <span class="input">43430</span>
+			</p>
+			<p>
+				● "ps" Show process status.<br>
+				● "-j" Process can be presented in several formats. "j" for Jobs format.<br>
+				● "jobs" Show all applications<br>
+				● "bg" 解暫停程序。<br>
+				● "kill" 結束程序，後面跟 PID。
 			</p>
 
 
