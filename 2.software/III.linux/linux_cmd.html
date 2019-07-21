@@ -43,6 +43,26 @@
 			<p class="code">
 				ip link set <span class="input">eth1</span> up
 			</p>
+			<h3>net-tools</h3>
+			<p class="code">
+				sudo apt install net-tools
+			</p>
+			<p>● 先安裝 net-tools 才有以下功能。</p>
+			<p class="code">
+				ifconfig<br>
+				ifconfig -a<br>
+				ifconfig <span class="input">ens33</span> up<br>
+				ifconfig <span class="input">ens33 192.168.31.2</span> netmask <span class="input">255.0.0.0</span> <br>
+				netstat
+			</p>
+			<p>
+				● "ifconfig" Show interfaces info.<br>
+				● "-a" Show all, even the down interfaces.<br>
+				● "up" 開 port，可以用 "down" 熄 port。<br>
+				● "netstat" Show network servers.<br>
+				● <br>
+				● 
+			</p>
 
 		
 		<h2>Directory</h2>
