@@ -467,8 +467,46 @@
       <h3>Multiple Tables</h3>
         <table>
           <tr>
-            <td>
-              
+            <td rowspan="2">
+              ANSI SQL 1992
+            </td>
+            <td style="text-align: left;">
+              <span class="sql">select</span> emp.empno, emp.ename, emp.sal, dept.dname <br>
+              <span class="sql">from</span> emp, dept <br>
+              <span class="sql">where</span> emp.deptno= dept.deptno; 
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <span class="sql">select</span> e.first_name, e.last_name, d.department_name, <br>
+              l.city, c.country_name, r.region_name <br>
+              <span class="sql">from</span> employees e, departments d, locations l, <br>
+              countries c, regions r <br>
+              <span class="sql">where</span> e.department_id = d.department_id <br>
+              <span class="sql">and</span> d.location_id = l.location_id <br>
+              <span class="sql">and</span> l.country_id = c.country_id <br>
+              <span class="sql">and</span> c.region_id = r.region_id; 
+            </td>
+          </tr>
+          <tr style="background-color: #dadada">
+            <td rowspan="2">
+              ANSI SQL 1999
+            </td>
+            <td style="text-align: left;">
+              <span class="sql">select</span> emp.empno, emp.ename, emp.sal, dept.dname <br>
+              <span class="sql">from</span> emp<br>
+              <span class="sql">join</span> dept <span class="sql">on</span> emp.deptno = dept.deptno; 
+            </td>
+          </tr>
+          <tr style="background-color: #dadada">
+            <td style="text-align: left;">
+              <span class="sql">select</span> e.first_name, e.last_name, d.department_name, <br>
+              l.city, c.country_name, r.region_name <br>
+              <span class="sql">from</span> employees e <br>
+              <span class="sql">join</span> departments d <span class="sql">on</span> e.department_id = d.department_id <br>
+              <span class="sql">join</span> locations l <span class="sql">on</span> d.location_id = l.location_id <br>
+              <span class="sql">join</span> countries c <span class="sql">on</span> l.country_id = c.country_id <br>
+              <span class="sql">join</span> regions r <span class="sql">on</span> r.region_id = c.region_id; 
             </td>
           </tr>
         </table>
