@@ -40,7 +40,15 @@
 
 
 		<h2>PPP</h2>
-		<p>PPP frames Over Ethernet</p>
+		<p class="code">
+			int <span class="input">s0/0/0</span><br>
+			encapsulation ppp<br>
+			ppp quality <span class="input">70</span>
+		</p>
+		<p>
+			● Cisco 的 serial port 預設是 HDLC，所以要先改成 PPP。<br>
+			● "70" 當 link quality 小於 70，link down.
+		</p>
 		<h3>Authentication Protocols</h3>
 		<table>
 			<tr style="background-color: #3A3A3A; color: #F4F6F7">
@@ -52,36 +60,23 @@
 			<tr>
 				<td>PAP</td>
 				<td>2-way</td>
-				<td>plaintext</td>
+				<td><span class="high">plaintext</span></td>
 				<td>身份一次認證後永遠生效</td>
 			</tr>
 			<tr>
 				<td>CHAP</td>
 				<td>3-way</td>
-				<td>hash</td>
+				<td><span class="high">hash</span></td>
 				<td>不停地檢查對方是否有密碼</td>
 			</tr>
 		</table>
 		
 		<h3>PAP</h3>
-		<p class="code">
-			int <span class="input">s0/0/0</span><br>
-			encapsulation ppp<br>
-			ppp quality <span class="input">70</span>
-		</p>
-		<p>
-			● Cisco 的 serial port 預設是 HDLC，所以要先改成 PPP。<br>
-			● "70" 當 link quality 小於 70，link down.
-		</p>
-		<p class="lilbr"><br></p>
 		<p>這是認證別人身份的一方：</p>
 		<p class=" code">
 			username <span class="input">u3</span> password <span class="input">888</span><br>
 			int <span class="input">s0/0/0</span><br>
 			ppp authentication pap
-		</p>
-		<p>
-			● "pap" 明文認證。
 		</p>
 		<p class="lilbr"><br></p>
 		<p>這是向別人證明自己的一方：</p>
@@ -107,6 +102,7 @@
 
 
 		<h3>PPPoE</h3>
+		<p>PPP frames Over Ethernet</p>
 		<table>
 			<tr style="background-color: #3A3A3A; color: #F4F6F7">
 				<td colspan="3">PPPoE 即用套路</td>
