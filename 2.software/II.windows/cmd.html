@@ -64,10 +64,34 @@
         <p class="code">
           diskpart<br>
           list disk<br>
-          select disk <span class="input">0</span>
+          select disk <span class="input">0</span><br>
+          detail disk<br>
+          list vol<br>
+          list partition
+        </p>
+        <p>
+          ● "detail disk" 顯示有多少個 partition，用甚麼 file system。<br>
+          ● "list vol" 所有 disk 的 volume 都出晒。<br>
+          ● "list partition" 顯示選中的 disk 內的 partition。
         </p>
         <p class="code">
-          detail disk
+          clean<br>
+          convert gpt<br>
+          create partition efi size=<span class="input">200</span><br>
+          create partition msr size=<span class="input">200</span><br>
+          create partition primary<br>
+        </p>
+        <p>
+          ● "clean" 需要極小心用，指令會直接 format 選中的 disk 而不須確認。<br>
+          ● "convert gpt" 將 disk 的 partition table 由 MBR 轉為 GPT。<br>
+          ● "create partition" 的單位為 MB。不指明大小就是用餘下所有。
+        </p>
+        <p class="code">
+          list partition<br>
+          select partition <span class="input">3</span><br>
+          active<br>
+          format fs=ntfs label=<span class="input">Data</span><br>
+          assign letter=<span class="input">x</span>
         </p>
 
       <h2>Find</h2>
