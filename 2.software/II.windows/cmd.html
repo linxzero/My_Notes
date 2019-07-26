@@ -31,53 +31,58 @@
 <!--D1----------------------------------------------> 
     <div class="block" onclick="hidebar()">
       <h2>Routing</h2>
-      <h3>Add Route</h3>
-      <p class="code">route add <span class="input">des-network</span> mask <span class="input">subnet-mask gateway</span></p>
-      <h3>Check Route</h3>
-      <p class="code">route print [-4]</p>
-      <p>[4] Specifies the IPv4 routing table</p>
-      <h3>Delete Route</h3>
-      <p class="code">route delete <span class="input">des-network</span></p>
-      <br>
-      <br>
-
+        <h3>Add Route</h3>
+        <p class="code">route add <span class="input">des-network</span> mask <span class="input">subnet-mask gateway</span></p>
+        <h3>Check Route</h3>
+        <p class="code">route print [-4]</p>
+        <p>[4] Specifies the IPv4 routing table</p>
+        <h3>Delete Route</h3>
+        <p class="code">route delete <span class="input">des-network</span></p>
 
       <h2>Network</h2>
-      <h3>tracert</h3>
-      <p>找出由本機到 des-ip 沿途所經過的所有路由器</p>
-      <p class="code">tracert <span class="input">des-ip</span></p>
-      <h3>nslookup</h3>
-      <p>DNS query</p>
-      <p class="code">nslookup <span class="input">www.yahoo.com.tw</span></p>
-      <p>Server：DNS server 名稱<br>Name：yahoo 伺服器的真正名字<br>Alias：yahoo 伺服器的別名</p>
-      <h3>arp</h3>
-      <p>找出本機中 IP 與 MAC 的配對紀錄：</p>
-      <p class="code">arp -a</p>
-      <p>配合 for 功能找出 LAN 內的所有 devices：</p>
-      <p class="code">for /L %i in (<span class="input">star</span>, <span class="input">step</span>, <span class="input">end</span>) do <span class="input">command</span></p>
-      <p>實例：</p>
-      <p class="code">arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
-      <p>arp –d：本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除<br>(1，1，254)：由 1 ping 到 254，每次加 1<br>–n 1：每次發 1 個 echo request<br>–w 200：200ms to wait for each reply</p>
-      <h3>netstat</h3>
-      <p>Useful command for checking network status. Such as :</p>
-      <p class="code">netstat -a</p>
-      [a] show all connections and ports.
-      <br>
-      <br>
+        <h3>tracert</h3>
+        <p>找出由本機到 des-ip 沿途所經過的所有路由器</p>
+        <p class="code">tracert <span class="input">des-ip</span></p>
+        <h3>nslookup</h3>
+        <p>DNS query</p>
+        <p class="code">nslookup <span class="input">www.yahoo.com.tw</span></p>
+        <p>Server：DNS server 名稱<br>Name：yahoo 伺服器的真正名字<br>Alias：yahoo 伺服器的別名</p>
+        <h3>arp</h3>
+        <p>找出本機中 IP 與 MAC 的配對紀錄：</p>
+        <p class="code">arp -a</p>
+        <p>配合 for 功能找出 LAN 內的所有 devices：</p>
+        <p class="code">for /L %i in (<span class="input">star</span>, <span class="input">step</span>, <span class="input">end</span>) do <span class="input">command</span></p>
+        <p>實例：</p>
+        <p class="code">arp -d<br>for /L %i in (1,1,254) do ping 192.168.1.%i -n 1 -w 200</p>
+        <p>arp –d：本機可能有舊紀錄，準確起見先把所有 arp 紀錄刪除<br>(1，1，254)：由 1 ping 到 254，每次加 1<br>–n 1：每次發 1 個 echo request<br>–w 200：200ms to wait for each reply</p>
+        <h3>netstat</h3>
+        <p>Useful command for checking network status. Such as :</p>
+        <p class="code">netstat -a</p>
+        <p>[a] show all connections and ports.</p>
+
+      <h2>Diskpart</h2>
+        <p class="code">
+          diskpart<br>
+          list disk<br>
+          select disk <span class="input">0</span>
+        </p>
+        <p class="code">
+          detail disk
+        </p>
 
       <h2>Find</h2>
-      <p>很好用的查找功能，to show IPv4 routes with Metric "5256"：</p>
-      <p class="code">route print -4 | find "5256"</p>
-      <p>Show all the dynamic ARP records：</p>
-      <p class="code">arp -a | find "dynamic"</p>
-      <br>
-      <br>
-
+        <p>很好用的查找功能，to show IPv4 routes with Metric "5256"：</p>
+        <p class="code">route print -4 | find "5256"</p>
+        <p>Show all the dynamic ARP records：</p>
+        <p class="code">arp -a | find "dynamic"</p>
 
       <h2>Runas (sudo)</h2>
-      <p class="code">runas /user:<span class="input">user-name program</span></p>
-      <p>For example：</p>
-      <p class="code">runas /user:administrator cmd</p>
+        <p class="code">runas /user:<span class="input">user-name program</span></p>
+        <p>For example：</p>
+        <p class="code">runas /user:administrator cmd</p>
+
+
+
     </div>
 <!--------------------------------------------------> 
     <button onclick="topFunction()" id="TopBtn" title="Go to top">T</button> 
