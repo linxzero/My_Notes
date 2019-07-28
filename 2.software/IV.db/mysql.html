@@ -518,7 +518,21 @@
           </tr>
         </table>
 
-
+      <h3>Left outer join</h3>
+        <p>有些情況左邊 table 的個別記錄，在右邊 table 上內容是 null，預設 join 了兩張 table 後整筆記錄不顯示，若要使左邊 table 所有記錄都顯示出來，需要用 "left outer join"：</p>
+        <table>
+          <tr>
+            <td style="text-align: left;">
+              <span class="sql">select</span> e.employee_id, e.first_name, e.department_id, d.department_name<br>
+              <span class="sql">from</span> employees e<br>
+              <span class="sql">left outer join</span> departments d <span class="sql">on</span> e.department_id = d.department_id;
+            </td>
+          </tr>
+        </table>
+        <p>
+          ● 所以當有些員工沒有填 department_id，也不至於消失在表上。<br>
+          ● 它只忽視下一個 table，換句話說再下一個 table 是 null，這個記錄依然消失。因此一用 outer join，就所有行都用晒才有意思。
+        </p>
 
 
 
