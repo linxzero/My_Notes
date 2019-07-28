@@ -534,6 +534,34 @@
           ● 它只忽視下一個 table，換句話說再下一個 table 是 null，這個記錄依然消失。因此一用 outer join，就所有行都用晒才有意思。
         </p>
 
+      <h3>Table management</h3>
+        <table>
+          <tr>
+            <td>Table建立</td>
+            <td style="text-align: left;"><span class="sql">create table</span> customer ( C_ID <span class="sql">varchar</span>(10), C_name <span class="sql">varchar</span>(20), <br>
+            Mobile <span class="sql">varchar</span>(20), B_day date, Loc <span class="sql">varchar</span>(13) <span class="sql">default</span> 'US');</td>
+          </tr>
+          <tr>
+            <td rowspan="2">加資料</td>
+            <td style="text-align: left;"><span class="sql">insert into</span> customer (c_name, loc) <span class="sql">values</span> ('peter', 'Macau');</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;"><span class="sql">insert into</span> customer <span class="sql">values</span> ('3388', 'She', '00853', '1980-06-06', <span class="sql">null</span>);</td>
+          </tr>
+          <tr>
+            <td>改資料</td>
+            <td style="text-align: left;"><span class="sql">update</span> customer <span class="sql">set</span> c_name = 'Eugene' <span class="sql">where</span> c_id = '3388';</td>
+          </tr>
+          <tr>
+            <td>刪資料</td>
+            <td style="text-align: left;"><span class="sql">delete from</span> customer <span class="sql">where</span> loc <span class="sql">is null</span>;</td>
+          </tr>
+        </table>
+        <p>
+          ● 改和刪資料都是不能返回的！<br>
+          ● 因此 mySQL 在修改資料前需要你去 SQL Editor 內熄掉 "Safe Updates"。
+        </p>
+
 
 
     </div>
