@@ -70,6 +70,14 @@
 				● "route -n" Show route，其中 "UG" 代表 Up & Gateway。<br>
 				● "netstat" Show network servers.<br>
 			</p>
+			<h3>Check</h3>
+			<p class="code">
+				dmesg | grep -i duplex
+			</p>
+			<p>
+				● "dmesg" Driver message，用於顯示開機信息 (kernel 把它暫存在 ring buffer 中)，若開機時看漏了，就用 dmesg 再看。<br>
+				● "-i" Ignore case，忽略大小寫。
+			</p>
 
 		
 		<h2>Directory</h2>
