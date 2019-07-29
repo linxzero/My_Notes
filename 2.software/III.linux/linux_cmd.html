@@ -97,7 +97,7 @@
 			<p>● 顯示現在的 directory。</p>
 			<p class="code">
 				mkdir <span class="input">dir</span><br>
-      	rmdir <span class="input">dir/</span>
+      			rmdir <span class="input">dir/</span>
 			</p>
 			<p>
 				● "mkdir" Create directory.<br>
@@ -130,53 +130,55 @@
 				● "q!" 不保存退出。<br>
 				● "wq!" 保存並退出。
 			</p>
-      <p class="code">
-      	cat <span class="input">/proc/version</span><br>
-      	more <span class="input">/proc/version</span><br>
-				file <span class="input">aa.txt</span>
-      </p>
-      <p>
-        ● "cat" Stay in line, have a look at the file.<br>
-        ● "more" Similar to "cat".<br>
-        ● "file" 檢查檔案類型。
-      </p>
-      <p class="code">
-      	echo <span class="input">Hello_world</span> > <span class="input">aa.txt</span><br>
-      	echo <span class="input">Hello_world</span> >> <span class="input">aa.txt</span>
-      </p>
-      <p>
-      	● ">" Clean all line from aa.txt, then add 'Hello_world' to aa.txt.<br>
-      	● ">>" Add 'Hello_world' to the end of aa.txt.
-      </p>      
-      <p class="code">
-      	cp <span class="input">file1 file2</span><br>
-      	cp <span class="input">file1 file2 dir</span><br>
-      </p>
-      <p>
-      	● First, copy file1 到原地，命名為 file2。<br>
-      	● Second, copy file1 和 file2 到 dir。
-      </p>
-      <p class="code">
-      	mv <span class="input">file dir</span><br>
-      	mv <span class="input">file1 file2</span><br>
-      	rm <span class="input">file1</span><br>
-      </p>
-      <p>
-      	● First, move file to dir.<br>
-      	● Second, rename file1 to file2.<br>
-      	● "rm" Remove file1.
-      </p>
+			<p class="code">
+				cat <span class="input">/proc/version</span><br>
+				more <span class="input">/proc/version</span><br>
+					file <span class="input">aa.txt</span>
+			</p>
+			<p>
+			● "cat" Stay in line, have a look at the file.<br>
+			● "more" Similar to "cat".<br>
+			● "file" 檢查檔案類型。
+			</p>
+			<p class="code">
+				echo <span class="input">Hello_world</span> > <span class="input">aa.txt</span><br>
+				echo <span class="input">Hello_world</span> >> <span class="input">aa.txt</span>
+			</p>
+			<p>
+				● ">" Clean all line from aa.txt, then add 'Hello_world' to aa.txt.<br>
+				● ">>" Add 'Hello_world' to the end of aa.txt.
+			</p>      
+			<p class="code">
+				cp <span class="input">file1 file2</span><br>
+				cp <span class="input">file1 file2 dir</span><br>
+			</p>
+			<p>
+				● First, copy file1 到原地，命名為 file2。<br>
+				● Second, copy file1 和 file2 到 dir。
+			</p>
+			<p class="code">
+				mv <span class="input">file dir</span><br>
+				mv <span class="input">file1 file2</span><br>
+				rm <span class="input">file1</span><br>
+			</p>
+			<p>
+				● First, move file to dir.<br>
+				● Second, rename file1 to file2.<br>
+				● "rm" Remove file1.
+			</p>
 
 
 		<h2>System</h2>
 			<p class="code">
 				sudo bash<br>
+				sudo -i<br>
 				exit<br>
 				su - <span class="input">eugene</span><br>
 				passwd
 			</p>
 			<p>
-				● "sudo bash" 轉為 root 帳戶，符號變成 #<br>
+				● "sudo bash" 扮 root 帳戶，變成 #，但環境不變，pwd 一下就知。<br>
+				● "sudo -i" 轉成 root 帳戶，環境都變，pwd 一下就知。<br>
 				● "exit" 離開 root 帳戶。<br>
 				● "su -" 轉為 eugene 帳戶，符號變成 $<br>
 				● "passwd" 修改現在帳戶密碼。
