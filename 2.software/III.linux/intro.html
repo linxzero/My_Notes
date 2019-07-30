@@ -32,30 +32,110 @@
     <div class="block" onclick="hidebar()">
     
 
-<table>
-  <tr style="background-color: #3A3A3A; color: #F4F6F7">
-    <td></td>
-    <td colspan="2">Linux Package Manager</td>
-  </tr>
-  <tr>
-    <td>派系</td>
-    <td>RPM (Red Hat Package Manager)</td>
-    <td>dpkg (Debian Package)</td>
-  </tr>
-  <tr>
-    <td>安裝指令</td>
-    <td>yum</td>
-    <td>apt</td>
-  </tr>
-  <tr>
-    <td>家族</td>
-    <td>RedHat, Fedora, CentOS, SuSE</td>
-    <td>Debian, Ubuntu</td>
-  </tr>
-</table>
+    <table>
+      <tr style="background-color: #3A3A3A; color: #F4F6F7">
+        <td></td>
+        <td colspan="2">Linux Package Manager</td>
+      </tr>
+      <tr>
+        <td>派系</td>
+        <td>RPM (Red Hat Package Manager)</td>
+        <td>dpkg (Debian Package)</td>
+      </tr>
+      <tr>
+        <td>安裝指令</td>
+        <td>yum</td>
+        <td>apt</td>
+      </tr>
+      <tr>
+        <td>家族</td>
+        <td>RedHat, Fedora, CentOS, SuSE</td>
+        <td>Debian, Ubuntu</td>
+      </tr>
+    </table>
 
 
-
+    <h3>Linux 檔案系統架構</h3>
+    <p>Linux distributions 都遵守檔案系統的標準 FHS (Filesystem Hierarchy Standard)。  
+    </p>
+    <table>
+      <tr>
+        <td style="text-align: left;">/bin</td>
+        <td style="text-align: left;">放置一般使用者可以操作的指令，連結到 /usr/bin</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/sbin</td>
+        <td style="text-align: left;">放置系統管理員可以操作的指令，連結到 /usr/sbin</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/boot</td>
+        <td style="text-align: left;">放置開機相關檔案</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/dev</td>
+        <td style="text-align: left;">放置 device 裝置檔案，包話滑鼠鍵盤等</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/etc</td>
+        <td style="text-align: left;">放置系統檔案</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/home</td>
+        <td style="text-align: left;">一般帳戶的家目錄</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/root</td>
+        <td style="text-align: left;">系統管理者的家目錄</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/lib</td>
+        <td style="text-align: left;">系統函式庫和核心函式庫，連結到  /usr/lib</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/lib64</td>
+        <td style="text-align: left;">若是64位元則放在，/usr/lib64</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/proc</td>
+        <td style="text-align: left;">將記憶體內的資料做成檔案類型</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/sys</td>
+        <td style="text-align: left;">與 /proc 類似，但主要針對硬體相關參數</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/usr</td>
+        <td style="text-align: left;">unix software resource，放置系統相關軟體、服務</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/var</td>
+        <td style="text-align: left;">variable，放置一些變數或記錄檔</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/tmp</td>
+        <td style="text-align: left;">放置暫存檔案</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/media</td>
+        <td style="text-align: left;">放置隨插即用的裝置慣用目錄</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/mnt</td>
+        <td style="text-align: left;">為管理員/使用者手動 mount 上的目錄</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/opt</td>
+        <td style="text-align: left;">optional，通常為第三方廠商放置軟體</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/run</td>
+        <td style="text-align: left;">系統進行服務軟體運作管理處</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">/srv</td>
+        <td style="text-align: left;">放置開發的服務。如網站服務 www 等</td>
+      </tr>
+    </table>
 
 
 
