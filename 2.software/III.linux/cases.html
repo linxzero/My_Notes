@@ -45,9 +45,20 @@
 
     <h2>Read Synology NAS HDD on Ubuntu</h2>
       <p class="code">
-        apt-get update<br>
-        apt-get install mdadm lvm2<br>
-
+        sudo -i<br>
+        apt update<br>
+        apt install -y mdadm lvm2
+      </p>
+      <p>
+        ● 先安裝兩個 RAID 管理工具，mdadm 和 lvm2。<br>
+        ● "-y" 表示 all "Yes"。
+      </p>
+      <p class="lilbr"><br></p>
+      <p class="code">
+        mdadm -Asf && vgchange -ay
+      </p>
+      <p>
+        ● 然後掛載所有從 Synology NAS 取出的硬碟。
       </p>
 
 
