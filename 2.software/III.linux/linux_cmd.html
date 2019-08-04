@@ -71,6 +71,15 @@
 				● "route -n" Show route，其中 "UG" 代表 Up & Gateway。<br>
 				● "netstat" Show network servers.<br>
 			</p>
+			<h3>Wifi</h3>
+			<p class="code">
+				ifconfig <span class="input">wlan0</span> up<br>
+				iwlist <span class="input">wlan0</span> scan<br>
+				iwconfig <span class="input">wlan0</span> essid <span class="input">abc_5G</span> key <span class="input">123321</span><br>
+				dhclient <span class="input">wlan0</span>
+		
+				
+			</p>
 			<h3>Check</h3>
 			<p class="code">
 				dmesg | grep -i duplex
